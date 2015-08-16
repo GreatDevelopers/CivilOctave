@@ -1,0 +1,42 @@
+# Created by Octave 4.0.0, Sun Aug 16 07:51:22 2015 IST <hsrai@rai>
+# name: Number_of_elements
+# type: scalar
+4
+
+
+# name: Number_of_nodes
+# type: scalar
+5
+
+
+# name: Element_incidences
+# type: matrix
+# rows: 4
+# columns: 2
+ 1 2
+ 2 3
+ 3 4
+ 4 5
+
+
+# name: Local_stiffness_matrix
+# type: matrix
+# rows: 4
+# columns: 1
+ 100
+ 100
+ 100
+ 100
+
+
+# name: Load_matrix
+# type: matrix
+# rows: 5
+# columns: 1
+ 0
+ 0
+ -20
+ -30
+ 30
+
+
