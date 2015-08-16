@@ -15,40 +15,31 @@ clear
 %       (Information on nodes correspinding to each elements)
 % Global_force_matrix
 
-%load input.mat
-
 % Enter global matrix
-Global_stiffness_matrix = [5.5 -4.6 0 0 0;
-    -4.6 14 -4.6 0 0;
-     0.4 -4.6 11 -4.6 0.4;
-     0 0 -4.6 14.2 -4.6;
-     0 0 4.0 -4.6 6.5];
 
 % Enter global force matrix
-Global_force_matrix = [50 200 100 200 90];
-
-Global_stiffness_matrix % Displays global stiffness matrix
-Global_force_matrix % Displays global force matrix
 
 % Enter number of nodes
-Number_of_nodes = 5; 
 
 % Enter number of elements
-Number_of_elements = 4; 
 
 %% Initialization- Boundary conditions [PRE-PROCESSING]
 
 % loc Enter location of boundary nodes to be initialised as node numbers
 % In this case boundaries corresponding to nodes 1 and 5
-Boundary_nodes = [1 5]';
 
 % Enter boundary condition displacement values in the order of
 % node numbers initialised in the location matrix
-Boundary_condition_displacement = [15 4]'; 
-
 
 % NOTE: 'Boundary_nodes' matrix and 'Boundary_condition_displacement'
 % matrix should be of the same size
+
+load input.mat
+
+% Echo input data
+
+Global_stiffness_matrix % Displays global stiffness matrix
+Global_force_matrix % Displays global force matrix
 
 %% [PROCESSING]
 
