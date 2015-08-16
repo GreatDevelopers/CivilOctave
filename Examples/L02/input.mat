@@ -1,0 +1,45 @@
+# Created by Octave 4.0.0, Sun Aug 16 18:59:41 2015 IST <hsrai@rai>
+# name: Number_of_elements
+# type: scalar
+4
+
+
+# name: Number_of_nodes
+# type: scalar
+5
+
+
+# name: Global_stiffness_matrix
+# type: matrix
+# rows: 5
+# columns: 5
+ 5.5 -4.6 0 0 0
+ -4.6 14 -4.6 0 0
+ 0.4 -4.6 11 -4.6 0.4
+ 0 0 -4.6 14.2 -4.6
+ 0 0 4 -4.6 6.5
+
+
+# name: Global_force_matrix
+# type: matrix
+# rows: 1
+# columns: 5
+ 50 200 100 200 90
+
+
+# name: Boundary_nodes
+# type: matrix
+# rows: 2
+# columns: 1
+ 1
+ 5
+
+
+# name: Boundary_condition_displacement
+# type: matrix
+# rows: 2
+# columns: 1
+ 15
+ 4
+
+
