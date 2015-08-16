@@ -1,0 +1,7 @@
+The main.m file contain code for Spring in Series, an example taken from
+book entitled "A First Course in the Finite Element Method" 4th Edition by
+Daryl L. Logan.
+
+The code correspond to a part of Example 2.2 page 45.
+
+To know how to execute this code, read README.md file in folder CivilOctave.
