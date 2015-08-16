@@ -6,12 +6,12 @@ clear
 
 % Follwing are the main variables used. No explaination is given as
 %	names are self explanatory.
-% Number_of_nodes nn
-% Number_of_elements ne
-% Global_stiffness_matrix K
-% Local_stiffness_matrix k
-% Load_matrix P
-% Element_incidences Nodal matrix
+% Number_of_nodes
+% Number_of_elements
+% Global_stiffness_matrix
+% Local_stiffness_matrix
+% Load_matrix
+% Element_incidences
 %	(Information on nodes correspinding to each elements)
 
 
