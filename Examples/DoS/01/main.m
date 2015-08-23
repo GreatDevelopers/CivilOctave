@@ -50,7 +50,7 @@ for storey_i = 1:Number_of_storeys
 end
 
 [Eigen_vector, Omega_square] = eig(Stiffness_matrix, Mass);
-
+Omega = sqrt(Omega_square);
 for storey_i = 1:Number_of_storeys
   Time_period(storey_i, storey_i) = 2 * pi() ...
     / sqrt(Omega_square(storey_i, storey_i)); 
@@ -69,6 +69,7 @@ Stiffness_matrix
 
 Eigen_vector
 Omega_square
+Omega
 Time_period
 
 % End of file
