@@ -10,8 +10,8 @@
 # columns: 4
  8 0 0 0
  0 8 0 0
- 0 0 8 0
- 0 0 0 8
+ 0 0 4 0
+ 0 0 0 4
 
 
 # name: Stiffness_story
