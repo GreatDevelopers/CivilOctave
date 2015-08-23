@@ -16,6 +16,8 @@ load input.mat
 
 %Variable initialisation
 Stiffness_matrix(Number_of_storeys, Number_of_storeys) = 0;
+Time_period(Number_of_storeys, Number_of_storeys) = 0;
+
 
 %% Display input
 
@@ -47,7 +49,12 @@ for storey_i = 1:Number_of_storeys
     
 end
 
-[EigenVector, EigenValue] = eig(Stiffness_matrix, Mass);
+[Eigen_vector, Omega_square] = eig(Stiffness_matrix, Mass);
+
+for storey_i = 1:Number_of_storeys
+  Time_period(storey_i, storey_i) = 2 * pi() ...
+    / sqrt(Omega_square(storey_i, storey_i)); 
+end
 
 %% [POST-PROCESSING]
 
@@ -60,7 +67,8 @@ Stiffness_story
 
 Stiffness_matrix
 
-EigenVector
-EigenValue
+Eigen_vector
+Omega_square
+Time_period
 
 % End of file
