@@ -47,6 +47,8 @@ for storey_i = 1:Number_of_storeys
     
 end
 
+[EigenVector, EigenValue] = eig(Stiffness_matrix, Mass);
+
 %% [POST-PROCESSING]
 
 %% Echo input data
@@ -58,5 +60,7 @@ Stiffness_story
 
 Stiffness_matrix
 
+EigenVector
+EigenValue
 
 % End of file
