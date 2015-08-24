@@ -109,5 +109,6 @@ hold off
 
 saveas(plotHangle, 'ModeShape.eps','eps')
 saveas(plotHangle, 'ModeShape.png','png')
+saveas(plotHangle, 'ModeShape.pdf')
 
 % End of file
