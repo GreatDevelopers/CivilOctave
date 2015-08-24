@@ -14,6 +14,16 @@
  0 0 0 4
 
 
+# name: Height_story
+# type: matrix
+# rows: 4
+# columns: 1
+ 4
+ 4
+ 4
+ 4
+
+
 # name: Stiffness_story
 # type: matrix
 # rows: 4
