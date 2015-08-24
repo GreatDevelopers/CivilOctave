@@ -77,6 +77,18 @@ for storey_i = 1:Number_of_storeys
  Time_periods(storey_i,1) = Time_period(storey_i, storey_i);
 end
 
+for index_k = 1:Number_of_storeys
+	sum_W_Phi = 0;
+	sum_W_Phi2 = 0;
+	for index_i = 1:Number_of_storeys
+		sum_W_Phi = sum_W_Phi + Mass(index_i, index_i) * ...
+			Eigen_vector(index_i, index_k);
+		sum_W_Phi2 = sum_W_Phi2 + Mass(index_i, index_i) * ...
+			Eigen_vector(index_i, index_k)^2;
+	end
+	Modal_participation_factor(index_k,1) = sum_W_Phi / sum_W_Phi2;
+end
+
 %% [POST-PROCESSING]
 
 %% Echo input data
@@ -94,6 +106,8 @@ Frequency
 Time_periods
 Level_floor
 
+
+Modal_participation_factor
 
 %% Plot mode shapes
 
