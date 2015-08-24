@@ -56,6 +56,14 @@ for storey_i = 1:Number_of_storeys
     / sqrt(Omega_square(storey_i, storey_i)); 
 end
 
+for storey_i = 1:Number_of_storeys
+ Frequency(storey_i,1) = Omega(storey_i, storey_i);
+end
+
+for storey_i = 1:Number_of_storeys
+ Time_periods(storey_i,1) = Time_period(storey_i, storey_i);
+end
+
 %% [POST-PROCESSING]
 
 %% Echo input data
@@ -68,8 +76,8 @@ Stiffness_story
 Stiffness_matrix
 
 Eigen_vector
-Omega_square
-Omega
-Time_period
+%Omega_square
+Frequency
+Time_periods
 
 % End of file
