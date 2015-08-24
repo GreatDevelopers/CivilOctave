@@ -97,6 +97,8 @@ Level_floor
 
 %% Plot mode shapes
 
+plotHangle = figure('visible','off')
+
 plot([0; Eigen_vector(:,1)], [0; Level_floor],'-ro')
 hold on
 plot([0; Eigen_vector(:,2)], [0; Level_floor],'-go')
@@ -105,5 +107,7 @@ plot([0; Eigen_vector(:,4)], [0; Level_floor],'-mo')
 plot([0 0], [0 Level_floor(Number_of_storeys)],'-k')
 hold off
 
+saveas(plotHangle, 'ModeShape.eps','eps')
+saveas(plotHangle, 'ModeShape.png','png')
 
 % End of file
