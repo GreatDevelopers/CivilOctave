@@ -107,7 +107,8 @@ plot([0; Eigen_vector(:,4)], [0; Level_floor],'-mo')
 plot([0 0], [0 Level_floor(Number_of_storeys)],'-k')
 hold off
 
-saveas(plotHangle, 'ModeShape.eps','eps')
+% saveas(plotHangle, 'ModeShape.eps','eps')
+print (plotHangle, '-color',  'ModeShape.eps')
 saveas(plotHangle, 'ModeShape.png','png')
 saveas(plotHangle, 'ModeShape.pdf')
 
