@@ -49,6 +49,19 @@ for storey_i = 1:Number_of_storeys
     
 end
 
+for storey_i = 1:Number_of_storeys
+
+	Level_floor(storey_i, 1) = ...
+		Height_storey(storey_i,1);
+
+	if (storey_i > 1 )
+		 Level_floor(storey_i, 1) = ...
+			Level_floor(storey_i, 1) + ...
+			  Level_floor(storey_i - 1, 1);
+ 	endif
+    
+end
+
 [Eigen_vector, Omega_square] = eig(Stiffness_matrix, Mass);
 Omega = sqrt(Omega_square);
 for storey_i = 1:Number_of_storeys
@@ -79,5 +92,18 @@ Eigen_vector
 %Omega_square
 Frequency
 Time_periods
+Level_floor
+
+
+%% Plot mode shapes
+
+plot([0; Eigen_vector(:,1)], [0; Level_floor],'-ro')
+hold on
+plot([0; Eigen_vector(:,2)], [0; Level_floor],'-go')
+plot([0; Eigen_vector(:,3)], [0; Level_floor],'-bo')
+plot([0; Eigen_vector(:,4)], [0; Level_floor],'-mo')
+plot([0 0], [0 Level_floor(Number_of_storeys)],'-k')
+hold off
+
 
 % End of file
