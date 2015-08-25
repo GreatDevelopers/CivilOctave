@@ -4,6 +4,11 @@
 4
 
 
+# name: Gravity_acceration
+# type: scalar
+9.81
+
+
 # name: Mass
 # type: matrix
 # rows: 4
