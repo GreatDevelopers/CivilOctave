@@ -43,7 +43,7 @@ for storey_i = 1:Number_of_storeys
       Stiffness_story(storey_i + 1);
     Stiffness_matrix(storey_i, storey_i + 1) = ...
       - Stiffness_story(storey_i + 1);
-                Stiffness_matrix(storey_i + 1, storey_i) = ...
+    Stiffness_matrix(storey_i + 1, storey_i) = ...
       Stiffness_matrix(storey_i, storey_i + 1);
    endif
     
@@ -56,14 +56,15 @@ for storey_i = 1 : Number_of_storeys
 
   if (storey_i > 1 )
      Level_floor(storey_i, 1) = ...
-      Level_floor(storey_i, 1) + ...
-        Level_floor(storey_i - 1, 1);
+       Level_floor(storey_i, 1) + ...
+     Level_floor(storey_i - 1, 1);
    endif
     
 end
 
 [Eigen_vector, Omega_square] = eig(Stiffness_matrix, Mass);
 Omega = sqrt(Omega_square);
+
 for storey_i = 1 : Number_of_storeys
   Time_period(storey_i, storey_i) = 2 * pi() ...
     / sqrt(Omega_square(storey_i, storey_i)); 
@@ -77,6 +78,8 @@ for storey_i = 1 : Number_of_storeys
  Time_periods(storey_i,1) = Time_period(storey_i, storey_i);
 end
 
+sum_modal_mass = 0;
+
 for index_k = 1 : Number_of_storeys
   sum_W_Phi = 0;
   sum_W_Phi2 = 0;
@@ -86,8 +89,14 @@ for index_k = 1 : Number_of_storeys
     sum_W_Phi2 = sum_W_Phi2 + Mass(index_i, index_i) * ...
       Eigen_vector(index_i, index_k)^2;
   end
+
   Modal_participation_factor(index_k,1) = sum_W_Phi / sum_W_Phi2;
+  Modal_mass(index_k,1) = (sum_W_Phi^2) / (sum_W_Phi2);
+  sum_modal_mass = sum_modal_mass + Modal_mass(index_k,1);  
+
 end
+
+Modal_contribution = 100 / sum_modal_mass * Modal_mass;
 
 %% [POST-PROCESSING]
 
@@ -105,9 +114,11 @@ Eigen_vector
 Frequency
 Time_periods
 Level_floor
-
-
 Modal_participation_factor
+Gravity_acceleration
+Modal_mass
+Modal_contribution
+
 
 %% Plot mode shapes
 
