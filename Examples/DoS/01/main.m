@@ -59,7 +59,7 @@ for storey_i = 1 : Number_of_storeys
      Level_floor(storey_i, 1) = ...
        Level_floor(storey_i, 1) + ...
      Level_floor(storey_i - 1, 1);
-   endif
+  endif
 end
 
 [Eigen_vector, Omega_square] = eig(Stiffness_matrix, Mass);
