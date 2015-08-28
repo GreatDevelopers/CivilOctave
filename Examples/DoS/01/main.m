@@ -4,12 +4,15 @@ clear
 
 %% Initialisation [PRE-PROCESSING]
 
-% Follwing are the main variables used. No explaination is given as
+% Following are the main variables used. No explanation is given as
 %  names are self explanatory.
 % Number_of_storeys
 % Mass
-% Stiffness_story
-%  (Summed shear stiffness of all columns in a story)
+% Stiffness_storey
+%  (Summed shear stiffness of all columns in a storey)
+%
+% Frequency is vector matrix while Omega is diagonal matrix.
+% Time_periods is vector matrix while Time_period is diagonal matrix.
 
 
 load input.mat
@@ -25,7 +28,7 @@ Number_of_storeys
 
 Mass
 
-Stiffness_story
+Stiffness_storey
 
 %% [PROCESSING]
 
@@ -35,14 +38,14 @@ Stiffness_story
 for storey_i = 1:Number_of_storeys
 
   Stiffness_matrix(storey_i, storey_i) = ...
-    Stiffness_story(storey_i);
+    Stiffness_storey(storey_i);
 
   if (storey_i < Number_of_storeys )
     Stiffness_matrix(storey_i, storey_i) = ...
       Stiffness_matrix(storey_i, storey_i) + ...
-      Stiffness_story(storey_i + 1);
+      Stiffness_storey(storey_i + 1);
     Stiffness_matrix(storey_i, storey_i + 1) = ...
-      - Stiffness_story(storey_i + 1);
+      - Stiffness_storey(storey_i + 1);
     Stiffness_matrix(storey_i + 1, storey_i) = ...
       Stiffness_matrix(storey_i, storey_i + 1);
    endif
@@ -103,7 +106,7 @@ Modal_contribution = 100 / sum_modal_mass * Modal_mass;
 %% Echo input data
 
 Number_of_storeys
-Stiffness_story
+Stiffness_storey
 
 %% Echo processed data
 

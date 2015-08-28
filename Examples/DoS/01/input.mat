@@ -4,7 +4,7 @@
 4
 
 
-# name: Gravity_acceration
+# name: Gravity_acceleration
 # type: scalar
 9.81
 
@@ -29,13 +29,13 @@
  4
 
 
-# name: Stiffness_story
+# name: Stiffness_storey
 # type: matrix
 # rows: 4
 # columns: 1
- 10
- 8
- 6
- 6
+ 1000
+ 800
+ 600
+ 600
 
 
