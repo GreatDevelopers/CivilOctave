@@ -53,16 +53,13 @@ for storey_i = 1:Number_of_storeys
 end
 
 for storey_i = 1 : Number_of_storeys
-
   Level_floor(storey_i, 1) = ...
     Height_storey(storey_i,1);
-
   if (storey_i > 1 )
      Level_floor(storey_i, 1) = ...
        Level_floor(storey_i, 1) + ...
      Level_floor(storey_i - 1, 1);
    endif
-    
 end
 
 [Eigen_vector, Omega_square] = eig(Stiffness_matrix, Mass);
@@ -74,11 +71,11 @@ for storey_i = 1 : Number_of_storeys
 end
 
 for storey_i = 1 : Number_of_storeys
- Frequency(storey_i,1) = Omega(storey_i, storey_i);
+  Frequency(storey_i,1) = Omega(storey_i, storey_i);
 end
 
 for storey_i = 1 : Number_of_storeys
- Time_periods(storey_i,1) = Time_period(storey_i, storey_i);
+  Time_periods(storey_i,1) = Time_period(storey_i, storey_i);
 end
 
 sum_modal_mass = 0;
@@ -92,11 +89,9 @@ for index_k = 1 : Number_of_storeys
     sum_W_Phi2 = sum_W_Phi2 + Mass(index_i, index_i) * ...
       Eigen_vector(index_i, index_k)^2;
   end
-
   Modal_participation_factor(index_k,1) = sum_W_Phi / sum_W_Phi2;
   Modal_mass(index_k,1) = (sum_W_Phi^2) / (sum_W_Phi2);
   sum_modal_mass = sum_modal_mass + Modal_mass(index_k,1);  
-
 end
 
 Modal_contribution = 100 / sum_modal_mass * Modal_mass;
@@ -121,7 +116,6 @@ Modal_participation_factor
 Gravity_acceleration
 Modal_mass
 Modal_contribution
-
 
 %% Plot mode shapes
 
