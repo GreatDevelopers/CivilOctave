@@ -2,6 +2,62 @@
 clc
 clear
 
+%% Function to write Matrix
+
+function matrixTeX(A, fmt, align)
+
+  disp(['\section{',strrep(inputname(1),'_',' '),'}'])
+  [m,n] = size(A);
+
+  if(nargin < 2)
+
+    %
+    % Is the matrix full of integers?
+    % If so, then use integer output
+    %
+
+    if( norm(A-floor(A)) < eps )
+      intA = 1;
+      fmt  = '%d';
+    else
+      intA = 0;
+      fmt  = '%8.4f';
+    end
+
+  end
+
+  fmtstring1 = [' ',fmt,' & '];
+  fmtstring2 = [' ',fmt,' \\\\ \n'];
+
+  if(nargin < 3)
+    printf('\\[\n\\begin{bmatrix}\n');
+  else
+    printf('\\[\n\\begin{bmatrix*}[%s]\n',align);
+  endif  
+
+  for i = 1:m
+
+    for j = 1:n-1
+       printf(fmtstring1,A(i,j));
+    end
+
+    printf(fmtstring2, A(i,n));
+
+  end
+
+  if(nargin < 3)
+    printf('\\end{bmatrix}\n\\]\n');
+  else
+    printf('\\end{bmatrix*}\n\\]\n');
+  endif  
+
+
+
+end
+
+
+%load otl.m
+
 %% Initialisation [PRE-PROCESSING]
 
 % Following are the main variables used. No explanation is given as
@@ -24,11 +80,12 @@ Time_period(Number_of_storeys, Number_of_storeys) = 0;
 
 %% Display input
 
-Number_of_storeys
+disp(['Number of storeys = ',num2str(Number_of_storeys)])
+%disp(Number_of_storeys)
 
-Mass
+matrixTeX(Mass)
 
-Stiffness_storey
+%matrixTeX(Stiffness_storey)
 
 %% [PROCESSING]
 
@@ -100,22 +157,23 @@ Modal_contribution = 100 / sum_modal_mass * Modal_mass;
 
 %% Echo input data
 
-Number_of_storeys
-Stiffness_storey
+%Number_of_storeys
+%Stiffness_storey
 
 %% Echo processed data
 
-Stiffness_matrix
+matrixTeX(Stiffness_matrix)
+matrixTeX(Eigen_vector)
+matrixTeX(Omega_square)
+matrixTeX(Frequency)
+matrixTeX(Time_periods)
+matrixTeX(Level_floor)
+matrixTeX(Modal_participation_factor)
 
-Eigen_vector
-%Omega_square
-Frequency
-Time_periods
-Level_floor
-Modal_participation_factor
-Gravity_acceleration
-Modal_mass
-Modal_contribution
+disp(['g = ', num2str(Gravity_acceleration)])
+
+matrixTeX(Modal_mass)
+matrixTeX(Modal_contribution)
 
 %% Plot mode shapes
 
