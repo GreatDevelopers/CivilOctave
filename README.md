@@ -13,11 +13,11 @@ in file `output.txt`, type command:
 `octave main.m > output.txt`
 
 or in following form, if we wish to produce pdf using LaTeX from folder
-(TeX, if available) using run.sh
+(tex, if available) using run.sh
 
 `octave main.m > output.tex`
 
-View file output.txt in any text editor, or main.pdf (in TeX folder) in pdf
+View file output.txt in any text editor, or main.pdf (in tex folder) in pdf
 viewer.
 
 Authors acknowledge used of function written by Sachin Shanbhag.
