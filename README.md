@@ -12,4 +12,10 @@ in file `output.txt`, type command:
 
 `octave main.m > output.txt`
 
-View file output.txt in any text editor.
+or in following form, if we wish to produce pdf using LaTeX from folder
+(TeX, if available) using run.sh
+
+`octave main.m > output.tex`
+
+View file output.txt in any text editor, or main.pdf (in TeX folder) in pdf
+viewer.
