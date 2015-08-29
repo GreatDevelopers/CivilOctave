@@ -9,6 +9,12 @@ function matrixTeX(A, fmt, align)
   disp(['\section{',strrep(inputname(1),'_',' '),'}'])
   [m,n] = size(A);
 
+  if isvector(A)
+    myMatrix = 'Bmatrix';
+  else
+    myMatrix = 'bmatrix';
+  end
+
   if(nargin < 2)
 
     %
@@ -30,9 +36,9 @@ function matrixTeX(A, fmt, align)
   fmtstring2 = [' ',fmt,' \\\\ \n'];
 
   if(nargin < 3)
-    printf('\\[\n\\begin{bmatrix}\n');
+    printf('\\[\n\\begin{%s}\n',myMatrix);
   else
-    printf('\\[\n\\begin{bmatrix*}[%s]\n',align);
+    printf('\\[\n\\begin{%s*}[%s]\n',myMatrix,align);
   endif  
 
   for i = 1:m
@@ -46,17 +52,14 @@ function matrixTeX(A, fmt, align)
   end
 
   if(nargin < 3)
-    printf('\\end{bmatrix}\n\\]\n');
+    printf('\\end{%s}\n\\]\n',myMatrix);
   else
-    printf('\\end{bmatrix*}\n\\]\n');
+    printf('\\end{%s*}\n\\]\n',myMatrix);
   endif  
 
 
 
 end
-
-
-%load otl.m
 
 %% Initialisation [PRE-PROCESSING]
 
@@ -80,7 +83,7 @@ Time_period(Number_of_storeys, Number_of_storeys) = 0;
 
 %% Display input
 
-disp(['Number of storeys = ',num2str(Number_of_storeys)])
+disp(['\section{Given data} Number of storeys = ',num2str(Number_of_storeys)])
 %disp(Number_of_storeys)
 
 matrixTeX(Mass)
