@@ -86,7 +86,7 @@ Time_period(Number_of_storeys, Number_of_storeys) = 0;
 disp(['\section{Given data} Number of storeys = ',num2str(Number_of_storeys)])
 %disp(Number_of_storeys)
 
-matrixTeX(Mass)
+matrixTeX(Mass,'%10.4e','r')
 
 %matrixTeX(Stiffness_storey)
 
@@ -165,18 +165,18 @@ Modal_contribution = 100 / sum_modal_mass * Modal_mass;
 
 %% Echo processed data
 
-matrixTeX(Stiffness_matrix)
-matrixTeX(Eigen_vector)
-matrixTeX(Omega_square)
-matrixTeX(Frequency)
-matrixTeX(Time_periods)
-matrixTeX(Level_floor)
-matrixTeX(Modal_participation_factor)
+matrixTeX(Stiffness_matrix,'%10.4e','r')
+matrixTeX(Eigen_vector,'%10.4e','r')
+matrixTeX(Omega_square,'%10.4e','r')
+matrixTeX(Frequency,'%10.4e','r')
+matrixTeX(Time_periods,'%10.4e','r')
+matrixTeX(Level_floor,'%10.4e','r')
+matrixTeX(Modal_participation_factor,'%10.4e','r')
 
 disp(['g = ', num2str(Gravity_acceleration)])
 
-matrixTeX(Modal_mass)
-matrixTeX(Modal_contribution)
+matrixTeX(Modal_mass,'%10.4e','r')
+matrixTeX(Modal_contribution,'%10.4e','r')
 
 %% Plot mode shapes
 
