@@ -2,7 +2,43 @@
 clc
 clear
 
+
+load input.mat
+
+Soil_type
+Type_of_soil = '';
+
+for i = 1:Soil_type
+  Type_of_soil = strcat(Type_of_soil, 'I');
+end
+
+%Type_of_soil
+
 %% Function to write Matrix
+
+t1 = 0; t2 = 0; t3 = 0; t4 = 0; 
+eq3num = 0;
+
+function sag = funSaog(soilType, timePrd)
+  t2 = 0.10;
+  switch soilType
+    case 'I' 
+      t3 = 0.40; eq3num = 1.0;
+    case 'II'
+      t3 = 0.55; eq3num = 1.36;
+    case 'III'
+      t3 = 0.67; eq3num = 1.67;
+    otherwise
+      warning('Unexpected soil type')
+  end
+  if (timePrd < t2)
+    sag = 1. + 15 * timePrd;  
+  elseif (timePrd > t3)
+    sag = eq3num / timePrd; 
+  else
+    sag = 2.5;
+  end
+end
 
 function matrixTeX(A, fmt, align)
 
@@ -72,9 +108,6 @@ end
 %
 % Frequency is vector matrix while Omega is diagonal matrix.
 % Time_periods is vector matrix while Time_period is diagonal matrix.
-
-
-load input.mat
 
 %Variable initialisation
 Stiffness_matrix(Number_of_storeys, Number_of_storeys) = 0;
@@ -156,6 +189,12 @@ end
 
 Modal_contribution = 100 / sum_modal_mass * Modal_mass;
 
+for index_time = 1:Number_of_storeys
+  Sa_by_g(index_time,1) = funSaog(Type_of_soil, Time_periods(index_time,1) );
+  A_h(index_time,1) = Zone_factor / 2 * Importance_factor / ...
+    Response_reduction_factor * Sa_by_g(index_time,1);
+end  
+
 %% [POST-PROCESSING]
 
 %% Echo input data
@@ -177,6 +216,8 @@ disp(['g = ', num2str(Gravity_acceleration)])
 
 matrixTeX(Modal_mass,'%10.4e','r')
 matrixTeX(Modal_contribution,'%10.4e','r')
+matrixTeX(Sa_by_g,'%10.4e','r')
+matrixTeX(A_h,'%10.4e','r')
 
 %% Plot mode shapes
 
