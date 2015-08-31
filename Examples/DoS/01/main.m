@@ -5,7 +5,7 @@ clear
 
 load input.mat
 
-Soil_type
+%Soil_type
 Type_of_soil = '';
 
 for i = 1:Soil_type
@@ -110,8 +110,8 @@ end
 % Time_periods is vector matrix while Time_period is diagonal matrix.
 
 %Variable initialisation
-Stiffness_matrix(Number_of_storeys, Number_of_storeys) = 0;
-Time_period(Number_of_storeys, Number_of_storeys) = 0;
+Stiffness_matrix = zeros(Number_of_storeys, Number_of_storeys,'double');
+Time_period = zeros(Number_of_storeys, Number_of_storeys, 'double');
 
 
 %% Display input
@@ -195,6 +195,26 @@ for index_time = 1:Number_of_storeys
     Response_reduction_factor * Sa_by_g(index_time,1);
 end  
 
+for index_i = 1:Number_of_storeys
+  Design_lateral_force(:,index_i) = Mass * Eigen_vector(:,index_i) * A_h(index_i) * ...
+  Modal_participation_factor(index_i) * Gravity_acceleration;
+end
+
+Peak_shear_force = zeros(Number_of_storeys, Number_of_storeys,'double');
+for index_j = 1:Number_of_storeys
+  for index_i = 1:Number_of_storeys
+      for index_k = 1:Number_of_storeys - index_i +1
+     % index_m = index_k + index_i -1;
+      Peak_shear_force(index_i,index_j) = ...
+        Design_lateral_force(index_k + index_i -1,index_j) + ...
+        Peak_shear_force(index_i,index_j)
+        index_i
+        index_j
+        index_k
+    end    
+  end  
+end
+
 %% [POST-PROCESSING]
 
 %% Echo input data
@@ -218,6 +238,8 @@ matrixTeX(Modal_mass,'%10.4e','r')
 matrixTeX(Modal_contribution,'%10.4e','r')
 matrixTeX(Sa_by_g,'%10.4e','r')
 matrixTeX(A_h,'%10.4e','r')
+matrixTeX(Design_lateral_force,'%10.4e','r')
+matrixTeX(Peak_shear_force,'%10.4e','r')
 
 %% Plot mode shapes
 
@@ -232,8 +254,8 @@ plot([0 0], [0 Level_floor(Number_of_storeys)],'-k')
 hold off
 
 % saveas(plotHangle, 'ModeShape.eps','eps')
-print (plotHangle, '-color',  'ModeShape.eps')
-saveas(plotHangle, 'ModeShape.png','png')
-saveas(plotHangle, 'ModeShape.pdf')
+%print (plotHangle, '-color',  'ModeShape.eps')
+%saveas(plotHangle, 'ModeShape.png','png')
+%saveas(plotHangle, 'ModeShape.pdf')
 
 % End of file
