@@ -207,10 +207,10 @@ for index_j = 1:Number_of_storeys
      % index_m = index_k + index_i -1;
       Peak_shear_force(index_i,index_j) = ...
         Design_lateral_force(index_k + index_i -1,index_j) + ...
-        Peak_shear_force(index_i,index_j)
-        index_i
-        index_j
-        index_k
+        Peak_shear_force(index_i,index_j);
+        %index_i
+        %index_j
+        %index_k
     end    
   end  
 end
