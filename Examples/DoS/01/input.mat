@@ -29,6 +29,11 @@
 9.81
 
 
+# name: Modes_considered
+# type: scalar
+3
+
+
 # name: Mass
 # type: matrix
 # rows: 4
