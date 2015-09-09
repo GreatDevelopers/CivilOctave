@@ -16,6 +16,18 @@ load dataFile.mat
 
 %% [PROCESSING]
 
-
+phiPrime = atand(0.67 * tand(phi));
+NcPrime = interp1(Bearing_capacity_factors(:,1), ...
+  Bearing_capacity_factors(:,2), phiPrime);
+NqPrime = interp1(Bearing_capacity_factors(:,1), ...
+  Bearing_capacity_factors(:,3), phiPrime);
+NgPrime = interp1(Bearing_capacity_factors(:,1), ...
+  Bearing_capacity_factors(:,4), phiPrime);
+  
+% Output
+phiPrime
+NcPrime
+NqPrime
+NgPrime
 
 % End of file
