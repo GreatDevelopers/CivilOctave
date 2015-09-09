@@ -172,7 +172,6 @@ end
 
 Modal_contribution = 100 / sum_modal_mass * Modal_mass;
 
-Modes90 = 1;
 ModesContributionX = 0;
 Number_of_modes_to_be_considered = 0;
 
@@ -243,10 +242,23 @@ endif
 disp(' ')
 disp(['Modes Considered ', num2str(Modes_considered)])
 
+Storey_shear_force = zeros(Number_of_storeys, 3);
+
+for index_i = 1:Number_of_storeys
+  for index_j = 1:Modes_considered
+    Storey_shear_force(index_i,1) = Storey_shear_force(index_i,1) + ...
+      abs(Peak_shear_force(index_i,index_j));
+    Storey_shear_force(index_i,2) = Storey_shear_force(index_i,2) + ...
+      Peak_shear_force(index_i,index_j)^2;
+  end
+   Storey_shear_force(index_i,2) = sqrt(Storey_shear_force(index_i,2));
+end
+
 matrixTeX(Sa_by_g,'%10.4e','r')
 matrixTeX(A_h,'%10.4e','r')
 matrixTeX(Design_lateral_force,'%10.4e','r')
 matrixTeX(Peak_shear_force,'%10.4e','r')
+matrixTeX(Storey_shear_force,'%10.4e','r')
 
 %% Plot mode shapes
 
