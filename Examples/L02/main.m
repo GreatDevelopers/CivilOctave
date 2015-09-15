@@ -5,7 +5,7 @@ clear
 
 %% Initialisation [PRE-PROCESSING]
 
-% Follwing are the main variables used. No explaination is given as
+% Following are the main variables used. No explanation is given as
 %       names are self explanatory.
 % Number_of_nodes   
 % Number_of_elements

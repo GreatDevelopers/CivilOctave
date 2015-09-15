@@ -1,0 +1,20 @@
+% This package is used to added fancy heading
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{fancyheadings}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset{.01 cm}
+\fancyhead[LE,LO]{\leftmark}
+\fancyfoot[LE,LO]{\rightmark}
+\fancyfoot[RE,RO]{\thepage}
+
+% Setting width of header footer line
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{.5pt}
+
+% Adding margin
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{a4paper, left=1.5in, right=.75in, top=1in, bottom=.57in}

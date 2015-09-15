@@ -4,9 +4,34 @@
 4
 
 
+# name: Soil_type
+# type: scalar
+1
+
+
+# name: Importance_factor
+# type: scalar
+1
+
+
+# name: Response_reduction_factor
+# type: scalar
+5
+
+
+# name: Zone_factor
+# type: scalar
+0.24
+
+
 # name: Gravity_acceleration
 # type: scalar
 9.81
+
+
+# name: Modes_considered
+# type: scalar
+4
 
 
 # name: Mass

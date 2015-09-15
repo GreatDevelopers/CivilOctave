@@ -1,0 +1,27 @@
+% Setting up document class
+\documentclass{article}
+
+% Inputting usepackage.tex file
+	\input{usepackage.tex}
+
+% Main source of a document
+\begin{document}
+       
+% Inputting title.tex file
+	\input{title.tex}
+
+	\input{abstract.tex}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth,height=0.75\textheight,resolution=300,keepaspectratio]{../ModeShape.png}
+\caption{Mode shapes}
+\label{ModeShape}
+\end{figure}
+
+
+% Inputting chapter.tex file
+	\input{../output.tex}
+
+% Closing document
+\end{document}

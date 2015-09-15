@@ -1,0 +1,26 @@
+# Created by Octave 4.0.0, Wed Sep 09 21:31:41 2015 IST <hsrai@rai>
+# name: Cohesion
+# type: scalar
+0
+
+
+# name: Depth_of_footing
+# type: scalar
+1.5
+
+
+# name: Gamma
+# type: scalar
+1.76
+
+
+# name: Width_of_footing
+# type: scalar
+5
+
+
+# name: phi
+# type: scalar
+31
+
+

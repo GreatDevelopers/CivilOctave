@@ -12,4 +12,16 @@ in file `output.txt`, type command:
 
 `octave main.m > output.txt`
 
-View file output.txt in any text editor.
+or in following form, if we wish to produce pdf using LaTeX from folder
+(tex, if available) using run.sh
+
+`octave main.m > output.tex`
+
+View file output.txt in any text editor, or main.pdf (in tex folder) in pdf
+viewer.
+
+Authors acknowledge used of function written by Sachin Shanbhag.
+
+http://sachinashanbhag.blogspot.in/2012/11/exporting-matrices-in-octavematlab-to.html
+
+https://docs.google.com/open?id=0Bww3OZktvGQucmxnd1FJNElCVGc
