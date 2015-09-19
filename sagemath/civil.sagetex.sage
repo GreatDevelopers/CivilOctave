@@ -5,25 +5,44 @@ _st_ = sagetex.SageTeXProcessor('civil', version='2012/01/16 v2.3.3-69dcb0eb93de
 _st_.blockbegin()
 try:
   load('input.sage')
+  def funSaog(soilType, timePrd):
+     t1 = 0; t2 = 0; t3 = 0; t4 = 0
+     eq3num = 0
+     t2 = 0.10
+     if(soilType=='I'):
+         t3 = 0.40; eq3num = 1.0
+     elif (soilType=='II'):
+         t3 = 0.55; eq3num = 1.36;
+     elif(soilType=='III'):
+           t3 = 0.67; eq3num = 1.67;
+     else:
+           warning('Unexpected soil type')
+     if (timePrd < t2):
+         sag = 1. + 15 * timePrd
+     elif(timePrd > t3):
+         sag = eq3num / timePrd
+     else:
+         sag = 2.5
+     return sag
   latex.matrix_delimiters("[","]")
-  '''for storey_i in range(Number_of_storeys):
-   Stiffness_matrix(storey_i, storey_i) = Stiffness_storey(storey_i)
-   if (storey_i < Number_of_storeys ):
-   Stiffness_matrix(storey_i, storey_i) = Stiffness_matrix(storey_i, storey_i) + Stiffness_storey(storey_i + 1)
-   Stiffness_matrix(storey_i, storey_i + 1) = - Stiffness_storey(storey_i + 1)
-   Stiffness_matrix(storey_i + 1, storey_i) = Stiffness_matrix(storey_i, storey_i + 1)
-  '''
- 
- 
-  Stiffness_matrix=matrix([[18,-8,0,0],[-8,14,-6,0],[0,-6,12,-6],[0,0,-6,6]])
+  Stiffness_matrix=zero_matrix(QQ,4,4)
+  for storey_i in range(Number_of_storeys):
+   Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][0]
+   if (storey_i < Number_of_storeys-1):
+         Stiffness_matrix[storey_i, storey_i] = Stiffness_matrix[storey_i, storey_i] + Stiffness_storey[storey_i + 1][0]
+         Stiffness_matrix[storey_i, storey_i + 1] = - Stiffness_storey[storey_i + 1][0]
+         Stiffness_matrix[storey_i + 1, storey_i] = Stiffness_matrix[storey_i, storey_i + 1]
   w=var('w')
   q=Stiffness_matrix-(w^2)*Mass
   A=Stiffness_matrix*Mass.inverse()
   Omega_square=A.eigenvalues()
-  Time_period=list()
+  Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
   for i in range( Number_of_storeys):
    q=sqrt(Omega_square[i])
-   Time_period.append(n(2*pi)/q)
+   Time_period[i,i]=n(2*pi)/q
+  Time_periods=list()
+  for storey_i in range(Number_of_storeys):
+   Time_periods.append(Time_period[storey_i, storey_i])
   Frequency=list()
   for storey_i in range(Number_of_storeys):
    Frequency.append(sqrt(Omega_square[storey_i]))
@@ -48,52 +67,65 @@ try:
          Modal_participation_factor.append(P1/P2)
          Modal_mass.append((P1)**2/(P2))
          sum_modal_mass = sum_modal_mass + Modal_mass[j]
-  print(sum_modal_mass)
   Modal_contribution=list()
   for i in range(Number_of_storeys):
-   Modal_contribution.append(100 / sum_modal_mass *Modal_mass[i])
+   Modal_contribution.append((100 / sum_modal_mass )*Modal_mass[i])
+  Type_of_soil=''
+  for i in range (Soil_type):
+     Type_of_soil = Type_of_soil+'I'
+  Sa_by_g=zero_matrix(RR,4,4)
+  A_h=zero_matrix(RR,4,4)
+  for index_time in range(Number_of_storeys):
+   Sa_by_g[index_time,1] = funSaog(Type_of_soil, Time_periods[index_time])
+   A_h[index_time,1] = Zone_factor/2*Importance_factor /Response_reduction_factor * Sa_by_g[index_time,1]
+  Eigen_vector=matrix(X)
+  for index_i in range(Number_of_storeys):
+   Design_lateral_force[:,index_i] = Mass * Eigen_vector[:,index_i]* A_h[index_i] *Modal_participation_factor[index_i] * Gravity_acceleration;
+ 
+ 
+ 
  
  
  
  
  
 except:
- _st_.goboom(80)
+ _st_.goboom(111)
 _st_.blockend()
 try:
  _st_.inline(0, latex(q))
 except:
- _st_.goboom(82)
+ _st_.goboom(113)
 try:
  _st_.inline(1, latex(Stiffness_matrix))
 except:
- _st_.goboom(85)
+ _st_.goboom(116)
 try:
  _st_.inline(2, latex(Mass))
 except:
- _st_.goboom(86)
+ _st_.goboom(117)
 try:
  _st_.inline(3, latex(Omega_square))
 except:
- _st_.goboom(88)
+ _st_.goboom(119)
 try:
  _st_.inline(4, latex(Time_period))
 except:
- _st_.goboom(90)
+ _st_.goboom(121)
 try:
  _st_.inline(5, latex(X))
 except:
- _st_.goboom(92)
+ _st_.goboom(123)
 try:
  _st_.inline(6, latex(Modal_participation_factor))
 except:
- _st_.goboom(95)
+ _st_.goboom(126)
 try:
  _st_.inline(7, latex(Modal_mass))
 except:
- _st_.goboom(98)
+ _st_.goboom(129)
 try:
  _st_.inline(8, latex(Modal_contribution))
 except:
- _st_.goboom(101)
+ _st_.goboom(132)
 _st_.endofdoc()

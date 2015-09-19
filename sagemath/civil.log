@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.7.7)  19 SEP 2015 20:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.7.7)  19 SEP 2015 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -467,329 +467,215 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-Overfull \hbox (99.31828pt too wide) detected at line 83
+Overfull \hbox (99.31828pt too wide) detected at line 114
 []\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Stiffness[]atrix \OMS/cmsy/m/n/12 ^^@ \OML/
 cmm/m/it/12 w[]M\OT1/cmr/m/n/12 ] = []
  []
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 
+      
+? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.85 Stiffnessmatrix=$
-                      \sage{Stiffness_matrix}$
+l.118 
+      
 ? 
-Runaway argument?
-! Forbidden control sequence found while scanning use of \Hy@setref@link.
+! Missing } inserted.
 <inserted text> 
-                \par 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+                }
+l.118 
+      
 ? 
-! Missing \endgroup inserted.
+! Missing \cr inserted.
 <inserted text> 
-                \endgroup 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+                \cr 
+l.118 
+      
 ? 
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+! Missing { inserted.
+<inserted text> 
+                {
+l.118 
+      
 ? 
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 
+      
 ? 
 ! Missing $$ inserted.
 <to be read again> 
-                   \egroup 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-
-! LaTeX Error: \begin{eqnarray} on input line 84 ended by \end{array}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Extra \right.
-\r@@sageinline1 ...0 & -6 & 6 \end {array}\right ]
-                                                  }{}{}{}{}
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Extra }, or forgotten $.
-\r@@sageinline1 ... & -6 & 6 \end {array}\right ]}
-                                                  {}{}{}{}
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Undefined control sequence.
-\@setref ...y@setref@link #1\@empty \@empty \@nil 
-                                                  {#2}\fi 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Argument of \@firstoffive has an extra }.
-<inserted text> 
-                \par 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-Runaway argument?
-! Paragraph ended before \@firstoffive was complete.
-<to be read again> 
                    \par 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+l.118 
+      
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+l.119 Omega=\sage{Omega_square}
+                               
 ? 
-! Missing } inserted.
+! Missing $ inserted.
 <inserted text> 
-                }
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Too many }'s.
-<recently read> }
-                 
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
+                $
+l.119 Omega=\sage{Omega_square}
+                               
 ? 
 
-! LaTeX Error: \begin{document} ended by \end{NoHyper}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.85 Stiffnessmatrix=$\sage{Stiffness_matrix}
-                                             $
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.87 
-     
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.88 Omega=\sage{Omega_square}
-                              
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.88 Omega=\sage{Omega_square}
-                              
-? 
-
-Overfull \hbox (72.10124pt too wide) in paragraph at lines 88--89
+Overfull \hbox (66.2263pt too wide) in paragraph at lines 119--120
 []\OT1/cmr/m/n/12 Omega=$[]$ 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.90 Time_
-          period=\sage{Time_period}
+l.121 Time_
+           period=\sage{Time_period}
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.91 
-     
+l.122 
+      
 ? 
 
-Overfull \hbox (49.66856pt too wide) in paragraph at lines 90--91
+Overfull \hbox (106.84917pt too wide) in paragraph at lines 121--122
 []\OT1/cmr/m/n/12 Time$[]\OML/cmm/m/it/12 eriod \OT1/cmr/m/n/12 = []$ 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.92 Vector=\sage{X}
-                    
+l.123 Vector=\sage{X}
+                     
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.92 Vector=\sage{X}
-                    
+l.123 Vector=\sage{X}
+                     
 ? 
 
-Overfull \hbox (1668.56964pt too wide) in paragraph at lines 92--93
+Overfull \hbox (1668.56964pt too wide) in paragraph at lines 123--124
 []\OT1/cmr/m/n/12 Vector=$[]$ 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.95 ...cipation=\sage{Modal_participation_factor}
+l.126 ...ipation=\sage{Modal_participation_factor}
                                                   
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.95 ...cipation=\sage{Modal_participation_factor}
+l.126 ...ipation=\sage{Modal_participation_factor}
                                                   
 ? 
 
-Overfull \hbox (134.76309pt too wide) in paragraph at lines 95--96
+Overfull \hbox (134.76309pt too wide) in paragraph at lines 126--127
 []\OT1/cmr/m/n/12 Modalparticipation=$[]$ 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.98 Modalmass=\sage{Modal_mass}
-                                
+l.129 Modalmass=\sage{Modal_mass}
+                                 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.98 Modalmass=\sage{Modal_mass}
-                                
+l.129 Modalmass=\sage{Modal_mass}
+                                 
 ? 
 
-Overfull \hbox (99.64401pt too wide) in paragraph at lines 98--99
+Overfull \hbox (99.64401pt too wide) in paragraph at lines 129--130
 []\OT1/cmr/m/n/12 Modalmass=$[]$ 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.101 Modalcontri=\sage{Modal_contribution}
+l.132 Modalcontri=\sage{Modal_contribution}
                                            
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.101 Modalcontri=\sage{Modal_contribution}
+l.132 Modalcontri=\sage{Modal_contribution}
                                            
 ? 
 
-Overfull \hbox (98.5343pt too wide) in paragraph at lines 101--102
+Overfull \hbox (98.5343pt too wide) in paragraph at lines 132--133
 []\OT1/cmr/m/n/12 Modalcontri=$[]$ 
  []
 
-
-! LaTeX Error: Too many columns in eqnarray environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 \end{eqnarray}
+! Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.134 \end{eqnarray}
+                    
+? 
+! Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.134 \end{eqnarray}
+                    
+? 
+! Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.134 \end{eqnarray}
                     
 ? 
 ! Misplaced \cr.
 \@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
                                                   
-l.104 \end{eqnarray}
+l.134 \end{eqnarray}
                     
 ? 
-! Too many }'s.
+! Extra }, or forgotten \endgroup.
 \H@endeqnarray ->\@@eqncr \egroup 
                                   \global \advance \c@equation \m@ne $$\@ign...
-l.104 \end{eqnarray}
-                    
-? 
-
-! LaTeX Error: \begin{document} ended by \end{eqnarray}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 \end{eqnarray}
+l.134 \end{eqnarray}
                     
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.104 \end{eqnarray}
+l.134 \end{eqnarray}
                     
 ? 
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.104 \end{eqnarray}
-                    
-? 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.104 \end{eqnarray}
+l.134 \end{eqnarray}
                     
 ? 
 *********************************************************************
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
 [1]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (./civil.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 135.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
 Package rerunfilecheck Info: File `civil.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
  8240 strings out of 493835
  118328 string characters out of 6154345
- 217094 words of memory out of 5000000
+ 218383 words of memory out of 5000000
  11433 multiletter control sequences out of 15000+600000
  11183 words of font info for 44 fonts, out of 8000000 for 9000
  798 hyphenation exceptions out of 8191
- 36i,8n,34p,228b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,34p,228b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on civil.dvi (2 pages, 5824 bytes).
+Output written on civil.dvi (2 pages, 6196 bytes).
