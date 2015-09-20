@@ -102,9 +102,9 @@ for index_i in range(Number_of_storeys):
         Storey_shear_force[index_i,2] = Storey_shear_force[index_i,2] + Peak_shear_force[index_i,index_j]^2
     Storey_shear_force[index_i,2] = sqrt(Storey_shear_force[index_i,2])
 P=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
-B=zero_matrix(RR,4,4)
-for i in range(4):
-	for j in range(4):
+B=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
+for i in range(Number_of_storeys):
+	for j in range(Number_of_storeys):
 		q=Omega[i]
 		r=Omega[j]
 		B[i,j]=(r/q)
@@ -115,11 +115,11 @@ for i in range(Number_of_storeys):
 		q=8*(0.05)^2*(b)*B[i,j]^1.5
 		e=(1-B[i,j]^2)^2+4*(0.05)*B[i,j]*(b)^2
 		P[i,j]=q/e
-Lateral_force=zero_vector(RR,4)
+Lateral_force=zero_vector(RR,Number_of_storeys)
 for i in range(Number_of_storeys):
 	l=Peak_shear_force[:,i].transpose()*P*Peak_shear_force[:,i]
 	Lateral_force[i]=sqrt(l[0,0])
-Force=zero_vector(RR,4)
+Force=zero_vector(RR,Number_of_storeys)
 for i in range(Number_of_storeys):
 	if(i==Number_of_storeys-1):
 		Force[i]=Lateral_force[i]
