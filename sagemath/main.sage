@@ -35,6 +35,7 @@ w=var('w')
 q=Stiffness_matrix-(w^2)*Mass
 A=Stiffness_matrix*Mass.inverse()
 Omega_square=A.eigenvalues()
+
 Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range( Number_of_storeys):
 	q=sqrt(Omega_square[i])
@@ -44,7 +45,7 @@ for storey_i in range(Number_of_storeys):
 	Time_periods.append(Time_period[storey_i, storey_i])
 Frequency=list()
 for storey_i in range(Number_of_storeys):
-	Frequency.append(sqrt(Omega_square[storey_i]))
+	Frequency.append(sqrt(Omega_square[storey_i].n(digits=4)))
 z=A.eigenvectors_left()
 J=list()
 for x in range(Number_of_storeys):
@@ -68,7 +69,7 @@ for j in range(Number_of_storeys):
         sum_modal_mass = sum_modal_mass + Modal_mass[j]
 Modal_contribution=list()
 for i in range(Number_of_storeys):
-	Modal_contribution.append((100 / sum_modal_mass )*Modal_mass[i])
+	Modal_contribution.append(((100 / sum_modal_mass )*Modal_mass[i]).n(digits=4))
 Type_of_soil=''
 for i in range (Soil_type):
    Type_of_soil = Type_of_soil+'I'

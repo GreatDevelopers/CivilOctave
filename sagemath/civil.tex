@@ -29,39 +29,49 @@ load('main.sage')
 
 \end{sagesilent}
 \begin{equation}
-	[ Stiffness_matrix - w^2M]=\sage{q}
-\end{equation}
-
-\begin{equation}
-Stiffnessmatrix=\sage{Stiffness_matrix}
+	Number Of Storeys = \sage{Number_of_storeys}
 \end{equation}
 \begin{equation}
-Mass=\sage{Mass}
+	Stiffness Matrix=\sage{Stiffness_matrix}
 \end{equation}
 \begin{equation}
-Omega=\sage{Omega_square}
-\end{equation}
-\begin{equation}Time_period=\sage{Time_period}
-\end{equation}
-\begin{equation}Vector=\sage{XX}
+	Mass =\sage{Mass}
 \end{equation}
 \begin{equation}
-Modalparticipation=\sage{Modal_participation_factor}
+	Omega Square=\sage{matrix(Omega_square).n(digits=6)}
 \end{equation}
 \begin{equation}
-Modalmass=\sage{Modal_mass}
+	Time Period=\sage{Time_period.n(digits=4)}
 \end{equation}
 \begin{equation}
-Modalcontri=\sage{Modal_contribution}
+	Frequency=\sage{Frequency}
 \end{equation}
 \begin{equation}
-Design_lateral_force=\sage{Design_lateral_force}
+	Level Floor=\sage{matrix(Level_floor).n(digits=4)}
 \end{equation}
 \begin{equation}
-Peak_shear_force=\sage{Peak_shear_force}
+	Modal Participation Factor = \sage{matrix(Modal_participation_factor).n(digits=4)}
 \end{equation}
 \begin{equation}
-Storey_shear_force=\sage{Storey_shear_force}
+	Modal Mass =\sage{matrix(Modal_mass).n(digits=4)}
+\end{equation}
+\begin{equation}
+	Modal Contribution=\sage{matrix(Modal_contribution)}
+\end{equation}
+\begin{equation}
+	Sa By G =\sage{Sa_by_g.n(digits=4)}
+\end{equation}
+\begin{equation}
+	A H=\sage{A_h.n(digits=4)}
+\end{equation}
+\begin{equation}
+	Design Lateral force=\sage{Design_lateral_force.n(digits=4)}
+\end{equation}
+\begin{equation}
+	Peak Shear Force=\sage{Peak_shear_force.n(digits=4)}
+\end{equation}
+\begin{equation}
+	Storey Shear Force=\sage{Storey_shear_force.n(digits=4)}
 \end{equation}
 \end{document}
 

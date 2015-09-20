@@ -12,51 +12,63 @@ except:
  _st_.goboom(30)
 _st_.blockend()
 try:
- _st_.inline(0, latex(q))
+ _st_.inline(0, latex(Number_of_storeys))
 except:
  _st_.goboom(32)
 try:
  _st_.inline(1, latex(Stiffness_matrix))
 except:
- _st_.goboom(36)
+ _st_.goboom(35)
 try:
  _st_.inline(2, latex(Mass))
 except:
- _st_.goboom(39)
+ _st_.goboom(38)
 try:
- _st_.inline(3, latex(Omega_square))
+ _st_.inline(3, latex(matrix(Omega_square).n(digits=6)))
 except:
- _st_.goboom(42)
+ _st_.goboom(41)
 try:
- _st_.inline(4, latex(Time_period))
+ _st_.inline(4, latex(Time_period.n(digits=4)))
 except:
  _st_.goboom(44)
 try:
- _st_.inline(5, latex(XX))
+ _st_.inline(5, latex(Frequency))
 except:
- _st_.goboom(46)
+ _st_.goboom(47)
 try:
- _st_.inline(6, latex(Modal_participation_factor))
+ _st_.inline(6, latex(matrix(Level_floor).n(digits=4)))
 except:
- _st_.goboom(49)
+ _st_.goboom(50)
 try:
- _st_.inline(7, latex(Modal_mass))
+ _st_.inline(7, latex(matrix(Modal_participation_factor).n(digits=4)))
 except:
- _st_.goboom(52)
+ _st_.goboom(53)
 try:
- _st_.inline(8, latex(Modal_contribution))
+ _st_.inline(8, latex(matrix(Modal_mass).n(digits=4)))
 except:
- _st_.goboom(55)
+ _st_.goboom(56)
 try:
- _st_.inline(9, latex(Design_lateral_force))
+ _st_.inline(9, latex(matrix(Modal_contribution)))
 except:
- _st_.goboom(58)
+ _st_.goboom(59)
 try:
- _st_.inline(10, latex(Peak_shear_force))
+ _st_.inline(10, latex(Sa_by_g.n(digits=4)))
 except:
- _st_.goboom(61)
+ _st_.goboom(62)
 try:
- _st_.inline(11, latex(Storey_shear_force))
+ _st_.inline(11, latex(A_h.n(digits=4)))
 except:
- _st_.goboom(64)
+ _st_.goboom(65)
+try:
+ _st_.inline(12, latex(Design_lateral_force.n(digits=4)))
+except:
+ _st_.goboom(68)
+try:
+ _st_.inline(13, latex(Peak_shear_force.n(digits=4)))
+except:
+ _st_.goboom(71)
+try:
+ _st_.inline(14, latex(Storey_shear_force.n(digits=4)))
+except:
+ _st_.goboom(74)
 _st_.endofdoc()
