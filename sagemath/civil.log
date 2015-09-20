@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.7)  20 SEP 2015 17:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.7)  20 SEP 2015 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,21 +490,21 @@ e ignored
 l.72 \end{equation}
                     [1]
 *********************************************************************
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
  (./civil.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
 Package rerunfilecheck Info: File `civil.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 8622 strings out of 493834
- 123807 string characters out of 6154319
- 230538 words of memory out of 5000000
- 11780 multiletter control sequences out of 15000+600000
+ 8628 strings out of 493834
+ 123897 string characters out of 6154319
+ 230590 words of memory out of 5000000
+ 11783 multiletter control sequences out of 15000+600000
  11183 words of font info for 44 fonts, out of 8000000 for 9000
  798 hyphenation exceptions out of 8191
  36i,7n,34p,251b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -513,10 +513,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on civil.pdf (3 pages, 56996 bytes).
+Output written on civil.pdf (3 pages, 59551 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

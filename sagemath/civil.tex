@@ -70,8 +70,27 @@ load('main.sage')
 \begin{equation}
 	Peak Shear Force=\sage{Peak_shear_force.n(digits=4)}
 \end{equation}
+
+ABS-:
+
 \begin{equation}
-	Storey Shear Force=\sage{Storey_shear_force.n(digits=4)}
+	Storey Shear Force=\sage{Storey_shear_force[:,1].n(digits=4)}
+\end{equation}
+
+SRSS -:
+
+\begin{equation}
+	Storey Shear Force=\sage{Storey_shear_force[:,2].n(digits=4)}
+\end{equation}
+
+Complete Quadratic combination -:
+\begin{equation}
+	Lateral Force =\sage{Lateral_force.n(digits=4)}
+\end{equation}
+
+Maximum Absolute Response -:
+\begin{equation}
+	Force =\sage{Force.n(digits=4)}
 \end{equation}
 \end{document}
 

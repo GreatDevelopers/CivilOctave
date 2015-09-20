@@ -35,10 +35,11 @@ w=var('w')
 q=Stiffness_matrix-(w^2)*Mass
 A=Stiffness_matrix*Mass.inverse()
 Omega_square=A.eigenvalues()
-
+Omega=zero_vector(RR,4)
 Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range( Number_of_storeys):
 	q=sqrt(Omega_square[i])
+	Omega[i]=q
 	Time_period[i,i]=n(2*pi)/q
 Time_periods=list()
 for storey_i in range(Number_of_storeys):
@@ -100,4 +101,28 @@ for index_i in range(Number_of_storeys):
         Storey_shear_force[index_i,1] = Storey_shear_force[index_i,1] + abs(Peak_shear_force[index_i,index_j])
         Storey_shear_force[index_i,2] = Storey_shear_force[index_i,2] + Peak_shear_force[index_i,index_j]^2
     Storey_shear_force[index_i,2] = sqrt(Storey_shear_force[index_i,2])
-
+P=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
+B=zero_matrix(RR,4,4)
+for i in range(4):
+	for j in range(4):
+		q=Omega[i]
+		r=Omega[j]
+		B[i,j]=(r/q)
+B=B.n(digits=4)
+for i in range(Number_of_storeys):
+	for j in range(Number_of_storeys):
+		b=1+B[i,j]
+		q=8*(0.05)^2*(b)*B[i,j]^1.5
+		e=(1-B[i,j]^2)^2+4*(0.05)*B[i,j]*(b)^2
+		P[i,j]=q/e
+Lateral_force=zero_vector(RR,4)
+for i in range(Number_of_storeys):
+	l=Peak_shear_force[:,i].transpose()*P*Peak_shear_force[:,i]
+	Lateral_force[i]=sqrt(l[0,0])
+Force=zero_vector(RR,4)
+for i in range(Number_of_storeys):
+	if(i==Number_of_storeys-1):
+		Force[i]=Lateral_force[i]
+		break
+	Force[i]=Lateral_force[i]-Lateral_force[i+1]
+	

@@ -68,7 +68,19 @@ try:
 except:
  _st_.goboom(71)
 try:
- _st_.inline(14, latex(Storey_shear_force.n(digits=4)))
+ _st_.inline(14, latex(Storey_shear_force[:,1].n(digits=4)))
 except:
- _st_.goboom(74)
+ _st_.goboom(77)
+try:
+ _st_.inline(15, latex(Storey_shear_force[:,2].n(digits=4)))
+except:
+ _st_.goboom(83)
+try:
+ _st_.inline(16, latex(Lateral_force.n(digits=4)))
+except:
+ _st_.goboom(88)
+try:
+ _st_.inline(17, latex(Force.n(digits=4)))
+except:
+ _st_.goboom(93)
 _st_.endofdoc()
