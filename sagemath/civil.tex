@@ -23,114 +23,46 @@
 \maketitle
 	\end{titlepage}
 \begin{sagesilent}
- load('input.sage')	
- def funSaog(soilType, timePrd):
-    t1 = 0; t2 = 0; t3 = 0; t4 = 0
-    eq3num = 0
-    t2 = 0.10
-    if(soilType=='I'):
-        t3 = 0.40; eq3num = 1.0
-    elif (soilType=='II'):
-        t3 = 0.55; eq3num = 1.36;
-    elif(soilType=='III'):
-          t3 = 0.67; eq3num = 1.67;
-    else:
-          warning('Unexpected soil type')
-    if (timePrd < t2):
-        sag = 1. + 15 * timePrd
-    elif(timePrd > t3):
-        sag = eq3num / timePrd
-    else:
-        sag = 2.5
-    return sag
- latex.matrix_delimiters("[","]")
- Stiffness_matrix=zero_matrix(QQ,4,4)
- for storey_i in range(Number_of_storeys):
- 	Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][0]
- 	if (storey_i < Number_of_storeys-1):
-        Stiffness_matrix[storey_i, storey_i] = Stiffness_matrix[storey_i, storey_i] + Stiffness_storey[storey_i + 1][0]
-        Stiffness_matrix[storey_i, storey_i + 1] = - Stiffness_storey[storey_i + 1][0]
-        Stiffness_matrix[storey_i + 1, storey_i] = Stiffness_matrix[storey_i, storey_i + 1]
- w=var('w')
- q=Stiffness_matrix-(w^2)*Mass
- A=Stiffness_matrix*Mass.inverse()
- Omega_square=A.eigenvalues()
- Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
- for i in range( Number_of_storeys):
- 	q=sqrt(Omega_square[i])
- 	Time_period[i,i]=n(2*pi)/q
- Time_periods=list()
- for storey_i in range(Number_of_storeys):
-  Time_periods.append(Time_period[storey_i, storey_i])
- Frequency=list()
- for storey_i in range(Number_of_storeys):
- 	Frequency.append(sqrt(Omega_square[storey_i]))
- z=A.eigenvectors_left()
- J=list()
- for x in range(Number_of_storeys):
- 	q=matrix(z[x][1][0])
- 	J.append(q*Mass*q.transpose())
- X=list()
- for x in range(Number_of_storeys):
- 	q=matrix(z[x][1][0])
- 	X.append(q/sqrt(abs(J[x])))
- Modal_participation_factor=list()
- Modal_mass=list()
- sum_modal_mass=0
- for j in range(Number_of_storeys):
-        P1,P2=0,0
-        m=matrix(X[j])
-        for i in range(Number_of_storeys):
-            P1=P1+Mass[i][i]*m[0][i]
-            P2=P2+Mass[i][i]*(m[0][i])**2
-        Modal_participation_factor.append(P1/P2)
-        Modal_mass.append((P1)**2/(P2))
-        sum_modal_mass = sum_modal_mass + Modal_mass[j]
- Modal_contribution=list()
- for i in range(Number_of_storeys):
- 	Modal_contribution.append((100 / sum_modal_mass )*Modal_mass[i])
- Type_of_soil=''
- for i in range (Soil_type):
-    Type_of_soil = Type_of_soil+'I'
- Sa_by_g=zero_matrix(RR,4,4)
- A_h=zero_matrix(RR,4,4)
- for index_time in range(Number_of_storeys):
- 	Sa_by_g[index_time,1] = funSaog(Type_of_soil, Time_periods[index_time])
- 	A_h[index_time,1] = Zone_factor/2*Importance_factor /Response_reduction_factor * Sa_by_g[index_time,1]
- for index_i in range(Number_of_storeys):
- 	Design_lateral_force[:,index_i] = Mass * Eigen_vector[:,index_i]* A_h[index_i] *Modal_participation_factor[index_i] * Gravity_acceleration;
-
-
- 
-
-
-
+load('input.sage')
+load('main.sage')
 
 
 \end{sagesilent}
 \begin{equation}
 	[ Stiffness_matrix - w^2M]=\sage{q}
 \end{equation}
-\begin{eqnarray}
+
+\begin{equation}
 Stiffnessmatrix=\sage{Stiffness_matrix}
+\end{equation}
+\begin{equation}
 Mass=\sage{Mass}
-
+\end{equation}
+\begin{equation}
 Omega=\sage{Omega_square}
-
-Time_period=\sage{Time_period}
-
-Vector=\sage{X}
-
-
+\end{equation}
+\begin{equation}Time_period=\sage{Time_period}
+\end{equation}
+\begin{equation}Vector=\sage{XX}
+\end{equation}
+\begin{equation}
 Modalparticipation=\sage{Modal_participation_factor}
-
-
+\end{equation}
+\begin{equation}
 Modalmass=\sage{Modal_mass}
-
-
+\end{equation}
+\begin{equation}
 Modalcontri=\sage{Modal_contribution}
-
-\end{eqnarray}
+\end{equation}
+\begin{equation}
+Design_lateral_force=\sage{Design_lateral_force}
+\end{equation}
+\begin{equation}
+Peak_shear_force=\sage{Peak_shear_force}
+\end{equation}
+\begin{equation}
+Storey_shear_force=\sage{Storey_shear_force}
+\end{equation}
 \end{document}
 
 

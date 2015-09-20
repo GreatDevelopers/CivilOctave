@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.7.7)  19 SEP 2015 22:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.7.7)  20 SEP 2015 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -467,215 +467,68 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-Overfull \hbox (99.31828pt too wide) detected at line 114
-[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Stiffness[]atrix \OMS/cmsy/m/n/12 ^^@ \OML/
-cmm/m/it/12 w[]M\OT1/cmr/m/n/12 ] = []
+Overfull \hbox (56.61998pt too wide) detected at line 43
+[]\OML/cmm/m/it/12 Omega \OT1/cmr/m/n/12 = []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.118 
-      
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.118 
-      
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.118 
-      
-? 
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.118 
-      
-? 
-! Missing { inserted.
-<inserted text> 
-                {
-l.118 
-      
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.118 
-      
-? 
-! Missing $$ inserted.
-<to be read again> 
-                   \par 
-l.118 
-      
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.119 Omega=\sage{Omega_square}
-                               
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.119 Omega=\sage{Omega_square}
-                               
-? 
 
-Overfull \hbox (66.2263pt too wide) in paragraph at lines 119--120
-[]\OT1/cmr/m/n/12 Omega=$[]$ 
+Overfull \hbox (90.71126pt too wide) detected at line 45
+[]\OML/cmm/m/it/12 Time[]eriod \OT1/cmr/m/n/12 = []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.121 Time_
-           period=\sage{Time_period}
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.122 
-      
-? 
 
-Overfull \hbox (106.84917pt too wide) in paragraph at lines 121--122
-[]\OT1/cmr/m/n/12 Time$[]\OML/cmm/m/it/12 eriod \OT1/cmr/m/n/12 = []$ 
+Overfull \hbox (106.07892pt too wide) detected at line 47
+[]\OML/cmm/m/it/12 Vector \OT1/cmr/m/n/12 = []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.123 Vector=\sage{X}
-                     
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.123 Vector=\sage{X}
-                     
-? 
 
-Overfull \hbox (1668.56964pt too wide) in paragraph at lines 123--124
-[]\OT1/cmr/m/n/12 Vector=$[]$ 
+Overfull \hbox (127.52946pt too wide) detected at line 50
+[]\OML/cmm/m/it/12 Modalparticipation \OT1/cmr/m/n/12 = []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.126 ...ipation=\sage{Modal_participation_factor}
-                                                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.126 ...ipation=\sage{Modal_participation_factor}
-                                                  
-? 
 
-Overfull \hbox (134.76309pt too wide) in paragraph at lines 126--127
-[]\OT1/cmr/m/n/12 Modalparticipation=$[]$ 
+Overfull \hbox (92.93718pt too wide) detected at line 53
+[]\OML/cmm/m/it/12 Modalmass \OT1/cmr/m/n/12 = []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.129 Modalmass=\sage{Modal_mass}
-                                 
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.129 Modalmass=\sage{Modal_mass}
-                                 
-? 
 
-Overfull \hbox (99.64401pt too wide) in paragraph at lines 129--130
-[]\OT1/cmr/m/n/12 Modalmass=$[]$ 
+Overfull \hbox (91.13933pt too wide) detected at line 56
+[]\OML/cmm/m/it/12 Modalcontri \OT1/cmr/m/n/12 = []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.132 Modalcontri=\sage{Modal_contribution}
-                                           
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.132 Modalcontri=\sage{Modal_contribution}
-                                           
-? 
 
-Overfull \hbox (98.5343pt too wide) in paragraph at lines 132--133
-[]\OT1/cmr/m/n/12 Modalcontri=$[]$ 
+Overfull \hbox (164.38515pt too wide) detected at line 59
+[]\OML/cmm/m/it/12 Design[]ateral[]orce \OT1/cmr/m/n/12 = []
  []
 
-! Misplaced alignment tab character &.
-\reserved@a ->&
-                & &
-l.134 \end{eqnarray}
-                    
-? 
-! Misplaced alignment tab character &.
-\reserved@a ->& &
-                  &
-l.134 \end{eqnarray}
-                    
-? 
-! Misplaced alignment tab character &.
-\reserved@a ->& & &
-                   
-l.134 \end{eqnarray}
-                    
-? 
-! Misplaced \cr.
-\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
-                                                  
-l.134 \end{eqnarray}
-                    
-? 
-! Extra }, or forgotten \endgroup.
-\H@endeqnarray ->\@@eqncr \egroup 
-                                  \global \advance \c@equation \m@ne $$\@ign...
-l.134 \end{eqnarray}
-                    
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.134 \end{eqnarray}
-                    
-? 
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.134 \end{eqnarray}
-                    
-? 
-*********************************************************************
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
+
+Overfull \hbox (146.99887pt too wide) detected at line 62
+[]\OML/cmm/m/it/12 Peak[]hear[]orce \OT1/cmr/m/n/12 = []
+ []
+
 [1]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
+Overfull \hbox (109.05649pt too wide) detected at line 65
+[]\OML/cmm/m/it/12 Storey[]hear[]orce \OT1/cmr/m/n/12 = []
+ []
+
+*********************************************************************
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  (./civil.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 135.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 66.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
 Package rerunfilecheck Info: File `civil.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 8240 strings out of 493835
- 118328 string characters out of 6154345
- 218383 words of memory out of 5000000
- 11433 multiletter control sequences out of 15000+600000
+ 8243 strings out of 493835
+ 118372 string characters out of 6154345
+ 222349 words of memory out of 5000000
+ 11436 multiletter control sequences out of 15000+600000
  11183 words of font info for 44 fonts, out of 8000000 for 9000
  798 hyphenation exceptions out of 8191
- 36i,12n,34p,228b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,7n,34p,228b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on civil.dvi (2 pages, 6196 bytes).
+Output written on civil.dvi (3 pages, 10092 bytes).
