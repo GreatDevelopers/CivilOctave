@@ -31,71 +31,64 @@
 \left[4.504, 10.62, 16.85, 20.81\right]}{}{}{}{}}
 \newlabel{@sageinline6}{{%
 \left[\begin{array}{rrrr}
-0.0914411013787156 & 0.184807216246257 & 0.279044742000588 & 0.0679621200653882 \\
-0.187195694728417 & 0.207346959995166 & -0.164226700033078 & -0.141402266785769 \\
-0.264243869632717 & -0.0744599538481001 & -0.133705012147917 & 0.395921535611530 \\
-0.305561403107646 & -0.300271172910561 & 0.149833960244888 & -0.209807616656631
+4.000 & 8.000 & 12.00 & 16.00
 \end{array}\right]}{}{}{}{}}
 \newlabel{@sageinline7}{{%
 \left[\begin{array}{rrrr}
-4.000 & 8.000 & 12.00 & 16.00
+4.508 & 1.638 & 0.9830 & 0.1569
 \end{array}\right]}{}{}{}{}}
 \newlabel{@sageinline8}{{%
 \left[\begin{array}{rrrr}
-4.508 & 1.638 & 0.9830 & 0.1569
+20.32 & 2.684 & 0.9664 & 0.02463
 \end{array}\right]}{}{}{}{}}
 \newlabel{@sageinline9}{{%
 \left[\begin{array}{rrrr}
-20.32 & 2.684 & 0.9664 & 0.02463
-\end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline10}{{%
-\left[\begin{array}{rrrr}
 84.69 & 11.18 & 4.027 & 0.1026
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline11}{{%
+\newlabel{@sageinline10}{{%
 \left[\begin{array}{rrrr}
 0.0000 & 0.7168 & 0.0000 & 0.0000 \\
 0.0000 & 1.690 & 0.0000 & 0.0000 \\
 0.0000 & 2.500 & 0.0000 & 0.0000 \\
 0.0000 & 2.500 & 0.0000 & 0.0000
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline12}{{%
+\newlabel{@sageinline11}{{%
 \left[\begin{array}{rrrr}
 0.0000 & 0.01720 & 0.0000 & 0.0000 \\
 0.0000 & 0.04057 & 0.0000 & 0.0000 \\
 0.0000 & 0.06000 & 0.0000 & 0.0000 \\
 0.0000 & 0.06000 & 0.0000 & 0.0000
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline13}{{%
+\newlabel{@sageinline12}{{%
 \left[\begin{array}{rrrr}
 0.5565 & 0.9640 & 1.292 & 0.05022 \\
 1.139 & 1.082 & -0.7602 & -0.1045 \\
 0.8042 & -0.1942 & -0.3095 & 0.1463 \\
 0.9299 & -0.7831 & 0.3468 & -0.07752
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline14}{{%
+\newlabel{@sageinline13}{{%
 \left[\begin{array}{rrrr}
 3.430 & 1.068 & 0.5688 & 0.01450 \\
 2.873 & 0.1042 & -0.7229 & -0.03573 \\
 1.734 & -0.9773 & 0.03733 & 0.06877 \\
 0.9299 & -0.7831 & 0.3468 & -0.07752
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline15}{{%
+\newlabel{@sageinline14}{{%
 \left[\begin{array}{r}
 5.082 \\
 3.736 \\
 2.818 \\
 2.137
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline16}{{%
+\newlabel{@sageinline15}{{%
 \left[\begin{array}{r}
 3.637 \\
 2.965 \\
 1.992 \\
 1.267
 \end{array}\right]}{}{}{}{}}
-\newlabel{@sageinline17}{{%
+\newlabel{@sageinline16}{{%
 \left(1.370,\,0.4258,\,0.1860,\,0.01156\right)}{}{}{}{}}
-\newlabel{@sageinline18}{{%
+\newlabel{@sageinline17}{{%
 \left(0.9445,\,0.2398,\,0.1744,\,0.01156\right)}{}{}{}{}}
-%10aaa25ff72e8da17f48a932a3c16ffd% md5sum of corresponding .sage file (minus "goboom" and pause/unpause lines)
+%ed4587e711c78010a9329683ea33317b% md5sum of corresponding .sage file (minus "goboom" and pause/unpause lines)
