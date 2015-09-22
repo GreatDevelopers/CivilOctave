@@ -36,51 +36,59 @@ try:
 except:
  _st_.goboom(47)
 try:
- _st_.inline(6, latex(matrix(Level_floor).n(digits=4)))
+ _st_.inline(6, latex(XX))
 except:
  _st_.goboom(50)
 try:
- _st_.inline(7, latex(matrix(Modal_participation_factor).n(digits=4)))
+ _st_.inline(7, latex(matrix(Level_floor).n(digits=4)))
 except:
  _st_.goboom(53)
 try:
- _st_.inline(8, latex(matrix(Modal_mass).n(digits=4)))
+ _st_.plot(0, format='notprovided', _p_=q)
 except:
- _st_.goboom(56)
+ _st_.goboom(55)
 try:
- _st_.inline(9, latex(matrix(Modal_contribution)))
+ _st_.inline(8, latex(matrix(Modal_participation_factor).n(digits=4)))
 except:
- _st_.goboom(59)
+ _st_.goboom(57)
 try:
- _st_.inline(10, latex(Sa_by_g.n(digits=4)))
+ _st_.inline(9, latex(matrix(Modal_mass).n(digits=4)))
 except:
- _st_.goboom(62)
+ _st_.goboom(60)
 try:
- _st_.inline(11, latex(A_h.n(digits=4)))
+ _st_.inline(10, latex(matrix(Modal_contribution)))
 except:
- _st_.goboom(65)
+ _st_.goboom(63)
 try:
- _st_.inline(12, latex(Design_lateral_force.n(digits=4)))
+ _st_.inline(11, latex(Sa_by_g.n(digits=4)))
 except:
- _st_.goboom(68)
+ _st_.goboom(66)
 try:
- _st_.inline(13, latex(Peak_shear_force.n(digits=4)))
+ _st_.inline(12, latex(A_h.n(digits=4)))
 except:
- _st_.goboom(71)
+ _st_.goboom(69)
 try:
- _st_.inline(14, latex(Storey_shear_force[:,1].n(digits=4)))
+ _st_.inline(13, latex(Design_lateral_force.n(digits=4)))
 except:
- _st_.goboom(77)
+ _st_.goboom(72)
 try:
- _st_.inline(15, latex(Storey_shear_force[:,2].n(digits=4)))
+ _st_.inline(14, latex(Peak_shear_force.n(digits=4)))
 except:
- _st_.goboom(83)
+ _st_.goboom(75)
 try:
- _st_.inline(16, latex(Lateral_force.n(digits=4)))
+ _st_.inline(15, latex(Storey_shear_force[:,1].n(digits=4)))
 except:
- _st_.goboom(88)
+ _st_.goboom(81)
 try:
- _st_.inline(17, latex(Force.n(digits=4)))
+ _st_.inline(16, latex(Storey_shear_force[:,2].n(digits=4)))
 except:
- _st_.goboom(93)
+ _st_.goboom(87)
+try:
+ _st_.inline(17, latex(Lateral_force.n(digits=4)))
+except:
+ _st_.goboom(92)
+try:
+ _st_.inline(18, latex(Force.n(digits=4)))
+except:
+ _st_.goboom(97)
 _st_.endofdoc()

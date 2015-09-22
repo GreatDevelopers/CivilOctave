@@ -125,4 +125,13 @@ for i in range(Number_of_storeys):
 		Force[i]=Lateral_force[i]
 		break
 	Force[i]=Lateral_force[i]-Lateral_force[i+1]
-	
+p=list()
+for i in range(Number_of_storeys):
+	for j in range(Number_of_storeys):
+		if(j==0):
+			p.append(line([(XX[j,i],Level_floor[j]),(0,0)],color=hue(0.4 + 0.6*(i/10))))
+		else:
+			p.append(line([(XX[j,i],Level_floor[j]),(XX[j-1,i],Level_floor[j-1])],marker='o',color=hue(0.4 + 0.6*(i/10))))
+q=plot([])
+for r in range(16):
+	q= q+p[r]

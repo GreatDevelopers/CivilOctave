@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.7)  22 SEP 2015 14:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.7)  21 SEP 2015 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**civil.tex
-(./civil.tex
+**civil1.tex
+(./civil1.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 43 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -125,10 +125,9 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \c@ST@cmdline=\count102
 \sagetexindent=\skip43
 
-(./civil.sagetex.sout)
+No file civil1.sagetex.sout.
 \sagecommandlineskip=\skip44
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
@@ -368,8 +367,8 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \@PDFmpht=\dimen133
 \c@slide=\count134
 \c@slideoverlay=\count135
-) Excluding 'screen' comment. (./civil.aux)
-\openout1 = `civil.aux'.
+) Excluding 'screen' comment. (./civil1.aux)
+\openout1 = `civil1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -416,7 +415,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \ST@sf=\write6
-\openout6 = `civil.sagetex.sage'.
+\openout6 = `civil1.sagetex.sage'.
 
 
 *geometry* driver: auto-detecting
@@ -467,9 +466,9 @@ LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 LaTeX Info: Redefining \nameref on input line 20.
 
-(./civil.out) (./civil.out)
+(./civil1.out) (./civil1.out)
 \@outlinefile=\write7
-\openout7 = `civil.out'.
+\openout7 = `civil1.out'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
@@ -483,56 +482,101 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (102.72894pt too wide) detected at line 51
-[]\OML/cmm/m/it/12 vector \OT1/cmr/m/n/12 = []
- []
 
-<sage-plots-for-civil.tex/plot-0.pdf, id=11, 564.85358pt x 421.6864pt>
-File: sage-plots-for-civil.tex/plot-0.pdf Graphic file (type pdf)
+LaTeX Warning: Reference `@sageinline0' on page 1 undefined on input line 32.
 
-<use sage-plots-for-civil.tex/plot-0.pdf>
-Package pdftex.def Info: sage-plots-for-civil.tex/plot-0.pdf used on input line
- 55.
-(pdftex.def)             Requested size: 423.63913pt x 316.26402pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
+LaTeX Warning: Reference `@sageinline1' on page 1 undefined on input line 35.
 
- []
 
+LaTeX Warning: Reference `@sageinline2' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Reference `@sageinline3' on page 1 undefined on input line 41.
+
+
+LaTeX Warning: Reference `@sageinline4' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Reference `@sageinline5' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Reference `@sageinline6' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Reference `@sageinline7' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Reference `@sageinline8' on page 1 undefined on input line 56.
+
+
+LaTeX Warning: Reference `@sageinline9' on page 1 undefined on input line 59.
+
+
+LaTeX Warning: Reference `@sageinline10' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Reference `@sageinline11' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Reference `@sageinline12' on page 1 undefined on input line 68.
+
+
+LaTeX Warning: Reference `@sageinline13' on page 1 undefined on input line 71.
+
+
+LaTeX Warning: Reference `@sageinline14' on page 1 undefined on input line 77.
+
+
+LaTeX Warning: Reference `@sageinline15' on page 1 undefined on input line 83.
+
+
+LaTeX Warning: Reference `@sageinline16' on page 1 undefined on input line 88.
+
+
+LaTeX Warning: Reference `@sageinline17' on page 1 undefined on input line 93.
+
+*********************************************************************
+
+Package sagetex Warning: there were undefined Sage formulas and/or plots.
+Run Sage on civil1.sagetex.sage, and then run LaTeX on civil1.tex again.
+
+*********************************************************************
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.56 \begin{equation}
-                      [1] [2 <./sage-plots-for-civil.tex/plot-0.pdf>]
-*********************************************************************
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
- (./civil.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
-Package rerunfilecheck Info: File `civil.out' has not changed.
+l.95 \end{document}
+                    [1]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
+ (./civil1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
+Package rerunfilecheck Info: File `civil1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 8636 strings out of 493834
- 124117 string characters out of 6154319
- 226956 words of memory out of 5000000
- 11787 multiletter control sequences out of 15000+600000
- 11183 words of font info for 44 fonts, out of 8000000 for 9000
+ 8631 strings out of 493834
+ 123926 string characters out of 6154319
+ 222785 words of memory out of 5000000
+ 11786 multiletter control sequences out of 15000+600000
+ 12111 words of font info for 47 fonts, out of 8000000 for 9000
  798 hyphenation exceptions out of 8191
- 36i,7n,34p,251b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+ 36i,6n,34p,252b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on civil.pdf (4 pages, 65339 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on civil1.pdf (2 pages, 50011 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 23 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 54 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
