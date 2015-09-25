@@ -1,0 +1,31 @@
+<html><head><title>hello</title></head>
+<body><br><br>
+<h3 class="header">Mass</h3><br>
+<h3>{{ Number_of_storeys }}</h3>
+
+
+
+
+
+{% for choice in question.choice_set.all%}
+    <div class="row">
+    for col in range(1,2):
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="mass',row,col,'" placeholder="m',row,col,'">
+    </div>
+{% endfor %}
+<h3 class="header">Height storey</h3>
+for row in range(int(lists['Number_of_storeys'])):
+    <div class="row">
+    for col in range(1,2):
+        <input class="input-lg col-md-12 col-sm-12 space" type="text" name="height',row,col,'" placeholder="h',row,col,'">
+    </div>
+
+<h3 class="header">Stiffness storey</h3>
+for row in range(int(lists['Number_of_storeys'])):
+    <div class="row">
+    for col in range(1, 2):
+        <input class="input-lg col-md-12 col-sm-12 space" type="text" name="stiff',row,col,'" placeholder="s',row,col,'">
+    </div>
+ <input class="btn-lg btn-success" type="submit" value="Submit">
+<br></body></html>
+

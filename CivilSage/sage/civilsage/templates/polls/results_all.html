@@ -1,0 +1,14 @@
+<a href="/"><h1>HOME PAGE</h1></a>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+    <li>{{question}}
+    	{% for choice in question.choice_set.all %}
+    <ul><li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li></ul>
+    </li>
+{% endfor %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
