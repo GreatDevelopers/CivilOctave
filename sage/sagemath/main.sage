@@ -19,6 +19,13 @@ def funSaog(soilType, timePrd):
     return sag
 load('input.sage')
 latex.matrix_delimiters("[","]")
+Mass=matrix(Number_of_storeys,Number_of_storeys)
+for i in range(Number_of_storeys):
+    for j in range(Number_of_storeys):
+        if(i==j):
+            Mass[i,j]=mass[j,0]
+        else:
+            Mass[i,j]=0
 Level_floor=zero_vector(RR,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
     Level_floor[storey_i] = Height_storey[storey_i,0]
