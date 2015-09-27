@@ -1,30 +1,29 @@
 <html><head><title>hello</title></head>
 <body><br><br>
-{% load mytag %}
-{% num_range 4 as some_range %}
+
 {% load static %}
+
+
 <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.cs' %}">
 <style>body{background-color:#111;}.space{margin-top:10px;}.header{text-align:center;color:#DADADA;}</style>
 <form action="{% url 'last' %}" method="get">
 <h3 class="header">Mass</h3><br>
-{% for row in some_range%}
+{% for row in  number_of_storeys %}
     <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="mass,{{row}}" placeholder="m,{{row}}">
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="mass,{{forloop.counter0}}" placeholder="m,{{forloop.counter0}}">
     </div>
 {% endfor %}
 <h3 class="header">Height storey</h3>
-{% for row in some_range%}
-	<h>{{row}}</h>
+{% for row in number_of_storeys %}
     <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="Height_storey,{{row}}" placeholder="h,{{row}}">
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="Height_storey,{{forloop.counter0}}" placeholder="h,{{forloop.counter0}}">
     </div>
 {% endfor %}
 
 <h3 class="header">Stiffness storey</h3>
-{% for row in some_range%}
-	<h>{{row}}</h>
+{% for row in number_of_storeys %}
     <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="Stiffness_storey,{{row}}" placeholder="s,{{row}}">
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" type="text" name="Stiffness_storey,{{forloop.counter0}}" placeholder="s,{{forloop.counter0}}">
     </div>
 {% endfor %}
  <input class="btn-lg btn-success" type="submit" value="Submit">

@@ -32,8 +32,11 @@ def matrix(request):
 		file.write(lists[var])
 		file.write('\n\n\n')
 	file.close()
+	number_of_storeys=list()
+	for a in range(int(lists['Number_of_storeys'])):
+		number_of_storeys.append('a')
 	request.session['Number_of_storeys'] = lists['Number_of_storeys']
-	return render( request,'civilsage/matrix.html')
+	return render( request,'civilsage/matrix.html',{'number_of_storeys': number_of_storeys})
 
 
 def last(request):
@@ -52,7 +55,7 @@ def last(request):
 	 			d=request.GET.get(temp)
 				file.write(d)
 				file.write(']')
-				if( i!=3):
+				if( i!=int(num)-1):
 					file.write(',') 
 			file.write(']) \n\n\n\n')
 	file.close()

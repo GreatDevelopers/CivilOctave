@@ -31,7 +31,7 @@ for storey_i in range(Number_of_storeys):
     Level_floor[storey_i] = Height_storey[storey_i,0]
     if(storey_i>0):
         Level_floor[storey_i]= Level_floor[storey_i]+Level_floor[storey_i - 1]
-Stiffness_matrix=zero_matrix(QQ,4,4)
+Stiffness_matrix=zero_matrix(QQ,Number_of_storeys,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
 	Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][0]
 	if (storey_i < Number_of_storeys-1):
@@ -42,7 +42,7 @@ w=var('w')
 q=Stiffness_matrix-(w^2)*Mass
 A=Stiffness_matrix*Mass.inverse()
 Omega_square=A.eigenvalues()
-Omega=zero_vector(RR,4)
+Omega=zero_vector(RR,Number_of_storeys)
 Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range( Number_of_storeys):
 	q=sqrt(Omega_square[i])
@@ -81,16 +81,16 @@ for i in range(Number_of_storeys):
 Type_of_soil=''
 for i in range (Soil_type):
    Type_of_soil = Type_of_soil+'I'
-Sa_by_g=zero_matrix(RR,4,4)
-A_h=zero_matrix(RR,4,4)
+Sa_by_g=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
+A_h=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_time in range(Number_of_storeys):
 	Sa_by_g[index_time,1] = funSaog(Type_of_soil, Time_periods[index_time])
  	A_h[index_time,1] = Zone_factor/2*Importance_factor /Response_reduction_factor * Sa_by_g[index_time,1]
 
-XX=zero_matrix(RR,4,4)
+XX=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range(Number_of_storeys):
     XX[:,i]=matrix(RR,X[i]).transpose()
-Design_lateral_force=zero_matrix(RR,4,4)
+Design_lateral_force=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_i in range(Number_of_storeys):
     q=Mass*XX[:,index_i]
     z=q*matrix(A_h[index_i] *Modal_participation_factor[index_i]* Gravity_acceleration)
@@ -140,5 +140,5 @@ for i in range(Number_of_storeys):
 		else:
 			p.append(line([(XX[j,i],Level_floor[j]),(XX[j-1,i],Level_floor[j-1])],marker='o',color=hue(0.4 + 0.6*(i/10))))
 q=plot([])
-for r in range(16):
+for r in range(Number_of_storeys^2):
 	q= q+p[r]
