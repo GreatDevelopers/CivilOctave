@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.7)  27 SEP 2015 07:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.7)  27 SEP 2015 09:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -219,15 +219,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 24.
 
-<sage-plots-for-civil.tex/plot-0.pdf, id=8, 566.59679pt x 421.6864pt>
+<sage-plots-for-civil.tex/plot-0.pdf, id=8, 566.41318pt x 421.6864pt>
 File: sage-plots-for-civil.tex/plot-0.pdf Graphic file (type pdf)
 
 <use sage-plots-for-civil.tex/plot-0.pdf>
 Package pdftex.def Info: sage-plots-for-civil.tex/plot-0.pdf used on input line
  42.
-(pdftex.def)             Requested size: 424.94655pt x 316.26402pt.
+(pdftex.def)             Requested size: 424.80884pt x 316.26402pt.
 
-Overfull \hbox (37.55763pt too wide) in paragraph at lines 41--43
+Overfull \hbox (37.41992pt too wide) in paragraph at lines 41--43
  []
  []
 
@@ -237,7 +237,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--43
  []
 
 [1] [2 <./sage-plots-for-civil.tex/plot-0.pdf>]
-Overfull \hbox (3.93153pt too wide) detected at line 63
+Overfull \hbox (9.80647pt too wide) detected at line 63
 \OML/cmm/m/it/12 DesignLateralforce \OT1/cmr/m/n/12 = [] [][][][]
  []
 
@@ -246,7 +246,7 @@ Overfull \hbox (3.93153pt too wide) detected at line 63
 Here is how much of TeX's memory you used:
  3300 strings out of 493834
  48316 string characters out of 6154319
- 119101 words of memory out of 5000000
+ 119105 words of memory out of 5000000
  6552 multiletter control sequences out of 15000+600000
  7588 words of font info for 27 fonts, out of 8000000 for 9000
  798 hyphenation exceptions out of 8191
@@ -256,9 +256,9 @@ m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on civil.pdf (4 pages, 66503 bytes).
+Output written on civil.pdf (4 pages, 66761 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)

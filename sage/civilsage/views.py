@@ -10,7 +10,8 @@ from django.template import RequestContext, loader
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_protect
-
+from django.utils.encoding import smart_str
+	
 Number=0
 
 
@@ -60,5 +61,8 @@ def last(request):
 			file.write(']) \n\n\n\n')
 	file.close()
 	os.system('sh sagemath/civil.sh')
-	return render_to_response('civilsage/last.html', c)
+	f=open('sagemath/civil.pdf')
+	response = HttpResponse(f,content_type='application/pdf')
+	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
+	return response
 
