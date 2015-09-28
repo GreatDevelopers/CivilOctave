@@ -22,7 +22,9 @@ def matrix(request):
 	global Number
 	c = {}
 	c=request.POST.get('Number_of_storeys')
-	lists = {'Soil_type':'','Number_of_storeys':'','Importance_factor':'','Response_reduction_factor':'','Zone_factor':'','Gravity_acceleration':'','Modes_considered':''}
+	lists = {'Soil_type':'','Number_of_storeys':'','Importance_factor':''
+	,'Response_reduction_factor':'','Zone_factor':'','Gravity_acceleration':''
+	,'Modes_considered':''}
 	values = {}
 	for var in lists.keys():
 		lists[var]=request.POST.get(var)
@@ -31,13 +33,14 @@ def matrix(request):
 		file.write(var)
 		file.write('=')
 		file.write(lists[var])
-		file.write('\n\n\n')
+		file.write('\n')
 	file.close()
 	number_of_storeys=list()
 	for a in range(int(lists['Number_of_storeys'])):
 		number_of_storeys.append('a')
 	request.session['Number_of_storeys'] = lists['Number_of_storeys']
-	return render( request,'civilsage/matrix.html',{'number_of_storeys': number_of_storeys})
+	return render( request,'civilsage/matrix.html'
+	,{'number_of_storeys': number_of_storeys})
 
 
 def last(request):
@@ -50,7 +53,7 @@ def last(request):
 			file.write(j)
 			file.write('=matrix([')
 			for i in range(int(num)):
-				temp = j+','+str(i)
+				temp = j+str(i)
 	 			c[temp]=request.GET.get(temp)
 	 			file.write('[')
 	 			d=request.GET.get(temp)
@@ -58,7 +61,7 @@ def last(request):
 				file.write(']')
 				if( i!=int(num)-1):
 					file.write(',') 
-			file.write(']) \n\n\n\n')
+			file.write('])\n')
 	file.close()
 	os.system('sh sagemath/civil.sh')
 	f=open('sagemath/civil.pdf')
