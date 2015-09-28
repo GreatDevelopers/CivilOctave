@@ -38,9 +38,13 @@ Stiffness_matrix=zero_matrix(QQ,Number_of_storeys,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
 	Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][_sage_const_0 ]
 	if (storey_i < Number_of_storeys-_sage_const_1 ):
-		Stiffness_matrix[storey_i, storey_i] = Stiffness_matrix[storey_i, storey_i] + Stiffness_storey[storey_i + _sage_const_1 ][_sage_const_0 ]
-		Stiffness_matrix[storey_i, storey_i + _sage_const_1 ] = - Stiffness_storey[storey_i + _sage_const_1 ][_sage_const_0 ]
-		Stiffness_matrix[storey_i + _sage_const_1 , storey_i] = Stiffness_matrix[storey_i, storey_i + _sage_const_1 ]
+		Stiffness_matrix[storey_i, storey_i]=(
+			Stiffness_matrix[storey_i, storey_i] + 
+			Stiffness_storey[storey_i + _sage_const_1 ][_sage_const_0 ])
+		Stiffness_matrix[storey_i, storey_i + _sage_const_1 ]=(
+		-Stiffness_storey[storey_i + _sage_const_1 ][_sage_const_0 ])
+		Stiffness_matrix[storey_i + _sage_const_1 , storey_i]=(
+		Stiffness_matrix[storey_i, storey_i + _sage_const_1 ])
 w=var('w')
 q=Stiffness_matrix-(w**_sage_const_2 )*Mass
 A=Stiffness_matrix*Mass.inverse()
@@ -88,7 +92,9 @@ Sa_by_g=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 A_h=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_time in range(Number_of_storeys):
 	Sa_by_g[index_time,_sage_const_1 ] = funSaog(Type_of_soil, Time_periods[index_time])
- 	A_h[index_time,_sage_const_1 ] = Zone_factor/_sage_const_2 *Importance_factor /Response_reduction_factor * Sa_by_g[index_time,_sage_const_1 ]
+ 	A_h[index_time,_sage_const_1 ]= (
+ 	Zone_factor/_sage_const_2 *Importance_factor/
+ 	Response_reduction_factor * Sa_by_g[index_time,_sage_const_1 ])
 
 XX=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range(Number_of_storeys):
@@ -96,20 +102,25 @@ for i in range(Number_of_storeys):
 Design_lateral_force=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_i in range(Number_of_storeys):
     q=Mass*XX[:,index_i]
-    z=q*matrix(A_h[index_i] *Modal_participation_factor[index_i]* Gravity_acceleration)
+    z=q*matrix(A_h[index_i]*Modal_participation_factor[index_i]*
+    Gravity_acceleration)
     Design_lateral_force[: , index_i]=z[:,_sage_const_1 ]
 Peak_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
 for index_j in range(Number_of_storeys):
 	for index_i in range(Number_of_storeys):
 		for index_k in range(Number_of_storeys - index_i ):
-			Peak_shear_force[index_i,index_j]=Design_lateral_force[index_k + index_i,index_j] + Peak_shear_force[index_i,index_j]
+			Peak_shear_force[index_i,index_j]=(
+			Design_lateral_force[index_k + index_i,index_j] +
+			 Peak_shear_force[index_i,index_j])
 Storey_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
 if (Modes_considered == _sage_const_0 ):
   Modes_considered = Number_of_modes_to_be_considered
 for index_i in range(Number_of_storeys):
     for index_j in range(Modes_considered):
-        Storey_shear_force[index_i,_sage_const_1 ]=Storey_shear_force[index_i,_sage_const_1 ] + abs(Peak_shear_force[index_i,index_j])
-        Storey_shear_force[index_i,_sage_const_2 ]=Storey_shear_force[index_i,_sage_const_2 ] + Peak_shear_force[index_i,index_j]**_sage_const_2 
+        Storey_shear_force[index_i,_sage_const_1 ]=(Storey_shear_force[index_i,_sage_const_1 ]+ 
+        abs(Peak_shear_force[index_i,index_j]))
+        Storey_shear_force[index_i,_sage_const_2 ]=(Storey_shear_force[index_i,_sage_const_2 ]+
+        Peak_shear_force[index_i,index_j]**_sage_const_2 )
     Storey_shear_force[index_i,_sage_const_2 ] = sqrt(Storey_shear_force[index_i,_sage_const_2 ])
 P=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 B=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
@@ -139,9 +150,12 @@ p=list()
 for i in range(Number_of_storeys):
 	for j in range(Number_of_storeys):
 		if(j==_sage_const_0 ):
-			p.append(line([(XX[j,i],Level_floor[j]),(_sage_const_0 ,_sage_const_0 )],color=hue(_sage_const_0p4  + _sage_const_0p6 *(i/_sage_const_10 ))))
+			p.append(line([(XX[j,i],Level_floor[j]),(_sage_const_0 ,_sage_const_0 )],
+			color=hue(_sage_const_0p4  + _sage_const_0p6 *(i/_sage_const_10 ))))
 		else:
-			p.append(line([(XX[j,i],Level_floor[j]),(XX[j-_sage_const_1 ,i],Level_floor[j-_sage_const_1 ])],marker='o',color=hue(_sage_const_0p4  + _sage_const_0p6 *(i/_sage_const_10 ))))
+			p.append(line([(XX[j,i],Level_floor[j]),
+			(XX[j-_sage_const_1 ,i],Level_floor[j-_sage_const_1 ])],marker='o',
+			color=hue(_sage_const_0p4  + _sage_const_0p6 *(i/_sage_const_10 ))))
 q=plot([])
 for r in range(Number_of_storeys**_sage_const_2 ):
 	q= q+p[r]
