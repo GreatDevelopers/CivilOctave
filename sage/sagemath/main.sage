@@ -30,7 +30,8 @@ Level_floor=zero_vector(RR,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
     Level_floor[storey_i] = Height_storey[storey_i,0]
     if(storey_i>0):
-        Level_floor[storey_i]= Level_floor[storey_i]+Level_floor[storey_i - 1]
+        Level_floor[storey_i]=(
+        Level_floor[storey_i]+Level_floor[storey_i-1])
 Stiffness_matrix=zero_matrix(QQ,Number_of_storeys,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
 	Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][0]
@@ -81,14 +82,16 @@ for j in range(Number_of_storeys):
         sum_modal_mass = sum_modal_mass + Modal_mass[j]
 Modal_contribution=list()
 for i in range(Number_of_storeys):
-	Modal_contribution.append(((100 / sum_modal_mass )*Modal_mass[i]).n(digits=4))
+	Modal_contribution.append(
+	((100 / sum_modal_mass )*Modal_mass[i]).n(digits=4))
 Type_of_soil=''
 for i in range (Soil_type):
    Type_of_soil = Type_of_soil+'I'
 Sa_by_g=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 A_h=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_time in range(Number_of_storeys):
-	Sa_by_g[index_time,1] = funSaog(Type_of_soil, Time_periods[index_time])
+	Sa_by_g[index_time,1] = funSaog(
+	Type_of_soil, Time_periods[index_time])
  	A_h[index_time,1]= (
  	Zone_factor/2*Importance_factor/
  	Response_reduction_factor * Sa_by_g[index_time,1])
@@ -109,7 +112,7 @@ for index_j in range(Number_of_storeys):
 			Peak_shear_force[index_i,index_j]=(
 			Design_lateral_force[index_k + index_i,index_j] +
 			 Peak_shear_force[index_i,index_j])
-Storey_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
+Storey_shear_force = zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 if (Modes_considered == 0):
   Modes_considered = Number_of_modes_to_be_considered
 for index_i in range(Number_of_storeys):

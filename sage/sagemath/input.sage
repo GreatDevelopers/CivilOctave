@@ -8,6 +8,3 @@ Zone_factor=0.24
 mass=matrix([[8],[8],[4],[4]])
 Height_storey=matrix([[4],[4],[4],[4]])
 Stiffness_storey=matrix([[1000],[800],[600],[600]])
-mass=matrix([[8],[8],[4],[4]])
-Height_storey=matrix([[4],[4],[4],[4]])
-Stiffness_storey=matrix([[1000],[800],[600],[600]])
