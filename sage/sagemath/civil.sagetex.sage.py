@@ -34,11 +34,11 @@ try:
 except:
  _st_.goboom(_sage_const_37 )
 try:
- _st_.inline(_sage_const_5 , latex(Frequency))
+ _st_.inline(_sage_const_5 , latex(Omega.n(digits=_sage_const_4 )))
 except:
  _st_.goboom(_sage_const_40 )
 try:
- _st_.plot(_sage_const_0 , format='notprovided', _p_=q)
+ _st_.plot(_sage_const_0 , format='notprovided', _p_=Graph)
 except:
  _st_.goboom(_sage_const_42 )
 try:

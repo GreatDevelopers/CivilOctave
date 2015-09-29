@@ -32,11 +32,11 @@ try:
 except:
  _st_.goboom(37)
 try:
- _st_.inline(5, latex(Frequency))
+ _st_.inline(5, latex(Omega.n(digits=4)))
 except:
  _st_.goboom(40)
 try:
- _st_.plot(0, format='notprovided', _p_=q)
+ _st_.plot(0, format='notprovided', _p_=Graph)
 except:
  _st_.goboom(42)
 try:

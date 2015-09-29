@@ -28,7 +28,7 @@
 0.0000 & 0.0000 & 0.0000 & 0.3019
 \end{array}\right]}{}{}{}{}}
 \newlabel{@sageinline5}{{%
-\left[4.504, 10.62, 16.85, 20.81\right]}{}{}{}{}}
+\left(4.504,\,10.62,\,16.85,\,20.81\right)}{}{}{}{}}
 \newlabel{@sageinline6}{{%
 \left[\begin{array}{rrrr}
 4.000 & 8.000 & 12.00 & 16.00
@@ -91,4 +91,4 @@
 \left(1.370,\,0.4258,\,0.1860,\,0.01156\right)}{}{}{}{}}
 \newlabel{@sageinline17}{{%
 \left(0.9445,\,0.2398,\,0.1744,\,0.01156\right)}{}{}{}{}}
-%ed4587e711c78010a9329683ea33317b% md5sum of corresponding .sage file (minus "goboom" and pause/unpause lines)
+%1549830520691aef72c24138bd683a61% md5sum of corresponding .sage file (minus "goboom" and pause/unpause lines)

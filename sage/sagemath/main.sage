@@ -1,3 +1,9 @@
+
+'''
+function to pick values according to
+type of soil selected
+...
+'''
 def funSaog(soilType, timePrd):
     t1 = 0; t2 = 0; t3 = 0; t4 = 0
     eq3num = 0
@@ -17,8 +23,15 @@ def funSaog(soilType, timePrd):
     else:
         sag = 2.5
     return sag
+
+
+'''main program ... '''
+#loading input variables from input.sage
 load('input.sage')
+#changing style of brackets for latex output
 latex.matrix_delimiters("[","]")
+
+#converting mass in diagonal matrix
 Mass=matrix(Number_of_storeys,Number_of_storeys)
 for i in range(Number_of_storeys):
     for j in range(Number_of_storeys):
@@ -26,12 +39,16 @@ for i in range(Number_of_storeys):
             Mass[i,j]=mass[j,0]
         else:
             Mass[i,j]=0
+            
+#calculating level of floors from its height
 Level_floor=zero_vector(RR,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
     Level_floor[storey_i] = Height_storey[storey_i,0]
     if(storey_i>0):
         Level_floor[storey_i]=(
         Level_floor[storey_i]+Level_floor[storey_i-1])
+        
+#calcutaing stiffness matrix from stiffness of storeys
 Stiffness_matrix=zero_matrix(QQ,Number_of_storeys,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
 	Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][0]
@@ -43,10 +60,14 @@ for storey_i in range(Number_of_storeys):
 		-Stiffness_storey[storey_i + 1][0])
 		Stiffness_matrix[storey_i + 1, storey_i]=(
 		Stiffness_matrix[storey_i, storey_i + 1])
+
+#calculating eginvalues
 w=var('w')
 q=Stiffness_matrix-(w^2)*Mass
 A=Stiffness_matrix*Mass.inverse()
 Omega_square=A.eigenvalues()
+
+#calculating W and time period
 Omega=zero_vector(RR,Number_of_storeys)
 Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range( Number_of_storeys):
@@ -56,9 +77,11 @@ for i in range( Number_of_storeys):
 Time_periods=list()
 for storey_i in range(Number_of_storeys):
 	Time_periods.append(Time_period[storey_i, storey_i])
-Frequency=list()
-for storey_i in range(Number_of_storeys):
-	Frequency.append(sqrt(Omega_square[storey_i].n(digits=4)))
+#Frequency=list()
+#for storey_i in range(Number_of_storeys):
+	#Frequency.append(sqrt(Omega_square[storey_i].n(digits=4)))
+
+#calculating egin vectors
 z=A.eigenvectors_left()
 J=list()
 for x in range(Number_of_storeys):
@@ -68,6 +91,16 @@ X=list()
 for x in range(Number_of_storeys):
 	q=matrix(z[x][1][0])
 	X.append(q/sqrt(abs(J[x])))
+	
+#ModesContributionX = 0;
+#Number_of_modes_to_be_considered = 0;
+#for Number_of_modes_to_be_considered in range(Number_of_storeys):
+	#ModesContributionX = ModesContributionX+Modal_contribution(Number_of_modes_to_be_considered); 
+ 	#if (ModesContributionX > 90):
+ 		#break;
+			
+#calculating Modal participation factor ,sum of modal mass 
+#and modal mass 
 Modal_participation_factor=list()
 Modal_mass=list()
 sum_modal_mass=0
@@ -80,10 +113,14 @@ for j in range(Number_of_storeys):
         Modal_participation_factor.append(P1/P2)
         Modal_mass.append((P1)**2/(P2))
         sum_modal_mass = sum_modal_mass + Modal_mass[j]
+
+#calculating modal contribution of each storey
 Modal_contribution=list()
 for i in range(Number_of_storeys):
 	Modal_contribution.append(
 	((100 / sum_modal_mass )*Modal_mass[i]).n(digits=4))
+
+#getting type of soil and dependent variables
 Type_of_soil=''
 for i in range (Soil_type):
    Type_of_soil = Type_of_soil+'I'
@@ -96,6 +133,7 @@ for index_time in range(Number_of_storeys):
  	Zone_factor/2*Importance_factor/
  	Response_reduction_factor * Sa_by_g[index_time,1])
 
+#calculating design lateral force 
 XX=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range(Number_of_storeys):
     XX[:,i]=matrix(RR,X[i]).transpose()
@@ -105,6 +143,8 @@ for index_i in range(Number_of_storeys):
     z=q*matrix(A_h[index_i]*Modal_participation_factor[index_i]*
     Gravity_acceleration)
     Design_lateral_force[: , index_i]=z[:,1]
+
+#calculating Peak shear force 
 Peak_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
 for index_j in range(Number_of_storeys):
 	for index_i in range(Number_of_storeys):
@@ -112,6 +152,8 @@ for index_j in range(Number_of_storeys):
 			Peak_shear_force[index_i,index_j]=(
 			Design_lateral_force[index_k + index_i,index_j] +
 			 Peak_shear_force[index_i,index_j])
+			 
+#storey shear force for all modes 
 Storey_shear_force = zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 if (Modes_considered == 0):
   Modes_considered = Number_of_modes_to_be_considered
@@ -146,6 +188,8 @@ for i in range(Number_of_storeys):
 		Force[i]=Lateral_force[i]
 		break
 	Force[i]=Lateral_force[i]-Lateral_force[i+1]
+
+#making graph for eigen vectors of calculated
 p=list()
 for i in range(Number_of_storeys):
 	for j in range(Number_of_storeys):
@@ -156,6 +200,7 @@ for i in range(Number_of_storeys):
 			p.append(line([(XX[j,i],Level_floor[j]),
 			(XX[j-1,i],Level_floor[j-1])],marker='o',
 			color=hue(0.4 + 0.6*(i/10))))
-q=plot([])
+Graph=plot([])
 for r in range(Number_of_storeys^2):
-	q= q+p[r]
+	Graph= Graph+p[r]
+
