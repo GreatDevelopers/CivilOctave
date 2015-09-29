@@ -1,10 +1,15 @@
-<html><head><title>hello</title></head>
-<body><br><br>
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>hello</title>
 
 {% load static %}
+<link rel="stylesheet" type="text/css" 
+href="{% static 'bootstrap.min.css' %}">
+</head>
+<body><br><br>
 
-
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
 <form action="{% url 'last' %}" method="get">
 <h3 class="header">Mass</h3><br>
 {% for row in  number_of_storeys %}
@@ -31,6 +36,8 @@
         placeholder="s{{forloop.counter0}}">
     </div>
 {% endfor %}
+</form>
  <input class="btn-lg btn-success" type="submit" value="Submit">
-<br></body></html>
+<br>
+</body></html>
 

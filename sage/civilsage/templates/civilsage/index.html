@@ -1,32 +1,40 @@
-<html>
+<!doctype html>
+
+<html lang="en">
 <head>
 <title>hello</title>
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-</head><body><br><br>
+<!-- css work-->
+<link rel="stylesheet" type="text/css" 
+href="{% static 'bootstrap.min.css' %}">
+</head>
+<!-- content block start-->
+<body>
 <h1 class="header">CivilOctave</h1>
+<!-- form to get values from the user-->
+<div class="input-group" style="width:340px;
+text-align:center;margin:0 auto;">
 <form action="{% url 'matrix' %}" method="post">{% csrf_token %}
-<div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
-	<input class="form-control input-lg space" type="text" name="Soil_type" 
-		placeholder="Soil_type"><br>
+	<input class="form-control input-lg space" type="text" 
+	name="Soil_type" placeholder="Soil_type"><br>
     <input class="form-control input-lg space" type="text" 
     name="Number_of_storeys" placeholder="Number_of_storeys"><br>
     <input class=" form-control input-lg space" type="text" 
     name="Importance_factor" placeholder="Importance_factor"><br>
     <input class=" form-control input-lg space" type="text" 
-    name="Response_reduction_factor" placeholder="Response_reduction_factor">
-    <br>
-    <input class=" form-control input-lg space" type="text" name="Zone_factor"
-    placeholder="Zone_factor"><br>
+    name="Response_reduction_factor" 
+    placeholder="Response_reduction_factor"><br>
+    <input class=" form-control input-lg space" type="text"
+    name="Zone_factor" placeholder="Zone_factor"><br>
     <input class=" form-control input-lg space" type="text" 
     name="Gravity_acceleration" placeholder="Gravity_acceleration"><br>
     <input class=" form-control input-lg space" type="text" 
     name="Modes_considered" placeholder="Modes_considered"><br>
-<br><br>
     <input class="btn-lg btn-success" type="submit" value="Submit">
-    </div>
-    </form>
-<br>
+	</form>  
+	<!-- form end-->
+</div>
+<!--div end  -->
 </body>
-
+<!-- end content block-->
 </html>
