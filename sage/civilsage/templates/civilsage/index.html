@@ -23,8 +23,9 @@ text-align:center;margin:0 auto;">
 	</select>
 	<br>
 	NUMBER OF STOREYS:<br>
-    <input class="form-control input-lg space" type="text" 
-    name="Number_of_storeys" placeholder="Number_of_storeys" required>
+    <input class="form-control input-lg space" type="number" 
+    name="Number_of_storeys" placeholder="Number_of_storeys" required 
+    min=0 max =10000>
     <br>
     IMPORTANCE FACTOR:<br>
     <input class=" form-control input-lg space" type="text" 
@@ -33,17 +34,19 @@ text-align:center;margin:0 auto;">
     RESPONSE REDUCTION FACTOR:<br>
     <input class=" form-control input-lg space" type="text" 
     name="Response_reduction_factor" 
-    placeholder="Response_reduction_factor" required ><br>
+    placeholder="Response_reduction_factor" required min= max=><br>
     ZOME FACTOR:<br>
     <input class=" form-control input-lg space" type="text"
-    name="Zone_factor" placeholder="Zone_factor" required ><br>
+    name="Zone_factor" placeholder="Zone_factor" required min= max= >
+    <br>
     GRAVITY ACCELERATION:<br>
-    <input class=" form-control input-lg space" type="text" 
+    <input class=" form-control input-lg space" type="number" 
     name="Gravity_acceleration" placeholder="Gravity_acceleration"
-    value="9.8" required ><br>
+    value="9.8" min= max= required ><br>
     MODES CONSIDERED:<br>
-    <input class=" form-control input-lg space" type="text" 
-    name="Modes_considered" placeholder="Modes_considered" ><br>
+    <input class=" form-control input-lg space" type="number" 
+    name="Modes_considered" placeholder="Modes_considered" min= 0 max =>
+    <br>
     <input class="btn-lg btn-success" type="submit" value="Submit">
 	</form>  
 	<!-- form end-->

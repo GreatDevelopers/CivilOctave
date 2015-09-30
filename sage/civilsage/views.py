@@ -26,13 +26,13 @@ def matrix(request):
 	,'Zone_factor':'','Gravity_acceleration':''
 	,'Modes_considered':''}
 	
+	#name of directory of specific user
+	name=''
+	
 	#getting input using tags
 	for var in lists.keys():
 		lists[var]=request.POST.get(var)
-	
-	#name of directory of specific user
-	name='amar'
-	
+		name=name+str(lists[var])
 	#creating directory from base directory
 	command='cp -r sagemath '+name
 	os.popen(command)
@@ -56,6 +56,7 @@ def matrix(request):
 	
 	#puting list created for iteration in request
 	request.session['Number_of_storeys'] = lists['Number_of_storeys']
+	request.session['name']=name
 	#calling matrix.html
 	return render( request,'civilsage/matrix.html'
 	,{'number_of_storeys': number_of_storeys})
@@ -72,7 +73,7 @@ def last(request):
 	num = request.session.get('Number_of_storeys')
 	
 	#creating directory from base directory
-	name='amar'
+	name =str(request.session.get('name'))
 	
 	#opening input.sage to append remaining inputs
 	command=name+'/input.sage'
@@ -98,7 +99,14 @@ def last(request):
 				file.write(',')
 		file.write('])\n')
 	file.close()
-	
+	#creating and writing sh file for background processing
+	command=name+'/civil.sh'
+	file=open(command,'w')
+	command='cd '+name
+	file.write(command)
+	file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
+	file.write('pdflatex civil.tex\n')
+	file.close()
 	#calling sh file for background processing
 	command='sh '+name+'/civil.sh'
 	os.system(command)
