@@ -5,3 +5,6 @@ Gravity_acceleration=9.8
 Modes_considered=4
 Response_reduction_factor=5
 Zone_factor=0.24
+mass=matrix([[8],[8],[4],[4]])
+Height_storey=matrix([[4],[4],[4],[4]])
+Stiffness_storey=matrix([[1000],[800],[600],[600]])
