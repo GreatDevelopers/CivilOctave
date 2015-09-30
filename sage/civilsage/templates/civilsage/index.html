@@ -15,21 +15,35 @@ href="{% static 'bootstrap.min.css' %}">
 <div class="input-group" style="width:340px;
 text-align:center;margin:0 auto;">
 <form action="{% url 'matrix' %}" method="post">{% csrf_token %}
-	<input class="form-control input-lg space" type="text" 
-	name="Soil_type" placeholder="Soil_type"><br>
+	SOIL TYPE:<br>
+	<select name = "Soil_type">
+	<option value="1">I</options> 
+	<option value="2">II</options>
+	<option value="3">III</options>
+	</select>
+	<br>
+	NUMBER OF STOREYS:<br>
     <input class="form-control input-lg space" type="text" 
-    name="Number_of_storeys" placeholder="Number_of_storeys"><br>
+    name="Number_of_storeys" placeholder="Number_of_storeys" required>
+    <br>
+    IMPORTANCE FACTOR:<br>
     <input class=" form-control input-lg space" type="text" 
-    name="Importance_factor" placeholder="Importance_factor"><br>
+    name="Importance_factor" placeholder="Importance_factor" required>
+    <br>
+    RESPONSE REDUCTION FACTOR:<br>
     <input class=" form-control input-lg space" type="text" 
     name="Response_reduction_factor" 
-    placeholder="Response_reduction_factor"><br>
+    placeholder="Response_reduction_factor" required ><br>
+    ZOME FACTOR:<br>
     <input class=" form-control input-lg space" type="text"
-    name="Zone_factor" placeholder="Zone_factor"><br>
+    name="Zone_factor" placeholder="Zone_factor" required ><br>
+    GRAVITY ACCELERATION:<br>
     <input class=" form-control input-lg space" type="text" 
-    name="Gravity_acceleration" placeholder="Gravity_acceleration"><br>
+    name="Gravity_acceleration" placeholder="Gravity_acceleration"
+    value="9.8" required ><br>
+    MODES CONSIDERED:<br>
     <input class=" form-control input-lg space" type="text" 
-    name="Modes_considered" placeholder="Modes_considered"><br>
+    name="Modes_considered" placeholder="Modes_considered" ><br>
     <input class="btn-lg btn-success" type="submit" value="Submit">
 	</form>  
 	<!-- form end-->

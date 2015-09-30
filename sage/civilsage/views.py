@@ -1,5 +1,3 @@
-
-
 # Create your views here.
 import os
 from django.http import HttpResponse
