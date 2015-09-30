@@ -1,4 +1,4 @@
-cd sagemath
+cd amar
 latex civil.tex
 sage civil.sagetex.sage
 pdflatex civil.tex

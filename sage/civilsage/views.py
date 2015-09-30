@@ -29,9 +29,17 @@ def matrix(request):
 	#getting input using tags
 	for var in lists.keys():
 		lists[var]=request.POST.get(var)
-		
+	
+	#name of directory of specific user
+	name='amar'
+	
+	#creating directory from base directory
+	command='cp -r sagemath '+name
+	os.popen(command)
+
 	#opening file for writing
-	file = open('sagemath/input.sage', 'w')
+	command=name+'/input.sage'
+	file = open(command, 'w')
 	
 	#writing variables in input.sage file with syntax of sage 
 	for var in lists.keys():
@@ -62,8 +70,13 @@ def last(request):
 
 	#getting numbers of storeys 
 	num = request.session.get('Number_of_storeys')
+	
+	#creating directory from base directory
+	name='amar'
+	
 	#opening input.sage to append remaining inputs
-	file=open('sagemath/input.sage','a')
+	command=name+'/input.sage'
+	file=open(command,'a')
 	#list of basic tags
 	var = ['mass','Height_storey','Stiffness_storey']
 	
@@ -87,10 +100,12 @@ def last(request):
 	file.close()
 	
 	#calling sh file for background processing
-	os.system('sh sagemath/civil.sh')
+	command='sh '+name+'/civil.sh'
+	os.system(command)
 	
 	#opening creted pdf to display to user
-	f=open('sagemath/civil.pdf')
+	command=name+'/civil.pdf'
+	f=open(command)
 	#sending pdf as response
 	response = HttpResponse(f,content_type='application/pdf')
 	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
