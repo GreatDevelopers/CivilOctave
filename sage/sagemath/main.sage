@@ -154,16 +154,17 @@ for index_j in range(Number_of_storeys):
 			 Peak_shear_force[index_i,index_j])
 			 
 #storey shear force for all modes 
-Storey_shear_force = zero_matrix(RR,Number_of_storeys,Number_of_storeys)
+Storey_shear_force = zero_vector(RR,Number_of_storeys)
+Storey_shear_force2 = zero_vector(RR,Number_of_storeys)
 if (Modes_considered == 0):
   Modes_considered = Number_of_modes_to_be_considered
 for index_i in range(Number_of_storeys):
     for index_j in range(Modes_considered):
-        Storey_shear_force[index_i,1]=(Storey_shear_force[index_i,1]+ 
+        Storey_shear_force[index_i]=(Storey_shear_force[index_i]+ 
         abs(Peak_shear_force[index_i,index_j]))
-        Storey_shear_force[index_i,2]=(Storey_shear_force[index_i,2]+
+        Storey_shear_force2[index_i]=(Storey_shear_force2[index_i]+
         Peak_shear_force[index_i,index_j]^2)
-    Storey_shear_force[index_i,2] = sqrt(Storey_shear_force[index_i,2])
+    Storey_shear_force2[index_i] = sqrt(Storey_shear_force2[index_i])
 P=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 B=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for i in range(Number_of_storeys):

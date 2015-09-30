@@ -74,11 +74,11 @@ try:
 except:
  _st_.goboom(_sage_const_65 )
 try:
- _st_.inline(_sage_const_14 , latex(Storey_shear_force[:,_sage_const_1 ].n(digits=_sage_const_4 )))
+ _st_.inline(_sage_const_14 , latex(Storey_shear_force[:].n(digits=_sage_const_4 )))
 except:
  _st_.goboom(_sage_const_71 )
 try:
- _st_.inline(_sage_const_15 , latex(Storey_shear_force[:,_sage_const_2 ].n(digits=_sage_const_4 )))
+ _st_.inline(_sage_const_15 , latex(Storey_shear_force2[:].n(digits=_sage_const_4 )))
 except:
  _st_.goboom(_sage_const_77 )
 try:

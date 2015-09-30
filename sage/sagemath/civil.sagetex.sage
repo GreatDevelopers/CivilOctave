@@ -72,11 +72,11 @@ try:
 except:
  _st_.goboom(65)
 try:
- _st_.inline(14, latex(Storey_shear_force[:,1].n(digits=4)))
+ _st_.inline(14, latex(Storey_shear_force[:].n(digits=4)))
 except:
  _st_.goboom(71)
 try:
- _st_.inline(15, latex(Storey_shear_force[:,2].n(digits=4)))
+ _st_.inline(15, latex(Storey_shear_force2[:].n(digits=4)))
 except:
  _st_.goboom(77)
 try:
