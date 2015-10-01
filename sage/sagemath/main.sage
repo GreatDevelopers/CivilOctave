@@ -39,7 +39,6 @@ for i in range(Number_of_storeys):
             Mass[i,j]=mass[j,0]
         else:
             Mass[i,j]=0
-            
 #calculating level of floors from its height
 Level_floor=zero_vector(RR,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
@@ -60,7 +59,6 @@ for storey_i in range(Number_of_storeys):
 		-Stiffness_storey[storey_i + 1][0])
 		Stiffness_matrix[storey_i + 1, storey_i]=(
 		Stiffness_matrix[storey_i, storey_i + 1])
-
 #calculating eginvalues
 w=var('w')
 q=Stiffness_matrix-(w^2)*Mass
@@ -80,18 +78,18 @@ for storey_i in range(Number_of_storeys):
 #Frequency=list()
 #for storey_i in range(Number_of_storeys):
 	#Frequency.append(sqrt(Omega_square[storey_i].n(digits=4)))
-
 #calculating egin vectors
 z=A.eigenvectors_left()
-J=list()
+J=zero_vector(RR,Number_of_storeys)
 for x in range(Number_of_storeys):
 	q=matrix(z[x][1][0])
-	J.append(q*Mass*q.transpose())
-X=list()
+	mid=q*Mass*q.transpose()
+	J[x]=(mid[0][0])
+X=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for x in range(Number_of_storeys):
 	q=matrix(z[x][1][0])
-	X.append(q/sqrt(abs(J[x])))
-	
+	X[x]=matrix(q/sqrt(abs(J[x])))
+
 #ModesContributionX = 0;
 #Number_of_modes_to_be_considered = 0;
 #for Number_of_modes_to_be_considered in range(Number_of_storeys):
@@ -106,14 +104,14 @@ Modal_mass=list()
 sum_modal_mass=0
 for j in range(Number_of_storeys):
         P1,P2=0,0
-        m=matrix(X[j])
+        m=X[j,:]
         for i in range(Number_of_storeys):
             P1=P1+Mass[i][i]*m[0][i]
             P2=P2+Mass[i][i]*(m[0][i])**2
         Modal_participation_factor.append(P1/P2)
         Modal_mass.append((P1)**2/(P2))
         sum_modal_mass = sum_modal_mass + Modal_mass[j]
-
+XX=X.transpose()
 #calculating modal contribution of each storey
 Modal_contribution=list()
 for i in range(Number_of_storeys):
@@ -134,15 +132,15 @@ for index_time in range(Number_of_storeys):
  	Response_reduction_factor * Sa_by_g[index_time,1])
 
 #calculating design lateral force 
-XX=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
-for i in range(Number_of_storeys):
-    XX[:,i]=matrix(RR,X[i]).transpose()
+
+
 Design_lateral_force=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_i in range(Number_of_storeys):
     q=Mass*XX[:,index_i]
     z=q*matrix(A_h[index_i]*Modal_participation_factor[index_i]*
     Gravity_acceleration)
     Design_lateral_force[: , index_i]=z[:,1]
+
 
 #calculating Peak shear force 
 Peak_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
@@ -152,6 +150,7 @@ for index_j in range(Number_of_storeys):
 			Peak_shear_force[index_i,index_j]=(
 			Design_lateral_force[index_k + index_i,index_j] +
 			 Peak_shear_force[index_i,index_j])
+
 			 
 #storey shear force for all modes 
 Storey_shear_force = zero_vector(RR,Number_of_storeys)
@@ -173,6 +172,7 @@ for i in range(Number_of_storeys):
 		r=Omega[j]
 		B[i,j]=(r/q)
 B=B.n(digits=4)
+
 for i in range(Number_of_storeys):
 	for j in range(Number_of_storeys):
 		b=1+B[i,j]
