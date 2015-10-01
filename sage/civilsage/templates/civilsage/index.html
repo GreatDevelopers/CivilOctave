@@ -1,63 +1,63 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<title>hello</title>
+	<head>
+		<title>hello</title>
 {% load static %}
-<!-- css work-->
-<link rel="stylesheet" type="text/css" 
-href="{% static 'bootstrap.min.css' %}">
-</head>
-<!-- content block start-->
-<body>
-<h1 class="header">Dynamic of Structure: Mode and Time Period</h1>
-<!-- form to get values from the user-->
-<div class="input-group" style="width:340px;
-text-align:center;margin:0 auto;">
-<form action="{% url 'matrix' %}" method="post">{% csrf_token %}
-	SOIL TYPE:<br>
-	<select name = "Soil_type">
-	<option value="1">I</options> 
-	<option value="2">II</options>
-	<option value="3">III</options>
-	</select>
-	<br>
-	NUMBER OF STOREYS:<br>
-    <input class="form-control input-lg space" type="number" 
-    name="Number_of_storeys" placeholder="Number_of_storeys" required 
-    min=0 max =10000>
-    <br>
-    IMPORTANCE FACTOR:<br>
-    <input class=" form-control input-lg space" type="number" 
-    name="Importance_factor" placeholder="Importance_factor" required 
-    step = 0.01 min =0.5 max=10 >
-    <br>
-    RESPONSE REDUCTION FACTOR:<br>
-    <input class=" form-control input-lg space" type="number" 
-    name="Response_reduction_factor" 
-    placeholder="Response_reduction_factor" required min=0.5 max= 10
-    size=0.5><br>
-    ZOME FACTOR:<br>
-    <select name = "Zone_factor">
-	<option value=".1">II</options> 
-	<option value=".16">III</options>
-	<option value=".24">IV</options>
-	<option value=".36">V</options>
-	</select>
-    <br>
-    GRAVITY ACCELERATION:<br>
-    <input class=" form-control input-lg space" type="number" 
-    name="Gravity_acceleration" placeholder="Gravity_acceleration"
-    min=9.0 max=10 size=0.1 required ><br>
-    MODES CONSIDERED:<br>
-    <input class=" form-control input-lg space" type="number" 
-    name="Modes_considered" placeholder="Modes_considered" min= 0 max =>
-    <br>
-    <input class="btn-lg btn-success" type="submit" value="Submit">
-	</form>  
-	<!-- form end-->
-</div>
-<!--div end  -->
-</body>
-<!-- end content block-->
+
+		<!-- css work-->
+		<link rel="stylesheet" type="text/css"
+			href="{% static 'bootstrap.min.css' %}">
+	</head>
+	<!-- content block start-->
+	<body>
+		<h1 class="header">Dynamic of Structure: Mode and Time Period</h1>
+		<!-- form to get values from the user-->
+		<div class="input-group" style="width:340px;
+		text-align:center;margin:0 auto;">
+			<form action="{% url 'matrix' %}" method="post">{% csrf_token %}
+				SOIL TYPE:<br>
+				<select name = "Soil_type">
+					<option value="1">I</options>
+					<option value="2">II</options>
+					<option value="3">III</options>
+				</select>
+				<br>
+				NUMBER OF STOREYS:<br>
+		    <input class="form-control input-lg space" type="number"
+		    name="Number_of_storeys" placeholder="Number_of_storeys" required
+		    min=0 max =10000>
+		    <br>
+		    IMPORTANCE FACTOR:<br>
+		    <input class=" form-control input-lg space" type="number"
+		    name="Importance_factor" placeholder="Importance_factor" required
+		    step = 0.01 min =0.5 max=10 >
+		    <br>
+		    RESPONSE REDUCTION FACTOR:<br>
+		    <input class=" form-control input-lg space" type="number"
+		    name="Response_reduction_factor"
+		    placeholder="Response_reduction_factor" required min=0.5 max= 10
+		    size=0.5><br>
+		    ZONE FACTOR:<br>
+			  <select name = "Zone_factor">
+					<option value=".1">II</options>
+					<option value=".16">III</options>
+					<option value=".24">IV</options>
+					<option value=".36">V</options>
+				</select>
+			  <br>
+			  GRAVITY ACCELERATION:<br>
+		    <input class=" form-control input-lg space" type="number"
+		    name="Gravity_acceleration" placeholder="Gravity_acceleration"
+		    min=9.0 max=10 step=0.1 required ><br>
+		    MODES CONSIDERED:<br>
+		    <input class=" form-control input-lg space" type="number"
+		    name="Modes_considered" placeholder="Modes_considered" min= 0>
+		    <br>
+		    <input class="btn-lg btn-success" type="submit" value="Submit">
+			</form>
+				<!-- form end-->
+		</div>
+		<!--div end  -->
+	</body>
+	<!-- end content block-->
 </html>
