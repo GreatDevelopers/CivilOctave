@@ -28,21 +28,27 @@ text-align:center;margin:0 auto;">
     min=0 max =10000>
     <br>
     IMPORTANCE FACTOR:<br>
-    <input class=" form-control input-lg space" type="text" 
-    name="Importance_factor" placeholder="Importance_factor" required>
+    <input class=" form-control input-lg space" type="number" 
+    name="Importance_factor" placeholder="Importance_factor" required 
+    step = 0.01 min =0.5 max 10 >
     <br>
     RESPONSE REDUCTION FACTOR:<br>
-    <input class=" form-control input-lg space" type="text" 
+    <input class=" form-control input-lg space" type="number" 
     name="Response_reduction_factor" 
-    placeholder="Response_reduction_factor" required min= max=><br>
+    placeholder="Response_reduction_factor" required min=0.5 max= 10
+    size=0.5><br>
     ZOME FACTOR:<br>
-    <input class=" form-control input-lg space" type="text"
-    name="Zone_factor" placeholder="Zone_factor" required min= max= >
+    <select name = "Zone_factor">
+	<option value=".1">II</options> 
+	<option value=".16">III</options>
+	<option value=".24">IV</options>
+	<option value=".36">V</options>
+	</select>
     <br>
     GRAVITY ACCELERATION:<br>
     <input class=" form-control input-lg space" type="number" 
     name="Gravity_acceleration" placeholder="Gravity_acceleration"
-    value="9.8" min= max= required ><br>
+    value="9.8" size=0.01 min=9 max=10 required ><br>
     MODES CONSIDERED:<br>
     <input class=" form-control input-lg space" type="number" 
     name="Modes_considered" placeholder="Modes_considered" min= 0 max =>

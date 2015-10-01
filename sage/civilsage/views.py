@@ -118,4 +118,3 @@ def last(request):
 	response = HttpResponse(f,content_type='application/pdf')
 	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 	return response
-
