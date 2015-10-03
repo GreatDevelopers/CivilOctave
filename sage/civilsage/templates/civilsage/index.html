@@ -11,11 +11,13 @@
 	</head>
 	<!-- content block start-->
 	<body>
-		<h1 class="header">Dynamic of Structure: Mode and Time Period</h1>
+		<h1 class="header">Dynamic of Structure: Mode and Time Period
+		</h1>
 		<!-- form to get values from the user-->
 		<div class="input-group" style="width:340px;
 		text-align:center;margin:0 auto;">
-			<form action="{% url 'matrix' %}" method="post">{% csrf_token %}
+			<form action="{% url 'matrix' %}" method="post">
+				{% csrf_token%}
 				SOIL TYPE:<br>
 				<select name = "Soil_type" class="form-control dropdown-toggle input-lg">
 					<option value="1">I</options>
@@ -25,19 +27,20 @@
 				<br>
 				NUMBER OF STOREYS:<br>
 		    <input class="form-control input-lg space" type="number"
-		    name="Number_of_storeys" placeholder="Number_of_storeys" required
-		    min=0 max =10000>
+		    name="Number_of_storeys" placeholder="Number_of_storeys" 
+		    required min=0 max =10000>
 		    <br>
 		    IMPORTANCE FACTOR:<br>
 		    <input class=" form-control input-lg space" type="number"
-		    name="Importance_factor" placeholder="Importance_factor" required
-		    step = 0.01 min =0.5 max=10 >
-		    <br>
+		    name="Importance_factor" placeholder="Importance_factor" 
+		    required step = 0.01 min =0.5 max=10 >
+			<br>
 		    RESPONSE REDUCTION FACTOR:<br>
 		    <input class=" form-control input-lg space" type="number"
 		    name="Response_reduction_factor"
-		    placeholder="Response_reduction_factor" required min=0.5 max= 10
-		    size=0.5><br>
+		    placeholder="Response_reduction_factor" required min=0.5 
+		    max= 10 size=0.5>
+		    <br>
 		    ZONE FACTOR:<br>
 			  <select name = "Zone_factor"class=" form-control dropdown-toggle input-lg">
 					<option value=".1">II</options>
@@ -48,13 +51,16 @@
 			  <br>
 			  GRAVITY ACCELERATION:<br>
 		    <input class=" form-control input-lg space" type="number"
-		    name="Gravity_acceleration" placeholder="Gravity_acceleration"
-		    min=9.0 max=10 step=0.1 required ><br>
+		    name="Gravity_acceleration" 
+		    placeholder="Gravity_acceleration"
+		    value=9.8 step=0.1 required ><br>
 		    MODES CONSIDERED:<br>
 		    <input class=" form-control input-lg space" type="number"
-		    name="Modes_considered" placeholder="Modes_considered" min= 0>
+		    name="Modes_considered" placeholder="Modes_considered" 
+		    min= 0>
 		    <br>
-		    <input class="btn-lg btn-success" type="submit" value="Submit">
+		    <input class="btn-lg btn-success" type="submit" 
+		    value="Submit">
 			</form>
 				<!-- form end-->
 		</div>

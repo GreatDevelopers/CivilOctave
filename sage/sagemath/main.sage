@@ -30,6 +30,7 @@ def funSaog(soilType, timePrd):
 load('input.sage')
 #changing style of brackets for latex output
 latex.matrix_delimiters("[","]")
+latex.vector_delimiters("[","]")
 
 #converting mass in diagonal matrix
 Mass=matrix(Number_of_storeys,Number_of_storeys)
