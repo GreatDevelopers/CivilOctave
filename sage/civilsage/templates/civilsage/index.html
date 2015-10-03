@@ -6,8 +6,10 @@
 {% load staticfiles %}
 
 		<!-- css work-->
-        <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
-        <link href="{% static 'css/custom.css' %}" type="text/css" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.min.css' %}" 
+        type="text/css" rel="stylesheet">
+        <link href="{% static 'css/custom.css' %}" type="text/css" 
+        rel="stylesheet">
 	</head>
 	<!-- content block start-->
 	<body>
@@ -19,7 +21,8 @@
 			<form action="{% url 'matrix' %}" method="post">
 				{% csrf_token%}
 				SOIL TYPE:<br>
-				<select name = "Soil_type" class="form-control dropdown-toggle input-lg">
+				<select name = "Soil_type" 
+				class="form-control dropdown-toggle input-lg">
 					<option value="1">I</options>
 					<option value="2">II</options>
 					<option value="3">III</options>
@@ -28,12 +31,12 @@
 				NUMBER OF STOREYS:<br>
 		    <input class="form-control input-lg space" type="number"
 		    name="Number_of_storeys" placeholder="Number_of_storeys" 
-		    required min=0 max =10000>
+		    required min=1 max =10000>
 		    <br>
 		    IMPORTANCE FACTOR:<br>
 		    <input class=" form-control input-lg space" type="number"
 		    name="Importance_factor" placeholder="Importance_factor" 
-		    required step = 0.01 min =0.5 max=10 >
+		    required step = 0.25 min =0.5 max=10 >
 			<br>
 		    RESPONSE REDUCTION FACTOR:<br>
 		    <input class=" form-control input-lg space" type="number"
@@ -42,7 +45,8 @@
 		    max= 10 size=0.5>
 		    <br>
 		    ZONE FACTOR:<br>
-			  <select name = "Zone_factor"class=" form-control dropdown-toggle input-lg">
+			  <select name = "Zone_factor"
+			  class=" form-control dropdown-toggle input-lg">
 					<option value=".1">II</options>
 					<option value=".16">III</options>
 					<option value=".24">IV</options>
@@ -53,11 +57,11 @@
 		    <input class=" form-control input-lg space" type="number"
 		    name="Gravity_acceleration" 
 		    placeholder="Gravity_acceleration"
-		    value=9.8 step=0.1 required ><br>
+		    value=9.8 step=0.1 min=9.0 max=10.0 required ><br>
 		    MODES CONSIDERED:<br>
 		    <input class=" form-control input-lg space" type="number"
 		    name="Modes_considered" placeholder="Modes_considered" 
-		    min= 0>
+		    min= 1>
 		    <br>
 		    <input class="btn-lg btn-success" type="submit" 
 		    value="Submit">

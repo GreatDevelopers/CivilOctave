@@ -14,7 +14,7 @@ href="{% static 'css/bootstrap.min.css' %}">
 {% for row in  number_of_storeys %}
     <div class="row">
         <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        type="text" name="mass{{forloop.counter0}}" 
+        type="number" name="mass{{forloop.counter0}}" 
         placeholder="m{{forloop.counter0}}" required >
     </div>
 {% endfor %}
@@ -22,7 +22,7 @@ href="{% static 'css/bootstrap.min.css' %}">
 {% for row in number_of_storeys %}
     <div class="row">
         <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        type="text" name="Height_storey{{forloop.counter0}}" 
+        type="number" name="Height_storey{{forloop.counter0}}" 
         placeholder="h{{forloop.counter0}}" required >
     </div>
 {% endfor %}
@@ -31,7 +31,7 @@ href="{% static 'css/bootstrap.min.css' %}">
 {% for row in number_of_storeys %}
     <div class="row">
         <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        type="text" name="Stiffness_storey{{forloop.counter0}}" 
+        type="number" name="Stiffness_storey{{forloop.counter0}}" 
         placeholder="s{{forloop.counter0}}" required >
     </div>
 {% endfor %}

@@ -2,7 +2,14 @@
 
 ##INSATLLATION -:
 
-just fork and run using python manage.py runserver
+1. Just clone or fork from 
+
+2. Go to terminal and go to 
+	cd  /path/to/folder/CivilOctave/sage
+
+3. Run command python manage.py makemigratation
+
+4. Run app using python manage.py runserver
 
 
 ### FOLDERS -:

@@ -110,7 +110,7 @@ def last(request):
 	#calling sh file for background processing
 	command='sh '+name+'/civil.sh'
 	os.system(command)
-
+	print('hwllo')
 	#opening creted pdf to display to user
 	command=name+'/civil.pdf'
 	f=open(command)

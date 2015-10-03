@@ -82,15 +82,12 @@ for storey_i in range(Number_of_storeys):
 #calculating egin vectors
 z=A.eigenvectors_left()
 J=zero_vector(RR,Number_of_storeys)
+X=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for x in range(Number_of_storeys):
 	q=matrix(z[x][1][0])
 	mid=q*Mass*q.transpose()
 	J[x]=(mid[0][0])
-X=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
-for x in range(Number_of_storeys):
-	q=matrix(z[x][1][0])
 	X[x]=matrix(q/sqrt(abs(J[x])))
-
 #ModesContributionX = 0;
 #Number_of_modes_to_be_considered = 0;
 #for Number_of_modes_to_be_considered in range(Number_of_storeys):
