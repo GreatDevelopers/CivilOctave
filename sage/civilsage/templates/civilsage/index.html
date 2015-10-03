@@ -3,10 +3,11 @@
 	<head>
 		<title>hello</title>
 {% load static %}
+{% load staticfiles %}
 
 		<!-- css work-->
-		<link rel="stylesheet" type="text/css"
-			href="{% static 'bootstrap.min.css' %}">
+        <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+        <link href="{% static 'css/custom.css' %}" type="text/css" rel="stylesheet">
 	</head>
 	<!-- content block start-->
 	<body>
@@ -18,7 +19,7 @@
 			<form action="{% url 'matrix' %}" method="post">
 				{% csrf_token%}
 				SOIL TYPE:<br>
-				<select name = "Soil_type">
+				<select name = "Soil_type" class="form-control dropdown-toggle input-lg">
 					<option value="1">I</options>
 					<option value="2">II</options>
 					<option value="3">III</options>
@@ -41,7 +42,7 @@
 		    max= 10 size=0.5>
 		    <br>
 		    ZONE FACTOR:<br>
-			  <select name = "Zone_factor">
+			  <select name = "Zone_factor"class=" form-control dropdown-toggle input-lg">
 					<option value=".1">II</options>
 					<option value=".16">III</options>
 					<option value=".24">IV</options>

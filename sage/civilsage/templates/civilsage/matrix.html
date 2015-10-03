@@ -1,42 +1,42 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<title>hello</title>
-		{% load static %}
-		<link rel="stylesheet" type="text/css" 
-		href="{% static 'bootstrap.min.css' %}">
-	</head>
-	<body>
-		<br><br>
-		<form action="{% url 'last' %}" method="get">
-			<h3 class="header">Mass</h3><br>
-			{% for row in  number_of_storeys %}
-	    	<div class="row">
-    	    	<input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-    	    	type="text" name="mass{{forloop.counter0}}" 
-    	    	placeholder="m{{forloop.counter0}}" required >
-    		</div>
-			{% endfor %}
-			<h3 class="header">Height storey</h3>
-			{% for row in number_of_storeys %}
-    		<div class="row">
-        		<input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        		type="text" name="Height_storey{{forloop.counter0}}" 
-        		placeholder="h{{forloop.counter0}}" required >
-    		</div>
-			{% endfor %}
-			<h3 class="header">Stiffness storey</h3>
-			{% for row in number_of_storeys %}
-    		<div class="row">
-    		    <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-    		    type="text" name="Stiffness_storey{{forloop.counter0}}" 
-    		    placeholder="s{{forloop.counter0}}" required >
-    		</div>
-			{% endfor %}
-			<input class="btn-lg btn-success" type="submit" 
-			value="Submit">
-		<br>
-	</form>
-	</body>
-</html>
+<head>
+<title>hello</title>
 
+{% load static %}
+<link rel="stylesheet" type="text/css" 
+href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body><br><br>
+
+<form action="{% url 'last' %}" method="get">
+<h3 class="header">Mass</h3><br>
+{% for row in  number_of_storeys %}
+    <div class="row">
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
+        type="text" name="mass{{forloop.counter0}}" 
+        placeholder="m{{forloop.counter0}}" required >
+    </div>
+{% endfor %}
+<h3 class="header">Height storey</h3>
+{% for row in number_of_storeys %}
+    <div class="row">
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
+        type="text" name="Height_storey{{forloop.counter0}}" 
+        placeholder="h{{forloop.counter0}}" required >
+    </div>
+{% endfor %}
+
+<h3 class="header">Stiffness storey</h3>
+{% for row in number_of_storeys %}
+    <div class="row">
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
+        type="text" name="Stiffness_storey{{forloop.counter0}}" 
+        placeholder="s{{forloop.counter0}}" required >
+    </div>
+{% endfor %}
+
+ <input class="btn-lg btn-success" type="submit" value="Submit">
+<br>
+</form>
+</body></html>
