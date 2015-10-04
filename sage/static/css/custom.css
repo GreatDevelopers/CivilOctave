@@ -5,4 +5,29 @@
 
 .space {
     margin-bottom: 20px;
+} 
+
+@media (min-width: 900px) {
+    .width {
+        width:340px;
+        text-align:center;
+        margin:0 auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .width {
+        width: 500px;
+        text-align:center;
+    }
+}
+
+@media (max-width: 300px) {
+    .width {
+        width: 90%;
+        text-align:center;
+    }
+}
+.center {
+    text-align: center;
 }
