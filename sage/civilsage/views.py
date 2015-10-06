@@ -29,11 +29,41 @@ def matrix(request):
 	#name of directory of specific user
 	name=''
 
+	#getting input using tags and sending it as response
+	for var in lists.keys():
+		request.session[var]=request.POST.get(var)
+	#creating directory from base directory
+	lists['Number_of_storeys']=request.POST.get('Number_of_storeys')
+	#making list for iteratation in templete
+	number_of_storeys=list()
+	for a in range(int(lists['Number_of_storeys'])):
+		number_of_storeys.append('a')
+	#calling matrix.html
+	return render( request,'civilsage/matrix.html'
+	,{'number_of_storeys': number_of_storeys})
+
+
+'''
+This function gets request from matix.html and
+gives pdf as output to user
+...
+'''
+def last(request):
+
+		#dictionary of all input tags
+	lists = {'Soil_type':'','Number_of_storeys':''
+	,'Importance_factor':'','Response_reduction_factor':''
+	,'Zone_factor':'','Gravity_acceleration':''
+	,'Modes_considered':''}
+
+	#name of directory of specific user
+	name=''
+
 	#getting input using tags
 	for var in lists.keys():
-		lists[var]=request.POST.get(var)
+		lists[var]=request.session.get(var)
 		name=name+str(lists[var])
-	#creating directory from base directory
+		
 	command='cp -r sagemath '+name
 	os.popen(command)
 
@@ -48,32 +78,11 @@ def matrix(request):
 		file.write(lists[var])
 		file.write('\n')
 	file.close()
-
-	#making list for iteratation in templete
-	number_of_storeys=list()
-	for a in range(int(lists['Number_of_storeys'])):
-		number_of_storeys.append('a')
-
-	#puting list created for iteration in request
-	request.session['Number_of_storeys'] = lists['Number_of_storeys']
-	request.session['name']=name
-	#calling matrix.html
-	return render( request,'civilsage/matrix.html'
-	,{'number_of_storeys': number_of_storeys})
-
-
-'''
-This function gets request from matix.html and
-gives pdf as output to user
-...
-'''
-def last(request):
-
+	
+	
 	#getting numbers of storeys
 	num = request.session.get('Number_of_storeys')
 
-	#creating directory from base directory
-	name =str(request.session.get('name'))
 
 	#opening input.sage to append remaining inputs
 	command=name+'/input.sage'
@@ -99,6 +108,8 @@ def last(request):
 				file.write(',')
 		file.write('])\n')
 	file.close()
+	
+	
 	#creating and writing sh file for background processing
 	command=name+'/civil.sh'
 	file=open(command,'w')
@@ -110,10 +121,16 @@ def last(request):
 	#calling sh file for background processing
 	command='sh '+name+'/civil.sh'
 	os.system(command)
+	
 	#opening creted pdf to display to user
 	command=name+'/civil.pdf'
 	f=open(command)
 	#sending pdf as response
 	response = HttpResponse(f,content_type='application/pdf')
 	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
+	
+	#deleting temperary files
+	command='rm -rf '+name
+	os.system(command)
+	
 	return response
