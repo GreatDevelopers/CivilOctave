@@ -1,0 +1,12 @@
+1. Documentaion 
+2. CSS
+3. Mode considered related editing (input)
+4. deleting temperory files refer to (https://groups.google.com/forum/?hl=en-GB#!topic/django-users/qjHh1vF-Qa4) 
+	or we can write shell script 
+
+5. sending pdf through email 
+	a. making model for it 
+	b. script for this 
+	c. job scheduling  refer to (http://www.celeryproject.org/) 
+6. script to of jobs to be done when server restart
+

@@ -18,10 +18,10 @@
         <script>
             function autofill(){
                 document.getElementById("noofstoreys").value="4";
-                document.getElementById("imp_factor").value="5.5";
-                document.getElementById("res_reduction").value="5.5";
+                document.getElementById("imp_factor").value="1.5";
+                document.getElementById("res_reduction").value="1.5";
                 document.getElementById("zone_factor").value=".1";
-                document.getElementById("modes").value="5";
+                document.getElementById("modes").value="4";
             }
         </script>
 	</head>
@@ -97,8 +97,10 @@
                 </div>
                 <br />
                 <div class="row">
-                    <div class="col-md-4"><a class="btn btn-primary" id="autofill"
-                            onclick="autofill()">Autofill values</a></div>
+                    <div class="col-md-4"><a class="btn btn-primary" 
+                    id="autofill"
+                            onclick="autofill()">Autofill values</a>
+                            </div>
                     <div class="col-md-4">
                     <input class="btn-lg btn-success" type="submit" 
                     value="Submit" id="submit"></div>
@@ -131,9 +133,17 @@
                        <dl>
                            <dt>Soil type</dt>
                            <dd>This is type of soil.</dd>
-
+							<dd>You can chosse from these three types-:
+							</dd>
+							<dd>1. Type I <br>
+								2. Type II <br>
+								3. Type III <br>
+							</dd>
                            <dt>Number of storeys</dt>
-                           <dd>This defines the number of storeys.</dd>
+                           <dd>This defines the number of storeys to be
+             				consider <br>
+             				It can have value from 1 to 1000 <br>
+             				</dd>
 
                            <dt>Importance factor</dt>
                            <dd></dd>
@@ -145,10 +155,13 @@
                            <dd></dd>
 
                            <dt>Gravity Acceleration</dt>
-                           <dd></dd>
+                           <dd> Its default value is 9.8 but you can 
+                           chosse between 9 to 10</dd>
 
                            <dt>Modes considered</dt>
-                           <dd></dd>
+                           <dd>It tells number of modes to be consisder
+                           It can have value from 1 to Number of storeys 
+                           input by user </dd>
                       </dl>
                    </div>
 
