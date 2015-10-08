@@ -4,7 +4,7 @@
 <title>hello</title>
 
 {% load static %}
-<link rel="stylesheet" type="text/css" 
+<link rel="stylesheet" type="text/css"
 href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body><br><br>
@@ -13,16 +13,16 @@ href="{% static 'css/bootstrap.min.css' %}">
 <h3 class="header">Mass</h3><br>
 {% for row in  number_of_storeys %}
     <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        type="number" name="mass{{forloop.counter0}}" 
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space"
+        type="number" name="mass{{forloop.counter0}}"
         placeholder="m{{forloop.counter0}}" required >
     </div>
 {% endfor %}
 <h3 class="header">Height storey</h3>
 {% for row in number_of_storeys %}
     <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        type="number" name="Height_storey{{forloop.counter0}}" 
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space"
+        type="number" name="Height_storey{{forloop.counter0}}"
         placeholder="h{{forloop.counter0}}" required >
     </div>
 {% endfor %}
@@ -30,8 +30,8 @@ href="{% static 'css/bootstrap.min.css' %}">
 <h3 class="header">Stiffness storey</h3>
 {% for row in number_of_storeys %}
     <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space" 
-        type="number" name="Stiffness_storey{{forloop.counter0}}" 
+        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space"
+        type="number" name="Stiffness_storey{{forloop.counter0}}"
         placeholder="s{{forloop.counter0}}" required >
     </div>
 {% endfor %}
