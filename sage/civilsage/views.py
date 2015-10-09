@@ -144,7 +144,7 @@ def last(request):
 	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 	if(request.GET.get('email_id')):
 		email_id='mandeeps708@gmail.com'
-		user_email = EmailMessage('Your PDF is ready!', 
+		user_email = EmailMessage('Your PDF is ready!',
 		'You have 24 hours to download it.', to=['ms525425@gmail.com'])
 		print user_email
 		user_email.send()
@@ -167,7 +167,7 @@ def file(request):
 	lists = {'Soil_type':'','Number_of_storeys':''
 	,'Importance_factor':'','Response_reduction_factor':''
 	,'Zone_factor':'','Gravity_acceleration':''
-	,'Modes_considered':''}
+	,'Modes_considered':'','email_id':''}
 	try:
 		#name of directory of specific user
 		name=''
@@ -247,27 +247,20 @@ def file(request):
 		#sending pdf as response
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
+		if(request.POST.get('email_id')):
+			email_id=request.POST.get('email_id')
+			user_email = EmailMessage('Your PDF is ready!',
+			'You have 24 hours to download it.', to=[email_id])
+			print user_email
+			user_email.send()
+			command='rm -rf '+name
+			os.system(command)
+			return render(request, "civilsage/index.html", {})
+		else:
+			#deleting temperary files
+			command='rm -rf '+name
+			os.system(command)
+			return response
+
 	except:
 		return render( request,'civilsage/file.html')
-	if(request.POST.get('email_id')):
-		email_id='mandeeps708@gmail.com'
-		user_email = EmailMessage('Your PDF is ready!', 
-		'You have 24 hours to download it.', to=['ms525425@gmail.com'])
-		print user_email
-		user_email.send()
-		command='rm -rf '+name
-		os.system(command)
-		return render(request, "civilsage/index.html", {})
-	else:
-		#deleting temperary files
-		command='rm -rf '+name
-		os.system(command)
-		return response
-
-def email(request):
-    email_id='mandeeps708@gmail.com'
-    user_email = EmailMessage('Your PDF is ready!', 
-    'You have 24 hours to download it.', to=['ms525425@gmail.com'])
-    print user_email
-    user_email.send()
-    return render(request, "civilsage/index.html", {})

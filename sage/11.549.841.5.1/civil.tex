@@ -1,0 +1,118 @@
+%===================================Used packages======================%
+%----------------------------------------------------------------------%
+\documentclass[12pt]{report}
+\usepackage{sagetex}
+
+
+%----------------------------------------------------------------------%
+%=======================Title page=====================================%
+%----------------------------------------------------------------------%
+\title{Dynamic of Structure: Mode and Time Period}
+\author{Amarjeet Singh }
+\begin{document}
+\thispagestyle{plain}
+	\begin{titlepage}
+\maketitle
+	\end{titlepage}
+
+\begin{sagesilent}
+	load('main.sage')
+\end{sagesilent}
+
+Number Of Storeys
+\begin{equation}
+	N = \sage{Number_of_storeys}
+\end{equation}
+
+Stiffness Matrix
+\begin{equation}
+	[K]=\sage{Stiffness_matrix}
+\end{equation}
+
+Mass
+\begin{equation}
+	 [M]=\sage{Mass}
+\end{equation}
+
+Omega Square
+\begin{equation}
+	[\omega^2] =\sage{matrix(Omega_square).n(digits=6)}
+\end{equation}
+
+Time Period
+\begin{equation}
+	[T]=\sage{Time_period.n(digits=4)}
+\end{equation}
+
+Frequency
+\begin{equation}
+	[\omega]=\sage{Omega.n(digits=4)}
+\end{equation}
+
+\begin{figure}
+	\sageplot[scale=0.75]{Graph}
+	\caption{Mass Model} 
+\end{figure}
+
+Level Floor
+\begin{equation}
+	[L]=\sage{matrix(Level_floor).n(digits=4)}
+\end{equation}
+
+Modal Participation Factor
+\begin{equation}
+	 [p]=\sage{matrix(Modal_participation_factor).n(digits=4)}
+\end{equation}
+
+Modal Mass
+\begin{equation}
+	 [M_{{m}}]=\sage{matrix(Modal_mass).n(digits=4)}
+\end{equation}
+
+Modal Contribution
+\begin{equation}
+	[M_{{c}}]=\sage{matrix(Modal_contribution)}
+\end{equation}
+
+Sa By G
+\begin{equation}
+	 [S_{{a}}]=\sage{Sa_by_g.n(digits=4)}
+\end{equation}
+
+A H
+\begin{equation}
+	[A_{{H}}]=\sage{A_h.n(digits=4)}
+\end{equation}
+
+Design Lateral Force
+\begin{equation}
+	[F]=\sage{Design_lateral_force.n(digits=4)}
+\end{equation}
+
+Peak Shear Force
+\begin{equation}
+	[V]=\sage{Peak_shear_force.n(digits=4)}
+\end{equation}
+
+
+\section{Storey Shear Force}
+ABS-:
+\begin{equation}
+	\sage{Storey_shear_force[:].n(digits=4)}
+\end{equation}
+SRSS -:
+\begin{equation}
+	\sage{Storey_shear_force2[:].n(digits=4)}
+\end{equation}
+Complete Quadratic combination -:
+\begin{equation}
+	\sage{Lateral_force.n(digits=4)}
+\end{equation}
+Maximum Absolute Response -:
+\begin{equation}
+	\sage{Force.n(digits=4)}
+\end{equation}
+\end{document}
+
+
+
