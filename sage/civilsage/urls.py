@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^file/$', views.file, name='file'),
     #directs request to last veiw
     url(r'^last/$', views.last, name='last'),
+    url(r'^email/$', views.email, name='email'),
 ]

@@ -3,6 +3,7 @@ import os
 from django.http import HttpResponse
 from django.shortcuts import render
 import csv
+from django.core.mail import EmailMessage
 
 
 '''
@@ -244,3 +245,10 @@ def file(request):
 
 
 	return response
+
+def email(request):
+    email_id='mandeeps708@gmail.com'
+    user_email = EmailMessage('Your PDF is ready!', 'You have 24 hours to download it.', to=['ms525425@gmail.com'])
+    print user_email
+    user_email.send()
+    return render(request, "civilsage/index.html", {})
