@@ -26,7 +26,7 @@ def matrix(request):
 		lists = {'Soil_type':'','Number_of_storeys':''
 		,'Importance_factor':'','Response_reduction_factor':''
 		,'Zone_factor':'','Gravity_acceleration':''
-		,'Modes_considered':''}
+		,'Modes_considered':'','get_email':''}
 
 		#name of directory of specific user
 		name=''
@@ -44,12 +44,15 @@ def matrix(request):
 		#calling differnet veiws based on option whether
 		#user want to upload matrix value through file or
 		#manually
+
 		if(request.POST.get('through_file')=='Y'):
 			return render( request,'civilsage/file.html'
-			,{'number_of_storeys': number_of_storeys})
+			,{'number_of_storeys': number_of_storeys,
+			'get_email': request.POST.get('email_get')})
 		else:
 			return render( request,'civilsage/matrix.html'
-			,{'number_of_storeys': number_of_storeys})
+			,{'number_of_storeys': number_of_storeys,
+			'get_email': request.POST.get('email_get') })
 	except:
 		return render(request, 'civilsage/index.html')
 
@@ -74,7 +77,7 @@ def last(request):
 	for var in lists.keys():
 		lists[var]=request.session.get(var)
 		name=name+str(lists[var])
-
+	print(request.session.get(var))
 	command='cp -r sagemath '+name
 	os.popen(command)
 
@@ -139,12 +142,20 @@ def last(request):
 	#sending pdf as response
 	response = HttpResponse(f,content_type='application/pdf')
 	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
-
-	#deleting temperary files
-	command='rm -rf '+name
-	os.system(command)
-
-	return response
+	if(request.GET.get('email_id')):
+		email_id='mandeeps708@gmail.com'
+		user_email = EmailMessage('Your PDF is ready!', 
+		'You have 24 hours to download it.', to=['ms525425@gmail.com'])
+		print user_email
+		user_email.send()
+		command='rm -rf '+name
+		os.system(command)
+		return render(request, "civilsage/index.html", {})
+	else:
+		#deleting temperary files
+		command='rm -rf '+name
+		os.system(command)
+		return response
 
 """
 This veiw take input data from file uploaded by user and processes
@@ -236,19 +247,27 @@ def file(request):
 		#sending pdf as response
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
-
+	except:
+		return render( request,'civilsage/file.html')
+	if(request.POST.get('email_id')):
+		email_id='mandeeps708@gmail.com'
+		user_email = EmailMessage('Your PDF is ready!', 
+		'You have 24 hours to download it.', to=['ms525425@gmail.com'])
+		print user_email
+		user_email.send()
+		command='rm -rf '+name
+		os.system(command)
+		return render(request, "civilsage/index.html", {})
+	else:
 		#deleting temperary files
 		command='rm -rf '+name
 		os.system(command)
-	except:
-		return render( request,'civilsage/file.html')
-
-
-	return response
+		return response
 
 def email(request):
     email_id='mandeeps708@gmail.com'
-    user_email = EmailMessage('Your PDF is ready!', 'You have 24 hours to download it.', to=['ms525425@gmail.com'])
+    user_email = EmailMessage('Your PDF is ready!', 
+    'You have 24 hours to download it.', to=['ms525425@gmail.com'])
     print user_email
     user_email.send()
     return render(request, "civilsage/index.html", {})

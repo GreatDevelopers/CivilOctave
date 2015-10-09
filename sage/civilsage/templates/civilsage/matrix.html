@@ -10,6 +10,13 @@ href="{% static 'css/bootstrap.min.css' %}">
 <body><br><br>
 
 <form action="{% url 'last' %}" method="get">
+  {% if get_email == 'Y' %}
+  <div>
+    <h3 class="header">ENTER EMAIL ID</h3><br>
+    <input type="email" name="email_id" />
+  </div>
+  <br>
+  {% endif %}
 <h3 class="header">Mass</h3><br>
 {% for row in  number_of_storeys %}
     <div class="row">

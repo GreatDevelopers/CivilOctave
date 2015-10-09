@@ -8,9 +8,16 @@
 href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body><br><br>
-
-<form action="{% url 'file' %}" method="post" enctype="multipart/form-data" >
+<form action="{% url 'file' %}" method="post" 
+enctype="multipart/form-data" >
   {% csrf_token %}
+  {% if get_email == 'Y' %}
+  <div >
+    <h3 class="header"> ENTER EMAIL ID </h3>
+    <input type="email" name="email_id" />
+  </div>
+  <br>
+  {% endif %}
   <input class="btn-lg btn-success" type="file" name="input_file" />
  <input class="btn-lg btn-success" type="submit" value="Submit">
 <br>
