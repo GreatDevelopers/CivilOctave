@@ -11,7 +11,7 @@ href="{% static 'css/bootstrap.min.css' %}">
 <form action="{% url 'file' %}" method="post"
 enctype="multipart/form-data" >
   {% csrf_token %}
-  {% if get_email == 'Y' %}
+  {% if email_get == 'Y' %}
   <div >
     <h3 class="header"> ENTER EMAIL ID </h3>
     <input type="email" name="email_id" />
