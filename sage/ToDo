@@ -1,5 +1,10 @@
-1. Documentaion 
-2. CSS
+1. Doxygen Documentaion 
+2. applying CSS to html pages
 3. Mode considered related editing (input)
-4. script to of jobs to be done when server restart
+4. script to do jobs when server restart-:
+	process inpterruted background processes
+	restart sage 
+	restart django 
+5. Testing 
+	
 
