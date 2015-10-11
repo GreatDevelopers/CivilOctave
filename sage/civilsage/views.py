@@ -44,12 +44,15 @@ def matrix(request):
 		#calling differnet veiws based on option whether
 		#user want to upload matrix value through file or
 		#manually
+
 		if(request.POST.get('through_file')=='Y'):
 			return render( request,'civilsage/file.html'
-			,{'number_of_storeys': number_of_storeys})
+			,{'number_of_storeys': number_of_storeys,
+			'email_get': request.POST.get('email_get')})
 		else:
 			return render( request,'civilsage/matrix.html'
-			,{'number_of_storeys': number_of_storeys})
+			,{'number_of_storeys': number_of_storeys,
+			'email_get': request.POST.get('email_get') })
 	except:
 		return render(request, 'civilsage/index.html')
 
@@ -66,85 +69,96 @@ def last(request):
 	,'Importance_factor':'','Response_reduction_factor':''
 	,'Zone_factor':'','Gravity_acceleration':''
 	,'Modes_considered':''}
+	try:
+		#name of directory of specific user
+		name=''
 
-	#name of directory of specific user
-	name=''
+		#getting input using tags
+		for var in lists.keys():
+			lists[var]=request.session.get(var)
+			name=name+str(lists[var])
+		print(request.session.get(var))
+		command='cp -r sagemath '+name
+		os.popen(command)
 
-	#getting input using tags
-	for var in lists.keys():
-		lists[var]=request.session.get(var)
-		name=name+str(lists[var])
+		#opening file for writing
+		command=name+'/input.sage'
+		file = open(command, 'w')
 
-	command='cp -r sagemath '+name
-	os.popen(command)
-
-	#opening file for writing
-	command=name+'/input.sage'
-	file = open(command, 'w')
-
-	#writing variables in input.sage file with syntax of sage
-	for var in lists.keys():
-		file.write(var)
-		file.write('=')
-		file.write(lists[var])
-		file.write('\n')
-	file.close()
-
-
-	#getting numbers of storeys
-	num = request.session.get('Number_of_storeys')
+		#writing variables in input.sage file with syntax of sage
+		for var in lists.keys():
+			file.write(var)
+			file.write('=')
+			file.write(lists[var])
+			file.write('\n')
+		file.close()
 
 
-	#opening input.sage to append remaining inputs
-	command=name+'/input.sage'
-	file=open(command,'a')
-	#list of basic tags
-	var = ['mass','Height_storey','Stiffness_storey']
-
-	#writing matix into sage file
-	for j in var:
-		file.write(j)
-		file.write('=matrix([')
-		#writing elements of matix
-		for i in range(int(num)):
-			#creating input tags
-			temp = j+str(i)
-	 		file.write('[')
-	 		#getting input from tags
-	 		d=request.GET.get(temp)
-			file.write(d)
-			file.write(']')
-			#condition to check last element
-			if( i!=int(num)-1):
-				file.write(',')
-		file.write('])\n')
-	file.close()
+		#getting numbers of storeys
+		num = request.session.get('Number_of_storeys')
 
 
-	#creating and writing sh file for background processing
-	command=name+'/civil.sh'
-	file=open(command,'w')
-	command='cd '+name
-	file.write(command)
-	file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-	file.write('pdflatex civil.tex\n')
-	file.close()
-	#calling sh file for background processing
-	command='sh '+name+'/civil.sh'
-	os.system(command)
+		#opening input.sage to append remaining inputs
+		command=name+'/input.sage'
+		file=open(command,'a')
+		#list of basic tags
+		var = ['mass','Height_storey','Stiffness_storey']
 
-	#opening creted pdf to display to user
-	command=name+'/civil.pdf'
-	f=open(command)
-	#sending pdf as response
-	response = HttpResponse(f,content_type='application/pdf')
-	response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
+		#writing matix into sage file
+		for j in var:
+			file.write(j)
+			file.write('=matrix([')
+			#writing elements of matix
+			for i in range(int(num)):
+				#creating input tags
+				temp = j+str(i)
+				file.write('[')
+				#getting input from tags
+				d=request.GET.get(temp)
+				file.write(d)
+				file.write(']')
+				#condition to check last element
+				if( i!=int(num)-1):
+					file.write(',')
+			file.write('])\n')
+		file.close()
 
-	#deleting temperary files
-	command='rm -rf '+name
-	os.system(command)
 
-	return response
+		#creating and writing sh file for background processing
+		command=name+'/civil.sh'
+		file=open(command,'w')
+		command='cd '+name
+		file.write(command)
+		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
+		file.write('pdflatex civil.tex\n')
+		file.close()
+		#calling sh file for background processing
+		command='sh '+name+'/civil.sh'
+		os.system(command)
+
+		#opening creted pdf to display to user
+		command=name+'/civil.pdf'
+		f=open(command)
+		#sending pdf as response
+		response = HttpResponse(f,content_type='application/pdf')
+		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
+		if(request.GET.get('email_id')):
+			email_id=request.GET.get('email_id')
+			user_email = EmailMessage('Your PDF is ready!',
+			'You have is ready', to=[email_id])
+			user_email.attach_file(command)
+			user_email.send()
+			command='rm -rf '+name
+			os.system(command)
+			return render(request, "civilsage/index.html", {})
+		else:
+			#deleting temperary files
+			command='rm -rf '+name
+			os.system(command)
+			return response
+	except:
+		return render(request, "civilsage/matrix.html")
+
 
 """
 This veiw take input data from file uploaded by user and processes
@@ -236,19 +250,21 @@ def file(request):
 		#sending pdf as response
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
+		if(request.POST.get('email_id')):
+			email_id=request.POST.get('email_id')
+			user_email = EmailMessage('Your PDF is ready!',
+			'You have is ready', to=[email_id])
+			user_email.attach_file(command)
+			user_email.send()
+			command='rm -rf '+name
+			os.system(command)
+			return render(request, "civilsage/index.html", {})
+		else:
+			#deleting temperary files
+			command='rm -rf '+name
+			os.system(command)
+			return response
 
-		#deleting temperary files
-		command='rm -rf '+name
-		os.system(command)
 	except:
-		return render( request,'civilsage/file.html')
-
-
-	return response
-
-def email(request):
-    email_id='mandeeps708@gmail.com'
-    user_email = EmailMessage('Your PDF is ready!', 'You have 24 hours to download it.', to=['ms525425@gmail.com'])
-    print user_email
-    user_email.send()
-    return render(request, "civilsage/index.html", {})
+		return render( request,'civilsage/file.html'
+		,{'email_get': request.POST.get('email_get')})

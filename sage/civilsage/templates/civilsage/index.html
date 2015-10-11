@@ -66,7 +66,7 @@
 		            <input class="form-control input-lg space"
                     type="number" name="Response_reduction_factor"
 		            placeholder="Response_reduction_factor" required
-                    min=0.5 max= 10 size=0.5 id="res_reduction">
+                    min=0.5 max= 10 step=0.5 id="res_reduction">
 		        </div>
                 <div class="row">
                     <label for="zone_factor">ZONE FACTOR:
@@ -95,12 +95,20 @@
                     type="number" name="Modes_considered" id="modes"
                     placeholder="Modes_considered" min=1>
                 </div>
-								<div class="row">
+					<div class="row">
                     <label for="modes">upload through file </label>
-										<input type="radio" name="through_file" value="Y" checked>
-										Yes
-										<br>
-										<input type="radio" name="through_file" value="N">No
+						<input type="radio" name="through_file"
+						value="Y" checked>Yes<br>
+						<input type="radio" name="through_file"
+						value="N">No
+
+                </div>
+					<div class="row">
+                    <label for="modes">Email </label>
+						<input type="radio" name="email_get" value="Y"
+						 checked>Yes<br>
+						<input type="radio" name="email_get" value="N">
+						No
 
                 </div>
                 <br />
@@ -170,6 +178,18 @@
                            <dd>It tells number of modes to be consisder
                            It can have value from 1 to Number of storeys
                            input by user </dd>
+						 	<dt> Upload through file</dt>
+							 <dd>upload through file allow you to upload
+							  csv file to add value of mass,
+							  height and stiffness matrix
+							  format for csv for 4 number of storeys :
+							  <br>
+							  12,3,2,4<br>
+	   						23,1,4,2<br>23,2,3,2<br></dd>
+							<dt>Email
+							</dt>
+							<dd>Email allow you to get pdf through mail
+							</dd>
                       </dl>
                    </div>
 

@@ -1,9 +1,11 @@
-1. Documentaion 
-2. CSS
+1. Doxygen Documentation 
+2. applying CSS to HTML pages
 3. Mode considered related editing (input)
-5. sending pdf through email 
-	a. making model for it 
-	b. script for this 
-	c. job scheduling  refer to (http://www.celeryproject.org/) 
-6. script to of jobs to be done when server restart
+4. script to do jobs when server restart-:
+	process interrupted background processes
+	restart sage 
+	restart django 
+5. Testing 
+6. proper exception 
+	
 
