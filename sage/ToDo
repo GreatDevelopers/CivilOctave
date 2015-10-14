@@ -6,6 +6,6 @@
 	restart sage 
 	restart django 
 5. Testing 
-6. proper exception 
+6. proper exception handling
 	
 

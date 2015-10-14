@@ -26,7 +26,7 @@ def matrix(request):
 		lists = {'Soil_type':'','Number_of_storeys':''
 		,'Importance_factor':'','Response_reduction_factor':''
 		,'Zone_factor':'','Gravity_acceleration':''
-		,'Modes_considered':''}
+		,'Modes_considered':'','email_get':''}
 
 		#name of directory of specific user
 		name=''
@@ -54,16 +54,17 @@ def matrix(request):
 			,{'number_of_storeys': number_of_storeys,
 			'email_get': request.POST.get('email_get') })
 	except:
-		return render(request, 'civilsage/index.html')
+		return render(request, 'civilsage/index.html'
+		,{'message':'please fill again'})
 
 
 '''
-This function gets request from matix.html and
 gives pdf as output to user
 ...
+This function gets request from matix.html and
 '''
 def last(request):
-
+	message='error occured please fill again'
 	#dictionary of all input tags
 	lists = {'Soil_type':'','Number_of_storeys':''
 	,'Importance_factor':'','Response_reduction_factor':''
@@ -114,7 +115,7 @@ def last(request):
 				temp = j+str(i)
 				file.write('[')
 				#getting input from tags
-				d=request.GET.get(temp)
+				d=request.POST.get(temp)
 				file.write(d)
 				file.write(']')
 				#condition to check last element
@@ -143,7 +144,7 @@ def last(request):
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 		if(request.GET.get('email_id')):
-			email_id=request.GET.get('email_id')
+			email_id=request.POST.get('email_id')
 			user_email = EmailMessage('Your PDF is ready!',
 			'You have is ready', to=[email_id])
 			user_email.attach_file(command)
@@ -157,7 +158,7 @@ def last(request):
 			os.system(command)
 			return response
 	except:
-		return render(request, "civilsage/matrix.html")
+		return render(request, "civilsage/matrix.html",{'message':message,'email_get':request.session.get('email_get')})
 
 
 """
@@ -166,6 +167,7 @@ to give output in form of response
 """
 def file(request):
 
+	message='please fill again'
 	#dictionary of all input tags
 	lists = {'Soil_type':'','Number_of_storeys':''
 	,'Importance_factor':'','Response_reduction_factor':''
@@ -198,7 +200,10 @@ def file(request):
 		#getting file uploaded by user
 		f=request.FILES["input_file"]
 		if(f.content_type != 'text/plain'):
-			return render( request,'civilsage/file.html')
+			print(request.session.get('email_get'))
+			return render( request,'civilsage/file.html',
+			{'email_get': request.session.get('email_get'),
+			'message':'File Not in CSV FORMAT '})
 		data = [row for row in csv.reader(f)]
 		#getting numbers of storeys
 		num = request.session.get('Number_of_storeys')
@@ -267,4 +272,4 @@ def file(request):
 
 	except:
 		return render( request,'civilsage/file.html'
-		,{'email_get': request.POST.get('email_get')})
+		,{'email_get': request.session.get('email_get'),'message':message})

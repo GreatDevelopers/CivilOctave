@@ -8,8 +8,11 @@
 href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body><br><br>
+<h3>{{ message }}</h3>
+<form action="{% url 'last' %}" method="post"
+enctype="multipart/form-data" >
 
-<form action="{% url 'last' %}" method="get">
+    {% csrf_token %}
   {% if email_get == 'Y' %}
   <div>
     <h3 class="header">ENTER EMAIL ID</h3><br>
