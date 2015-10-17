@@ -1,10 +1,10 @@
-#SAGE
+# SAGE
 
 ##INSATLLATION -:
 
-1. Just clone or fork from 
+1. Just clone or fork from
 
-2. Go to terminal and go to 
+2. Go to terminal and go to
 	cd  /path/to/folder/CivilOctave/sage
 
 3. Run command python manage.py migrate
@@ -14,7 +14,7 @@
 
 ### FOLDERS -:
 
-1. civilsage - contain Django code for interface 
+1. civilsage - contain Django code for interface
 
 2. sagemath - contain Sagemath and LaTeX code  
 

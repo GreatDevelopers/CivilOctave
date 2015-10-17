@@ -1,31 +1,35 @@
+"""@package docstring
+This module contain code to process the data
+obtain from input.sage
+"""
 
-'''
-function to pick values according to
-type of soil selected
-...
-'''
+
 def funSaog(soilType, timePrd):
-    t1 = 0; t2 = 0; t3 = 0; t4 = 0
-    eq3num = 0
-    t2 = 0.10
-    if(soilType=='I'):
-        t3 = 0.40; eq3num = 1.0
-    elif (soilType=='II'):
-        t3 = 0.55; eq3num = 1.36
-    elif(soilType=='III'):
-        t3 = 0.67; eq3num = 1.67
-    else:
-        Print('Unexpected soil type')
-    if (timePrd < t2):
-        sag = 1. + 15 * timePrd
-    elif(timePrd > t3):
-        sag = eq3num / timePrd
-    else:
-        sag = 2.5
-    return sag
+  """
+  function to pick values according to
+  type of soil selected
+  ...
+  """
+  t1 = 0; t2 = 0; t3 = 0; t4 = 0
+  eq3num = 0
+  t2 = 0.10
+  if(soilType=='I'):
+      t3 = 0.40; eq3num = 1.0
+  elif (soilType=='II'):
+      t3 = 0.55; eq3num = 1.36
+  elif(soilType=='III'):
+      t3 = 0.67; eq3num = 1.67
+  else:
+      Print('Unexpected soil type')
+  if (timePrd < t2):
+      sag = 1. + 15 * timePrd
+  elif(timePrd > t3):
+      sag = eq3num / timePrd
+  else:
+      sag = 2.5
+  return sag
 
-
-'''main program ... '''
+"""main program ... """
 #loading input variables from input.sage
 load('input.sage')
 #changing style of brackets for latex output
@@ -47,14 +51,14 @@ for storey_i in range(Number_of_storeys):
     if(storey_i>0):
         Level_floor[storey_i]=(
         Level_floor[storey_i]+Level_floor[storey_i-1])
-        
+
 #calcutaing stiffness matrix from stiffness of storeys
 Stiffness_matrix=zero_matrix(QQ,Number_of_storeys,Number_of_storeys)
 for storey_i in range(Number_of_storeys):
 	Stiffness_matrix[storey_i, storey_i] = Stiffness_storey[storey_i][0]
 	if (storey_i < Number_of_storeys-1):
 		Stiffness_matrix[storey_i, storey_i]=(
-			Stiffness_matrix[storey_i, storey_i] + 
+			Stiffness_matrix[storey_i, storey_i] +
 			Stiffness_storey[storey_i + 1][0])
 		Stiffness_matrix[storey_i, storey_i + 1]=(
 		-Stiffness_storey[storey_i + 1][0])
@@ -91,12 +95,12 @@ for x in range(Number_of_storeys):
 #ModesContributionX = 0;
 #Number_of_modes_to_be_considered = 0;
 #for Number_of_modes_to_be_considered in range(Number_of_storeys):
-	#ModesContributionX = ModesContributionX+Modal_contribution(Number_of_modes_to_be_considered); 
+	#ModesContributionX = ModesContributionX+Modal_contribution(Number_of_modes_to_be_considered);
  	#if (ModesContributionX > 90):
  		#break;
-			
-#calculating Modal participation factor ,sum of modal mass 
-#and modal mass 
+
+#calculating Modal participation factor ,sum of modal mass
+#and modal mass
 Modal_participation_factor=list()
 Modal_mass=list()
 sum_modal_mass=0
@@ -129,7 +133,7 @@ for index_time in range(Number_of_storeys):
  	Zone_factor/2*Importance_factor/
  	Response_reduction_factor * Sa_by_g[index_time,1])
 
-#calculating design lateral force 
+#calculating design lateral force
 
 
 Design_lateral_force=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
@@ -140,7 +144,7 @@ for index_i in range(Number_of_storeys):
     Design_lateral_force[: , index_i]=z[:,1]
 
 
-#calculating Peak shear force 
+#calculating Peak shear force
 Peak_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
 for index_j in range(Number_of_storeys):
 	for index_i in range(Number_of_storeys):
@@ -149,15 +153,15 @@ for index_j in range(Number_of_storeys):
 			Design_lateral_force[index_k + index_i,index_j] +
 			 Peak_shear_force[index_i,index_j])
 
-			 
-#storey shear force for all modes 
+
+#storey shear force for all modes
 Storey_shear_force = zero_vector(RR,Number_of_storeys)
 Storey_shear_force2 = zero_vector(RR,Number_of_storeys)
 if (Modes_considered == 0):
   Modes_considered = Number_of_modes_to_be_considered
 for index_i in range(Number_of_storeys):
     for index_j in range(Modes_considered):
-        Storey_shear_force[index_i]=(Storey_shear_force[index_i]+ 
+        Storey_shear_force[index_i]=(Storey_shear_force[index_i]+
         abs(Peak_shear_force[index_i,index_j]))
         Storey_shear_force2[index_i]=(Storey_shear_force2[index_i]+
         Peak_shear_force[index_i,index_j]^2)
@@ -202,4 +206,3 @@ for i in range(Number_of_storeys):
 Graph=plot([])
 for r in range(Number_of_storeys^2):
 	Graph= Graph+p[r]
-
