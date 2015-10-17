@@ -1,3 +1,6 @@
+"""@package docstring
+Documentation for this module.
+"""
 # Create your views here.
 import os
 from django.http import HttpResponse
@@ -6,27 +9,29 @@ import csv
 from django.core.mail import EmailMessage
 
 
-'''
+"""
+@package docstring
 first veiw created by rendering html page
 from templete
 ...
-'''
+"""
 def index(request):
 	return render(request, 'civilsage/index.html')
 
-'''
+"""
+@package docstring
 This function display matrix for input from user and take
 response from index veiw and write input taken through index.html
 and write in input.sage file
 ...
-'''
+"""
 def matrix(request):
 	try:
 		#dictionary of all input tags
 		lists = {'Soil_type':'','Number_of_storeys':''
 		,'Importance_factor':'','Response_reduction_factor':''
 		,'Zone_factor':'','Gravity_acceleration':''
-		,'Modes_considered':''}
+		,'Modes_considered':'','email_get':''}
 
 		#name of directory of specific user
 		name=''
@@ -54,16 +59,18 @@ def matrix(request):
 			,{'number_of_storeys': number_of_storeys,
 			'email_get': request.POST.get('email_get') })
 	except:
-		return render(request, 'civilsage/index.html')
+		return render(request, 'civilsage/index.html'
+		,{'message':'please fill again'})
 
 
-'''
-This function gets request from matix.html and
+"""
+@package docstring
 gives pdf as output to user
 ...
-'''
+This function gets request from matix.html and
+"""
 def last(request):
-
+	message='error occured please fill again'
 	#dictionary of all input tags
 	lists = {'Soil_type':'','Number_of_storeys':''
 	,'Importance_factor':'','Response_reduction_factor':''
@@ -114,7 +121,7 @@ def last(request):
 				temp = j+str(i)
 				file.write('[')
 				#getting input from tags
-				d=request.GET.get(temp)
+				d=request.POST.get(temp)
 				file.write(d)
 				file.write(']')
 				#condition to check last element
@@ -143,7 +150,7 @@ def last(request):
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 		if(request.GET.get('email_id')):
-			email_id=request.GET.get('email_id')
+			email_id=request.POST.get('email_id')
 			user_email = EmailMessage('Your PDF is ready!',
 			'You have is ready', to=[email_id])
 			user_email.attach_file(command)
@@ -157,21 +164,23 @@ def last(request):
 			os.system(command)
 			return response
 	except:
-		return render(request, "civilsage/matrix.html")
+		return render(request, "civilsage/matrix.html",
+		{'message':message,'email_get':request.session.get('email_get')})
 
 
-"""
+"""Documentation for a function
 This veiw take input data from file uploaded by user and processes
 to give output in form of response
 """
 def file(request):
 
-	#dictionary of all input tags
-	lists = {'Soil_type':'','Number_of_storeys':''
-	,'Importance_factor':'','Response_reduction_factor':''
-	,'Zone_factor':'','Gravity_acceleration':''
-	,'Modes_considered':''}
+	message='please fill again'
 	try:
+		#dictionary of all input tags
+		lists = {'Soil_type':'','Number_of_storeys':''
+		,'Importance_factor':'','Response_reduction_factor':''
+		,'Zone_factor':'','Gravity_acceleration':''
+		,'Modes_considered':''}
 		#name of directory of specific user
 		name=''
 
@@ -197,8 +206,11 @@ def file(request):
 
 		#getting file uploaded by user
 		f=request.FILES["input_file"]
-		if(f.content_type != 'text/plain'):
-			return render( request,'civilsage/file.html')
+		print(f.content_type)
+		if(f.content_type != 'text/csv'):
+			return render( request,'civilsage/file.html',
+			{'email_get': request.session.get('email_get'),
+			'message':'File Not in CSV FORMAT '})
 		data = [row for row in csv.reader(f)]
 		#getting numbers of storeys
 		num = request.session.get('Number_of_storeys')
@@ -214,13 +226,19 @@ def file(request):
 		jar=0
 		#writing matix into sage file
 		for j in var:
+			message="Less no. of rows in csv file"
 			file.write(j)
 			file.write('=matrix([')
 			#writing elements of matix
 			for i in range(int(num)):
-		 		file.write('[')
-		 		#getting input from tags
-		 		d=data[jar][i]
+				file.write('[')
+				#getting input from tags
+				message="Less no. of elements in row "+str(i)
+				if(not data[jar][i].isdigit()):
+					ii=i+1
+				else:
+					ii=i
+				d=data[jar][ii]
 				print(d)
 				file.write(str(d))
 				file.write(']')
@@ -263,8 +281,7 @@ def file(request):
 			#deleting temperary files
 			command='rm -rf '+name
 			os.system(command)
-			return response
-
+			return render(response)
 	except:
-		return render( request,'civilsage/file.html'
-		,{'email_get': request.POST.get('email_get')})
+		return render(request, "civilsage/file.html",
+		{'message':message,'email_get':request.session.get('email_get')})

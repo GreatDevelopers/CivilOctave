@@ -1,11 +1,8 @@
-1. Doxygen Documentation 
+1. Doxygen Documentation
 2. applying CSS to HTML pages
 3. Mode considered related editing (input)
 4. script to do jobs when server restart-:
 	process interrupted background processes
-	restart sage 
-	restart django 
-5. Testing 
-6. proper exception 
-	
-
+	restart sage
+	restart django
+5. Testing
