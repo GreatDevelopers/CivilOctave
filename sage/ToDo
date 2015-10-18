@@ -6,3 +6,6 @@
 	restart sage
 	restart django
 5. Testing
+6. Creating a base html file for making other html file inherit.
+7. Modifying responsiveness (for all screens).
+8. Code structuring.
