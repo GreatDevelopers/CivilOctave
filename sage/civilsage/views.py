@@ -6,7 +6,7 @@ This module contain functions to controls veiws
 import os
 from django.http import HttpResponse
 from django.shortcuts import render
-import csv
+import csv,datetime
 from django.core.mail import EmailMessage
 
 
@@ -35,7 +35,6 @@ def matrix(request):
 		,'Zone_factor':'','Gravity_acceleration':''
 		,'Modes_considered':'','email_get':''}
 
-		#name of directory of specific user
 		name = ''
 
 		#getting input using tags and sending it as response
@@ -47,11 +46,11 @@ def matrix(request):
 
 		#making list for iteratation in templete
 		number_of_storeys = list()
+		#name of directory of specific user
 		for a in range(int(lists['Number_of_storeys'])):
 			number_of_storeys.append('a')
 
 		#calling differnet veiws based on option whether
-		#user want to upload matrix value through file or
 		#manually
 
 		if(request.POST.get('through_file')=='Y'):
@@ -59,6 +58,7 @@ def matrix(request):
 			,{'number_of_storeys': number_of_storeys,
 			'email_get': request.POST.get('email_get')})
 		else:
+		#user want to upload matrix value through file or
 			return render( request,'civilsage/matrix.html'
 			,{'number_of_storeys': number_of_storeys,
 			'email_get': request.POST.get('email_get') })
@@ -86,13 +86,12 @@ def last(request):
 	try:
 
 		#name of directory of specific user
-		name=''
-
+		name=request.session.session_key+str(datetime.datetime.now())
+		name=name.replace(" ", "")
 		#getting input using tags
 		for var in lists.keys():
 			lists[var]=request.session.get(var)
 			name=name+str(lists[var])
-		print(request.session.get(var))
 		command='cp -r sagemath '+name
 		os.popen(command)
 
@@ -161,7 +160,7 @@ def last(request):
 		#sending pdf as response
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
-		if(request.GET.get('email_id')):
+		if(request.POST.get('email_id')):
 			email_id=request.POST.get('email_id')
 			user_email = EmailMessage('Your PDF is ready!',
 			'You have is ready', to=[email_id])
@@ -169,7 +168,8 @@ def last(request):
 			user_email.send()
 			command='rm -rf '+name
 			os.system(command)
-			return render(request, "civilsage/index.html", {})
+			message="PDF send to "+request.POST.get('email_id')
+			return render(request, "civilsage/index.html", {'message':message})
 		else:
 
 			#deleting temperary files
@@ -177,7 +177,7 @@ def last(request):
 			os.system(command)
 			return response
 	except:
-		return render(request, "civilsage/matrix.html",
+		return render(request, "civilsage/index.html",
 		{'message':message,'email_get':request.session.get('email_get')})
 
 
@@ -198,13 +198,13 @@ def file(request):
 		,'Modes_considered':''}
 
 		#name of directory of specific user
-		name=''
+		name=request.session.session_key+str(datetime.datetime.now())
+		name=name.replace(" ", "")
 
 		#getting input using tags
 		for var in lists.keys():
 			lists[var]=request.session.get(var)
 			name=name+str(lists[var])
-
 		command='cp -r sagemath '+name
 		os.popen(command)
 
@@ -222,7 +222,6 @@ def file(request):
 
 		#getting file uploaded by user
 		f=request.FILES["input_file"]
-		print(f.content_type)
 		if(f.content_type != 'text/csv'):
 			return render( request,'civilsage/file.html',
 			{'email_get': request.session.get('email_get'),
@@ -231,7 +230,6 @@ def file(request):
 
 		#getting numbers of storeys
 		num = request.session.get('Number_of_storeys')
-
 		#checking if number values are not less than required values
 		#if(len(data)<3*int(num)):
 			#return render( request,'civilsage/file.html')
@@ -260,7 +258,6 @@ def file(request):
 				else:
 					ii=i
 				d=data[jar][ii]
-				print(d)
 				file.write(str(d))
 				file.write(']')
 
@@ -291,9 +288,7 @@ def file(request):
 		#sending pdf as response
 		response = HttpResponse(f,content_type='application/pdf')
 		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
-		print(request.POST.get('email_id'))
 		if(request.POST.get('email_id')):
-			print(request.POST.get('email_id'))
 			email_id=request.POST.get('email_id')
 			user_email = EmailMessage('Your PDF is ready!',
 			'You have is ready', to=[email_id])
@@ -301,11 +296,11 @@ def file(request):
 			user_email.send()
 			command='rm -rf '+name
 			os.system(command)
-			return render(request, "civilsage/index.html", {})
+			message="PDF send to "+request.POST.get('email_id')
+			return render(request, "civilsage/index.html", {'message':message})
 		else:
 
 			#deleting temperary files
-			print(request.POST.get('email_id'))
 			command='rm -rf '+name
 			os.system(command)
 			return response
