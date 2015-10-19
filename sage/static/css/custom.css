@@ -6,7 +6,7 @@
 .space {
     margin-bottom: 20px;
 } 
-
+/*
 @media (min-width: 900px) {
     .width {
         width:340px;
@@ -27,7 +27,19 @@
         width: 90%;
         text-align:center;
     }
-}
+}*/
 .center {
     text-align: center;
+}
+
+.label {
+    text-align: right;
+}
+
+.top-space {
+    margin-top: 5em; 
+}
+
+.top-margin {
+    margin-top: 0.8em;
 }
