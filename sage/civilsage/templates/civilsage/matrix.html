@@ -1,53 +1,85 @@
-<!doctype html>
-<html lang="en">
-<head>
-<title>hello</title>
-
-{% load static %}
-<link rel="stylesheet" type="text/css"
-href="{% static 'css/bootstrap.min.css' %}">
-</head>
-<body><br><br>
-  <a href="/"><h1>HOME PAGE</h1></a>
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
 <h3>{{ message }}</h3>
+<div class="top-space input-group container width"></div>
 <form action="{% url 'last' %}" method="post"
-enctype="multipart/form-data" >
-
+    enctype="multipart/form-data">
     {% csrf_token %}
-  {% if email_get == 'Y' %}
-  <div>
-    <h3 class="header">ENTER EMAIL ID</h3><br>
-    <input type="email" name="email_id" />
-  </div>
-  <br>
-  {% endif %}
-<h3 class="header">Mass</h3><br>
-{% for row in  number_of_storeys %}
-    <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space"
-        type="number" name="mass{{forloop.counter0}}"
-        placeholder="m{{forloop.counter0}}" required >
-    </div>
-{% endfor %}
-<h3 class="header">Height storey</h3>
-{% for row in number_of_storeys %}
-    <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space"
-        type="number" name="Height_storey{{forloop.counter0}}"
-        placeholder="h{{forloop.counter0}}" required >
-    </div>
-{% endfor %}
+    {% if email_get == 'Y' %}
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12"> 
+                        <h3 class="center"><label for="email_id">
+                            Email address</label></h3>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-md-1 col-sm-2 col-xs-2"></div>
+                <div class="col-md-6 col-xs-8 col-sm-8">
+                    <input class="form-control input-lg space" 
+                        type="email" name="email_id" id="email_id"/>
+                </div>
+                <div class="col-xs-2 col-md-5 col-sm-2"></div>
+            </div>
+        </div>
+    {% endif %}
 
-<h3 class="header">Stiffness storey</h3>
-{% for row in number_of_storeys %}
-    <div class="row">
-        <input class="input-lg col-md-3 col-sm-3 col-xs-3 space"
-        type="number" name="Stiffness_storey{{forloop.counter0}}"
-        placeholder="s{{forloop.counter0}}" required >
-    </div>
-{% endfor %}
+    <!-- 3 Column layout  -->
+    <div class="row">    
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <h3 class="center">Mass</h3>
+            {% for row in  number_of_storeys %}
+            <div class="row">
+                <div class="col-md-1 col-sm-2 col-xs-2"></div>
+                <div class="col-md-10 col-xs-8 col-sm-8">
+                    <input class="input-lg space form-control"
+                        type="number" name="mass{{forloop.counter0}}"
+                        placeholder="m{{forloop.counter0}}" required>
+                </div>
+                <div class="col-xs-2 col-md-1 col-sm-2"></div>
+            </div>
+            {% endfor %}
+        </div> 
+        
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <h3 class="center">Height storey</h3>
+    
+            {% for row in number_of_storeys %}
+    
+            <div class="row">
+                <div class="col-md-1 col-sm-2 col-xs-2"></div>
+                <div class="col-md-10 col-xs-8 col-sm-8">
+                <input class="input-lg space form-control"
+                    type="number" 
+                    name="Height_storey{{forloop.counter0}}"
+                    placeholder="h{{forloop.counter0}}" required >
+            </div>
+                <div class="col-xs-2 col-md-1 col-sm-2"></div>
+            </div>
+             {% endfor %}
+        </div>
 
- <input class="btn-lg btn-success" type="submit" value="Submit">
-<br>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <h3 class="center">Stiffness storey</h3>
+    
+            {% for row in number_of_storeys %}
+            <div class="row">
+                <div class="col-md-1 col-sm-2 col-xs-2"></div>
+                <div class="col-md-10 col-xs-8 col-sm-8">
+                <input class="input-lg space form-control"
+                    type="number" 
+                    name="Stiffness_storey{{forloop.counter0}}"
+                    placeholder="s{{forloop.counter0}}" required >
+            </div>
+                <div class="col-xs-2 col-md-1 col-sm-2"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <input class="btn-lg btn-success space" type="submit" value="Submit">
 </form>
-</body></html>
+</div>
+{% endblock %}
