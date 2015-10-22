@@ -1,12 +1,11 @@
-1. Documentaion 
-2. CSS
-3. Mode considered related editing (input)
-4. deleting temperory files refer to (https://groups.google.com/forum/?hl=en-GB#!topic/django-users/qjHh1vF-Qa4) 
-	or we can write shell script 
-
-5. sending pdf through email 
-	a. making model for it 
-	b. script for this 
-	c. job scheduling  refer to (http://www.celeryproject.org/) 
-6. script to of jobs to be done when server restart
-
+- [ ] Improving Doxygen Documentation
+- [ ] Applying CSS to HTML pages(file.html,matrix.html)
+- [ ] Mode considered related editing (input)
+- [ ] script to do jobs when server restart-:
+ 	- [ ] process interrupted background processes
+	- [ ] restart sage
+	- [ ] restart django
+- [ ] Testing
+- [ ] Creating a base html file for making other html file inherit.
+- [ ] Modifying responsiveness (for all screens).
+- [ ] Code structuring.

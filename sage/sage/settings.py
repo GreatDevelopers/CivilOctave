@@ -95,3 +95,24 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+#Set it's value to the email-id from which the emails will be sent.
+EMAIL_HOST_USER = 'your_email1@gmail.com'
+
+
+"""
+Write the password here. If you are using 2-step verification (gmail),
+then you should use generate the app password via https://security.google.com/settings/security/apppasswords
+and paste that here.
+"""
+
+EMAIL_HOST_PASSWORD = 'password'
+
+EMAIL_PORT = 587
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
