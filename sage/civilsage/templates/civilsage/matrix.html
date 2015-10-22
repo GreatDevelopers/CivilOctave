@@ -2,7 +2,7 @@
 {% block body %}
 <div class="container">
 <h3>{{ message }}</h3>
-<div class="top-space input-group container width"></div>
+<div class="input-group container width"></div>
 <form action="{% url 'last' %}" method="post"
     enctype="multipart/form-data">
     {% csrf_token %}

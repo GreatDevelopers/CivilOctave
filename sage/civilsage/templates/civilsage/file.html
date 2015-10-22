@@ -1,27 +1,35 @@
-<!doctype html>
-<html lang="en">
-<head>
-<title>hello</title>
+{% extends "base.html" %}
+{% block title %}CSV{% endblock %}
 
-{% load static %}
-<link rel="stylesheet" type="text/css"
-href="{% static 'css/bootstrap.min.css' %}">
-</head>
-<body><br><br>
-<a href="/"><h1>HOME PAGE</h1></a>
-  <h3>{{message}}</h3>
-<form action="{% url 'file' %}" method="post"
-enctype="multipart/form-data" >
-  {% csrf_token %}
-  {% if email_get == 'Y' %}
-  <div >
-    <h3 class="header"> ENTER EMAIL ID </h3>
-    <input type="email" name="email_id" />
-  </div>
-  <br>
-  {% endif %}
-  <input class="btn-lg btn-success" type="file" name="input_file" />
- <input class="btn-lg btn-success" type="submit" value="Submit">
-<br>
-</form>
-</body></html>
+{% block body %}
+    <div class="container">
+    <h3>{{message}}</h3>
+    <form action="{% url 'file' %}" method="post"
+        enctype="multipart/form-data" >
+        {% csrf_token %}
+        {% if email_get == 'Y' %}
+        <div class="container"> 
+        <div class="row">
+            <div class="form-group"> 
+                <h3 class="center"><label for="email_id">
+                    Email address</label></h3>
+                <input class="form-control input-lg space" type="email"
+                    name="email_id" id="email_id" />
+            </div>
+        </div>
+        {% endif %}
+        <div class="row"> 
+            <div class="form-group">
+                <input class="form-control btn-lg input-lg" type="file" 
+                    name="input_file">
+            </div>
+        </div>
+        </div>
+        
+        <div class="row center">
+                <input class="btn-lg btn-succes" type="submit" 
+                    value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock %}
