@@ -43,3 +43,7 @@
 .top-margin {
     margin-top: 0.8em;
 }
+
+h3 > label{
+    font-weight: normal;    
+}

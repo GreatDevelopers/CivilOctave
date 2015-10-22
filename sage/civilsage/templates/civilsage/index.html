@@ -1,82 +1,30 @@
-{% load static %}
-{% load staticfiles %}
+{% extends "base.html" %}
+{% block title %}DoS{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>DoS</title>
-        <meta name="viewport" content="width=device-width,
-            initial-scale=1, maximum-scale=1">
-		<!-- stylesheets -->
-        <link href="{% static 'css/bootstrap.min.css' %}"
-        type="text/css" rel="stylesheet">
-        <link href="{% static 'css/custom.css' %}" type="text/css"
-        rel="stylesheet">
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block extrastyle %}
+    <script>
+        $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip({
+                 placement : 'top'
+             });
+        });
+        function autofill(){
+            document.getElementById("noofstoreys").value="4";
+            document.getElementById("imp_factor").value="1.5";
+            document.getElementById("res_reduction").value="1.5";
+            document.getElementById("zone_factor").value=".1";
+            document.getElementById("modes").value="4";
+        }
+    </script>
+    {% endblock %}
 
-        <script>
-            $(document).ready(function(){
-                     $('[data-toggle="tooltip"]').tooltip({
-                         placement : 'top'
-                     });
-            });
-            function autofill(){
-                document.getElementById("noofstoreys").value="4";
-                document.getElementById("imp_factor").value="1.5";
-                document.getElementById("res_reduction").value="1.5";
-                document.getElementById("zone_factor").value=".1";
-                document.getElementById("modes").value="4";
-            }
-        </script>
-	</head>
 	<!-- content block start-->
-	<body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-           <div class="container">
-               <div class="navbar-header">
-                   <button type="button" class="navbar-toggle collapsed"
-									 data-toggle="collapse" data-target="#navbar"
-									 aria-expanded="false" aria-controls="navbar">
-                       <span class="sr-only">Toggle navigation</span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="/">Dynamic of Structure
-                  </a>
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav">
-                      <li class="active"><a href="/">Home</a></li>
-                      <li><a href="#" id="autofill"
-                            onclick="autofill()">Autofill values</a>
-                    </li>
-                 </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                     <li><a href="#" id="help-btn" data-toggle="modal"
-                        data-target="#myModal">Help</a></li>
-                     <li><a href="http://github.com/GreatDevelopers"
-											 target="new">About</a></li>
-                     <li class="active"><a id="help-btn" data-toggle="modal"
-                        data-target="#contact">Contact us<span
-                        class="sr-only">(current)</span></a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
+    {% block body %}
 
-
-
-
-
-    <!-- ENDS THE NAVIGATION BAR HERE.......... -->
-
-        <div class="top-space"></div>
 
         <!--<div class="center"><h2>Dynamic of Structure:</h2>
             <h4>Mode and Time Period</h4></div>-->
-<h3>{{ message }}</h3>
+        <h3>{{ message }}</h3>
 		<!-- form to get values from the user-->
 		<div class="input-group container width">
 			<form action="{% url 'matrix' %}" method="post">
@@ -85,242 +33,280 @@
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-9">
-                        <label class="top-margin" for="soil_type">SOIL TYPE:
-												</label>
+                        <label class="top-margin" for="soil_type">
+                            SOIL TYPE:</label>
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-6 col-sm-10 col-xs-10">
-                    <select name = "Soil_type"
-				        class="form-control dropdown-toggle input-lg"
-                        id="soil_type">
-					    <option value="1">I</options>
-					    <option value="2">II</options>
-					    <option value="3">III</options>
-                </select></div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="This is type of soil.">
-                    </span>
+                        <select name = "Soil_type"
+				            class="form-control dropdown-toggle 
+                            input-lg" id="soil_type">
+                            <option value="1">I</options>
+                            <option value="2">II</options>
+                            <option value="3">III</options>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true" 
+                            data-toggle="tooltip" data-original-title=
+                            "This is type of soil.">
+                        </span>
+                    </div>
                 </div>
-                </div>
-                    <div class="row">
+                
+                <div class="row">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-9"><label class="top-margin"
-											 for="noofstoreys">NUMBER OF STOREYS:
-                </label></div></div>
+				        for="noofstoreys">NUMBER OF STOREYS:</label>
+                    </div>
+                </div>
+               
                 <div class="row">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-6 col-sm-10 col-xs-10">
-                    <input class="form-control input-lg space"
-                    type="number" name="Number_of_storeys"
-                    placeholder="Number_of_storeys"
-                    required min="1" max="10000"
-                    id="noofstoreys">
-                </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="This defines the number of
-												storeys to be considered. It can have value
-												from 1 to 1000.">
-                    </span>
-            </div>
+                        <input class="form-control input-lg space"
+                        type="number" name="Number_of_storeys"
+                        placeholder="Number_of_storeys" required min="1" 
+                        max="10000" id="noofstoreys">
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true" 
+                        data-toggle="tooltip" data-original-title="This
+                        defines the number of storeys to be considered.
+                        It can have value from 1 to 1000.">
+                        </span>
+                    </div>
 		        </div>
-                    <div class="row">
+                
+                <div class="row">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-9"><label class="top-margin"
-											for="imp_factor">IMPORTANCE FACTOR:
-										</label>
-										</div></div>
-                <div class="row">
-                    <div class="col-md-3">
+					    for="imp_factor">IMPORTANCE FACTOR:</label>
                     </div>
-                    <div class="col-md-6 col-sm-10 col-xs-10">
-		            <input class="form-control input-lg space"
-                    type="number" name="Importance_factor"
-                    placeholder="Importance_factor" required step=0.25
-                    min =0.5 max=10 id="imp_factor">
                 </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="It depends upon the building
-												category and nature of use.">
-                    </span>
-                </div>
-            </div>
-                    <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-9"><label class="top-margin"
-											for="res_reduction">RESPONSE REDUCTION
-                            FACTOR:</label></div></div>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6 col-sm-10 col-xs-10">
-		            <input class="form-control input-lg space"
-                    type="number" name="Response_reduction_factor"
-		            placeholder="Response_reduction_factor" required
-                    min=0.5 max= 10 step=0.5 id="res_reduction">
-		        </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="It depends upon the
-												ductility of the structure.">
-                    </span>
-                </div>
-                </div>
-                 <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-9">   <label class="top-margin"
-											for="zone_factor">ZONE FACTOR:
-                </label></div></div>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6 col-sm-10 col-xs-10">
-			        <select name="Zone_factor" id="zone_factor"
-			        class="form-control dropdown-toggle input-lg"
-                    id="zone_factor">
-					    <option value=".1">II</options>
-					    <option value=".16">III</options>
-					    <option value=".24">IV</options>
-					    <option value=".36">V</options>
-				    </select>
-                </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="It depends upon the location of
-												the structure. Also, it corresponds to the
-                        seismic zone obtained from a map.">
-                    </span>
-                </div>
-            </div>
-                 <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-9">   <label class="top-margin"
-											for="gravity">GRAVITY ACCELERATION:</label>
-										</div></div>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6 col-sm-10 col-xs-10">
-                    <input class="form-control input-lg space"
-                    type="number" name="Gravity_acceleration"
-		            placeholder="Gravity_acceleration" value=9.8
-                    step=0.1 min=9.0 max=10.0 required id="gravity">
-                </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="The default value is 9.8,
-												but you can choose between 9 to 10.">
-                    </span>
-                </div>
-            </div>
-                  <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-9">  <label class="top-margin"
-											for="modes">MODES CONSIDERED:</label>
-                </div></div>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-6 col-sm-10 col-xs-10">
-                    <input class=" form-control input-lg space"
-                    type="number" name="Modes_considered" id="modes"
-                    placeholder="Modes_considered" min=1>
-                </div>
-                <div class="col-md-3 col-sm-2 col-xs-2">
-                    <span class="col-md-2 glyphicon glyphicon-question-sign"
-                        aria-hidden="true" data-toggle="tooltip"
-												data-original-title="It tells about the number of modes
-												to be considered. It can have value from 1 to
-												'Number of storeys' field value above.">
-                    </span>
-                </div>
-            </div>
-                    <div class="row">
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-9"><label class="top-margin"
-											for="modes">UPLOAD CSV FILE:</label>
-											<span class="glyphicon glyphicon-question-sign"
-											aria-hidden="true" data-toggle="tooltip"
-											data-original-title="This allows you to upload CSV file to
-											 submit the values of Mass, Height and Stiffness matrices
-											 instead of filling in yourself. Click 'Help' button on
-											 the top to know more about the CSV format.">
-                    </span>
 
-                </div></div>
-
-					<div class="row">
-                        <div class="col-md-3">
-                        </div>
-                        <div class="col-md-2">
-                            <label class="radio-inline"><input type="radio"
-															name="through_file" value="Y">Yes</label>
+                <div class="row">
+                    <div class="col-md-3">
                     </div>
-                        <div class="col-md-2">
-                            <label class="radio-inline"><input type="radio"
-															name="through_file" value="N" checked>No</label>
-                </div></div>
+                    <div class="col-md-6 col-sm-10 col-xs-10">
+                        <input class="form-control input-lg space"
+                        type="number" name="Importance_factor"
+                        placeholder="Importance_factor" required 
+                        step=0.25 min =0.5 max=10 id="imp_factor">
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true"
+                            data-toggle="tooltip" data-original-title=
+                            "It depends upon the building category and 
+                            nature of use.">
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9"><label class="top-margin"
+                        for="res_reduction">RESPONSE REDUCTION
+                        FACTOR:</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6 col-sm-10 col-xs-10">
+                        <input class="form-control input-lg space"
+                        type="number" name="Response_reduction_factor"
+                        placeholder="Response_reduction_factor" 
+                        required min=0.5 max= 10 step=0.5 
+                        id="res_reduction">
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true"
+                            data-toggle="tooltip" data-original-title=
+                            "It depends upon the ductility of the 
+                            structure.">
+                        </span>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-9"><label class="top-margin"
-											for="modes">EMAIL (after completion):</label>
-											<span class="glyphicon glyphicon-question-sign"
-											aria-hidden="true" data-toggle="tooltip"
-											data-original-title="If you select yes, the output PDF
-											file will be sent to you via email. Or else,
-											you have to wait till the processing ends.">
-                    </span>
-									</div>
-							</div>
-					<div class="row">
-                        <div class="col-md-3">
-                        </div>
-                        <div class="col-md-2">
-                            <label class="radio-inline"><input type="radio"
-															 name="email_get" value="Y" checked>Yes</label>
+                        for="zone_factor">ZONE FACTOR:</label>
+                    </div>
                 </div>
-                        <div class="col-md-2">
-                            <label class="radio-inline"><input type="radio"
-															name="email_get" value="N">No</label>
-                        </div>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6 col-sm-10 col-xs-10">
+                        <select name="Zone_factor" id="zone_factor"
+                        class="form-control dropdown-toggle input-lg"
+                        id="zone_factor">
+                            <option value=".1">II</options>
+                            <option value=".16">III</options>
+                            <option value=".24">IV</options>
+                            <option value=".36">V</options>
+                        </select>
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true" 
+                            data-toggle="tooltip" data-original-title="
+                            It depends upon the location of the 
+                            structure. Also, it corresponds to the
+                            seismic zone obtained from a map.">
+                        </span>
+                    </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9"><label class="top-margin"
+                        for="gravity">GRAVITY ACCELERATION:</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6 col-sm-10 col-xs-10">
+                        <input class="form-control input-lg space"
+                        type="number" name="Gravity_acceleration"
+                        placeholder="Gravity_acceleration" value=9.8
+                        step=0.1 min=9.0 max=10.0 required 
+                        id="gravity">
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true"
+                            data-toggle="tooltip" data-original-title=
+                            "The default value is 9.8, but you can 
+                            choose between 9 to 10.">
+                        </span>
+                    </div>
+                </div>
+                  
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9"><label class="top-margin"
+                        for="modes">MODES CONSIDERED:</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6 col-sm-10 col-xs-10">
+                        <input class=" form-control input-lg space"
+                        type="number" name="Modes_considered" 
+                        id="modes" placeholder="Modes_considered" 
+                        min=1>
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-2">
+                        <span class="col-md-2 glyphicon 
+                            glyphicon-question-sign" aria-hidden="true" 
+                            data-toggle="tooltip" data-original-title=
+                            "It tells about the number of modes to be 
+                            considered. It can have value from 1 to
+                            'Number of storeys' field value above.">
+                        </span>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9"><label class="top-margin"
+				        for="modes">UPLOAD CSV FILE:</label>
+                        <span class="glyphicon glyphicon-question-sign"
+					        aria-hidden="true" data-toggle="tooltip"
+						    data-original-title="This allows you to 
+                            upload CSV file to submit the values of 
+                            Mass, Height and Stiffness matrices instead
+                            of filling in yourself. Click 'Help' button
+                            on the top to know more about the CSV 
+                            format.">
+                        </span>
+                    </div>
+                </div>
+
+			    <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="radio-inline"><input type="radio"
+                            name="through_file" value="Y">Yes</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="radio-inline"><input type="radio"
+					        name="through_file" value="N" checked>No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9"><label class="top-margin"
+                        for="modes">EMAIL (after completion):</label>
+                        <span class="glyphicon glyphicon-question-sign"
+                            aria-hidden="true" data-toggle="tooltip"
+                            data-original-title="If you select yes, 
+                            the output PDF file will be sent to you via
+                            email. Or else, you have to wait till the 
+                            processing ends.">
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="radio-inline"><input type="radio"
+                            name="email_get" value="Y" checked>Yes
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="radio-inline"><input type="radio"
+                            name="email_get" value="N">No</label>
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-md-5"></div>
                     <!--
                     <div class="col-md-3"><a class="btn btn-primary"
                     id="autofill"
                             onclick="autofill()">Autofill values</a>
-                            </div>-->
+                    </div>-->
                     <div class="col-md-3">
-                    <input class="btn-lg btn-success" type="submit"
-                    value="Submit" id="submit"></div>
+                        <input class="btn-lg btn-success" type="submit"
+                            value="Submit" id="submit">
+                    </div>
                     <!-- Button trigger modal
                     <div class="col-md-3">
                     <button type="button" class="btn btn-primary"
                         id="help-btn" data-toggle="modal"
                         data-target="#myModal">Help</button>
-                </div> -->
+                    </div> -->
                 </div>
 			</form>
 				<!-- form end-->
@@ -341,45 +327,45 @@
                             Help Section</h4>
                    </div>
                    <div class="modal-body">
-                       <dl>
-                           <dt>Soil type</dt>
-                           <dd>This is type of soil.</dd>
-							<dd>You can chosse from these three types-:
-							</dd>
-							<dd>1. Type I <br>
+                       <ul>
+                           <li>Soil type</li>
+                           <li>This is type of soil.</li>
+							<li>You can chosse from these three types-:
+							</li>
+							<li>1. Type I <br>
 								2. Type II <br>
 								3. Type III <br>
-							</dd>
-                           <dt>Number of storeys</dt>
-                           <dd>This defines the number of storeys to be
+							</li>
+                           <li>Number of storeys</li>
+                           <li>This defines the number of storeys to be
              				consider <br>
              				It can have value from 1 to 1000 <br>
-             				</dd>
+             				</li>
 
-                           <dt>Importance factor</dt>
-                           <dd>It depends upon the building category
-														 and nature of use.</dd>
+                           <li>Importance factor</li>
+                           <li>It depends upon the building category
+                             and nature of use.</li>
 
-                           <dt>Response Reduction factor</dt>
-                           <dd>It depends upon the ductility of the structure.
-													 </dd>
+                           <li>Response Reduction factor</li>
+                           <li>It depends upon the ductility of the structure.
+                                 </li>
 
-                           <dt>Zone factor</dt>
-                           <dd>It depends upon the location of the structure.
+                           <li>Zone factor</li>
+                           <li>It depends upon the location of the structure.
 													 Also, it corresponds to the seismic zone obtained
-													 from a map.</dd>
+													 from a map.</li>
 
-                           <dt>Gravity Acceleration</dt>
-                           <dd> Its default value is 9.8 but you can
-                           chosse between 9 to 10</dd>
+                           <li>Gravity Acceleration</li>
+                           <li> Its default value is 9.8 but you can
+                           chosse between 9 to 10</li>
 
-                           <dt>Modes considered</dt>
-                           <dd>It tells number of modes to be consisder
+                           <li>Modes considered</li>
+                           <li>It tells number of modes to be consisder
                            It can have value from 1 to Number of storeys
-                           input by user </dd>
-						 	<dt> Upload through file</dt>
-							 <dd>upload through file allow you to upload
-							  csv file to add value of mass,
+                           input by user </li>
+						 	<li> Upload through file</li>
+							 <li>upload through file allow you to upload
+							  csv file to ali value of mass,
 							  height and stiffness matrix
 							  format for csv for 4 number of storeys :
 								<br>mass inputs<br>
@@ -389,12 +375,12 @@
 								e.g-:
 							  <br>
 							  12,3,2,4<br>
-	   						23,1,4,2<br>23,2,3,2<br></dd>
-							<dt>Email
-							</dt>
-							<dd>Email allow you to get pdf through mail
-							</dd>
-                      </dl>
+	   						23,1,4,2<br>23,2,3,2<br></li>
+							<li>Email
+							</li>
+							<li>Email allow you to get pdf through mail
+							</li>
+                      </ul>
                    </div>
 
                    <div class="modal-footer">
@@ -428,6 +414,4 @@
                 </div>
             </div>
         </div>
-    </body>
-	<!-- end content block-->
-</html>
+        {% endblock %}	
