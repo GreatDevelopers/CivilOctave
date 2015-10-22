@@ -3,7 +3,7 @@ This module contain functions to controls veiws
 ...
 """
 # Create your views here.
-import os
+import os,threading
 from django.http import HttpResponse
 from django.shortcuts import render
 import csv,datetime
@@ -77,36 +77,9 @@ def last(request):
 	"""
 
 	message='error occured please fill again'
-
-	#dictionary of all input tags
-	lists = {'Soil_type':'','Number_of_storeys':''
-	,'Importance_factor':'','Response_reduction_factor':''
-	,'Zone_factor':'','Gravity_acceleration':''
-	,'Modes_considered':''}
 	try:
-
-		#name of directory of specific user
-		name=request.session.session_key+str(datetime.datetime.now())
-		name=name.replace(" ", "")
-		#getting input using tags
-		for var in lists.keys():
-			lists[var]=request.session.get(var)
-			name=name+str(lists[var])
-		command='cp -r sagemath '+name
-		os.popen(command)
-
-		#opening file for writing
-		command=name+'/input.sage'
-		file = open(command, 'w')
-
-		#writing variables in input.sage file with syntax of sage
-		for var in lists.keys():
-			file.write(var)
-			file.write('=')
-			file.write(lists[var])
-			file.write('\n')
-		file.close()
-
+		#calling function to writte basic input
+		name,message=first_write(request)
 		#getting numbers of storeys
 		num = request.session.get('Number_of_storeys')
 
@@ -140,38 +113,34 @@ def last(request):
 			file.write('])\n')
 		file.close()
 
-		#creating and writing sh file for background processing
-		command=name+'/civil.sh'
-		file=open(command,'w')
-		command='cd '+name
-		file.write(command)
-		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-		file.write('pdflatex civil.tex\n')
-		file.close()
-
-		#calling sh file for background processing
-		command='sh '+name+'/civil.sh'
-		os.system(command)
-
-		#opening creted pdf to display to user
-		command=name+'/civil.pdf'
-		f=open(command)
-
-		#sending pdf as response
-		response = HttpResponse(f,content_type='application/pdf')
-		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 		if(request.POST.get('email_id')):
-			email_id=request.POST.get('email_id')
-			user_email = EmailMessage('Your PDF is ready!',
-			'You have is ready', to=[email_id])
-			user_email.attach_file(command)
-			user_email.send()
-			command='rm -rf '+name
-			os.system(command)
+			#calling funcion to send pdf and run that as background process
+			thread = threading.Thread(target=pdfemail,args=(request,name))
+			thread.daemon = True
+			thread.start()
 			message="PDF send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
+			#creating and writing sh file for background processing
+			command=name+'/civil.sh'
+			file=open(command,'w')
+			command='cd '+name
+			file.write(command)
+			file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
+			file.write('pdflatex civil.tex\n')
+			file.close()
 
+			#calling sh file for background processing
+			command='sh '+name+'/civil.sh'
+			os.system(command)
+
+			#opening creted pdf to display to user
+			command=name+'/civil.pdf'
+			f=open(command)
+
+			#sending pdf as response
+			response = HttpResponse(f,content_type='application/pdf')
+			response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 			#deleting temperary files
 			command='rm -rf '+name
 			os.system(command)
@@ -190,36 +159,7 @@ def file(request):
 
 	message='please fill again'
 	try:
-
-		#dictionary of all input tags
-		lists = {'Soil_type':'','Number_of_storeys':''
-		,'Importance_factor':'','Response_reduction_factor':''
-		,'Zone_factor':'','Gravity_acceleration':''
-		,'Modes_considered':''}
-
-		#name of directory of specific user
-		name=request.session.session_key+str(datetime.datetime.now())
-		name=name.replace(" ", "")
-
-		#getting input using tags
-		for var in lists.keys():
-			lists[var]=request.session.get(var)
-			name=name+str(lists[var])
-		command='cp -r sagemath '+name
-		os.popen(command)
-
-		#opening file for writing
-		command=name+'/input.sage'
-		file = open(command, 'w')
-
-		#writing variables in input.sage file with syntax of sage
-		for var in lists.keys():
-			file.write(var)
-			file.write('=')
-			file.write(lists[var])
-			file.write('\n')
-		file.close()
-
+		name,message=first_write(request)
 		#getting file uploaded by user
 		f=request.FILES["input_file"]
 		if(f.content_type != 'text/csv'):
@@ -227,16 +167,12 @@ def file(request):
 			{'email_get': request.session.get('email_get'),
 			'message':'File Not in CSV FORMAT '})
 		data = [row for row in csv.reader(f)]
-
 		#getting numbers of storeys
 		num = request.session.get('Number_of_storeys')
-		#checking if number values are not less than required values
-		#if(len(data)<3*int(num)):
-			#return render( request,'civilsage/file.html')
+
 		#opening input.sage to append remaining inputs
 		command=name+'/input.sage'
 		file=open(command,'a')
-
 		#list of basic tags
 		var = ['mass','Height_storey','Stiffness_storey']
 		jar=0
@@ -267,39 +203,34 @@ def file(request):
 			jar=jar+1
 			file.write('])\n')
 		file.close()
-
-		#creating and writing sh file for background processing
-		command=name+'/civil.sh'
-		file=open(command,'w')
-		command='cd '+name
-		file.write(command)
-		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-		file.write('pdflatex civil.tex\n')
-		file.close()
-
-		#calling sh file for background processing
-		command='sh '+name+'/civil.sh'
-		os.system(command)
-
-		#opening creted pdf to display to user
-		command=name+'/civil.pdf'
-		f=open(command)
-
-		#sending pdf as response
-		response = HttpResponse(f,content_type='application/pdf')
-		response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 		if(request.POST.get('email_id')):
-			email_id=request.POST.get('email_id')
-			user_email = EmailMessage('Your PDF is ready!',
-			'You have is ready', to=[email_id])
-			user_email.attach_file(command)
-			user_email.send()
-			command='rm -rf '+name
-			os.system(command)
+			#calling funcion to send pdf and run that as background proces
+			thread = threading.Thread(target=pdfemail,args=(request,name))
+			thread.daemon = True
+			thread.start()
 			message="PDF send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
+			#creating and writing sh file for background processing
+			command=name+'/civil.sh'
+			file=open(command,'w')
+			command='cd '+name
+			file.write(command)
+			file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
+			file.write('pdflatex civil.tex\n')
+			file.close()
 
+			#calling sh file for background processing
+			command='sh '+name+'/civil.sh'
+			os.system(command)
+
+			#opening creted pdf to display to user
+			command=name+'/civil.pdf'
+			f=open(command)
+
+			#sending pdf as response
+			response = HttpResponse(f,content_type='application/pdf')
+			response['Content-Disposition'] = 'attachment; filename="civil.pdf"'
 			#deleting temperary files
 			command='rm -rf '+name
 			os.system(command)
@@ -307,3 +238,76 @@ def file(request):
 	except:
 		return render(request, "civilsage/file.html",
 		{'message':message,'email_get':request.session.get('email_get')})
+
+def pdfemail(request,name):
+	"""
+	A function that run as background process to send pdf as emails
+	...
+	"""
+	message='unable to send'
+	try:
+		#creating and writing sh file for background processing
+		email_id=request.POST.get('email_id')
+		command=name+'/email.txt'
+		f=open(command,'w')
+		f.write(email_id)
+		f.close()
+		command=name+'/civil.sh'
+		file=open(command,'w')
+		command='cd '+name
+		file.write(command)
+		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
+		file.write('pdflatex civil.tex\n')
+		file.close()
+		#calling sh file for background processing
+		command='sh '+name+'/civil.sh'
+		os.system(command)
+		command=name+'/civil.pdf'
+		email_id=request.POST.get('email_id')
+		user_email = EmailMessage('Dynamics of structure',
+		'You have is ready', to=[email_id])
+		user_email.attach_file(command)
+		user_email.send()
+		command='rm -rf '+name
+		os.system(command)
+	except:
+		email_id=request.POST.get('email_id')
+		user_email = EmailMessage('Dynamics of structure',
+		message, to=[email_id])
+
+def first_write(request):
+	"""
+
+	This function that write basic input same for all
+	veiws
+	...
+	"""
+	message='error occured please fill again'
+
+	#dictionary of all input tags
+	lists = {'Soil_type':'','Number_of_storeys':''
+	,'Importance_factor':'','Response_reduction_factor':''
+	,'Zone_factor':'','Gravity_acceleration':''
+	,'Modes_considered':''}
+	#name of directory of specific user
+	name=request.session.session_key+str(datetime.datetime.now())
+	name=name.replace(" ", "")
+	#getting input using tags
+	for var in lists.keys():
+		lists[var]=request.session.get(var)
+		name=name+str(lists[var])
+	command='cp -r sagemath '+name
+	os.popen(command)
+
+	#opening file for writing
+	command=name+'/input.sage'
+	file = open(command, 'w')
+
+	#writing variables in input.sage file with syntax of sage
+	for var in lists.keys():
+		file.write(var)
+		file.write('=')
+		file.write(lists[var])
+		file.write('\n')
+	file.close()
+	return name,message

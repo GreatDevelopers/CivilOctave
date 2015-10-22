@@ -3,7 +3,7 @@
 - [ ] Mode considered related editing (input)
 - [ ] script to do jobs when server restart-:
  	- [ ] process interrupted background processes
-	- [ ] restart sage
+	- [Y] restart sage
 	- [ ] restart django
 - [ ] Testing
 - [ ] Creating a base html file for making other html file inherit.
