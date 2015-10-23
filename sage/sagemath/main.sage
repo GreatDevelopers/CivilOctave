@@ -71,25 +71,23 @@ Omega_square=A.eigenvalues()
 
 #calculating W and time period
 Omega=zero_matrix(RR,Number_of_storeys,1)
-Time_period=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
+Time_period=zero_matrix(RR,Number_of_storeys,1)
 for i in range( Number_of_storeys):
 	q=sqrt(Omega_square[i])
-	Omega[i,0]=q
-	Time_period[i,i]=n(2*pi)/q
-Time_periods=list()
-for storey_i in range(Number_of_storeys):
-	Time_periods.append(Time_period[storey_i, storey_i])
+	Omega[i,0]=n(q)
+	Time_period[i,0]=n(2*pi)/q
 #Frequency=list()
 #for storey_i in range(Number_of_storeys):
 	#Frequency.append(sqrt(Omega_square[storey_i].n(digits=4)))
 #calculating egin vectors
 z=A.eigenvectors_left()
+
 J=zero_matrix(RR,Number_of_storeys,1)
 X=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for x in range(Number_of_storeys):
 	q=matrix(z[x][1][0])
 	mid=q*Mass*q.transpose()
-	J[x,0]=(mid[0][0])
+	J[x,0]=n(mid[0][0])
 	X[x]=matrix(q/sqrt(abs(J[x])))
 #ModesContributionX = 0;
 #Number_of_modes_to_be_considered = 0;
@@ -126,7 +124,7 @@ Sa_by_g=zero_matrix(RR,Number_of_storeys,1)
 A_h=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_time in range(Number_of_storeys):
 	Sa_by_g[index_time,0] = funSaog(
-	Type_of_soil, Time_periods[index_time])
+	Type_of_soil, Time_period[index_time,0])
  	A_h[index_time,1]= (
  	Zone_factor/2*Importance_factor/
  	Response_reduction_factor * Sa_by_g[index_time,0])
