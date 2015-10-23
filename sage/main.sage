@@ -34,6 +34,7 @@ def funSaog(soilType, timePrd):
 load('input.sage')
 #changing style of brackets for latex output
 latex.matrix_delimiters("[","]")
+latex.vector_delimiters("[","]")
 
 #converting mass in diagonal matrix
 Mass=matrix(Number_of_storeys,Number_of_storeys)
@@ -109,8 +110,8 @@ for j in range(Number_of_storeys):
         for i in range(Number_of_storeys):
             P1=P1+Mass[i][i]*m[0][i]
             P2=P2+Mass[i][i]*(m[0][i])**2
-        Modal_participation_factor[j,0]=P1/P2
-        Modal_mass[j,0]=(P1)**2/(P2)
+        Modal_participation_factor[i,0]=P1/P2
+        Modal_mass[i,0]=(P1)**2/(P2)
         sum_modal_mass = sum_modal_mass + Modal_mass[j,0]
 XX=X.transpose()
 #calculating modal contribution of each storey
@@ -122,14 +123,14 @@ for i in range(Number_of_storeys):
 Type_of_soil=''
 for i in range (Soil_type):
    Type_of_soil = Type_of_soil+'I'
-Sa_by_g=zero_matrix(RR,Number_of_storeys,1)
+Sa_by_g=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 A_h=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
 for index_time in range(Number_of_storeys):
-	Sa_by_g[index_time,0] = funSaog(
+	Sa_by_g[index_time,1] = funSaog(
 	Type_of_soil, Time_periods[index_time])
  	A_h[index_time,1]= (
  	Zone_factor/2*Importance_factor/
- 	Response_reduction_factor * Sa_by_g[index_time,0])
+ 	Response_reduction_factor * Sa_by_g[index_time,1])
 
 #calculating design lateral force
 
@@ -204,19 +205,3 @@ for i in range(Number_of_storeys):
 Graph=plot([])
 for r in range(Number_of_storeys^2):
 	Graph= Graph+p[r]
-
-Omega_square=matrix(Omega_square).n(digits=4)
-Time_period=Time_period.n(digits=4)
-Omega=Omega.n(digits=4)
-Level_floor=(Level_floor).n(digits=4)
-Modal_participation_factor=(Modal_participation_factor).n(digits=4)
-Modal_mass=(Modal_mass).n(digits=4)
-Modal_contribution=Modal_contribution.n(digits=4)
-Sa_by_g=Sa_by_g.n(digits=4)
-A_h=A_h.n(digits=4)
-Design_lateral_force=Design_lateral_force.n(digits=4)
-Peak_shear_force=Peak_shear_force.n(digits=4)
-storey_shear_force3=Storey_shear_force[:].n(digits=4)
-Storey_shear_force2=Storey_shear_force2[:].n(digits=4)
-Lateral_force=Lateral_force.n(digits=4)
-Force=Force.n(digits=4)
