@@ -1,0 +1,49 @@
+.header {
+    text-align: center;
+    font-size: 2em;
+}
+
+.space {
+    margin-bottom: 20px;
+} 
+/*
+@media (min-width: 900px) {
+    .width {
+        width:340px;
+        text-align:center;
+        margin:0 auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .width {
+        width: 500px;
+        text-align:center;
+    }
+}
+
+@media (max-width: 300px) {
+    .width {
+        width: 90%;
+        text-align:center;
+    }
+}*/
+.center {
+    text-align: center;
+}
+
+.label {
+    text-align: right;
+}
+
+.top-space {
+    margin-top: 5em; 
+}
+
+.top-margin {
+    margin-top: 0.8em;
+}
+
+h3 > label{
+    font-weight: normal;    
+}

@@ -1,0 +1,25 @@
+\hypertarget{namespacesage_1_1urls}{}\section{sage.\+urls Namespace Reference}
+\label{namespacesage_1_1urls}\index{sage.\+urls@{sage.\+urls}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacesage_1_1urls_a5c86cdc04e09bcea3285cc79e9c83220}{urlpatterns}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacesage_1_1urls_a5c86cdc04e09bcea3285cc79e9c83220}{}\index{sage\+::urls@{sage\+::urls}!urlpatterns@{urlpatterns}}
+\index{urlpatterns@{urlpatterns}!sage\+::urls@{sage\+::urls}}
+\subsubsection[{urlpatterns}]{\setlength{\rightskip}{0pt plus 5cm}tuple sage.\+urls.\+urlpatterns}\label{namespacesage_1_1urls_a5c86cdc04e09bcea3285cc79e9c83220}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = patterns(\textcolor{stringliteral}{''},
+2     \textcolor{comment}{# Examples:}
+3     \textcolor{comment}{# url(r'^$', 'sage.views.home', name='home'),}
+4     \textcolor{comment}{#url(r'^blog/', include('blog.urls')),}
+5     \textcolor{comment}{#url for civilsage files}
+6     url(\textcolor{stringliteral}{r'^'}, include(\textcolor{stringliteral}{'civilsage.urls'})),
+7     \textcolor{comment}{#url for admin login}
+8     url(\textcolor{stringliteral}{r'^admin/'}, include(admin.site.urls)),
+9 )
+\end{DoxyCode}
