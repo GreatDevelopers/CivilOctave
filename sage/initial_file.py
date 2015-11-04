@@ -1,4 +1,4 @@
 import os
 
 def pdfemail():
-    os.system('sage sagemath/input.sage')
+    os.system('sh shell_script.sh')
