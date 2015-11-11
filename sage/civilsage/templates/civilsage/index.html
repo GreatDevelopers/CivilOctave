@@ -17,7 +17,11 @@
         }
     </script>
     {% endblock %}
-
+    {% block autofill %}
+        <li><a href="#" id="autofill"
+            onclick="autofill()">Autofill values</a>
+        </li>
+    {% endblock %}
 	<!-- content block start-->
     {% block body %}
 
