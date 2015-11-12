@@ -23,14 +23,14 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-            	    <button type="button" class="navbar-toggle 
+                    <button type="button" class="navbar-toggle 
                         collapsed" data-toggle="collapse" 
                         data-target="#navbar" aria-expanded="false" 
                         aria-controls="navbar">
-                       <span class="sr-only">Toggle navigation</span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
+                         <span class="sr-only">Toggle navigation</span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/">
                         Dynamic of Structure</a>
@@ -47,7 +47,8 @@
                                 data-target="#myModal">Help</a></li>
                         <li>
                             <a href="http://github.com/GreatDevelopers"
-							    target="new">About</a></li>
+							    
+target="new">About</a></li>
                         <li class="active"><a id="help-btn" 
                             data-toggle="modal" data-target="#contact">
                             Contact us
@@ -56,7 +57,7 @@
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
-    	</nav>
+    	  </nav>
          
         <div class="top-space"></div>
 
@@ -72,73 +73,98 @@
                         </button>
                         <h4 class="modal-title" id="myModalLabel">
                             Help Section</h4>
-                   </div>
-                   <div class="modal-body">
-                       <ul>
-                           <li>Soil type</li>
-                           <li>This is type of soil.</li>
-							<li>You can chosse from these three types-:
-							</li>
-							<li>1. Type I <br>
-								2. Type II <br>
-								3. Type III <br>
-							</li>
-                           <li>Number of storeys</li>
-                           <li>This defines the number of storeys to be
-             				consider <br>
-             				It can have value from 1 to 1000 <br>
-             				</li>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <h4>Autofill Values</h4>
+                                <span>It can be used to Autofill all 
+                                the values on the index page.</span>
+                            </li>
+                            <li>
+                                <h4>Soil type</h4>
+                                <span>This is type of soil. You can 
+                                choose from these three types:
+                                    <ol>
+                                        <li>Type I</li>
+                                        <li>Type II</li>
+                                            <li>Type III</li>
+                                    </ol>
+                                </span>
+                            </li>
+                            <li>
+                                <h4>Number of storeys</h4>
+                                <span>This defines the number of 
+                                storeys to be considered. 
+                                It can have value from 1 to 1000.</span>
+                            </li>
 
-                           <li>Importance factor</li>
-                           <li>It depends upon the building category
-                             and nature of use.</li>
+                            <li>
+                                <h4>Importance factor</h4>
+                                <span>It depends upon the building 
+                                category and nature of use.</span>
+                            </li>
+                            
+                            <li>
+                                <h4>Response Reduction factor</h4>
+                                <span>It depends upon the ductility of 
+                                the structure.</span>
+                            </li>
 
-                           <li>Response Reduction factor</li>
-                           <li>It depends upon the ductility of the structure.
-                                 </li>
+                            <li>
+                                <h4>Zone factor</h4>
+                                <span>It depends upon the location of 
+                                the structure. Also, it corresponds to 
+                                the seismic zone obtained from a map.
+                                </span>
+                            </li>
 
-                           <li>Zone factor</li>
-                           <li>It depends upon the location of the structure.
-													 Also, it corresponds to the seismic zone obtained
-													 from a map.</li>
+                            <li>
+                                <h4>Gravity Acceleration</h4>
+                                <span>Its default value is 9.8, but you 
+                                can choose between 9 to 10.</span>
+                            </li>
+                            <li>
+                                <h4>Modes considered</h4>
+                                <span>It tells about the number of 
+                                modes to be considered. It can have 
+                                value from 1 to Number of storeys input 
+                                by user.</span>
+                            </li>
 
-                           <li>Gravity Acceleration</li>
-                           <li> Its default value is 9.8 but you can
-                           chosse between 9 to 10</li>
+                            <li>
+                                <h4>Upload through file</h4>
+                                <span>Upload through file allow you to 
+                                upload csv file to ali value of mass, 
+                                height and stiffness matrix format for 
+                                csv for 4 number of storeys :
+                                <ol>
+                                    <li>mass inputs</li>
+                				    <li>height values</li>
+                    			    <li>stiffness matrix values</li>
+                                    <li>e.g:
+                                        12,3,2,4<br>
+                      				    23,1,4,2<br>
+                                        23,2,3,2<br>
+                                    </li>
+                                </ol>
+                            <li>
+                                <h4>Email</h4>
+                                <span>Email allow you to get pdf through
+                                    mail.</span>
+                        </ul>
+                    </div>
 
-                           <li>Modes considered</li>
-                           <li>It tells number of modes to be consisder
-                           It can have value from 1 to Number of storeys
-                           input by user </li>
-						 	<li> Upload through file</li>
-							 <li>upload through file allow you to upload
-							  csv file to ali value of mass,
-							  height and stiffness matrix
-							  format for csv for 4 number of storeys :
-								<br>mass inputs<br>
-								height values<br>
-								stiffness matrix values <br>
-
-								e.g-:
-							  <br>
-							  12,3,2,4<br>
-	   						23,1,4,2<br>23,2,3,2<br></li>
-							<li>Email
-							</li>
-							<li>Email allow you to get pdf through mail
-							</li>
-                      </ul>
-                   </div>
-
-                   <div class="modal-footer">
-                       <button type="button" class="btn btn-default"
-                           data-dismiss="modal">Close</button>
-                       <!--button type="button" class="btn btn-primary">
-                           Save changes</button-->
-                   </div>
-               </div>
-           </div>
-       </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                            <!--button type="button" class="btn 
+                            btn-primary">
+                            Save changes</button-->
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="contact" tabindex="-1"
@@ -152,11 +178,12 @@
                         </button>
                         <h4 class="modal-title" id="myModalLabel">
                             Contact us</h4>
-                   </div>
-                   <div class="modal-body">
-                       <a href="http://github.com/GreatDevelopers">Github</a>
-                       <br />
-                       <a href="#">Email</a>
+                    </div>
+                    <div class="modal-body">
+                        <a href="http://github.com/GreatDevelopers">
+                            Github</a>
+                        <br />
+                        <a href="#">Email</a>
                     </div>
                 </div>
             </div>
