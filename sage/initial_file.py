@@ -1,15 +1,31 @@
-import os
+import os,threading
 from django.core.mail import EmailMessage
 
+
+lock=threading.Lock()
 def pdfemail():
-    os.system('sage ../sagemath/input.sage')
-    os.system('ls -d Temp*>file')
-    f=open('file')
-    a=f.read()
-    a=a.split('\n')
-    for i in range(len(a)-1):
-        emailcall(a[i])
-    os.system('rm file')
+    if(lock.acquire()):
+    	"""
+    	runs sage for first time
+    	"""
+    	os.system('sage sagemath/input.sage')
+    	
+    	#get list of unprocessed files
+    	os.system('ls -d Temp*>file')
+    	f=open('file')
+    	a=f.readline()
+    	if( a ==''):
+            lock.release()
+	    return
+	a=a.split('\n')
+	
+	#process files
+    	for i in range(len(a)-1):
+    	    emailcall(a[i])
+    	os.system('rm file')
+	lock.release()
+    else:
+    	return
 
 def emailcall(name):
 	"""
@@ -40,6 +56,8 @@ def emailcall(name):
 		'You have is ready', to=[email_id])
 		user_email.attach_file(command)
 		user_email.send()
+		command='rm -rf '+name
+		os.system(command)
 		command='rm -rf '+name
 		os.system(command)
 	except:

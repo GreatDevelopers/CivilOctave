@@ -208,7 +208,7 @@ def file(request):
 			thread = threading.Thread(target=pdfemail,args=(request,name))
 			thread.daemon = True
 			thread.start()
-			message="PDF send to "+request.POST.get('email_id')
+			message="PDF will be send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
 			#creating and writing sh file for background processing
