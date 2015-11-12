@@ -290,7 +290,7 @@ def first_write(request):
 	,'Zone_factor':'','Gravity_acceleration':''
 	,'Modes_considered':''}
 	#name of directory of specific user
-	name=request.session.session_key+str(datetime.datetime.now())
+	name='Temp'+request.session.session_key+str(datetime.datetime.now())
 	name=name.replace(" ", "")
 	#getting input using tags
 	for var in lists.keys():
