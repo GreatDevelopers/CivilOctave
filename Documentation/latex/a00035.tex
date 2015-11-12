@@ -1,0 +1,30 @@
+\hypertarget{a00035}{}\section{civilsage.\+urls Namespace Reference}
+\label{a00035}\index{civilsage.\+urls@{civilsage.\+urls}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{a00035_a46a501661622e9e2b11c9d6da43bbec0}{urlpatterns}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00035_a46a501661622e9e2b11c9d6da43bbec0}{}\index{civilsage\+::urls@{civilsage\+::urls}!urlpatterns@{urlpatterns}}
+\index{urlpatterns@{urlpatterns}!civilsage\+::urls@{civilsage\+::urls}}
+\subsubsection[{urlpatterns}]{\setlength{\rightskip}{0pt plus 5cm}list civilsage.\+urls.\+urlpatterns}\label{a00035_a46a501661622e9e2b11c9d6da43bbec0}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [
+2     \textcolor{comment}{#directs to index veiw}
+3     url(\textcolor{stringliteral}{r'^$'}, views.index, name=\textcolor{stringliteral}{'index'}),
+4     \textcolor{comment}{#directs request to matrix veiw}
+5     url(\textcolor{stringliteral}{r'^matrix/$'}, views.matrix, name=\textcolor{stringliteral}{'matrix'}),
+6     \textcolor{comment}{#directs request to file veiw to upload file}
+7     url(\textcolor{stringliteral}{r'^file/$'}, views.file, name=\textcolor{stringliteral}{'file'}),
+8     \textcolor{comment}{#directs request to last veiw}
+9     url(\textcolor{stringliteral}{r'^last/$'}, views.last, name=\textcolor{stringliteral}{'last'}),
+10 ]
+\end{DoxyCode}
+
+
+Definition at line 5 of file urls.\+py.
+

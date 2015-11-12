@@ -3,33 +3,62 @@
 
 {% block body %}
     <div class="container">
-    <h3>{{message}}</h3>
-    <form action="{% url 'file' %}" method="post"
-        enctype="multipart/form-data" >
-        {% csrf_token %}
-        {% if email_get == 'Y' %}
-        <div class="container"> 
-        <div class="row">
-            <div class="form-group"> 
-                <h3 class="center"><label for="email_id">
-                    Email address</label></h3>
-                <input class="form-control input-lg space" type="email"
-                    name="email_id" id="email_id" />
-            </div>
-        </div>
-        {% endif %}
-        <div class="row"> 
-            <div class="form-group">
-                <input class="form-control btn-lg input-lg" type="file" 
-                    name="input_file">
-            </div>
-        </div>
-        </div>
-        
-        <div class="row center">
-                <input class="btn-lg btn-succes" type="submit" 
-                    value="Submit">
-        </div>
-    </form>
-</div>
+        <h3>{{message}}</h3>
+        <form action="{% url 'file' %}" method="post"
+            enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if email_get == 'Y' %}
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 col-xs-12"> 
+                                <h3 class="center"><label 
+                                    for="email_id">Email address</label>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1 col-sm-2 col-xs-2">
+                            </div>
+                            <div class="col-md-6 col-xs-8 col-sm-8">
+                                <input class="form-control input-lg 
+                                    space" type="email" name="email_id" 
+                                    id="email_id"/>
+                            </div>
+                            <div class="col-xs-2 col-md-5 col-sm-2">
+                            </div>
+                        </div>
+            	</div>
+            {% endif %}
+            	<div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-xs-12"> 
+                            <h3 class="center"><label 
+                                for="csvfile">Select CSV</label>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 col-sm-2 col-xs-2">
+                        </div>
+                        <div class="col-md-6 col-xs-8 col-sm-8">
+                            <input class="form-control btn-lg 
+                                input-lg space" type="file" id="csvfile"
+                                name="input_file">
+                        </div>
+                        <div class="col-xs-2 col-md-5 col-sm-2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-5 col-xs-4">
+                        </div>
+                        <div class="row col-md-5 col-sm-5 col-xs-6">
+                            <input class="btn-lg btn-succes" 
+                            type="submit" value="Submit">
+                        </div>
+                        <div class="col-md-4 col-sm-2 col-xs-2">
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
 {% endblock %}

@@ -10,6 +10,10 @@ def \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{ma
 def \hyperlink{namespacecivilsage_1_1views_aed47fb0740a2fa14693f697905788719}{last} (request)
 \item 
 def \hyperlink{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb}{file} (request)
+\item 
+def \hyperlink{namespacecivilsage_1_1views_a9914ff19f8e15ccab1a07eaeac8cfb21}{pdfemail} (request, name)
+\item 
+def \hyperlink{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{first\+\_\+write} (request)
 \end{DoxyCompactItemize}
 
 
@@ -33,147 +37,173 @@ This veiw take input data from file uploaded by user and processes
 to give output in form of response
 \end{DoxyVerb}
  
+
+Definition at line 153 of file views.\+py.
+
+
 \begin{DoxyCode}
-184 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb}{file}(request):
+153 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb}{file}(request):
+154 
+155     \textcolor{stringliteral}{"""Documentation for a function}
+156 \textcolor{stringliteral}{    This veiw take input data from file uploaded by user and processes}
+157 \textcolor{stringliteral}{    to give output in form of response}
+158 \textcolor{stringliteral}{    """}
+159 
+160     message=\textcolor{stringliteral}{'please fill again'}
+161     \textcolor{keywordflow}{try}:
+162         name,message=\hyperlink{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{first\_write}(request)
+163         \textcolor{comment}{#getting file uploaded by user}
+164         f=request.FILES[\textcolor{stringliteral}{"input\_file"}]
+165         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(f.content\_type != \textcolor{stringliteral}{'text/csv'}):
+166             \textcolor{keywordflow}{return} render( request,\textcolor{stringliteral}{'civilsage/file.html'},
+167             \{\textcolor{stringliteral}{'email\_get'}: request.session.get(\textcolor{stringliteral}{'email\_get'}),
+168             \textcolor{stringliteral}{'message'}:\textcolor{stringliteral}{'File Not in CSV FORMAT '}\})
+169         data = [row \textcolor{keywordflow}{for} row \textcolor{keywordflow}{in} csv.reader(f)]
+170         \textcolor{comment}{#getting numbers of storeys}
+171         num = request.session.get(\textcolor{stringliteral}{'Number\_of\_storeys'})
+172 
+173         \textcolor{comment}{#opening input.sage to append remaining inputs}
+174         command=name+\textcolor{stringliteral}{'/input.sage'}
+175         file=open(command,\textcolor{stringliteral}{'a'})
+176         \textcolor{comment}{#list of basic tags}
+177         var = [\textcolor{stringliteral}{'mass'},\textcolor{stringliteral}{'Height\_storey'},\textcolor{stringliteral}{'Stiffness\_storey'}]
+178         jar=0
+179 
+180         \textcolor{comment}{#writing matix into sage file}
+181         \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} var:
+182             message=\textcolor{stringliteral}{"Less no. of rows in csv file"}
+183             file.write(j)
+184             file.write(\textcolor{stringliteral}{'=matrix(['})
 185 
-186     \textcolor{stringliteral}{"""Documentation for a function}
-187 \textcolor{stringliteral}{    This veiw take input data from file uploaded by user and processes}
-188 \textcolor{stringliteral}{    to give output in form of response}
-189 \textcolor{stringliteral}{    """}
-190 
-191     message=\textcolor{stringliteral}{'please fill again'}
-192     \textcolor{keywordflow}{try}:
-193 
-194         \textcolor{comment}{#dictionary of all input tags}
-195         lists = \{\textcolor{stringliteral}{'Soil\_type'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Number\_of\_storeys'}:\textcolor{stringliteral}{''}
-196         ,\textcolor{stringliteral}{'Importance\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Response\_reduction\_factor'}:\textcolor{stringliteral}{''}
-197         ,\textcolor{stringliteral}{'Zone\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Gravity\_acceleration'}:\textcolor{stringliteral}{''}
-198         ,\textcolor{stringliteral}{'Modes\_considered'}:\textcolor{stringliteral}{''}\}
+186             \textcolor{comment}{#writing elements of matix}
+187             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(int(num)):
+188                 file.write(\textcolor{stringliteral}{'['})
+189 
+190                 \textcolor{comment}{#getting input from tags}
+191                 message=\textcolor{stringliteral}{"Less no. of elements in row "}+str(i)
+192                 \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(\textcolor{keywordflow}{not} data[jar][i].isdigit()):
+193                     ii=i+1
+194                 \textcolor{keywordflow}{else}:
+195                     ii=i
+196                 d=data[jar][ii]
+197                 file.write(str(d))
+198                 file.write(\textcolor{stringliteral}{']'})
 199 
-200         \textcolor{comment}{#name of directory of specific user}
-201         name=\textcolor{stringliteral}{''}
-202 
-203         \textcolor{comment}{#getting input using tags}
-204         \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-205             lists[var]=request.session.get(var)
-206             name=name+str(lists[var])
-207 
-208         command=\textcolor{stringliteral}{'cp -r sagemath '}+name
-209         os.popen(command)
-210 
-211         \textcolor{comment}{#opening file for writing}
-212         command=name+\textcolor{stringliteral}{'/input.sage'}
-213         file = open(command, \textcolor{stringliteral}{'w'})
-214 
-215         \textcolor{comment}{#writing variables in input.sage file with syntax of sage}
-216         \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-217             file.write(var)
-218             file.write(\textcolor{stringliteral}{'='})
-219             file.write(lists[var])
-220             file.write(\textcolor{stringliteral}{'\(\backslash\)n'})
-221         file.close()
+200                 \textcolor{comment}{#condition to check last element}
+201                 \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}( i!=int(num)+jar-1):
+202                     file.write(\textcolor{stringliteral}{','})
+203             jar=jar+1
+204             file.write(\textcolor{stringliteral}{'])\(\backslash\)n'})
+205         file.close()
+206         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(request.POST.get(\textcolor{stringliteral}{'email\_id'})):
+207             \textcolor{comment}{#calling funcion to send pdf and run that as background proces}
+208             thread = threading.Thread(target=pdfemail,args=(request,name))
+209             thread.daemon = \textcolor{keyword}{True}
+210             thread.start()
+211             message=\textcolor{stringliteral}{"PDF send to "}+request.POST.get(\textcolor{stringliteral}{'email\_id'})
+212             \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/index.html"}, \{\textcolor{stringliteral}{'message'}:message\})
+213         \textcolor{keywordflow}{else}:
+214             \textcolor{comment}{#creating and writing sh file for background processing}
+215             command=name+\textcolor{stringliteral}{'/civil.sh'}
+216             file=open(command,\textcolor{stringliteral}{'w'})
+217             command=\textcolor{stringliteral}{'cd '}+name
+218             file.write(command)
+219             file.write(\textcolor{stringliteral}{'\(\backslash\)nlatex civil.tex\(\backslash\)nsage civil.sagetex.sage\(\backslash\)n'})
+220             file.write(\textcolor{stringliteral}{'pdflatex civil.tex\(\backslash\)n'})
+221             file.close()
 222 
-223         \textcolor{comment}{#getting file uploaded by user}
-224         f=request.FILES[\textcolor{stringliteral}{"input\_file"}]
-225         print(f.content\_type)
-226         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(f.content\_type != \textcolor{stringliteral}{'text/csv'}):
-227             \textcolor{keywordflow}{return} render( request,\textcolor{stringliteral}{'civilsage/file.html'},
-228             \{\textcolor{stringliteral}{'email\_get'}: request.session.get(\textcolor{stringliteral}{'email\_get'}),
-229             \textcolor{stringliteral}{'message'}:\textcolor{stringliteral}{'File Not in CSV FORMAT '}\})
-230         data = [row \textcolor{keywordflow}{for} row \textcolor{keywordflow}{in} csv.reader(f)]
-231 
-232         \textcolor{comment}{#getting numbers of storeys}
-233         num = request.session.get(\textcolor{stringliteral}{'Number\_of\_storeys'})
-234 
-235         \textcolor{comment}{#checking if number values are not less than required values}
-236         \textcolor{comment}{#if(len(data)<3*int(num)):}
-237             \textcolor{comment}{#return render( request,'civilsage/file.html')}
-238         \textcolor{comment}{#opening input.sage to append remaining inputs}
-239         command=name+\textcolor{stringliteral}{'/input.sage'}
-240         file=open(command,\textcolor{stringliteral}{'a'})
+223             \textcolor{comment}{#calling sh file for background processing}
+224             command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
+225             os.system(command)
+226 
+227             \textcolor{comment}{#opening creted pdf to display to user}
+228             command=name+\textcolor{stringliteral}{'/civil.pdf'}
+229             f=open(command)
+230 
+231             \textcolor{comment}{#sending pdf as response}
+232             response = HttpResponse(f,content\_type=\textcolor{stringliteral}{'application/pdf'})
+233             response[\textcolor{stringliteral}{'Content-Disposition'}] = \textcolor{stringliteral}{'attachment; filename="civil.pdf"'}
+234             \textcolor{comment}{#deleting temperary files}
+235             command=\textcolor{stringliteral}{'rm -rf '}+name
+236             os.system(command)
+237             \textcolor{keywordflow}{return} response
+238     \textcolor{keywordflow}{except}:
+239         \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/file.html"},
+240         \{\textcolor{stringliteral}{'message'}:message,\textcolor{stringliteral}{'email\_get'}:request.session.get(\textcolor{stringliteral}{'email\_get'})\})
 241 
-242         \textcolor{comment}{#list of basic tags}
-243         var = [\textcolor{stringliteral}{'mass'},\textcolor{stringliteral}{'Height\_storey'},\textcolor{stringliteral}{'Stiffness\_storey'}]
-244         jar=0
-245 
-246         \textcolor{comment}{#writing matix into sage file}
-247         \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} var:
-248             message=\textcolor{stringliteral}{"Less no. of rows in csv file"}
-249             file.write(j)
-250             file.write(\textcolor{stringliteral}{'=matrix(['})
-251 
-252             \textcolor{comment}{#writing elements of matix}
-253             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(int(num)):
-254                 file.write(\textcolor{stringliteral}{'['})
-255 
-256                 \textcolor{comment}{#getting input from tags}
-257                 message=\textcolor{stringliteral}{"Less no. of elements in row "}+str(i)
-258                 \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(\textcolor{keywordflow}{not} data[jar][i].isdigit()):
-259                     ii=i+1
-260                 \textcolor{keywordflow}{else}:
-261                     ii=i
-262                 d=data[jar][ii]
-263                 print(d)
-264                 file.write(str(d))
-265                 file.write(\textcolor{stringliteral}{']'})
-266 
-267                 \textcolor{comment}{#condition to check last element}
-268                 \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}( i!=int(num)+jar-1):
-269                     file.write(\textcolor{stringliteral}{','})
-270             jar=jar+1
-271             file.write(\textcolor{stringliteral}{'])\(\backslash\)n'})
-272         file.close()
-273 
-274         \textcolor{comment}{#creating and writing sh file for background processing}
-275         command=name+\textcolor{stringliteral}{'/civil.sh'}
-276         file=open(command,\textcolor{stringliteral}{'w'})
-277         command=\textcolor{stringliteral}{'cd '}+name
-278         file.write(command)
-279         file.write(\textcolor{stringliteral}{'\(\backslash\)nlatex civil.tex\(\backslash\)nsage civil.sagetex.sage\(\backslash\)n'})
-280         file.write(\textcolor{stringliteral}{'pdflatex civil.tex\(\backslash\)n'})
-281         file.close()
-282 
-283         \textcolor{comment}{#calling sh file for background processing}
-284         command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
-285         os.system(command)
-286 
-287         \textcolor{comment}{#opening creted pdf to display to user}
-288         command=name+\textcolor{stringliteral}{'/civil.pdf'}
-289         f=open(command)
-290 
-291         \textcolor{comment}{#sending pdf as response}
-292         response = HttpResponse(f,content\_type=\textcolor{stringliteral}{'application/pdf'})
-293         response[\textcolor{stringliteral}{'Content-Disposition'}] = \textcolor{stringliteral}{'attachment; filename="civil.pdf"'}
-294         print(request.POST.get(\textcolor{stringliteral}{'email\_id'}))
-295         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(request.POST.get(\textcolor{stringliteral}{'email\_id'})):
-296             print(request.POST.get(\textcolor{stringliteral}{'email\_id'}))
-297             email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
-298             user\_email = EmailMessage(\textcolor{stringliteral}{'Your PDF is ready!'},
-299             \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
-300             user\_email.attach\_file(command)
-301             user\_email.send()
-302             command=\textcolor{stringliteral}{'rm -rf '}+name
-303             os.system(command)
-304             \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/index.html"}, \{\})
-305         \textcolor{keywordflow}{else}:
-306 
-307             \textcolor{comment}{#deleting temperary files}
-308             print(request.POST.get(\textcolor{stringliteral}{'email\_id'}))
-309             command=\textcolor{stringliteral}{'rm -rf '}+name
-310             os.system(command)
-311             \textcolor{keywordflow}{return} response
-312     \textcolor{keywordflow}{except}:
-313         \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/file.html"},
-314         \{\textcolor{stringliteral}{'message'}:message,\textcolor{stringliteral}{'email\_get'}:request.session.get(\textcolor{stringliteral}{'email\_get'})\})
-315 \end{DoxyCode}
+\end{DoxyCode}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=246pt]{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb_cgraph}
+\includegraphics[width=320pt]{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{}\index{civilsage\+::views@{civilsage\+::views}!first\+\_\+write@{first\+\_\+write}}
+\index{first\+\_\+write@{first\+\_\+write}!civilsage\+::views@{civilsage\+::views}}
+\subsubsection[{first\+\_\+write(request)}]{\setlength{\rightskip}{0pt plus 5cm}def civilsage.\+views.\+first\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\label{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}
+\begin{DoxyVerb}This function that write basic input same for all
+veiws
+...
+\end{DoxyVerb}
+ 
+
+Definition at line 278 of file views.\+py.
+
+
+\begin{DoxyCode}
+278 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{first\_write}(request):
+279     \textcolor{stringliteral}{"""}
+280 \textcolor{stringliteral}{}
+281 \textcolor{stringliteral}{    This function that write basic input same for all}
+282 \textcolor{stringliteral}{    veiws}
+283 \textcolor{stringliteral}{    ...}
+284 \textcolor{stringliteral}{    """}
+285     message=\textcolor{stringliteral}{'error occured please fill again'}
+286 
+287     \textcolor{comment}{#dictionary of all input tags}
+288     lists = \{\textcolor{stringliteral}{'Soil\_type'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Number\_of\_storeys'}:\textcolor{stringliteral}{''}
+289     ,\textcolor{stringliteral}{'Importance\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Response\_reduction\_factor'}:\textcolor{stringliteral}{''}
+290     ,\textcolor{stringliteral}{'Zone\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Gravity\_acceleration'}:\textcolor{stringliteral}{''}
+291     ,\textcolor{stringliteral}{'Modes\_considered'}:\textcolor{stringliteral}{''}\}
+292     \textcolor{comment}{#name of directory of specific user}
+293     name=request.session.session\_key+str(datetime.datetime.now())
+294     name=name.replace(\textcolor{stringliteral}{" "}, \textcolor{stringliteral}{""})
+295     \textcolor{comment}{#getting input using tags}
+296     \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
+297         lists[var]=request.session.get(var)
+298         name=name+str(lists[var])
+299     command=\textcolor{stringliteral}{'cp -r sagemath '}+name
+300     os.popen(command)
+301 
+302     \textcolor{comment}{#opening file for writing}
+303     command=name+\textcolor{stringliteral}{'/input.sage'}
+304     file = open(command, \textcolor{stringliteral}{'w'})
+305 
+306     \textcolor{comment}{#writing variables in input.sage file with syntax of sage}
+307     \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
+308         file.write(var)
+309         file.write(\textcolor{stringliteral}{'='})
+310         file.write(lists[var])
+311         file.write(\textcolor{stringliteral}{'\(\backslash\)n'})
+312     file.close()
+313     \textcolor{keywordflow}{return} name,message
+314 \end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3_icgraph}
 \end{center}
 \end{figure}
 
@@ -190,6 +220,10 @@ from templete
 ...
 \end{DoxyVerb}
  
+
+Definition at line 14 of file views.\+py.
+
+
 \begin{DoxyCode}
 14 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_a7b4fd4478a312ce8e35a192159c59de9}{index}(request):
 15     \textcolor{stringliteral}{"""}
@@ -213,6 +247,10 @@ gives pdf as output to user
 ...
 \end{DoxyVerb}
  
+
+Definition at line 71 of file views.\+py.
+
+
 \begin{DoxyCode}
 71 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_aed47fb0740a2fa14693f697905788719}{last}(request):
 72     \textcolor{stringliteral}{"""}
@@ -223,119 +261,87 @@ gives pdf as output to user
 77 \textcolor{stringliteral}{    """}
 78 
 79     message=\textcolor{stringliteral}{'error occured please fill again'}
-80 
-81     \textcolor{comment}{#dictionary of all input tags}
-82     lists = \{\textcolor{stringliteral}{'Soil\_type'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Number\_of\_storeys'}:\textcolor{stringliteral}{''}
-83     ,\textcolor{stringliteral}{'Importance\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Response\_reduction\_factor'}:\textcolor{stringliteral}{''}
-84     ,\textcolor{stringliteral}{'Zone\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Gravity\_acceleration'}:\textcolor{stringliteral}{''}
-85     ,\textcolor{stringliteral}{'Modes\_considered'}:\textcolor{stringliteral}{''}\}
-86     \textcolor{keywordflow}{try}:
-87 
-88         \textcolor{comment}{#name of directory of specific user}
-89         name=\textcolor{stringliteral}{''}
-90 
-91         \textcolor{comment}{#getting input using tags}
-92         \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-93             lists[var]=request.session.get(var)
-94             name=name+str(lists[var])
-95         print(request.session.get(var))
-96         command=\textcolor{stringliteral}{'cp -r sagemath '}+name
-97         os.popen(command)
-98 
-99         \textcolor{comment}{#opening file for writing}
-100         command=name+\textcolor{stringliteral}{'/input.sage'}
-101         file = open(command, \textcolor{stringliteral}{'w'})
-102 
-103         \textcolor{comment}{#writing variables in input.sage file with syntax of sage}
-104         \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-105             file.write(var)
-106             file.write(\textcolor{stringliteral}{'='})
-107             file.write(lists[var])
-108             file.write(\textcolor{stringliteral}{'\(\backslash\)n'})
-109         file.close()
-110 
-111         \textcolor{comment}{#getting numbers of storeys}
-112         num = request.session.get(\textcolor{stringliteral}{'Number\_of\_storeys'})
-113 
-114         \textcolor{comment}{#opening input.sage to append remaining inputs}
-115         command=name+\textcolor{stringliteral}{'/input.sage'}
-116         file=open(command,\textcolor{stringliteral}{'a'})
-117 
-118         \textcolor{comment}{#list of basic tags}
-119         var = [\textcolor{stringliteral}{'mass'},\textcolor{stringliteral}{'Height\_storey'},\textcolor{stringliteral}{'Stiffness\_storey'}]
-120 
-121         \textcolor{comment}{#writing matix into sage file}
-122         \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} var:
-123             file.write(j)
-124             file.write(\textcolor{stringliteral}{'=matrix(['})
-125 
-126             \textcolor{comment}{#writing elements of matix}
-127             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(int(num)):
-128 
-129                 \textcolor{comment}{#creating input tags}
-130                 temp = j+str(i)
-131                 file.write(\textcolor{stringliteral}{'['})
+80     \textcolor{keywordflow}{try}:
+81         \textcolor{comment}{#calling function to writte basic input}
+82         name,message=\hyperlink{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{first\_write}(request)
+83         \textcolor{comment}{#getting numbers of storeys}
+84         num = request.session.get(\textcolor{stringliteral}{'Number\_of\_storeys'})
+85 
+86         \textcolor{comment}{#opening input.sage to append remaining inputs}
+87         command=name+\textcolor{stringliteral}{'/input.sage'}
+88         file=open(command,\textcolor{stringliteral}{'a'})
+89 
+90         \textcolor{comment}{#list of basic tags}
+91         var = [\textcolor{stringliteral}{'mass'},\textcolor{stringliteral}{'Height\_storey'},\textcolor{stringliteral}{'Stiffness\_storey'}]
+92 
+93         \textcolor{comment}{#writing matix into sage file}
+94         \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} var:
+95             file.write(j)
+96             file.write(\textcolor{stringliteral}{'=matrix(['})
+97 
+98             \textcolor{comment}{#writing elements of matix}
+99             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(int(num)):
+100 
+101                 \textcolor{comment}{#creating input tags}
+102                 temp = j+str(i)
+103                 file.write(\textcolor{stringliteral}{'['})
+104 
+105                 \textcolor{comment}{#getting input from tags}
+106                 d=request.POST.get(temp)
+107                 file.write(d)
+108                 file.write(\textcolor{stringliteral}{']'})
+109 
+110                 \textcolor{comment}{#condition to check last element}
+111                 \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}( i!=int(num)-1):
+112                     file.write(\textcolor{stringliteral}{','})
+113             file.write(\textcolor{stringliteral}{'])\(\backslash\)n'})
+114         file.close()
+115 
+116         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(request.POST.get(\textcolor{stringliteral}{'email\_id'})):
+117             \textcolor{comment}{#calling funcion to send pdf and run that as background process}
+118             thread = threading.Thread(target=pdfemail,args=(request,name))
+119             thread.daemon = \textcolor{keyword}{True}
+120             thread.start()
+121             message=\textcolor{stringliteral}{"PDF send to "}+request.POST.get(\textcolor{stringliteral}{'email\_id'})
+122             \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/index.html"}, \{\textcolor{stringliteral}{'message'}:message\})
+123         \textcolor{keywordflow}{else}:
+124             \textcolor{comment}{#creating and writing sh file for background processing}
+125             command=name+\textcolor{stringliteral}{'/civil.sh'}
+126             file=open(command,\textcolor{stringliteral}{'w'})
+127             command=\textcolor{stringliteral}{'cd '}+name
+128             file.write(command)
+129             file.write(\textcolor{stringliteral}{'\(\backslash\)nlatex civil.tex\(\backslash\)nsage civil.sagetex.sage\(\backslash\)n'})
+130             file.write(\textcolor{stringliteral}{'pdflatex civil.tex\(\backslash\)n'})
+131             file.close()
 132 
-133                 \textcolor{comment}{#getting input from tags}
-134                 d=request.POST.get(temp)
-135                 file.write(d)
-136                 file.write(\textcolor{stringliteral}{']'})
-137 
-138                 \textcolor{comment}{#condition to check last element}
-139                 \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}( i!=int(num)-1):
-140                     file.write(\textcolor{stringliteral}{','})
-141             file.write(\textcolor{stringliteral}{'])\(\backslash\)n'})
-142         file.close()
-143 
-144         \textcolor{comment}{#creating and writing sh file for background processing}
-145         command=name+\textcolor{stringliteral}{'/civil.sh'}
-146         file=open(command,\textcolor{stringliteral}{'w'})
-147         command=\textcolor{stringliteral}{'cd '}+name
-148         file.write(command)
-149         file.write(\textcolor{stringliteral}{'\(\backslash\)nlatex civil.tex\(\backslash\)nsage civil.sagetex.sage\(\backslash\)n'})
-150         file.write(\textcolor{stringliteral}{'pdflatex civil.tex\(\backslash\)n'})
-151         file.close()
+133             \textcolor{comment}{#calling sh file for background processing}
+134             command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
+135             os.system(command)
+136 
+137             \textcolor{comment}{#opening creted pdf to display to user}
+138             command=name+\textcolor{stringliteral}{'/civil.pdf'}
+139             f=open(command)
+140 
+141             \textcolor{comment}{#sending pdf as response}
+142             response = HttpResponse(f,content\_type=\textcolor{stringliteral}{'application/pdf'})
+143             response[\textcolor{stringliteral}{'Content-Disposition'}] = \textcolor{stringliteral}{'attachment; filename="civil.pdf"'}
+144             \textcolor{comment}{#deleting temperary files}
+145             command=\textcolor{stringliteral}{'rm -rf '}+name
+146             os.system(command)
+147             \textcolor{keywordflow}{return} response
+148     \textcolor{keywordflow}{except}:
+149         \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/index.html"},
+150         \{\textcolor{stringliteral}{'message'}:message,\textcolor{stringliteral}{'email\_get'}:request.session.get(\textcolor{stringliteral}{'email\_get'})\})
+151 
 152 
-153         \textcolor{comment}{#calling sh file for background processing}
-154         command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
-155         os.system(command)
-156 
-157         \textcolor{comment}{#opening creted pdf to display to user}
-158         command=name+\textcolor{stringliteral}{'/civil.pdf'}
-159         f=open(command)
-160 
-161         \textcolor{comment}{#sending pdf as response}
-162         response = HttpResponse(f,content\_type=\textcolor{stringliteral}{'application/pdf'})
-163         response[\textcolor{stringliteral}{'Content-Disposition'}] = \textcolor{stringliteral}{'attachment; filename="civil.pdf"'}
-164         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(request.GET.get(\textcolor{stringliteral}{'email\_id'})):
-165             email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
-166             user\_email = EmailMessage(\textcolor{stringliteral}{'Your PDF is ready!'},
-167             \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
-168             user\_email.attach\_file(command)
-169             user\_email.send()
-170             command=\textcolor{stringliteral}{'rm -rf '}+name
-171             os.system(command)
-172             \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/index.html"}, \{\})
-173         \textcolor{keywordflow}{else}:
-174 
-175             \textcolor{comment}{#deleting temperary files}
-176             command=\textcolor{stringliteral}{'rm -rf '}+name
-177             os.system(command)
-178             \textcolor{keywordflow}{return} response
-179     \textcolor{keywordflow}{except}:
-180         \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/matrix.html"},
-181         \{\textcolor{stringliteral}{'message'}:message,\textcolor{stringliteral}{'email\_get'}:request.session.get(\textcolor{stringliteral}{'email\_get'})\})
-182 
-183 
 \end{DoxyCode}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=248pt]{namespacecivilsage_1_1views_aed47fb0740a2fa14693f697905788719_cgraph}
+\includegraphics[width=322pt]{namespacecivilsage_1_1views_aed47fb0740a2fa14693f697905788719_cgraph}
 \end{center}
 \end{figure}
 
@@ -353,6 +359,10 @@ and write in input.sage file
 ...
 \end{DoxyVerb}
  
+
+Definition at line 23 of file views.\+py.
+
+
 \begin{DoxyCode}
 23 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}(request):
 24     \textcolor{stringliteral}{"""}
@@ -369,30 +379,30 @@ and write in input.sage file
 35         ,\textcolor{stringliteral}{'Zone\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Gravity\_acceleration'}:\textcolor{stringliteral}{''}
 36         ,\textcolor{stringliteral}{'Modes\_considered'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'email\_get'}:\textcolor{stringliteral}{''}\}
 37 
-38         \textcolor{comment}{#name of directory of specific user}
-39         name = \textcolor{stringliteral}{''}
-40 
-41         \textcolor{comment}{#getting input using tags and sending it as response}
-42         \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-43             request.session[var] = request.POST.get(var)
-44 
-45         \textcolor{comment}{#creating directory from base directory}
-46         lists[\textcolor{stringliteral}{'Number\_of\_storeys'}] = request.POST.get(\textcolor{stringliteral}{'Number\_of\_storeys'})
-47 
-48         \textcolor{comment}{#making list for iteratation in templete}
-49         number\_of\_storeys = list()
+38         name = \textcolor{stringliteral}{''}
+39 
+40         \textcolor{comment}{#getting input using tags and sending it as response}
+41         \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
+42             request.session[var] = request.POST.get(var)
+43 
+44         \textcolor{comment}{#creating directory from base directory}
+45         lists[\textcolor{stringliteral}{'Number\_of\_storeys'}] = request.POST.get(\textcolor{stringliteral}{'Number\_of\_storeys'})
+46 
+47         \textcolor{comment}{#making list for iteratation in templete}
+48         number\_of\_storeys = list()
+49         \textcolor{comment}{#name of directory of specific user}
 50         \textcolor{keywordflow}{for} a \textcolor{keywordflow}{in} range(int(lists[\textcolor{stringliteral}{'Number\_of\_storeys'}])):
 51             number\_of\_storeys.append(\textcolor{stringliteral}{'a'})
 52 
 53         \textcolor{comment}{#calling differnet veiws based on option whether}
-54         \textcolor{comment}{#user want to upload matrix value through file or}
-55         \textcolor{comment}{#manually}
-56 
-57         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(request.POST.get(\textcolor{stringliteral}{'through\_file'})==\textcolor{stringliteral}{'Y'}):
-58             \textcolor{keywordflow}{return} render( request,\textcolor{stringliteral}{'civilsage/file.html'}
-59             ,\{\textcolor{stringliteral}{'number\_of\_storeys'}: number\_of\_storeys,
-60             \textcolor{stringliteral}{'email\_get'}: request.POST.get(\textcolor{stringliteral}{'email\_get'})\})
-61         \textcolor{keywordflow}{else}:
+54         \textcolor{comment}{#manually}
+55 
+56         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(request.POST.get(\textcolor{stringliteral}{'through\_file'})==\textcolor{stringliteral}{'Y'}):
+57             \textcolor{keywordflow}{return} render( request,\textcolor{stringliteral}{'civilsage/file.html'}
+58             ,\{\textcolor{stringliteral}{'number\_of\_storeys'}: number\_of\_storeys,
+59             \textcolor{stringliteral}{'email\_get'}: request.POST.get(\textcolor{stringliteral}{'email\_get'})\})
+60         \textcolor{keywordflow}{else}:
+61         \textcolor{comment}{#user want to upload matrix value through file or}
 62             \textcolor{keywordflow}{return} render( request,\textcolor{stringliteral}{'civilsage/matrix.html'}
 63             ,\{\textcolor{stringliteral}{'number\_of\_storeys'}: number\_of\_storeys,
 64             \textcolor{stringliteral}{'email\_get'}: request.POST.get(\textcolor{stringliteral}{'email\_get'}) \})
@@ -405,8 +415,7 @@ and write in input.sage file
 \end{DoxyCode}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -415,3 +424,68 @@ Here is the call graph for this function\+:
 \end{figure}
 
 
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespacecivilsage_1_1views_a9914ff19f8e15ccab1a07eaeac8cfb21}{}\index{civilsage\+::views@{civilsage\+::views}!pdfemail@{pdfemail}}
+\index{pdfemail@{pdfemail}!civilsage\+::views@{civilsage\+::views}}
+\subsubsection[{pdfemail(request, name)}]{\setlength{\rightskip}{0pt plus 5cm}def civilsage.\+views.\+pdfemail (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}\label{namespacecivilsage_1_1views_a9914ff19f8e15ccab1a07eaeac8cfb21}
+\begin{DoxyVerb}A function that run as background process to send pdf as emails
+...
+\end{DoxyVerb}
+ 
+
+Definition at line 242 of file views.\+py.
+
+
+\begin{DoxyCode}
+242 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_a9914ff19f8e15ccab1a07eaeac8cfb21}{pdfemail}(request,name):
+243     \textcolor{stringliteral}{"""}
+244 \textcolor{stringliteral}{    A function that run as background process to send pdf as emails}
+245 \textcolor{stringliteral}{    ...}
+246 \textcolor{stringliteral}{    """}
+247     message=\textcolor{stringliteral}{'unable to send'}
+248     \textcolor{keywordflow}{try}:
+249         \textcolor{comment}{#creating and writing sh file for background processing}
+250         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
+251         command=name+\textcolor{stringliteral}{'/email.txt'}
+252         f=open(command,\textcolor{stringliteral}{'w'})
+253         f.write(email\_id)
+254         f.close()
+255         command=name+\textcolor{stringliteral}{'/civil.sh'}
+256         file=open(command,\textcolor{stringliteral}{'w'})
+257         command=\textcolor{stringliteral}{'cd '}+name
+258         file.write(command)
+259         file.write(\textcolor{stringliteral}{'\(\backslash\)nlatex civil.tex\(\backslash\)nsage civil.sagetex.sage\(\backslash\)n'})
+260         file.write(\textcolor{stringliteral}{'pdflatex civil.tex\(\backslash\)n'})
+261         file.close()
+262         \textcolor{comment}{#calling sh file for background processing}
+263         command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
+264         os.system(command)
+265         command=name+\textcolor{stringliteral}{'/civil.pdf'}
+266         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
+267         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
+268         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
+269         user\_email.attach\_file(command)
+270         user\_email.send()
+271         command=\textcolor{stringliteral}{'rm -rf '}+name
+272         os.system(command)
+273     \textcolor{keywordflow}{except}:
+274         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
+275         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
+276         message, to=[email\_id])
+277 
+\end{DoxyCode}
