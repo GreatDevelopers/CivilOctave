@@ -17,6 +17,7 @@
 
 \begin{sagesilent}
 	load('main.sage.py')
+
 \end{sagesilent}
 
 Number Of Storeys
@@ -34,19 +35,24 @@ Mass
 	 [M]=\sage{Mass}
 \end{equation}
 
-Omega Square
-\begin{equation}
-	[\omega^2] =\sage{matrix(Omega_square).n(digits=6)}
-\end{equation}
+
+\begin{sagesilent}
+latex.matrix_delimiters("\{","\}")
+\end{sagesilent}
 
 Time Period
 \begin{equation}
-	[T]=\sage{Time_period.n(digits=4)}
+	[T]=\sage{Time_period}
+\end{equation}
+
+Omega Square
+\begin{equation}
+	[\omega^2] =\sage{Omega_square.transpose()}
 \end{equation}
 
 Frequency
 \begin{equation}
-	[\omega]=\sage{Omega.n(digits=4)}
+	[\omega]=\sage{Omega}
 \end{equation}
 
 \begin{figure}
@@ -56,60 +62,69 @@ Frequency
 
 Level Floor
 \begin{equation}
-	[L]=\sage{matrix(Level_floor).n(digits=4)}
+	[L]=\sage{Level_floor}
 \end{equation}
 
 Modal Participation Factor
 \begin{equation}
-	 [p]=\sage{matrix(Modal_participation_factor).n(digits=4)}
+	 [p]=\sage{Modal_participation_factor}
 \end{equation}
 
 Modal Mass
 \begin{equation}
-	 [M_{{m}}]=\sage{matrix(Modal_mass).n(digits=4)}
+	 [M_{{m}}]=\sage{Modal_mass}
 \end{equation}
 
 Modal Contribution
 \begin{equation}
-	[M_{{c}}]=\sage{matrix(Modal_contribution)}
+	[M_{{c}}]=\sage{Modal_contribution}
 \end{equation}
+
 
 Sa By G
 \begin{equation}
-	 [S_{{a}}]=\sage{Sa_by_g.n(digits=4)}
+	 [S_{{a}}]=\sage{Sa_by_g}
 \end{equation}
 
 A H
 \begin{equation}
-	[A_{{H}}]=\sage{A_h.n(digits=4)}
+	[A_{{H}}]=\sage{A_h[:,1]}
 \end{equation}
 
+\begin{sagesilent}
+latex.matrix_delimiters("[","]")
+
+\end{sagesilent}
 Design Lateral Force
 \begin{equation}
-	[F]=\sage{Design_lateral_force.n(digits=4)}
+	[F]=\sage{Design_lateral_force}
 \end{equation}
 
 Peak Shear Force
 \begin{equation}
-	[V]=\sage{Peak_shear_force.n(digits=4)}
+	[V]=\sage{Peak_shear_force}
 \end{equation}
 
+
+\begin{sagesilent}
+latex.matrix_delimiters("\{","\}")
+\end{sagesilent}
 
 \section{Storey Shear Force}
 ABS-:
 \begin{equation}
-	\sage{Storey_shear_force[:].n(digits=4)}
+	\sage{storey_shear_force3}
 \end{equation}
 SRSS -:
 \begin{equation}
-	\sage{Storey_shear_force2[:].n(digits=4)}
+	\sage{Storey_shear_force2}
 \end{equation}
 Complete Quadratic combination -:
 \begin{equation}
-	\sage{Lateral_force.n(digits=4)}
+	\sage{Lateral_force}
 \end{equation}
 Maximum Absolute Response -:
 \begin{equation}
-	\sage{Force.n(digits=4)}
+	\sage{Force}
 \end{equation}
 \end{document}
