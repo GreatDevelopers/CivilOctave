@@ -100,7 +100,7 @@ Definition at line 153 of file views.\+py.
 208             thread = threading.Thread(target=pdfemail,args=(request,name))
 209             thread.daemon = \textcolor{keyword}{True}
 210             thread.start()
-211             message=\textcolor{stringliteral}{"PDF send to "}+request.POST.get(\textcolor{stringliteral}{'email\_id'})
+211             message=\textcolor{stringliteral}{"PDF will be send to "}+request.POST.get(\textcolor{stringliteral}{'email\_id'})
 212             \textcolor{keywordflow}{return} render(request, \textcolor{stringliteral}{"civilsage/index.html"}, \{\textcolor{stringliteral}{'message'}:message\})
 213         \textcolor{keywordflow}{else}:
 214             \textcolor{comment}{#creating and writing sh file for background processing}
@@ -156,47 +156,47 @@ veiws
 \end{DoxyVerb}
  
 
-Definition at line 278 of file views.\+py.
+Definition at line 283 of file views.\+py.
 
 
 \begin{DoxyCode}
-278 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{first\_write}(request):
-279     \textcolor{stringliteral}{"""}
-280 \textcolor{stringliteral}{}
-281 \textcolor{stringliteral}{    This function that write basic input same for all}
-282 \textcolor{stringliteral}{    veiws}
-283 \textcolor{stringliteral}{    ...}
-284 \textcolor{stringliteral}{    """}
-285     message=\textcolor{stringliteral}{'error occured please fill again'}
-286 
-287     \textcolor{comment}{#dictionary of all input tags}
-288     lists = \{\textcolor{stringliteral}{'Soil\_type'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Number\_of\_storeys'}:\textcolor{stringliteral}{''}
-289     ,\textcolor{stringliteral}{'Importance\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Response\_reduction\_factor'}:\textcolor{stringliteral}{''}
-290     ,\textcolor{stringliteral}{'Zone\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Gravity\_acceleration'}:\textcolor{stringliteral}{''}
-291     ,\textcolor{stringliteral}{'Modes\_considered'}:\textcolor{stringliteral}{''}\}
-292     \textcolor{comment}{#name of directory of specific user}
-293     name=request.session.session\_key+str(datetime.datetime.now())
-294     name=name.replace(\textcolor{stringliteral}{" "}, \textcolor{stringliteral}{""})
-295     \textcolor{comment}{#getting input using tags}
-296     \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-297         lists[var]=request.session.get(var)
-298         name=name+str(lists[var])
-299     command=\textcolor{stringliteral}{'cp -r sagemath '}+name
-300     os.popen(command)
-301 
-302     \textcolor{comment}{#opening file for writing}
-303     command=name+\textcolor{stringliteral}{'/input.sage'}
-304     file = open(command, \textcolor{stringliteral}{'w'})
-305 
-306     \textcolor{comment}{#writing variables in input.sage file with syntax of sage}
-307     \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
-308         file.write(var)
-309         file.write(\textcolor{stringliteral}{'='})
-310         file.write(lists[var])
-311         file.write(\textcolor{stringliteral}{'\(\backslash\)n'})
-312     file.close()
-313     \textcolor{keywordflow}{return} name,message
-314 \end{DoxyCode}
+283 \textcolor{keyword}{def }\hyperlink{namespacecivilsage_1_1views_ad9397359f36a9df37e0aa43f3be032a3}{first\_write}(request):
+284     \textcolor{stringliteral}{"""}
+285 \textcolor{stringliteral}{}
+286 \textcolor{stringliteral}{    This function that write basic input same for all}
+287 \textcolor{stringliteral}{    veiws}
+288 \textcolor{stringliteral}{    ...}
+289 \textcolor{stringliteral}{    """}
+290     message=\textcolor{stringliteral}{'error occured please fill again'}
+291 
+292     \textcolor{comment}{#dictionary of all input tags}
+293     lists = \{\textcolor{stringliteral}{'Soil\_type'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Number\_of\_storeys'}:\textcolor{stringliteral}{''}
+294     ,\textcolor{stringliteral}{'Importance\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Response\_reduction\_factor'}:\textcolor{stringliteral}{''}
+295     ,\textcolor{stringliteral}{'Zone\_factor'}:\textcolor{stringliteral}{''},\textcolor{stringliteral}{'Gravity\_acceleration'}:\textcolor{stringliteral}{''}
+296     ,\textcolor{stringliteral}{'Modes\_considered'}:\textcolor{stringliteral}{''}\}
+297     \textcolor{comment}{#name of directory of specific user}
+298     name=\textcolor{stringliteral}{'Temp'}+request.session.session\_key+str(datetime.datetime.now())
+299     name=name.replace(\textcolor{stringliteral}{" "}, \textcolor{stringliteral}{""})
+300     \textcolor{comment}{#getting input using tags}
+301     \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
+302         lists[var]=request.session.get(var)
+303         name=name+str(lists[var])
+304     command=\textcolor{stringliteral}{'cp -r sagemath '}+name
+305     os.popen(command)
+306 
+307     \textcolor{comment}{#opening file for writing}
+308     command=name+\textcolor{stringliteral}{'/input.sage'}
+309     file = open(command, \textcolor{stringliteral}{'w'})
+310 
+311     \textcolor{comment}{#writing variables in input.sage file with syntax of sage}
+312     \textcolor{keywordflow}{for} var \textcolor{keywordflow}{in} lists.keys():
+313         file.write(var)
+314         file.write(\textcolor{stringliteral}{'='})
+315         file.write(lists[var])
+316         file.write(\textcolor{stringliteral}{'\(\backslash\)n'})
+317     file.close()
+318     \textcolor{keywordflow}{return} name,message
+319 \end{DoxyCode}
 
 
 Here is the caller graph for this function\+:\nopagebreak
@@ -476,16 +476,32 @@ Definition at line 242 of file views.\+py.
 263         command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
 264         os.system(command)
 265         command=name+\textcolor{stringliteral}{'/civil.pdf'}
-266         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
-267         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
-268         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
-269         user\_email.attach\_file(command)
-270         user\_email.send()
-271         command=\textcolor{stringliteral}{'rm -rf '}+name
-272         os.system(command)
-273     \textcolor{keywordflow}{except}:
-274         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
-275         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
-276         message, to=[email\_id])
-277 
+266         message=\textcolor{stringliteral}{'wrong email id'}
+267         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
+268         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
+269         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
+270         user\_email.attach\_file(command)
+271         user\_email.send()
+272         command=\textcolor{stringliteral}{'rm -rf '}+name
+273         os.system(command)
+274     \textcolor{keywordflow}{except}:
+275         command=\textcolor{stringliteral}{'rm -rf '}+name
+276         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(message==\textcolor{stringliteral}{'wrong email id'}):
+277             os.system(command)
+278         email\_id=request.POST.get(\textcolor{stringliteral}{'email\_id'})
+279         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
+280         message, to=[email\_id])
+281         os.system(command)
+282 
 \end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{namespacecivilsage_1_1views_a9914ff19f8e15ccab1a07eaeac8cfb21_cgraph}
+\end{center}
+\end{figure}
+
+

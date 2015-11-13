@@ -263,6 +263,7 @@ def pdfemail(request,name):
 		command='sh '+name+'/civil.sh'
 		os.system(command)
 		command=name+'/civil.pdf'
+		message='wrong email id'
 		email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		'You have is ready', to=[email_id])
@@ -271,9 +272,13 @@ def pdfemail(request,name):
 		command='rm -rf '+name
 		os.system(command)
 	except:
+		command='rm -rf '+name
+		if(message=='wrong email id'):
+			os.system(command)
 		email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		message, to=[email_id])
+		os.system(command)
 
 def first_write(request):
 	"""
