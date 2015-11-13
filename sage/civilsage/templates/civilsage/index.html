@@ -17,7 +17,11 @@
         }
     </script>
     {% endblock %}
-
+    {% block autofill %}
+        <li><a href="#" id="autofill"
+            onclick="autofill()">Autofill values</a>
+        </li>
+    {% endblock %}
 	<!-- content block start-->
     {% block body %}
 
@@ -46,7 +50,7 @@
 				            class="form-control dropdown-toggle 
                             input-lg" id="soil_type">
                             <option value="1">I</options>
-                            <option value="2">II</options>
+                            <option value="2" selected="selected">II</options>
                             <option value="3">III</options>
                         </select>
                     </div>
@@ -285,7 +289,7 @@
                         </label>
                     </div>
                     <div class="col-md-2">
-                        <label class="radio-inline"><input type="radio"
+                        <label class="radio-inline space"><input type="radio"
                             name="email_get" value="N">No</label>
                     </div>
                 </div>
@@ -298,7 +302,7 @@
                             onclick="autofill()">Autofill values</a>
                     </div>-->
                     <div class="col-md-3">
-                        <input class="btn-lg btn-success" type="submit"
+                        <input class="btn-lg btn-success space" type="submit"
                             value="Submit" id="submit">
                     </div>
                     <!-- Button trigger modal
@@ -313,105 +317,6 @@
 		</div>
 		<!--div end  -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1"
-            role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close"
-                            data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">
-                            Help Section</h4>
-                   </div>
-                   <div class="modal-body">
-                       <ul>
-                           <li>Soil type</li>
-                           <li>This is type of soil.</li>
-							<li>You can chosse from these three types-:
-							</li>
-							<li>1. Type I <br>
-								2. Type II <br>
-								3. Type III <br>
-							</li>
-                           <li>Number of storeys</li>
-                           <li>This defines the number of storeys to be
-             				consider <br>
-             				It can have value from 1 to 1000 <br>
-             				</li>
 
-                           <li>Importance factor</li>
-                           <li>It depends upon the building category
-                             and nature of use.</li>
 
-                           <li>Response Reduction factor</li>
-                           <li>It depends upon the ductility of the structure.
-                                 </li>
-
-                           <li>Zone factor</li>
-                           <li>It depends upon the location of the structure.
-													 Also, it corresponds to the seismic zone obtained
-													 from a map.</li>
-
-                           <li>Gravity Acceleration</li>
-                           <li> Its default value is 9.8 but you can
-                           chosse between 9 to 10</li>
-
-                           <li>Modes considered</li>
-                           <li>It tells number of modes to be consisder
-                           It can have value from 1 to Number of storeys
-                           input by user </li>
-						 	<li> Upload through file</li>
-							 <li>upload through file allow you to upload
-							  csv file to ali value of mass,
-							  height and stiffness matrix
-							  format for csv for 4 number of storeys :
-								<br>mass inputs<br>
-								height values<br>
-								stiffness matrix values <br>
-
-								e.g-:
-							  <br>
-							  12,3,2,4<br>
-	   						23,1,4,2<br>23,2,3,2<br></li>
-							<li>Email
-							</li>
-							<li>Email allow you to get pdf through mail
-							</li>
-                      </ul>
-                   </div>
-
-                   <div class="modal-footer">
-                       <button type="button" class="btn btn-default"
-                           data-dismiss="modal">Close</button>
-                       <!--button type="button" class="btn btn-primary">
-                           Save changes</button-->
-                   </div>
-               </div>
-           </div>
-       </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="contact" tabindex="-1"
-            role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close"
-                            data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">
-                            Contact us</h4>
-                   </div>
-                   <div class="modal-body">
-                       <a href="http://github.com/GreatDevelopers">Github</a>
-                       <br />
-                       <a href="#">Email</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         {% endblock %}	
