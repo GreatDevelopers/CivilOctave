@@ -66,5 +66,4 @@ target/
 sage/**/input.sage
 sage/db.sqlite3
 sage/**/migrations/
-setting.py
-
+sage/file
