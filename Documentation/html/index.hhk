@@ -4,795 +4,826 @@
 <param name="FrameName" value="right">
 </OBJECT>
 <UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a43f0b96ea8ec44ca20ba86809a785614"><param name="Name" value="!function"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a43f0b96ea8ec44ca20ba86809a785614"><param name="Name" value="!function"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="_sage_const_1"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#ac1b86705df1981fd4962cc056fb0608a"><param name="Name" value="_sage_const_9p8"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#ac1b86705df1981fd4962cc056fb0608a"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#ac1b86705df1981fd4962cc056fb0608a"><param name="Name" value="input.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="a"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="a"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="bootstrap.min.js"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#aa4d4888597588a84fd5b1184d00c91f3"><param name="Name" value="jquery.min.js"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="bootstrap.min.js"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#aa4d4888597588a84fd5b1184d00c91f3"><param name="Name" value="jquery.min.js"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="A"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="A"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a90e3156cc1a3ea63ba2d089e78b34e3d"><param name="Name" value="A_h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a49b10c1530f56b101c4cc17b20fb1973"><param name="Name" value="A_h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a90e3156cc1a3ea63ba2d089e78b34e3d"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a90e3156cc1a3ea63ba2d089e78b34e3d"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a49b10c1530f56b101c4cc17b20fb1973"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a49b10c1530f56b101c4cc17b20fb1973"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#aaa41eef066735d697e7786ec86d52389"><param name="Name" value="alert"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="ALLOWED_HOSTS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#aaa41eef066735d697e7786ec86d52389"><param name="Name" value="alert"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="ALLOWED_HOSTS"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#ab56a0e8dabe1e9e6a7fd6913e6448220"><param name="Name" value="and"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00045.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="application"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#ab56a0e8dabe1e9e6a7fd6913e6448220"><param name="Name" value="and"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1wsgi.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="application"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00045.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="sage::wsgi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00045.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="wsgi.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1wsgi.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="sage::wsgi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1wsgi.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="wsgi.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a7c192e47b11481e4717b9f1e04eb4420"><param name="Name" value="b"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a7c192e47b11481e4717b9f1e04eb4420"><param name="Name" value="b"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a7c192e47b11481e4717b9f1e04eb4420"><param name="Name" value="bootstrap.min.js"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#ac0431efac4d7c393d1e70b86115cb93f"><param name="Name" value="jquery.min.js"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a7c192e47b11481e4717b9f1e04eb4420"><param name="Name" value="bootstrap.min.js"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#ac0431efac4d7c393d1e70b86115cb93f"><param name="Name" value="jquery.min.js"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html"><param name="Name" value="bootstrap.min.js"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html"><param name="Name" value="bootstrap.min.js"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="a"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#aaa41eef066735d697e7786ec86d52389"><param name="Name" value="alert"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a7c192e47b11481e4717b9f1e04eb4420"><param name="Name" value="b"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a55e170814e74f6c3db8ae9ea3ba9054f"><param name="Name" value="button"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ad9d1ac02e33c4aed62ad517a7cb8b3fb"><param name="Name" value="c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#afaca3a961d693f40135a872e93e71198"><param name="Name" value="close"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a0545907c609a48549a0cf5d4c692f851"><param name="Name" value="Constructor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#aeb337d295abaddb5ec3cb34cc2e2bbc9"><param name="Name" value="d"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a6c1cf0be5e5383617ddc5efdfdc8c651"><param name="Name" value="DEFAULTS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ab5902775854a8b8440bcd25e0fe1c120"><param name="Name" value="e"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a006fe6a2a254572b367123c6db401ff3"><param name="Name" value="emulateTransitionEnd"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#afa9eb56c756985e9715e3820fd044aa3"><param name="Name" value="hasClass"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ac2d69f5011896c6ed4a54e0dd36f6334"><param name="Name" value="if"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ac26971afe341e4079ee34fceab395fc2"><param name="Name" value="noConflict"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a14f119ea3b5abc5536d590dfe1793c6e"><param name="Name" value="setState"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#aa8e797a9bda5e7e313be3518054164a3"><param name="Name" value="toggle"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ae4adb159aeacba734c34bd530baf92f6"><param name="Name" value="TRANSITION_DURATION"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a3635f2df5844f69204b70bf7b3983587"><param name="Name" value="VERSION"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="a"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#aaa41eef066735d697e7786ec86d52389"><param name="Name" value="alert"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a7c192e47b11481e4717b9f1e04eb4420"><param name="Name" value="b"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a55e170814e74f6c3db8ae9ea3ba9054f"><param name="Name" value="button"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ad9d1ac02e33c4aed62ad517a7cb8b3fb"><param name="Name" value="c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#afaca3a961d693f40135a872e93e71198"><param name="Name" value="close"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a0545907c609a48549a0cf5d4c692f851"><param name="Name" value="Constructor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#aeb337d295abaddb5ec3cb34cc2e2bbc9"><param name="Name" value="d"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a6c1cf0be5e5383617ddc5efdfdc8c651"><param name="Name" value="DEFAULTS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120"><param name="Name" value="e"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a006fe6a2a254572b367123c6db401ff3"><param name="Name" value="emulateTransitionEnd"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#afa9eb56c756985e9715e3820fd044aa3"><param name="Name" value="hasClass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ac2d69f5011896c6ed4a54e0dd36f6334"><param name="Name" value="if"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ac26971afe341e4079ee34fceab395fc2"><param name="Name" value="noConflict"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a14f119ea3b5abc5536d590dfe1793c6e"><param name="Name" value="setState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#aa8e797a9bda5e7e313be3518054164a3"><param name="Name" value="toggle"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ae4adb159aeacba734c34bd530baf92f6"><param name="Name" value="TRANSITION_DURATION"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a3635f2df5844f69204b70bf7b3983587"><param name="Name" value="VERSION"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a55e170814e74f6c3db8ae9ea3ba9054f"><param name="Name" value="button"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ad9d1ac02e33c4aed62ad517a7cb8b3fb"><param name="Name" value="c"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00031.html"><param name="Name" value="civilsage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00015.html"><param name="Name" value="civilsage/urls.py"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00032.html"><param name="Name" value="civilsage::admin"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00033.html"><param name="Name" value="civilsage::models"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00034.html"><param name="Name" value="civilsage::tests"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00035.html"><param name="Name" value="civilsage::urls"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a55e170814e74f6c3db8ae9ea3ba9054f"><param name="Name" value="button"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ad9d1ac02e33c4aed62ad517a7cb8b3fb"><param name="Name" value="c"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage.html"><param name="Name" value="civilsage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="civilsage_2urls_8py.html"><param name="Name" value="civilsage/urls.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1admin.html"><param name="Name" value="civilsage::admin"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1models.html"><param name="Name" value="civilsage::models"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1tests.html"><param name="Name" value="civilsage::tests"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1urls.html"><param name="Name" value="civilsage::urls"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00035.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="urlpatterns"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1urls.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="urlpatterns"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html"><param name="Name" value="civilsage::views"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html"><param name="Name" value="civilsage::views"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="file"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="first_write"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="index"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="last"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="pdfemail"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="file"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="first_write"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="index"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="last"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="pdfemail"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#afaca3a961d693f40135a872e93e71198"><param name="Name" value="close"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="color"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#afaca3a961d693f40135a872e93e71198"><param name="Name" value="close"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="color"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a0545907c609a48549a0cf5d4c692f851"><param name="Name" value="Constructor"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00002.html"><param name="Name" value="Contribute"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#aeb337d295abaddb5ec3cb34cc2e2bbc9"><param name="Name" value="d"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="DATABASES"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a0545907c609a48549a0cf5d4c692f851"><param name="Name" value="Constructor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md__home_amarjeet_projects_CivilOctave_sage_Contribute.html"><param name="Name" value="Contribute"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#aeb337d295abaddb5ec3cb34cc2e2bbc9"><param name="Name" value="d"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="DATABASES"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="DEBUG"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="DEFAULT_FROM_EMAIL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="DEFAULT_FROM_EMAIL"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a6c1cf0be5e5383617ddc5efdfdc8c651"><param name="Name" value="DEFAULTS"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a35df7d294c439792977f174dd5b04ec1"><param name="Name" value="Design_lateral_force"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a6c1cf0be5e5383617ddc5efdfdc8c651"><param name="Name" value="DEFAULTS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0caf610899fee63b00acb7cce7c804d7"><param name="Name" value="Design_lateral_force"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a35df7d294c439792977f174dd5b04ec1"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a35df7d294c439792977f174dd5b04ec1"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0caf610899fee63b00acb7cce7c804d7"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0caf610899fee63b00acb7cce7c804d7"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html"><param name="Name" value="DoS/01/main.m"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html"><param name="Name" value="DoS/01/main.m"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a0d135864d9bc0103cbd903c62d64b088"><param name="Name" value="elseif"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a8ecbd124ddcdab7fc367443a82b241af"><param name="Name" value="eq3num"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="i"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a8c0a4f44ca03289871d3743578e0412c"><param name="Name" value="matrixTeX"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#aac9abc95cd2ddc27fa84fb4440b62888"><param name="Name" value="sag"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a3a318718cf4c9c1380475d059171d8f3"><param name="Name" value="t1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a24aeadb733f27244ec14e4cba82eeee9"><param name="Name" value="t2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a80d62394ff82e3ae283e9113bca340a2"><param name="Name" value="t3"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#ae95ab11d59379638967673bd74654b2a"><param name="Name" value="t4"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a3e2c6a7e7b1f0ac68cc462d26373be9b"><param name="Name" value="Type_of_soil"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a29249d852e6e3fd1e206e1f920300e24"><param name="Name" value="warning"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a0d135864d9bc0103cbd903c62d64b088"><param name="Name" value="elseif"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a8ecbd124ddcdab7fc367443a82b241af"><param name="Name" value="eq3num"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="i"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c"><param name="Name" value="matrixTeX"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888"><param name="Name" value="sag"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a3a318718cf4c9c1380475d059171d8f3"><param name="Name" value="t1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a24aeadb733f27244ec14e4cba82eeee9"><param name="Name" value="t2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a80d62394ff82e3ae283e9113bca340a2"><param name="Name" value="t3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#ae95ab11d59379638967673bd74654b2a"><param name="Name" value="t4"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b"><param name="Name" value="Type_of_soil"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a29249d852e6e3fd1e206e1f920300e24"><param name="Name" value="warning"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ab5902775854a8b8440bcd25e0fe1c120"><param name="Name" value="e"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120"><param name="Name" value="e"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ab5902775854a8b8440bcd25e0fe1c120"><param name="Name" value="bootstrap.min.js"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120"><param name="Name" value="bootstrap.min.js"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a18d9b499a0765bf2fe5f372ff2fc0236"><param name="Name" value="each"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#aeaaf98952d2cff93963f1287282861de"><param name="Name" value="element_i"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#aba5eae545abb25c91b167b9fcdf95479"><param name="Name" value="Element_incidences"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a0d135864d9bc0103cbd903c62d64b088"><param name="Name" value="elseif"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="EMAIL_BACKEND"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a18d9b499a0765bf2fe5f372ff2fc0236"><param name="Name" value="each"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#aeaaf98952d2cff93963f1287282861de"><param name="Name" value="element_i"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#aba5eae545abb25c91b167b9fcdf95479"><param name="Name" value="Element_incidences"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a0d135864d9bc0103cbd903c62d64b088"><param name="Name" value="elseif"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="EMAIL_BACKEND"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="EMAIL_HOST"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="EMAIL_HOST"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="EMAIL_HOST_PASSWORD"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="EMAIL_HOST_PASSWORD"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="EMAIL_HOST_USER"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="EMAIL_HOST_USER"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="EMAIL_PORT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="EMAIL_PORT"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="EMAIL_USE_TLS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="EMAIL_USE_TLS"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a006fe6a2a254572b367123c6db401ff3"><param name="Name" value="emulateTransitionEnd"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a8ecbd124ddcdab7fc367443a82b241af"><param name="Name" value="eq3num"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a30e1442d731d3fa211c24c68affccacd"><param name="Name" value="extend"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="file"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#ad9d26ace18fc618ee70df3c0c94927b7"><param name="Name" value="emailcall"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="civilsage::views"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="views.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#ad9d26ace18fc618ee70df3c0c94927b7"><param name="Name" value="initial_file"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#ad9d26ace18fc618ee70df3c0c94927b7"><param name="Name" value="initial_file.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="first_write"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a006fe6a2a254572b367123c6db401ff3"><param name="Name" value="emulateTransitionEnd"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a8ecbd124ddcdab7fc367443a82b241af"><param name="Name" value="eq3num"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a30e1442d731d3fa211c24c68affccacd"><param name="Name" value="extend"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="file"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="civilsage::views"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="views.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="civilsage::views"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="views.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#ab2836ee14921cbd6e34ea91a9a99ad66"><param name="Name" value="fn"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4612305e50326c88dea04736a647c238"><param name="Name" value="Force"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="first_write"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4612305e50326c88dea04736a647c238"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4612305e50326c88dea04736a647c238"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="civilsage::views"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="views.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="funSaog"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#ab2836ee14921cbd6e34ea91a9a99ad66"><param name="Name" value="fn"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa91561fad2579200e566fa01f3cbc359"><param name="Name" value="Force"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa91561fad2579200e566fa01f3cbc359"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa91561fad2579200e566fa01f3cbc359"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html"><param name="Name" value="GeoTech/BC/main.m"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="funSaog"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a31cdcce530a93925f9b8c6349e94e70b"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#aae2972ba47d756535fc8fa0206dd7d53"><param name="Name" value="NcPrime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a1cbfb427d0fd236ae4446fb44e5b64d1"><param name="Name" value="NgPrime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#ade3072591b86caf4be69b3a9c353f213"><param name="Name" value="NqPrime"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a430c21324a0c2608090a5bb4e98d093c"><param name="Name" value="phiPrime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a22c0511a90736f47a39b47581e1b823e"><param name="Name" value="Global_force_matrix"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a31cdcce530a93925f9b8c6349e94e70b"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html"><param name="Name" value="GeoTech/BC/main.m"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a31cdcce530a93925f9b8c6349e94e70b"><param name="Name" value="GeoTech/BC/main.m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#ac49be6f89ac077f02ba11ae139998e18"><param name="Name" value="L01/main.m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a66cbc5292012ccf4747a955f8669ce69"><param name="Name" value="L02/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a31cdcce530a93925f9b8c6349e94e70b"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#aae2972ba47d756535fc8fa0206dd7d53"><param name="Name" value="NcPrime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a1cbfb427d0fd236ae4446fb44e5b64d1"><param name="Name" value="NgPrime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#ade3072591b86caf4be69b3a9c353f213"><param name="Name" value="NqPrime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a430c21324a0c2608090a5bb4e98d093c"><param name="Name" value="phiPrime"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="Graph"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a22c0511a90736f47a39b47581e1b823e"><param name="Name" value="Global_force_matrix"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a31cdcce530a93925f9b8c6349e94e70b"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a31cdcce530a93925f9b8c6349e94e70b"><param name="Name" value="GeoTech/BC/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#ac49be6f89ac077f02ba11ae139998e18"><param name="Name" value="L01/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a66cbc5292012ccf4747a955f8669ce69"><param name="Name" value="L02/main.m"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="Graph"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="input.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#afa9eb56c756985e9715e3820fd044aa3"><param name="Name" value="hasClass"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="i"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="DoS/01/main.m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="L02/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ac2d69f5011896c6ed4a54e0dd36f6334"><param name="Name" value="if"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#afa9eb56c756985e9715e3820fd044aa3"><param name="Name" value="hasClass"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="Height_storey"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="input.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="index"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="i"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="civilsage::views"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="views.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="DoS/01/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="L02/main.m"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00037.html"><param name="Name" value="initial_file"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00019.html"><param name="Name" value="initial_file.py"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00037.html"><param name="Name" value="initial_file"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html"><param name="Name" value="input"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html"><param name="Name" value="input.sage.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ac2d69f5011896c6ed4a54e0dd36f6334"><param name="Name" value="if"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#ac1b86705df1981fd4962cc056fb0608a"><param name="Name" value="_sage_const_9p8"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="Modes_considered"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="Number_of_storeys"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="Response_reduction_factor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="Soil_type"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00025.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="Zone_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html"><param name="Name" value="input"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="index"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#ac1b86705df1981fd4962cc056fb0608a"><param name="Name" value="_sage_const_9p8"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="Modes_considered"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="Number_of_storeys"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="Response_reduction_factor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="Soil_type"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="Zone_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="civilsage::views"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="views.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="INSTALLED_APPS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html"><param name="Name" value="initial_file"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="initial__file_8py.html"><param name="Name" value="initial_file.py"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="initial__file_8py.html#ad9d26ace18fc618ee70df3c0c94927b7"><param name="Name" value="emailcall"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="initial__file_8py.html#a105b1aa7bf4db853b6f4d064ed224030"><param name="Name" value="pdfemail"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#abf2bc2545a4a5f5683d9ef3ed0d977e0"><param name="Name" value="j"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html"><param name="Name" value="initial_file"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#abf2bc2545a4a5f5683d9ef3ed0d977e0"><param name="Name" value="L01/main.m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#ac86694252f8dfdb19aaeadc4b7c342c6"><param name="Name" value="L02/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#ad9d26ace18fc618ee70df3c0c94927b7"><param name="Name" value="emailcall"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#a105b1aa7bf4db853b6f4d064ed224030"><param name="Name" value="pdfemail"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="J"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html"><param name="Name" value="input"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html"><param name="Name" value="input.sage.py"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="_sage_const_1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="Height_storey"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#af91e2c1a9ecd07a9c8dcf3a5fc8b2b60"><param name="Name" value="mass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="Modes_considered"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="Number_of_storeys"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="Response_reduction_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="Soil_type"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a3853184afbe677b2a218690766c4f5e4"><param name="Name" value="Stiffness_storey"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="Zone_factor"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html"><param name="Name" value="jquery.min.js"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html"><param name="Name" value="input"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a43f0b96ea8ec44ca20ba86809a785614"><param name="Name" value="!function"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#aa4d4888597588a84fd5b1184d00c91f3"><param name="Name" value="a"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#ac0431efac4d7c393d1e70b86115cb93f"><param name="Name" value="b"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a18d9b499a0765bf2fe5f372ff2fc0236"><param name="Name" value="each"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a30e1442d731d3fa211c24c68affccacd"><param name="Name" value="extend"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#ab2836ee14921cbd6e34ea91a9a99ad66"><param name="Name" value="fn"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a96f65b399314d93896076ceb474b6b9b"><param name="Name" value="r"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#ae21cc36bf0d65014c717a481a3f8a468"><param name="Name" value="undefined"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="_sage_const_1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="Height_storey"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#af91e2c1a9ecd07a9c8dcf3a5fc8b2b60"><param name="Name" value="mass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="Modes_considered"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="Number_of_storeys"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="Response_reduction_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="Soil_type"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a3853184afbe677b2a218690766c4f5e4"><param name="Name" value="Stiffness_storey"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="Zone_factor"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#a0b4fbdd467cb846f22c44ad1178c22d4"><param name="Name" value="ks"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html"><param name="Name" value="L01/main.m"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="INSTALLED_APPS"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#aeaaf98952d2cff93963f1287282861de"><param name="Name" value="element_i"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#aba5eae545abb25c91b167b9fcdf95479"><param name="Name" value="Element_incidences"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#ac49be6f89ac077f02ba11ae139998e18"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#abf2bc2545a4a5f5683d9ef3ed0d977e0"><param name="Name" value="j"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#a0b4fbdd467cb846f22c44ad1178c22d4"><param name="Name" value="ks"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#a1d65c23ed4744bf98747671b08490b5c"><param name="Name" value="Number_of_nodes"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html"><param name="Name" value="L02/main.m"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0"><param name="Name" value="j"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#ab56a0e8dabe1e9e6a7fd6913e6448220"><param name="Name" value="and"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a22c0511a90736f47a39b47581e1b823e"><param name="Name" value="Global_force_matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a66cbc5292012ccf4747a955f8669ce69"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="i"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#ac86694252f8dfdb19aaeadc4b7c342c6"><param name="Name" value="j"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a12cee0ac1d8aa6ee889f94b55d48769f"><param name="Name" value="NOTE:"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="l"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="LANGUAGE_CODE"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="settings.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="last"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="civilsage::views"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="views.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a8d395a4120126cf1de1d3f04b1fc3457"><param name="Name" value="Lateral_force"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a8d395a4120126cf1de1d3f04b1fc3457"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a8d395a4120126cf1de1d3f04b1fc3457"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa6efadb1dc89cc9d5b75113b025fe962"><param name="Name" value="Level_floor"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa6efadb1dc89cc9d5b75113b025fe962"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa6efadb1dc89cc9d5b75113b025fe962"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="m"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html"><param name="Name" value="main"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html"><param name="Name" value="main.sage.py"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="A"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a90e3156cc1a3ea63ba2d089e78b34e3d"><param name="Name" value="A_h"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="color"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a35df7d294c439792977f174dd5b04ec1"><param name="Name" value="Design_lateral_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="e"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a4612305e50326c88dea04736a647c238"><param name="Name" value="Force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="funSaog"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="Graph"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="J"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="l"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a8d395a4120126cf1de1d3f04b1fc3457"><param name="Name" value="Lateral_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#aa6efadb1dc89cc9d5b75113b025fe962"><param name="Name" value="Level_floor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="mid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ae8c706be82800a75da37e5da67018f90"><param name="Name" value="Modal_contribution"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ac7e5d737af53772a131628449c0e6477"><param name="Name" value="Modal_mass"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a4ad22e0a1336b0e665ff865d68f4fcc1"><param name="Name" value="Modal_participation_factor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="Modes_considered"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a0cc58897a39912c706ab64fd26e0d62e"><param name="Name" value="Omega"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#abc7a524ddae98db1c2f4cf8535104feb"><param name="Name" value="Omega_square"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a6461376590c833b81e5920e96ed3d5bf"><param name="Name" value="Peak_shear_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a1787a37505189f764069a45071189112"><param name="Name" value="q"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="r"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a01374e7fea2c00172c845c7a5c71cfae"><param name="Name" value="Sa_by_g"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="Stiffness_matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="Storey_shear_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ad9f40bb3020e00eecaf17c078a1e61b6"><param name="Name" value="Storey_shear_force2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="sum_modal_mass"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a76fa8360c88818d30b9b5d2a473e79e4"><param name="Name" value="Time_period"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#afe9c3a972582e300106b7dec57600887"><param name="Name" value="Time_periods"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="Type_of_soil"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="w"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="X"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="XX"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00027.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="z"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html"><param name="Name" value="main"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="A"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a90e3156cc1a3ea63ba2d089e78b34e3d"><param name="Name" value="A_h"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="color"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a35df7d294c439792977f174dd5b04ec1"><param name="Name" value="Design_lateral_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="e"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4612305e50326c88dea04736a647c238"><param name="Name" value="Force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="funSaog"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="Graph"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="J"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="l"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a8d395a4120126cf1de1d3f04b1fc3457"><param name="Name" value="Lateral_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aa6efadb1dc89cc9d5b75113b025fe962"><param name="Name" value="Level_floor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="mid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae8c706be82800a75da37e5da67018f90"><param name="Name" value="Modal_contribution"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ac7e5d737af53772a131628449c0e6477"><param name="Name" value="Modal_mass"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4ad22e0a1336b0e665ff865d68f4fcc1"><param name="Name" value="Modal_participation_factor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="Modes_considered"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0cc58897a39912c706ab64fd26e0d62e"><param name="Name" value="Omega"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#abc7a524ddae98db1c2f4cf8535104feb"><param name="Name" value="Omega_square"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6461376590c833b81e5920e96ed3d5bf"><param name="Name" value="Peak_shear_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1787a37505189f764069a45071189112"><param name="Name" value="q"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="r"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a01374e7fea2c00172c845c7a5c71cfae"><param name="Name" value="Sa_by_g"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="Stiffness_matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="Storey_shear_force"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad9f40bb3020e00eecaf17c078a1e61b6"><param name="Name" value="Storey_shear_force2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="sum_modal_mass"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a76fa8360c88818d30b9b5d2a473e79e4"><param name="Name" value="Time_period"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#afe9c3a972582e300106b7dec57600887"><param name="Name" value="Time_periods"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="Type_of_soil"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="w"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="X"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="XX"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="z"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0"><param name="Name" value="L01/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#ac86694252f8dfdb19aaeadc4b7c342c6"><param name="Name" value="L02/main.m"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00040.html"><param name="Name" value="manage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00020.html"><param name="Name" value="manage.py"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00040.html"><param name="Name" value="manage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="matrix"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="J"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="civilsage::views"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="views.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a8c0a4f44ca03289871d3743578e0412c"><param name="Name" value="matrixTeX"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="mid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html"><param name="Name" value="jquery.min.js"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a43f0b96ea8ec44ca20ba86809a785614"><param name="Name" value="!function"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#aa4d4888597588a84fd5b1184d00c91f3"><param name="Name" value="a"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#ac0431efac4d7c393d1e70b86115cb93f"><param name="Name" value="b"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a18d9b499a0765bf2fe5f372ff2fc0236"><param name="Name" value="each"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a30e1442d731d3fa211c24c68affccacd"><param name="Name" value="extend"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#ab2836ee14921cbd6e34ea91a9a99ad66"><param name="Name" value="fn"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a96f65b399314d93896076ceb474b6b9b"><param name="Name" value="r"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#ae21cc36bf0d65014c717a481a3f8a468"><param name="Name" value="undefined"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="MIDDLEWARE_CLASSES"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#a0b4fbdd467cb846f22c44ad1178c22d4"><param name="Name" value="ks"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html"><param name="Name" value="L01/main.m"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#aeaaf98952d2cff93963f1287282861de"><param name="Name" value="element_i"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#aba5eae545abb25c91b167b9fcdf95479"><param name="Name" value="Element_incidences"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#ac49be6f89ac077f02ba11ae139998e18"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0"><param name="Name" value="j"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#a0b4fbdd467cb846f22c44ad1178c22d4"><param name="Name" value="ks"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#a1d65c23ed4744bf98747671b08490b5c"><param name="Name" value="Number_of_nodes"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae8c706be82800a75da37e5da67018f90"><param name="Name" value="Modal_contribution"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html"><param name="Name" value="L02/main.m"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae8c706be82800a75da37e5da67018f90"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae8c706be82800a75da37e5da67018f90"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#ab56a0e8dabe1e9e6a7fd6913e6448220"><param name="Name" value="and"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a22c0511a90736f47a39b47581e1b823e"><param name="Name" value="Global_force_matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a66cbc5292012ccf4747a955f8669ce69"><param name="Name" value="Global_stiffness_matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b"><param name="Name" value="i"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#ac86694252f8dfdb19aaeadc4b7c342c6"><param name="Name" value="j"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a12cee0ac1d8aa6ee889f94b55d48769f"><param name="Name" value="NOTE:"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ac7e5d737af53772a131628449c0e6477"><param name="Name" value="Modal_mass"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="l"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ac7e5d737af53772a131628449c0e6477"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ac7e5d737af53772a131628449c0e6477"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="LANGUAGE_CODE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="settings.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="last"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="civilsage::views"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="views.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a712447a841ce148ad2d1210e57dc7894"><param name="Name" value="Lateral_force"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a712447a841ce148ad2d1210e57dc7894"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a712447a841ce148ad2d1210e57dc7894"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad7b051da0e829aff37fef1e171e37fa3"><param name="Name" value="Level_floor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad7b051da0e829aff37fef1e171e37fa3"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad7b051da0e829aff37fef1e171e37fa3"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="m"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html"><param name="Name" value="main"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html"><param name="Name" value="main.sage.py"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="A"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a49b10c1530f56b101c4cc17b20fb1973"><param name="Name" value="A_h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a0caf610899fee63b00acb7cce7c804d7"><param name="Name" value="Design_lateral_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="e"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#aa91561fad2579200e566fa01f3cbc359"><param name="Name" value="Force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="funSaog"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="Graph"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="J"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="l"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a712447a841ce148ad2d1210e57dc7894"><param name="Name" value="Lateral_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ad7b051da0e829aff37fef1e171e37fa3"><param name="Name" value="Level_floor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="mid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ab273c2ae46514d6ec3d905c30cbb5a1b"><param name="Name" value="Modal_contribution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a176940b2d446033050ac092436f63974"><param name="Name" value="Modal_mass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a936ce857e8e4f4855af1cc5bf2635191"><param name="Name" value="Modal_participation_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="Modes_considered"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#af44dcb60e61649c65257466d65b4d548"><param name="Name" value="Omega"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a63066086ca439ff34de16475b00387f5"><param name="Name" value="Omega_square"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a9e135aea550f8ea419857f817a196d56"><param name="Name" value="Peak_shear_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a1787a37505189f764069a45071189112"><param name="Name" value="q"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="r"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ac3a509169246622b50fc23d809d30833"><param name="Name" value="Sa_by_g"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="Stiffness_matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="Storey_shear_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ab6dd9cc05fd903a9da8b9734c44fef57"><param name="Name" value="Storey_shear_force2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#aa741e0bac28acc57bb99fbe2b14205c7"><param name="Name" value="storey_shear_force3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="sum_modal_mass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a6bf4b8266bcb3b4f390149620fea3d6c"><param name="Name" value="Time_period"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="Type_of_soil"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="w"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="X"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="XX"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8sage_8py.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="z"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html"><param name="Name" value="main"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad101f166a53497f04b37636bcadbfe65"><param name="Name" value="A"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a49b10c1530f56b101c4cc17b20fb1973"><param name="Name" value="A_h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aeabbf69db1809807f065c2d1e9a62567"><param name="Name" value="color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0caf610899fee63b00acb7cce7c804d7"><param name="Name" value="Design_lateral_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa7f4fe671f919f7f067f9337ef9e02c0"><param name="Name" value="e"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa91561fad2579200e566fa01f3cbc359"><param name="Name" value="Force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4f60afd2426ee9409955e4352b3f0486"><param name="Name" value="funSaog"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad40f6b3437e83a0385177ac65a317b97"><param name="Name" value="Graph"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a00488f5887e168f7781b6fb94dd08518"><param name="Name" value="J"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a027916efc284622d928c1d8383917f6d"><param name="Name" value="l"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a712447a841ce148ad2d1210e57dc7894"><param name="Name" value="Lateral_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad7b051da0e829aff37fef1e171e37fa3"><param name="Name" value="Level_floor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af6e3698b7f50fc004eb759d7c447fdb3"><param name="Name" value="m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="mid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab273c2ae46514d6ec3d905c30cbb5a1b"><param name="Name" value="Modal_contribution"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a176940b2d446033050ac092436f63974"><param name="Name" value="Modal_mass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a936ce857e8e4f4855af1cc5bf2635191"><param name="Name" value="Modal_participation_factor"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="Modes_considered"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af44dcb60e61649c65257466d65b4d548"><param name="Name" value="Omega"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a63066086ca439ff34de16475b00387f5"><param name="Name" value="Omega_square"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9e135aea550f8ea419857f817a196d56"><param name="Name" value="Peak_shear_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1787a37505189f764069a45071189112"><param name="Name" value="q"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="r"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ac3a509169246622b50fc23d809d30833"><param name="Name" value="Sa_by_g"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="Stiffness_matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="Storey_shear_force"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab6dd9cc05fd903a9da8b9734c44fef57"><param name="Name" value="Storey_shear_force2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa741e0bac28acc57bb99fbe2b14205c7"><param name="Name" value="storey_shear_force3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="sum_modal_mass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6bf4b8266bcb3b4f390149620fea3d6c"><param name="Name" value="Time_period"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="Type_of_soil"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="w"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="X"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="XX"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="z"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4ad22e0a1336b0e665ff865d68f4fcc1"><param name="Name" value="Modal_participation_factor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemanage.html"><param name="Name" value="manage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="manage_8py.html"><param name="Name" value="manage.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemanage.html"><param name="Name" value="manage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#af91e2c1a9ecd07a9c8dcf3a5fc8b2b60"><param name="Name" value="mass"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4ad22e0a1336b0e665ff865d68f4fcc1"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4ad22e0a1336b0e665ff865d68f4fcc1"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#af91e2c1a9ecd07a9c8dcf3a5fc8b2b60"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#af91e2c1a9ecd07a9c8dcf3a5fc8b2b60"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="Modes_considered"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="matrix"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="input.sage.py"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="civilsage::views"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="views.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#aae2972ba47d756535fc8fa0206dd7d53"><param name="Name" value="NcPrime"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a1cbfb427d0fd236ae4446fb44e5b64d1"><param name="Name" value="NgPrime"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ac26971afe341e4079ee34fceab395fc2"><param name="Name" value="noConflict"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00008.html#a12cee0ac1d8aa6ee889f94b55d48769f"><param name="Name" value="NOTE:"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#ade3072591b86caf4be69b3a9c353f213"><param name="Name" value="NqPrime"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00007.html#a1d65c23ed4744bf98747671b08490b5c"><param name="Name" value="Number_of_nodes"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="Number_of_storeys"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c"><param name="Name" value="matrixTeX"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="mid"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="input.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0cc58897a39912c706ab64fd26e0d62e"><param name="Name" value="Omega"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0cc58897a39912c706ab64fd26e0d62e"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0cc58897a39912c706ab64fd26e0d62e"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#abc7a524ddae98db1c2f4cf8535104feb"><param name="Name" value="Omega_square"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#abc7a524ddae98db1c2f4cf8535104feb"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#abc7a524ddae98db1c2f4cf8535104feb"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a70551c7fc78da8fdec83fe500056d388"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="MIDDLEWARE_CLASSES"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab273c2ae46514d6ec3d905c30cbb5a1b"><param name="Name" value="Modal_contribution"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab273c2ae46514d6ec3d905c30cbb5a1b"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab273c2ae46514d6ec3d905c30cbb5a1b"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="pdfemail"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a176940b2d446033050ac092436f63974"><param name="Name" value="Modal_mass"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="civilsage::views"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00037.html#a105b1aa7bf4db853b6f4d064ed224030"><param name="Name" value="initial_file"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00037.html#a105b1aa7bf4db853b6f4d064ed224030"><param name="Name" value="initial_file.py"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00036.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="views.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6461376590c833b81e5920e96ed3d5bf"><param name="Name" value="Peak_shear_force"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6461376590c833b81e5920e96ed3d5bf"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a6461376590c833b81e5920e96ed3d5bf"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00006.html#a430c21324a0c2608090a5bb4e98d093c"><param name="Name" value="phiPrime"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="PROJECT_ROOT"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="settings.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1787a37505189f764069a45071189112"><param name="Name" value="q"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1787a37505189f764069a45071189112"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a1787a37505189f764069a45071189112"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a96f65b399314d93896076ceb474b6b9b"><param name="Name" value="r"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#a96f65b399314d93896076ceb474b6b9b"><param name="Name" value="jquery.min.js"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="Response_reduction_factor"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="input.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="ROOT_URLCONF"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="settings.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a01374e7fea2c00172c845c7a5c71cfae"><param name="Name" value="Sa_by_g"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a01374e7fea2c00172c845c7a5c71cfae"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a01374e7fea2c00172c845c7a5c71cfae"><param name="Name" value="main.sage.py"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#aac9abc95cd2ddc27fa84fb4440b62888"><param name="Name" value="sag"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00004.html"><param name="Name" value="SAGE"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00041.html"><param name="Name" value="sage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00016.html"><param name="Name" value="sage/urls.py"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html"><param name="Name" value="sage::settings"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="ALLOWED_HOSTS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="DATABASES"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="DEBUG"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="DEFAULT_FROM_EMAIL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="EMAIL_BACKEND"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="EMAIL_HOST"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="EMAIL_HOST_PASSWORD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="EMAIL_HOST_USER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="EMAIL_PORT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="EMAIL_USE_TLS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="INSTALLED_APPS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="LANGUAGE_CODE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="MIDDLEWARE_CLASSES"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="PROJECT_ROOT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="ROOT_URLCONF"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="STATIC_ROOT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="STATIC_URL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="STATICFILES_DIRS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="STATICFILES_FINDERS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="TEMPLATE_DEBUG"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="TEMPLATE_DIRS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="TIME_ZONE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="USE_I18N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="USE_L10N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="USE_TZ"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="WSGI_APPLICATION"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a176940b2d446033050ac092436f63974"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a176940b2d446033050ac092436f63974"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00044.html"><param name="Name" value="sage::urls"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a936ce857e8e4f4855af1cc5bf2635191"><param name="Name" value="Modal_participation_factor"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00044.html#a5c86cdc04e09bcea3285cc79e9c83220"><param name="Name" value="urlpatterns"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a936ce857e8e4f4855af1cc5bf2635191"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a936ce857e8e4f4855af1cc5bf2635191"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00045.html"><param name="Name" value="sage::wsgi"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="Modes_considered"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00045.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="application"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#adb7aca4735796aaa4a46456d3edeac2e"><param name="Name" value="input.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#aae2972ba47d756535fc8fa0206dd7d53"><param name="Name" value="NcPrime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a1cbfb427d0fd236ae4446fb44e5b64d1"><param name="Name" value="NgPrime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ac26971afe341e4079ee34fceab395fc2"><param name="Name" value="noConflict"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L02_2main_8m.html#a12cee0ac1d8aa6ee889f94b55d48769f"><param name="Name" value="NOTE:"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#ade3072591b86caf4be69b3a9c353f213"><param name="Name" value="NqPrime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="L01_2main_8m.html#a1d65c23ed4744bf98747671b08490b5c"><param name="Name" value="Number_of_nodes"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="Number_of_storeys"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a10237b312ba44e8c8090db86059c5803"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a14f119ea3b5abc5536d590dfe1793c6e"><param name="Name" value="setState"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html"><param name="Name" value="settings.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af44dcb60e61649c65257466d65b4d548"><param name="Name" value="Omega"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af44dcb60e61649c65257466d65b4d548"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af44dcb60e61649c65257466d65b4d548"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a63066086ca439ff34de16475b00387f5"><param name="Name" value="Omega_square"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a63066086ca439ff34de16475b00387f5"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a63066086ca439ff34de16475b00387f5"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="pdfemail"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="civilsage::views"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#a105b1aa7bf4db853b6f4d064ed224030"><param name="Name" value="initial_file"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinitial__file.html#a105b1aa7bf4db853b6f4d064ed224030"><param name="Name" value="initial_file.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1views.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="views.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9e135aea550f8ea419857f817a196d56"><param name="Name" value="Peak_shear_force"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9e135aea550f8ea419857f817a196d56"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9e135aea550f8ea419857f817a196d56"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="GeoTech_2BC_2main_8m.html#a430c21324a0c2608090a5bb4e98d093c"><param name="Name" value="phiPrime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="PROJECT_ROOT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="settings.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1787a37505189f764069a45071189112"><param name="Name" value="q"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1787a37505189f764069a45071189112"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1787a37505189f764069a45071189112"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a96f65b399314d93896076ceb474b6b9b"><param name="Name" value="r"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a96f65b399314d93896076ceb474b6b9b"><param name="Name" value="jquery.min.js"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a4760f4121f66000c5570f75176649cb8"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="Response_reduction_factor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aa6d0078a6d934c0d515d85059525e938"><param name="Name" value="input.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="ROOT_URLCONF"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="settings.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ac3a509169246622b50fc23d809d30833"><param name="Name" value="Sa_by_g"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ac3a509169246622b50fc23d809d30833"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ac3a509169246622b50fc23d809d30833"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888"><param name="Name" value="sag"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md__home_amarjeet_projects_CivilOctave_sage_Readme.html"><param name="Name" value="SAGE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage.html"><param name="Name" value="sage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="sage_2urls_8py.html"><param name="Name" value="sage/urls.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html"><param name="Name" value="sage::settings"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="ALLOWED_HOSTS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="DATABASES"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="DEFAULT_FROM_EMAIL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="EMAIL_BACKEND"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="EMAIL_HOST"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="EMAIL_HOST_PASSWORD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="EMAIL_HOST_USER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="EMAIL_PORT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="EMAIL_USE_TLS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="INSTALLED_APPS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="LANGUAGE_CODE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="MIDDLEWARE_CLASSES"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="PROJECT_ROOT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="ROOT_URLCONF"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="STATIC_ROOT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="STATIC_URL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="STATICFILES_DIRS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="STATICFILES_FINDERS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="TEMPLATE_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="TEMPLATE_DIRS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="TIME_ZONE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="USE_I18N"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="USE_L10N"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="USE_TZ"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="WSGI_APPLICATION"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1urls.html"><param name="Name" value="sage::urls"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1urls.html#a5c86cdc04e09bcea3285cc79e9c83220"><param name="Name" value="urlpatterns"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1wsgi.html"><param name="Name" value="sage::wsgi"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1wsgi.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="application"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="settings.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a14f119ea3b5abc5536d590dfe1793c6e"><param name="Name" value="setState"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html"><param name="Name" value="settings.py"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="ALLOWED_HOSTS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="DATABASES"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="DEFAULT_FROM_EMAIL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="EMAIL_BACKEND"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="EMAIL_HOST"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="EMAIL_HOST_PASSWORD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="EMAIL_HOST_USER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="EMAIL_PORT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="EMAIL_USE_TLS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="INSTALLED_APPS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="LANGUAGE_CODE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="MIDDLEWARE_CLASSES"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="PROJECT_ROOT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="ROOT_URLCONF"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="STATIC_ROOT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="STATIC_URL"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="STATICFILES_DIRS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="STATICFILES_FINDERS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="TEMPLATE_DEBUG"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="TEMPLATE_DIRS"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="TIME_ZONE"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="USE_I18N"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="USE_L10N"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="USE_TZ"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="settings_8py.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="WSGI_APPLICATION"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="Soil_type"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a2eb98def792cf73bbc5884024afc5602"><param name="Name" value="ALLOWED_HOSTS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a870c10acdd1141ac92340ce3e50ffbbd"><param name="Name" value="DATABASES"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#acc28086c56df6aed910b2552e07944cc"><param name="Name" value="DEBUG"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a6517c4f93850d63e2bdbe7040ad0e2ff"><param name="Name" value="DEFAULT_FROM_EMAIL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a2d83ca0a279480aa03599465a0386b17"><param name="Name" value="EMAIL_BACKEND"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a594329fe15c9680f523afaab779411ed"><param name="Name" value="EMAIL_HOST"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a66e7a16ed6b0df5716a6579fcba949a6"><param name="Name" value="EMAIL_HOST_PASSWORD"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a9c01855359753a3c3f517341806347c2"><param name="Name" value="EMAIL_HOST_USER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a3fe927460bba6408b5df39fa8a10d367"><param name="Name" value="EMAIL_PORT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a0fe7c4174cb1b7d03f7b574ae1e5eed9"><param name="Name" value="EMAIL_USE_TLS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#af48e999a4a4e7f8830d84ac4eb08df1a"><param name="Name" value="INSTALLED_APPS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#ac5b7a49ef37a25508ecb84453063821a"><param name="Name" value="LANGUAGE_CODE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a247a0ea3c79f999897dbfaed3bc99b1d"><param name="Name" value="MIDDLEWARE_CLASSES"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#ae2e71004e0684c0243b4e9792726cd0f"><param name="Name" value="PROJECT_ROOT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a92b3d804acae3871a9877ad143df4201"><param name="Name" value="ROOT_URLCONF"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="STATIC_ROOT"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="STATIC_URL"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="STATICFILES_DIRS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="STATICFILES_FINDERS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="TEMPLATE_DEBUG"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="TEMPLATE_DIRS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="TIME_ZONE"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="USE_I18N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="USE_L10N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="USE_TZ"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00022.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="WSGI_APPLICATION"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="Soil_type"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="STATIC_ROOT"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#a6221ae01cf2fb9e8cd22204749785a0e"><param name="Name" value="input.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="STATIC_ROOT"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="STATIC_URL"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a91b967847aecdd4d0edfbb0229656929"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="STATIC_URL"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="STATICFILES_DIRS"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a0b4647cdde23eaed09c255182a9f576c"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="STATICFILES_DIRS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="STATICFILES_FINDERS"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#ac4ae870dea0d58410747ddcbdff2b3d7"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="STATICFILES_FINDERS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="Stiffness_matrix"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#af629022b1da961fa9828f450bc80bd22"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="Stiffness_matrix"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a3853184afbe677b2a218690766c4f5e4"><param name="Name" value="Stiffness_storey"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a0011be18dbc87087d6aaf28802f121c0"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a3853184afbe677b2a218690766c4f5e4"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a3853184afbe677b2a218690766c4f5e4"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad9f40bb3020e00eecaf17c078a1e61b6"><param name="Name" value="Storey_shear_force2"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab6dd9cc05fd903a9da8b9734c44fef57"><param name="Name" value="Storey_shear_force2"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad9f40bb3020e00eecaf17c078a1e61b6"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ad9f40bb3020e00eecaf17c078a1e61b6"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab6dd9cc05fd903a9da8b9734c44fef57"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab6dd9cc05fd903a9da8b9734c44fef57"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="Storey_shear_force"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa741e0bac28acc57bb99fbe2b14205c7"><param name="Name" value="storey_shear_force3"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa741e0bac28acc57bb99fbe2b14205c7"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aa741e0bac28acc57bb99fbe2b14205c7"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="sum_modal_mass"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="Storey_shear_force"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#aaa52e7055409dcf0785880422294a704"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a3a318718cf4c9c1380475d059171d8f3"><param name="Name" value="t1"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a24aeadb733f27244ec14e4cba82eeee9"><param name="Name" value="t2"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a80d62394ff82e3ae283e9113bca340a2"><param name="Name" value="t3"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#ae95ab11d59379638967673bd74654b2a"><param name="Name" value="t4"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="TEMPLATE_DEBUG"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="sum_modal_mass"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a27fb93072b84fd448623807df350f132"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="TEMPLATE_DIRS"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a3a318718cf4c9c1380475d059171d8f3"><param name="Name" value="t1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a24aeadb733f27244ec14e4cba82eeee9"><param name="Name" value="t2"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a80d62394ff82e3ae283e9113bca340a2"><param name="Name" value="t3"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#ae95ab11d59379638967673bd74654b2a"><param name="Name" value="t4"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="TEMPLATE_DEBUG"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a74c98bee40b9b06d51e44be6df73eb46"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00040.html#ab0c13dd165a5c8a6f3e3c029a2acd921"><param name="Name" value="thread"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="TEMPLATE_DIRS"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00040.html#ab0c13dd165a5c8a6f3e3c029a2acd921"><param name="Name" value="manage"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00040.html#ab0c13dd165a5c8a6f3e3c029a2acd921"><param name="Name" value="manage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#addc90c15790d385d304972f1b3098a86"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a76fa8360c88818d30b9b5d2a473e79e4"><param name="Name" value="Time_period"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemanage.html#ab0c13dd165a5c8a6f3e3c029a2acd921"><param name="Name" value="thread"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a76fa8360c88818d30b9b5d2a473e79e4"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a76fa8360c88818d30b9b5d2a473e79e4"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemanage.html#ab0c13dd165a5c8a6f3e3c029a2acd921"><param name="Name" value="manage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemanage.html#ab0c13dd165a5c8a6f3e3c029a2acd921"><param name="Name" value="manage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#afe9c3a972582e300106b7dec57600887"><param name="Name" value="Time_periods"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6bf4b8266bcb3b4f390149620fea3d6c"><param name="Name" value="Time_period"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#afe9c3a972582e300106b7dec57600887"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#afe9c3a972582e300106b7dec57600887"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6bf4b8266bcb3b4f390149620fea3d6c"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6bf4b8266bcb3b4f390149620fea3d6c"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="TIME_ZONE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="TIME_ZONE"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a07421ef620becc4c93753901abdf83c0"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#aa8e797a9bda5e7e313be3518054164a3"><param name="Name" value="toggle"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#ae4adb159aeacba734c34bd530baf92f6"><param name="Name" value="TRANSITION_DURATION"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a3e2c6a7e7b1f0ac68cc462d26373be9b"><param name="Name" value="Type_of_soil"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#aa8e797a9bda5e7e313be3518054164a3"><param name="Name" value="toggle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#ae4adb159aeacba734c34bd530baf92f6"><param name="Name" value="TRANSITION_DURATION"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b"><param name="Name" value="Type_of_soil"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a3e2c6a7e7b1f0ac68cc462d26373be9b"><param name="Name" value="DoS/01/main.m"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b"><param name="Name" value="DoS/01/main.m"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a52e65712caa18dade1326ad4efeebfa1"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00030.html#ae21cc36bf0d65014c717a481a3f8a468"><param name="Name" value="undefined"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00035.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="urlpatterns"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#ae21cc36bf0d65014c717a481a3f8a468"><param name="Name" value="undefined"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1urls.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="urlpatterns"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00035.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="civilsage/urls.py"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00035.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="civilsage::urls"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00044.html#a5c86cdc04e09bcea3285cc79e9c83220"><param name="Name" value="sage/urls.py"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00044.html#a5c86cdc04e09bcea3285cc79e9c83220"><param name="Name" value="sage::urls"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1urls.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="civilsage/urls.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacecivilsage_1_1urls.html#a46a501661622e9e2b11c9d6da43bbec0"><param name="Name" value="civilsage::urls"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1urls.html#a5c86cdc04e09bcea3285cc79e9c83220"><param name="Name" value="sage/urls.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1urls.html#a5c86cdc04e09bcea3285cc79e9c83220"><param name="Name" value="sage::urls"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="USE_I18N"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="USE_I18N"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acf5dd02a352695a98f57bef7679a29af"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="USE_L10N"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="USE_L10N"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a9d0e7298d4688c99e0ee9e965d950de0"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="USE_TZ"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="USE_TZ"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#aa385f778cd7bd79cc4c688fec7c101a2"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00029.html#a3635f2df5844f69204b70bf7b3983587"><param name="Name" value="VERSION"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html"><param name="Name" value="views.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a3635f2df5844f69204b70bf7b3983587"><param name="Name" value="VERSION"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html"><param name="Name" value="views.py"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="file"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="first_write"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="index"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="last"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="matrix"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00017.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="pdfemail"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html#a32de127956738677913352a2db84ecdb"><param name="Name" value="file"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html#ad9397359f36a9df37e0aa43f3be032a3"><param name="Name" value="first_write"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html#a7b4fd4478a312ce8e35a192159c59de9"><param name="Name" value="index"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html#aed47fb0740a2fa14693f697905788719"><param name="Name" value="last"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html#a8b58c93a9c82e84143c43dafaa744a4b"><param name="Name" value="matrix"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="views_8py.html#a9914ff19f8e15ccab1a07eaeac8cfb21"><param name="Name" value="pdfemail"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="w"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="w"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af76005101c339a32cd5d37ba82ee072c"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00005.html#a29249d852e6e3fd1e206e1f920300e24"><param name="Name" value="warning"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00023.html"><param name="Name" value="wsgi.py"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="WSGI_APPLICATION"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#a29249d852e6e3fd1e206e1f920300e24"><param name="Name" value="warning"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="wsgi_8py.html"><param name="Name" value="wsgi.py"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="WSGI_APPLICATION"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="sage::settings"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00043.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="settings.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="sage::settings"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#a700b653427cc28bc1ebe951b419cfd58"><param name="Name" value="settings.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="X"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="X"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a5eac8e4368036ef94463d6e42c1628c5"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="XX"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="XX"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ae18df6a00aee4516c7ad8961b666e2a3"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="z"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="z"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00039.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="main.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a2d5b336e3b2f7d2e14f04fa3cc413457"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="Zone_factor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="Zone_factor"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="a00038.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="input.sage.py"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#aeea70e58ec9bb0d3d6c4363867eb0f82"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
 </UL>
 </BODY>
