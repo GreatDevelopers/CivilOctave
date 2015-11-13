@@ -9,7 +9,7 @@
 
 3. Run command python manage.py migrate
 
-4. Run app using python manage.py runserver
+4. Run app using python manage.py initial runserver
 
 
 ### FOLDERS -:

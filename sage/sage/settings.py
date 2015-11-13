@@ -102,7 +102,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 
 #Set it's value to the email-id from which the emails will be sent.
-EMAIL_HOST_USER = 'your_email1@gmail.com'
+EMAIL_HOST_USER = 'email.id1@gmail.com'
 
 
 """

@@ -208,7 +208,7 @@ def file(request):
 			thread = threading.Thread(target=pdfemail,args=(request,name))
 			thread.daemon = True
 			thread.start()
-			message="PDF send to "+request.POST.get('email_id')
+			message="PDF will be send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
 			#creating and writing sh file for background processing
@@ -263,6 +263,7 @@ def pdfemail(request,name):
 		command='sh '+name+'/civil.sh'
 		os.system(command)
 		command=name+'/civil.pdf'
+		message='wrong email id'
 		email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		'You have is ready', to=[email_id])
@@ -271,9 +272,13 @@ def pdfemail(request,name):
 		command='rm -rf '+name
 		os.system(command)
 	except:
+		command='rm -rf '+name
+		if(message=='wrong email id'):
+			os.system(command)
 		email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		message, to=[email_id])
+		os.system(command)
 
 def first_write(request):
 	"""
@@ -290,7 +295,7 @@ def first_write(request):
 	,'Zone_factor':'','Gravity_acceleration':''
 	,'Modes_considered':''}
 	#name of directory of specific user
-	name=request.session.session_key+str(datetime.datetime.now())
+	name='Temp'+request.session.session_key+str(datetime.datetime.now())
 	name=name.replace(" ", "")
 	#getting input using tags
 	for var in lists.keys():
