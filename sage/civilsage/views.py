@@ -274,8 +274,8 @@ def pdfemail(request,name):
 	except:
 		command='rm -rf '+name
 		if(message=='wrong email id'):
-			os.system(command)
-		email_id=request.POST.get('email_id')
+                    os.system(command)
+                email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		message, to=[email_id])
 		os.system(command)

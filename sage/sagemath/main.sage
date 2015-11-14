@@ -36,7 +36,7 @@ load('input.sage')
 latex.matrix_delimiters("[","]")
 
 #converting mass in diagonal matrix
-Mass=matrix(Number_of_storeys,Number_of_storeys)
+Mass=matrix(QQ,Number_of_storeys,Number_of_storeys)
 for i in range(Number_of_storeys):
     for j in range(Number_of_storeys):
         if(i==j):
@@ -44,7 +44,7 @@ for i in range(Number_of_storeys):
         else:
             Mass[i,j]=0
 #calculating level of floors from its height
-Level_floor=zero_matrix(RR,Number_of_storeys,1)
+Level_floor=zero_matrix(QQ,Number_of_storeys,1)
 for storey_i in range(Number_of_storeys):
     Level_floor[storey_i,0] = Height_storey[storey_i,0]
     if(storey_i>0):
