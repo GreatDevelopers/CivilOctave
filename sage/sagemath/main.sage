@@ -76,6 +76,8 @@ for i in range( Number_of_storeys):
 	q=sqrt(Omega_square[i])
 	Omega[i,0]=n(q)
 	Time_period[i,0]=n(2*pi)/q
+
+
 #Frequency=list()
 #for storey_i in range(Number_of_storeys):
 	#Frequency.append(sqrt(Omega_square[storey_i].n(digits=4)))
@@ -91,10 +93,6 @@ for x in range(Number_of_storeys):
 	X[x]=matrix(q/sqrt(abs(J[x])))
 #ModesContributionX = 0;
 #Number_of_modes_to_be_considered = 0;
-#for Number_of_modes_to_be_considered in range(Number_of_storeys):
-	#ModesContributionX = ModesContributionX+Modal_contribution(Number_of_modes_to_be_considered);
- 	#if (ModesContributionX > 90):
- 		#break;
 
 #calculating Modal participation factor ,sum of modal mass
 #and modal mass
@@ -116,6 +114,16 @@ Modal_contribution=zero_matrix(RR,Number_of_storeys,1)
 for i in range(Number_of_storeys):
 	Modal_contribution[i,0]=((100 / sum_modal_mass )*Modal_mass[i,0]).n(digits=4)
 
+
+#for Number_of_modes_to_be_considered in range(Number_of_storeys):
+	#ModesContributionX = ModesContributionX+Modal_contribution[Number_of_modes_to_be_considered,0];
+ 	#if (ModesContributionX > 90):
+ 		#Modes_considered= Number_of_modes_to_be_considered
+ 		#break;
+ 		
+if (Modes_considered == 0 or Modes_considered > Number_of_storeys):
+    Modes_considered = Number_of_storeys
+    
 #getting type of soil and dependent variables
 Type_of_soil=''
 for i in range (Soil_type):
@@ -132,8 +140,8 @@ for index_time in range(Number_of_storeys):
 #calculating design lateral force
 
 
-Design_lateral_force=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
-for index_i in range(Number_of_storeys):
+Design_lateral_force=zero_matrix(RR,Number_of_storeys,Modes_considered)
+for index_i in range(Modes_considered):
     q=Mass*XX[:,index_i]
     z=q*matrix(A_h[index_i]*Modal_participation_factor[index_i,0]*
     Gravity_acceleration)
@@ -141,8 +149,8 @@ for index_i in range(Number_of_storeys):
 
 
 #calculating Peak shear force
-Peak_shear_force = zero_matrix(RR,Number_of_storeys, Number_of_storeys)
-for index_j in range(Number_of_storeys):
+Peak_shear_force = zero_matrix(RR,Number_of_storeys,Modes_considered)
+for index_j in range(Modes_considered):
 	for index_i in range(Number_of_storeys):
 		for index_k in range(Number_of_storeys - index_i ):
 			Peak_shear_force[index_i,index_j]=(
@@ -153,8 +161,7 @@ for index_j in range(Number_of_storeys):
 #storey shear force for all modes
 Storey_shear_force = zero_matrix(RR,Number_of_storeys,1)
 Storey_shear_force2 = zero_matrix(RR,Number_of_storeys,1)
-if (Modes_considered == 0):
-  Modes_considered = Number_of_modes_to_be_considered
+
 for index_i in range(Number_of_storeys):
     for index_j in range(Modes_considered):
         Storey_shear_force[index_i,0]=(Storey_shear_force[index_i,0]+
@@ -162,31 +169,36 @@ for index_i in range(Number_of_storeys):
         Storey_shear_force2[index_i,0]=(Storey_shear_force2[index_i,0]+
         Peak_shear_force[index_i,index_j]^2)
     Storey_shear_force2[index_i,0] = sqrt(Storey_shear_force2[index_i,0])
-P=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
-B=zero_matrix(RR,Number_of_storeys,Number_of_storeys)
+    
+Force=zero_matrix(RR,Number_of_storeys,1)
 for i in range(Number_of_storeys):
-	for j in range(Number_of_storeys):
+	if(i==Number_of_storeys-1):
+		Force[i,0]=Storey_shear_force[i,0]
+		break
+	Force[i,0]=Storey_shear_force[i,0]-Storey_shear_force[i+1,0]
+    
+ 
+P=zero_matrix(RR,Modes_considered,Modes_considered)
+B=zero_matrix(RR,Modes_considered,Modes_considered)
+for i in range(Modes_considered):
+	for j in range(Modes_considered):
 		q=Omega[i,0]
 		r=Omega[j,0]
 		B[i,j]=(r/q)
 B=B.n(digits=4)
 
-for i in range(Number_of_storeys):
-	for j in range(Number_of_storeys):
+
+for i in range(Modes_considered):
+	for j in range(Modes_considered):
 		b=1+B[i,j]
 		q=8*(0.05)^2*(b)*B[i,j]^1.5
 		e=(1-B[i,j]^2)^2+4*(0.05)*B[i,j]*(b)^2
 		P[i,j]=q/e
+	
 Lateral_force=zero_matrix(RR,Number_of_storeys,1)
 for i in range(Number_of_storeys):
-	l=Peak_shear_force[:,i].transpose()*P*Peak_shear_force[:,i]
+	l=Peak_shear_force[i,:]*P*Peak_shear_force[i,:].transpose()
 	Lateral_force[i,0]=sqrt(l[0,0])
-Force=zero_matrix(RR,Number_of_storeys,1)
-for i in range(Number_of_storeys):
-	if(i==Number_of_storeys-1):
-		Force[i,0]=Lateral_force[i,0]
-		break
-	Force[i,0]=Lateral_force[i,0]-Lateral_force[i+1,0]
 
 #making graph for eigen vectors of calculated
 p=list()
@@ -218,3 +230,4 @@ storey_shear_force3=Storey_shear_force[:].n(digits=4)
 Storey_shear_force2=Storey_shear_force2[:].n(digits=4)
 Lateral_force=Lateral_force.n(digits=4)
 Force=Force.n(digits=4)
+

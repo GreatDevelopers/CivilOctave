@@ -188,7 +188,7 @@ def file(request):
 				file.write('[')
 
 				#getting input from tags
-				message="Less no. of elements in row "+str(i)
+				message="Less no. of elements in row "+str(j)
 				if(not data[jar][i].isdigit()):
 					ii=i+1
 				else:
@@ -198,7 +198,7 @@ def file(request):
 				file.write(']')
 
 				#condition to check last element
-				if( i!=int(num)+jar-1):
+				if( i!=int(num)-1):
 					file.write(',')
 			jar=jar+1
 			file.write('])\n')
@@ -236,6 +236,8 @@ def file(request):
 			os.system(command)
 			return response
 	except:
+		command='rm -rf '+name
+		os.system(command)
 		return render(request, "civilsage/file.html",
 		{'message':message,'email_get':request.session.get('email_get')})
 
@@ -244,7 +246,7 @@ def pdfemail(request,name):
 	A function that run as background process to send pdf as emails
 	...
 	"""
-	message='unable to send'
+	message='unable to send it will be send after sometime'
 	try:
 		#creating and writing sh file for background processing
 		email_id=request.POST.get('email_id')
@@ -263,11 +265,11 @@ def pdfemail(request,name):
 		command='sh '+name+'/civil.sh'
 		os.system(command)
 		command=name+'/civil.pdf'
-		message='wrong email id'
 		email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		'You have is ready', to=[email_id])
 		user_email.attach_file(command)
+		message='wrong email id'
 		user_email.send()
 		command='rm -rf '+name
 		os.system(command)
@@ -278,7 +280,6 @@ def pdfemail(request,name):
                 email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		message, to=[email_id])
-		os.system(command)
 
 def first_write(request):
 	"""
