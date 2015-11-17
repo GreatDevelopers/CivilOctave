@@ -117,8 +117,8 @@ for i in range(Number_of_storeys):
 
 #for Number_of_modes_to_be_considered in range(Number_of_storeys):
 	#ModesContributionX = ModesContributionX+Modal_contribution[Number_of_modes_to_be_considered,0];
- 	#if (ModesContributionX > 90):
- 		#Modes_considered= Number_of_modes_to_be_considered
+ 	#if (ModesContributionX > Modescontribution):
+ 		#Modes_considered= Number_of_modes_to_be_considered+1
  		#break;
  		
 if (Modes_considered == 0 or Modes_considered > Number_of_storeys):

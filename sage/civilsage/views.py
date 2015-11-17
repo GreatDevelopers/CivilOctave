@@ -121,17 +121,9 @@ def last(request):
 			message="PDF send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
-			#creating and writing sh file for background processing
-			command=name+'/civil.sh'
-			file=open(command,'w')
-			command='cd '+name
-			file.write(command)
-			file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-			file.write('pdflatex civil.tex\n')
-			file.close()
 
 			#calling sh file for background processing
-			command='sh '+name+'/civil.sh'
+			command='sh  civil.sh '+name
 			os.system(command)
 
 			#opening creted pdf to display to user
@@ -211,17 +203,7 @@ def file(request):
 			message="PDF will be send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
-			#creating and writing sh file for background processing
-			command=name+'/civil.sh'
-			file=open(command,'w')
-			command='cd '+name
-			file.write(command)
-			file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-			file.write('pdflatex civil.tex\n')
-			file.close()
-
-			#calling sh file for background processing
-			command='sh '+name+'/civil.sh'
+			command='sh  civil.sh '+name
 			os.system(command)
 
 			#opening creted pdf to display to user
@@ -254,15 +236,7 @@ def pdfemail(request,name):
 		f=open(command,'w')
 		f.write(email_id)
 		f.close()
-		command=name+'/civil.sh'
-		file=open(command,'w')
-		command='cd '+name
-		file.write(command)
-		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-		file.write('pdflatex civil.tex\n')
-		file.close()
-		#calling sh file for background processing
-		command='sh '+name+'/civil.sh'
+		command='sh  civil.sh '+name
 		os.system(command)
 		command=name+'/civil.pdf'
 		email_id=request.POST.get('email_id')
