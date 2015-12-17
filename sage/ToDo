@@ -1,11 +1,11 @@
-- [ ] Improving Doxygen Documentation
+- [Y] Improving Doxygen Documentation
 - [Y] Applying CSS to HTML pages(file.html,matrix.html)
 - [Y] Mode considered related editing (input)
 - [ ] script to do jobs when server restart-:
  	- [Y] process interrupted background processes
 	- [Y] restart sage
 	- [ ] restart django
-- [ ] Testing
+- [Y] Testing
 - [Y] Creating a base html file for making other html file inherit.
 - [Y] Modifying responsiveness (for all screens).
 - [Y] Code structuring.

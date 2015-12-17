@@ -1,3 +1,9 @@
+##
+# @package civilsage.urls
+# This module contain urlspatterns to map to html file in django.
+#...
+# @author amarjeet kapoor
+
 from django.conf.urls import url
 
 from . import views

@@ -1,35 +1,46 @@
-"""@package docstring
-This module contain functions to controls veiws
-...
-"""
-# Create your views here.
+##
+# @package civilsage.views
+# This module contain functions to controls veiws of django.
+# It include following functions -:
+# index()
+# matrix() 
+# last()
+# file() 
+# pdfemail()
+# first_write()
+# ...
+# @author amarjeet kapoor
+
+# @code importing modules
 import os,threading
 from django.http import HttpResponse
 from django.shortcuts import render
 import csv,datetime
 from django.core.mail import EmailMessage
 
-
-
+##
+# first veiw created by rendering html page
+# from templete
+# @param request request from civilsage.urls()
+# @return request and path to index.html
+#
 def index(request):
-	"""
-	first veiw created by rendering html page
-	from templete
-	...
-	"""
-
 	return render(request, 'civilsage/index.html')
 
+##
+# This function display matrix for input from user and take 
+# response from index veiw and write input taken through index.html
+# and write in input.sage file
+# @param request request from index.html
+# @return request and path to matrix.html and number of storeys and 
+# input taken from index.html
+# @exception return message and request to index.html
+
 def matrix(request):
-	"""
-	This function display matrix for input from user and take
-	response from index veiw and write input taken through index.html
-	and write in input.sage file
-	...
-	"""
 
 	try:
 		#dictionary of all input tags
+		
 		lists = {'Soil_type':'','Number_of_storeys':''
 		,'Importance_factor':'','Response_reduction_factor':''
 		,'Zone_factor':'','Gravity_acceleration':''
@@ -38,15 +49,20 @@ def matrix(request):
 		name = ''
 
 		#getting input using tags and sending it as response
+		
 		for var in lists.keys():
 			request.session[var] = request.POST.get(var)
 
 		#creating directory from base directory
+		
 		lists['Number_of_storeys'] = request.POST.get('Number_of_storeys')
 
 		#making list for iteratation in templete
+		
 		number_of_storeys = list()
+		
 		#name of directory of specific user
+		
 		for a in range(int(lists['Number_of_storeys'])):
 			number_of_storeys.append('a')
 
@@ -59,6 +75,7 @@ def matrix(request):
 			'email_get': request.POST.get('email_get')})
 		else:
 		#user want to upload matrix value through file or
+		
 			return render( request,'civilsage/matrix.html'
 			,{'number_of_storeys': number_of_storeys,
 			'email_get': request.POST.get('email_get') })
@@ -67,14 +84,15 @@ def matrix(request):
 		,{'message':'please fill again'})
 
 
+##
+# This function gets request from matix.html and
+# gives pdf as output to user it call civil.sh to process inputs and get output
+# @param request request from matrix.html
+# @return request and message to index.html 
+# @return pdf as response 
+# @exception return message and request to index.html
 
 def last(request):
-	"""
-
-	This function gets request from matix.html and
-	gives pdf as output to user
-	...
-	"""
 
 	message='error occured please fill again'
 	try:
@@ -141,6 +159,15 @@ def last(request):
 		return render(request, "civilsage/index.html",
 		{'message':message,'email_get':request.session.get('email_get')})
 
+
+##
+# This veiw take input data from file uploaded by user and processes
+# to give output in form of response.
+# It call civil.sh to process
+# @param request request from matrix.html
+# @return request and message to index.html 
+# @return pdf as response 
+# @exception return message and request to file.html
 
 def file(request):
 
@@ -223,11 +250,15 @@ def file(request):
 		return render(request, "civilsage/file.html",
 		{'message':message,'email_get':request.session.get('email_get')})
 
+##
+# A function that run as background process to send pdf as emails and called
+# by last() and file() when email option is chossen
+# @param request request from calling function 
+# @param name name of directory to becreated for user
+# @exception send error message through email 
+
 def pdfemail(request,name):
-	"""
-	A function that run as background process to send pdf as emails
-	...
-	"""
+
 	message='unable to send it will be send after sometime'
 	try:
 		#creating and writing sh file for background processing
@@ -254,6 +285,12 @@ def pdfemail(request,name):
                 email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		message, to=[email_id])
+
+##
+# This function that write basic input same for all veiws and called
+# by last() and file() when email option is chossen
+# @param request request from calling function 
+# @return name and message 
 
 def first_write(request):
 	"""

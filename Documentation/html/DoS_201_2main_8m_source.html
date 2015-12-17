@@ -42,7 +42,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8ab8c7931e0b0c7aa78cc17c6768e085.html">projects</a></li><li class="navelem"><a class="el" href="dir_e17dfacb779d11bff8d7f4107b5b9c06.html">CivilOctave</a></li><li class="navelem"><a class="el" href="dir_47cb02a577b483a2c10410d3ee783038.html">Examples</a></li><li class="navelem"><a class="el" href="dir_a3ec31493ada77b0db5a82172c3f8dbd.html">DoS</a></li><li class="navelem"><a class="el" href="dir_51ab6ee50d07e6dd12199aef16e19e4e.html">01</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_03680f297d755c096b0a1ead13ee12b7.html">Examples</a></li><li class="navelem"><a class="el" href="dir_26203cf3324dc076901316d6d502552e.html">DoS</a></li><li class="navelem"><a class="el" href="dir_821be8184f5dd7e875db36971184a58f.html">01</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -55,12 +55,12 @@
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;clear</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;load <a class="code" href="namespaceinput.html">input</a>.mat</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;load input.mat</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%<a class="code" href="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e">Soil_type</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%Soil_type</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b">    9</a></span>&#160;<a class="code" href="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b">Type_of_soil</a> = <span class="stringliteral">&#39;&#39;</span>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b">   11</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b">i</a> = 1:<a class="code" href="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e">Soil_type</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b">   11</a></span>&#160;<span class="keywordflow">for</span> <a class="code" href="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b">i</a> = 1:Soil_type</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b">Type_of_soil</a> = strcat(<a class="code" href="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b">Type_of_soil</a>, <span class="charliteral">&#39;I&#39;</span>);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;end</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
@@ -71,7 +71,7 @@
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#ae95ab11d59379638967673bd74654b2a">   19</a></span>&#160;<a class="code" href="DoS_201_2main_8m.html#a3a318718cf4c9c1380475d059171d8f3">t1</a> = 0; <a class="code" href="DoS_201_2main_8m.html#a24aeadb733f27244ec14e4cba82eeee9">t2</a> = 0; <a class="code" href="DoS_201_2main_8m.html#a80d62394ff82e3ae283e9113bca340a2">t3</a> = 0; <a class="code" href="DoS_201_2main_8m.html#ae95ab11d59379638967673bd74654b2a">t4</a> = 0; </div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#a8ecbd124ddcdab7fc367443a82b241af">   20</a></span>&#160;<a class="code" href="DoS_201_2main_8m.html#a8ecbd124ddcdab7fc367443a82b241af">eq3num</a> = 0;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888">   22</a></span>&#160;<span class="keyword">function</span> <a class="code" href="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888">sag</a> = <a class="code" href="namespacemain.html#a4f60afd2426ee9409955e4352b3f0486">funSaog</a>(soilType, timePrd)</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888">   22</a></span>&#160;<span class="keyword">function</span> <a class="code" href="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888">sag</a> = funSaog(soilType, timePrd)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="DoS_201_2main_8m.html#a24aeadb733f27244ec14e4cba82eeee9">t2</a> = 0.10;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  switch soilType</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    case &#39;I&#39; </div>
@@ -92,7 +92,7 @@
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  end</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;end</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c">   43</a></span>&#160;function <a class="code" href="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c">matrixTeX</a>(<a class="code" href="namespacemain.html#ad101f166a53497f04b37636bcadbfe65">A</a>, fmt, align)</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c">   43</a></span>&#160;function <a class="code" href="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c">matrixTeX</a>(A, fmt, align)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  disp([&#39;\section{<span class="stringliteral">&#39;,strrep(inputname(1),&#39;</span>_<span class="charliteral">&#39;,&#39;</span> <span class="stringliteral">&#39;),&#39;</span>}<span class="stringliteral">&#39;])</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral">  [m,n] = size(A);</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral">  if isvector(A)</span></div>
@@ -321,7 +321,7 @@
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;plot([0; Eigen_vector(:,2)], [0; Level_floor],<span class="stringliteral">&#39;-go&#39;</span>)</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;plot([0; Eigen_vector(:,3)], [0; Level_floor],<span class="stringliteral">&#39;-bo&#39;</span>)</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;plot([0; Eigen_vector(:,4)], [0; Level_floor],<span class="stringliteral">&#39;-mo&#39;</span>)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;plot([0 0], [0 <a class="code" href="namespacemain.html#ad7b051da0e829aff37fef1e171e37fa3">Level_floor</a>(<a class="code" href="namespaceinput.html#a10237b312ba44e8c8090db86059c5803">Number_of_storeys</a>)],<span class="stringliteral">&#39;-k&#39;</span>)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;plot([0 0], [0 Level_floor(Number_of_storeys)],<span class="stringliteral">&#39;-k&#39;</span>)</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;hold off</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;% saveas(plotHangle, <span class="stringliteral">&#39;ModeShape.eps&#39;</span>,<span class="stringliteral">&#39;eps&#39;</span>)</div>
@@ -331,31 +331,25 @@
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;% End of <a class="code" href="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb">file</a></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a8c0a4f44ca03289871d3743578e0412c"><div class="ttname"><a href="DoS_201_2main_8m.html#a8c0a4f44ca03289871d3743578e0412c">matrixTeX</a></div><div class="ttdeci">end end function matrixTeX(A, fmt, align) disp(['\section</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00043">main.m:43</a></div></div>
-<div class="ttc" id="namespaceinput_html"><div class="ttname"><a href="namespaceinput.html">input</a></div><div class="ttdef"><b>Definition:</b> <a href="input_8sage_8py_source.html#l00001">input.sage.py:1</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a3a318718cf4c9c1380475d059171d8f3"><div class="ttname"><a href="DoS_201_2main_8m.html#a3a318718cf4c9c1380475d059171d8f3">t1</a></div><div class="ttdeci">end Type_of_soil Function to write Matrix t1</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00019">main.m:19</a></div></div>
 <div class="ttc" id="bootstrap_8min_8js_html_ac2d69f5011896c6ed4a54e0dd36f6334"><div class="ttname"><a href="bootstrap_8min_8js.html#ac2d69f5011896c6ed4a54e0dd36f6334">if</a></div><div class="ttdeci">if(&quot;undefined&quot;==typeof jQuery) throw new Error(&quot;Bootstrap's JavaScript requires jQuery&quot;)</div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a6dbbc96f4222af2f6c18c8e60f41726b"><div class="ttname"><a href="DoS_201_2main_8m.html#a6dbbc96f4222af2f6c18c8e60f41726b">i</a></div><div class="ttdeci">for i</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00011">main.m:11</a></div></div>
-<div class="ttc" id="namespacemain_html_ad7b051da0e829aff37fef1e171e37fa3"><div class="ttname"><a href="namespacemain.html#ad7b051da0e829aff37fef1e171e37fa3">main.Level_floor</a></div><div class="ttdeci">tuple Level_floor</div><div class="ttdef"><b>Definition:</b> <a href="main_8sage_8py_source.html#l00050">main.sage.py:50</a></div></div>
 <div class="ttc" id="bootstrap_8min_8js_html_aeb337d295abaddb5ec3cb34cc2e2bbc9"><div class="ttname"><a href="bootstrap_8min_8js.html#aeb337d295abaddb5ec3cb34cc2e2bbc9">d</a></div><div class="ttdeci">var d</div><div class="ttdef"><b>Definition:</b> <a href="bootstrap_8min_8js_source.html#l00006">bootstrap.min.js:6</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a24aeadb733f27244ec14e4cba82eeee9"><div class="ttname"><a href="DoS_201_2main_8m.html#a24aeadb733f27244ec14e4cba82eeee9">t2</a></div><div class="ttdeci">t2</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00019">main.m:19</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a8ecbd124ddcdab7fc367443a82b241af"><div class="ttname"><a href="DoS_201_2main_8m.html#a8ecbd124ddcdab7fc367443a82b241af">eq3num</a></div><div class="ttdeci">eq3num</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00020">main.m:20</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a29249d852e6e3fd1e206e1f920300e24"><div class="ttname"><a href="DoS_201_2main_8m.html#a29249d852e6e3fd1e206e1f920300e24">warning</a></div><div class="ttdeci">otherwise warning('Unexpected soil type') end if(timePrd&lt; t2) sag</div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_aac9abc95cd2ddc27fa84fb4440b62888"><div class="ttname"><a href="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888">sag</a></div><div class="ttdeci">function sag</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00022">main.m:22</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_ae95ab11d59379638967673bd74654b2a"><div class="ttname"><a href="DoS_201_2main_8m.html#ae95ab11d59379638967673bd74654b2a">t4</a></div><div class="ttdeci">t4</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00019">main.m:19</a></div></div>
-<div class="ttc" id="namespaceinput_html_a10237b312ba44e8c8090db86059c5803"><div class="ttname"><a href="namespaceinput.html#a10237b312ba44e8c8090db86059c5803">input.Number_of_storeys</a></div><div class="ttdeci">Number_of_storeys</div><div class="ttdef"><b>Definition:</b> <a href="input_8sage_8py_source.html#l00006">input.sage.py:6</a></div></div>
-<div class="ttc" id="namespaceinput_html_a6221ae01cf2fb9e8cd22204749785a0e"><div class="ttname"><a href="namespaceinput.html#a6221ae01cf2fb9e8cd22204749785a0e">input.Soil_type</a></div><div class="ttdeci">Soil_type</div><div class="ttdef"><b>Definition:</b> <a href="input_8sage_8py_source.html#l00004">input.sage.py:4</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a80d62394ff82e3ae283e9113bca340a2"><div class="ttname"><a href="DoS_201_2main_8m.html#a80d62394ff82e3ae283e9113bca340a2">t3</a></div><div class="ttdeci">t3</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00019">main.m:19</a></div></div>
-<div class="ttc" id="namespacemain_html_ad101f166a53497f04b37636bcadbfe65"><div class="ttname"><a href="namespacemain.html#ad101f166a53497f04b37636bcadbfe65">main.A</a></div><div class="ttdeci">tuple A</div><div class="ttdef"><b>Definition:</b> <a href="main_8sage_8py_source.html#l00072">main.sage.py:72</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a0d135864d9bc0103cbd903c62d64b088"><div class="ttname"><a href="DoS_201_2main_8m.html#a0d135864d9bc0103cbd903c62d64b088">elseif</a></div><div class="ttdeci">elseif(timePrd &gt; t3) sag</div></div>
 <div class="ttc" id="jquery_8min_8js_html_a96f65b399314d93896076ceb474b6b9b"><div class="ttname"><a href="jquery_8min_8js.html#a96f65b399314d93896076ceb474b6b9b">r</a></div><div class="ttdeci">function r(a)</div><div class="ttdef"><b>Definition:</b> <a href="jquery_8min_8js_source.html#l00002">jquery.min.js:2</a></div></div>
-<div class="ttc" id="namespacecivilsage_1_1views_html_a32de127956738677913352a2db84ecdb"><div class="ttname"><a href="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb">civilsage.views.file</a></div><div class="ttdeci">def file(request)</div><div class="ttdef"><b>Definition:</b> <a href="views_8py_source.html#l00153">views.py:153</a></div></div>
-<div class="ttc" id="namespacecivilsage_1_1views_html_a8b58c93a9c82e84143c43dafaa744a4b"><div class="ttname"><a href="namespacecivilsage_1_1views.html#a8b58c93a9c82e84143c43dafaa744a4b">civilsage.views.matrix</a></div><div class="ttdeci">def matrix(request)</div><div class="ttdef"><b>Definition:</b> <a href="views_8py_source.html#l00023">views.py:23</a></div></div>
+<div class="ttc" id="namespacecivilsage_1_1views_html_a32de127956738677913352a2db84ecdb"><div class="ttname"><a href="namespacecivilsage_1_1views.html#a32de127956738677913352a2db84ecdb">civilsage.views.file</a></div><div class="ttdeci">def file(request)</div><div class="ttdoc">This veiw take input data from file uploaded by user and processes to give output in form of response...</div><div class="ttdef"><b>Definition:</b> <a href="views_8py_source.html#l00172">views.py:172</a></div></div>
+<div class="ttc" id="namespacecivilsage_1_1views_html_a8b58c93a9c82e84143c43dafaa744a4b"><div class="ttname"><a href="namespacecivilsage_1_1views.html#a8b58c93a9c82e84143c43dafaa744a4b">civilsage.views.matrix</a></div><div class="ttdeci">def matrix(request)</div><div class="ttdoc">This function display matrix for input from user and take response from index veiw and write input ta...</div><div class="ttdef"><b>Definition:</b> <a href="views_8py_source.html#l00039">views.py:39</a></div></div>
 <div class="ttc" id="DoS_201_2main_8m_html_a3e2c6a7e7b1f0ac68cc462d26373be9b"><div class="ttname"><a href="DoS_201_2main_8m.html#a3e2c6a7e7b1f0ac68cc462d26373be9b">Type_of_soil</a></div><div class="ttdeci">Program to formulate global stiffness matrix clc clear load input mat Soil_type Type_of_soil</div><div class="ttdef"><b>Definition:</b> <a href="DoS_201_2main_8m_source.html#l00009">main.m:9</a></div></div>
-<div class="ttc" id="namespacemain_html_a4f60afd2426ee9409955e4352b3f0486"><div class="ttname"><a href="namespacemain.html#a4f60afd2426ee9409955e4352b3f0486">main.funSaog</a></div><div class="ttdeci">def funSaog(soilType, timePrd)</div><div class="ttdef"><b>Definition:</b> <a href="main_8sage_8py_source.html#l00010">main.sage.py:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 13 2015 14:55:55 for CivilOctave by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 19:59:16 for CivilOctave by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
