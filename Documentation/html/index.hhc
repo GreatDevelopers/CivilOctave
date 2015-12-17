@@ -45,7 +45,11 @@
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="tex"><param name="Local" value="dir_ca84ae60ed57642ec7339c3fcaea75ed.html"><param name="ImageNumber" value="1"></OBJECT>
             <UL>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="abstract.tex"><param name="Local" value="abstract_8tex.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="main.tex"><param name="Local" value="main_8tex.html"><param name="ImageNumber" value="11"></OBJECT>
             <LI><OBJECT type="text/sitemap"><param name="Name" value="run.sh"><param name="Local" value="run_8sh.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="title.tex"><param name="Local" value="title_8tex.html"><param name="ImageNumber" value="11"></OBJECT>
+            <LI><OBJECT type="text/sitemap"><param name="Name" value="usepackage.tex"><param name="Local" value="usepackage_8tex.html"><param name="ImageNumber" value="11"></OBJECT>
             </UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="main.m"><param name="Local" value="DoS_201_2main_8m.html"><param name="ImageNumber" value="1"></OBJECT>
             <UL>
@@ -184,6 +188,7 @@
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="sagemath"><param name="Local" value="dir_83435ec4abf8ab08769f53d35d669510.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="civil.tex"><param name="Local" value="civil_8tex.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="input.sage"><param name="Local" value="input_8sage.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="main.sage"><param name="Local" value="main_8sage.html"><param name="ImageNumber" value="11"></OBJECT>
         </UL>

@@ -16,7 +16,11 @@ DoS_201_2main_8m_source.html
 GeoTech_2BC_2main_8m_source.html
 L01_2main_8m_source.html
 L02_2main_8m_source.html
+abstract_8tex_source.html
+main_8tex_source.html
 run_8sh_source.html
+title_8tex_source.html
+usepackage_8tex_source.html
 README_8md_source.html
 sage_2README_8md_source.html
 civil_8sh_source.html
@@ -37,6 +41,7 @@ initial__file_8py_source.html
 manage_8py_source.html
 settings_8py_source.html
 wsgi_8py_source.html
+civil_8tex_source.html
 input_8sage_source.html
 main_8sage_source.html
 autofill_8js_source.html
@@ -46,7 +51,11 @@ DoS_201_2main_8m.html
 GeoTech_2BC_2main_8m.html
 L01_2main_8m.html
 L02_2main_8m.html
+abstract_8tex.html
+main_8tex.html
 run_8sh.html
+title_8tex.html
+usepackage_8tex.html
 README_8md.html
 sage_2README_8md.html
 civil_8sh.html
@@ -67,6 +76,7 @@ initial__file_8py.html
 manage_8py.html
 settings_8py.html
 wsgi_8py.html
+civil_8tex.html
 input_8sage.html
 main_8sage.html
 autofill_8js.html
