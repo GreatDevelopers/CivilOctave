@@ -1,0 +1,199 @@
+\hypertarget{base_8html_source}{}\section{base.\+html}
+\label{base_8html_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/base.\+html@{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/base.\+html}}
+
+\begin{DoxyCode}
+00001 \{% load static %\}
+00002 \{% load staticfiles %\}
+00003 
+00004 <!DOCTYPE html>
+00005 <html lang="en">
+00006     <head>
+00007         \{% block title %\}\{% endblock %\}
+00008         <meta name="viewport" content="width=device-width,
+00009             initial-scale=1, maximum-scale=1">
+00010         
+00011             <!-- stylesheets -->
+00012         <link href="\{% static 'css/bootstrap.min.css' %\}"
+00013             type="text/css" rel="stylesheet">
+00014         <link href="\{% static 'css/custom.css' %\}" type="text/css"
+00015             rel="stylesheet">
+00016         <script src="\{% static 'js/jquery.min.js' %\}"></script>
+00017         <script src="\{% static 'js/bootstrap.min.js' %\}"></script>
+00018        
+00019         \{% block extrastyle %\}\{% endblock %\}
+00020     </head>
+00021 
+00022        <body>
+00023         <nav class="navbar navbar-default navbar-fixed-top">
+00024             <div class="container">
+00025                 <div class="navbar-header">
+00026                     <button type="button" class="navbar-toggle 
+00027                         collapsed" data-toggle="collapse" 
+00028                         data-target="#navbar" aria-expanded="false" 
+00029                         aria-controls="navbar">
+00030                          <span class="sr-only">Toggle navigation</span>
+00031                          <span class="icon-bar"></span>
+00032                          <span class="icon-bar"></span>
+00033                          <span class="icon-bar"></span>
+00034                     </button>
+00035                     <a class="navbar-brand" href="/">
+00036                         Dynamic of Structure</a>
+00037                 </div>
+00038                 <div id="navbar" class="navbar-collapse collapse">
+00039                     <ul class="nav navbar-nav">
+00040                         <li class="active"><a href="/">Home</a></li>
+00041                         \{% block autofill %\}\{% endblock %\}
+00042                     </ul>
+00043                     <ul class="nav navbar-nav navbar-right">
+00044                         <li>
+00045                             <a href="#" id="help-btn" 
+00046                                 data-toggle="modal"
+00047                                 data-target="#myModal">Help</a></li>
+00048                         <li>
+00049                             <a href="http://github.com/GreatDevelopers"
+00050                                
+00051 target="new">About</a></li>
+00052                         <li class="active"><a id="help-btn" 
+00053                             data-toggle="modal" data-target="#contact">
+00054                             Contact us
+00055                             <span class="sr-only">(current)</span></a>
+00056                         </li>
+00057                     </ul>
+00058                 </div><!--/.nav-collapse -->
+00059             </div>
+00060          </nav>
+00061          
+00062         <div class="top-space"></div>
+00063 
+00064         <!-- Modal -->
+00065         <div class="modal fade" id="myModal" tabindex="-1"
+00066             role="dialog" aria-labelledby="myModalLabel">
+00067             <div class="modal-dialog" role="document">
+00068                 <div class="modal-content">
+00069                     <div class="modal-header">
+00070                         <button type="button" class="close"
+00071                             data-dismiss="modal" aria-label="Close">
+00072                             <span aria-hidden="true">&times;</span>
+00073                         </button>
+00074                         <h4 class="modal-title" id="myModalLabel">
+00075                             Help Section</h4>
+00076                     </div>
+00077                     <div class="modal-body">
+00078                         <ul>
+00079                             <li>
+00080                                 <h4>Autofill Values</h4>
+00081                                 <span>It can be used to Autofill all 
+00082                                 the values on the index page.</span>
+00083                             </li>
+00084                             <li>
+00085                                 <h4>Soil type</h4>
+00086                                 <span>This is type of soil. You can 
+00087                                 choose from these three types:
+00088                                     <ol>
+00089                                         <li>Type I</li>
+00090                                         <li>Type II</li>
+00091                                             <li>Type III</li>
+00092                                     </ol>
+00093                                 </span>
+00094                             </li>
+00095                             <li>
+00096                                 <h4>Number of storeys</h4>
+00097                                 <span>This defines the number of 
+00098                                 storeys to be considered. 
+00099                                 It can have value from 1 to 1000.</span>
+00100                             </li>
+00101 
+00102                             <li>
+00103                                 <h4>Importance factor</h4>
+00104                                 <span>It depends upon the building 
+00105                                 category and nature of use.</span>
+00106                             </li>
+00107                             
+00108                             <li>
+00109                                 <h4>Response Reduction factor</h4>
+00110                                 <span>It depends upon the ductility of 
+00111                                 the structure.</span>
+00112                             </li>
+00113 
+00114                             <li>
+00115                                 <h4>Zone factor</h4>
+00116                                 <span>It depends upon the location of 
+00117                                 the structure. Also, it corresponds to 
+00118                                 the seismic zone obtained from a map.
+00119                                 </span>
+00120                             </li>
+00121 
+00122                             <li>
+00123                                 <h4>Gravity Acceleration</h4>
+00124                                 <span>Its default value is 9.8, but you 
+00125                                 can choose between 9 to 10.</span>
+00126                             </li>
+00127                             <li>
+00128                                 <h4>Modes considered</h4>
+00129                                 <span>It tells about the number of 
+00130                                 modes to be considered. It can have 
+00131                                 value from 1 to Number of storeys input 
+00132                                 by user.</span>
+00133                             </li>
+00134 
+00135                             <li>
+00136                                 <h4>Upload through file</h4>
+00137                                 <span>Upload through file allow you to 
+00138                                 upload csv file to ali value of mass, 
+00139                                 height and stiffness matrix format for 
+00140                                 csv for 4 number of storeys :
+00141                                 <ol>
+00142                                     <li>mass inputs</li>
+00143                                    <li>height values</li>
+00144                                    <li>stiffness matrix values</li>
+00145                                     <li>e.g:
+00146                                         12,3,2,4<br>
+00147                                        23,1,4,2<br>
+00148                                         23,2,3,2<br>
+00149                                     </li>
+00150                                 </ol>
+00151                             <li>
+00152                                 <h4>Email</h4>
+00153                                 <span>Email allow you to get pdf through
+00154                                     mail.</span>
+00155                         </ul>
+00156                     </div>
+00157 
+00158                     <div class="modal-footer">
+00159                         <button type="button" class="btn btn-default"
+00160                             data-dismiss="modal">Close</button>
+00161                             <!--button type="button" class="btn 
+00162                             btn-primary">
+00163                             Save changes</button-->
+00164                     </div>
+00165                 </div>
+00166             </div>
+00167         </div>
+00168 
+00169         <!-- Modal -->
+00170         <div class="modal fade" id="contact" tabindex="-1"
+00171             role="dialog" aria-labelledby="myModalLabel">
+00172             <div class="modal-dialog" role="document">
+00173                 <div class="modal-content">
+00174                     <div class="modal-header">
+00175                         <button type="button" class="close"
+00176                             data-dismiss="modal" aria-label="Close">
+00177                             <span aria-hidden="true">&times;</span>
+00178                         </button>
+00179                         <h4 class="modal-title" id="myModalLabel">
+00180                             Contact us</h4>
+00181                     </div>
+00182                     <div class="modal-body">
+00183                         <a href="http://github.com/GreatDevelopers">
+00184                             Github</a>
+00185                         <br />
+00186                         <a href="#">Email</a>
+00187                     </div>
+00188                 </div>
+00189             </div>
+00190         </div>
+00191         \{% block body %\}
+00192         \{% endblock %\}
+00193     </body>
+00194 </html>
+\end{DoxyCode}

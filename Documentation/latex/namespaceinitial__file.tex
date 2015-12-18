@@ -46,47 +46,46 @@ A function that run as process to send pdf as emails.
 \end{DoxyExceptions}
 
 
-Definition at line 48 of file initial\+\_\+file.\+py.
+Definition at line \hyperlink{initial__file_8py_source_l00048}{48} of file \hyperlink{initial__file_8py_source}{initial\+\_\+file.\+py}.
 
 
 \begin{DoxyCode}
-48 \textcolor{keyword}{def }\hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{emailcall}(name):
-49     \textcolor{comment}{##}
-50     \textcolor{comment}{# @breif}
-51 
-52     \textcolor{comment}{#getting email id}
-53 
-54     \textcolor{keywordflow}{try}:
-55                 message=\textcolor{stringliteral}{'unable to send'}
-56                 command=name+\textcolor{stringliteral}{'/email.txt'}
-57                 f=open(command)
-58                 a=f.read()
-59                 email=a.split(\textcolor{stringliteral}{'\(\backslash\)n'})
-60                 email\_id=email[0]
-61                 f.close()
-62         \textcolor{comment}{#calling sh file for background processing}
-63         command=\textcolor{stringliteral}{'sh civil.sh '}+name
-64         os.system(command)
-65 
-66         \textcolor{comment}{#sending email}
-67         command=name+\textcolor{stringliteral}{'/civil.pdf'}
-68         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
-69         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
-70         user\_email.attach\_file(command)
-71         user\_email.send()
-72 
-73         \textcolor{comment}{#deleting files}
-74         command=\textcolor{stringliteral}{'rm -rf '}+name
-75         os.system(command)
-76     \textcolor{keywordflow}{except}:
-77                 command=\textcolor{stringliteral}{'rm -rf '}+name
-78                 os.system(command)
-79 
+\hypertarget{namespaceinitial__file_l00048}{}\hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{00048} \textcolor{keyword}{def }\hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{emailcall}(name):
+00049     \textcolor{comment}{##}
+00050     \textcolor{comment}{# @breif}
+00051 
+00052     \textcolor{comment}{#getting email id}
+00053 
+00054     \textcolor{keywordflow}{try}:
+00055                 message=\textcolor{stringliteral}{'unable to send'}
+00056                 command=name+\textcolor{stringliteral}{'/email.txt'}
+00057                 f=open(command)
+00058                 a=f.read()
+00059                 email=a.split(\textcolor{stringliteral}{'\(\backslash\)n'})
+00060                 email\_id=email[0]
+00061                 f.close()
+00062         \textcolor{comment}{#calling sh file for background processing}
+00063         command=\textcolor{stringliteral}{'sh civil.sh '}+name
+00064         os.system(command)
+00065 
+00066         \textcolor{comment}{#sending email}
+00067         command=name+\textcolor{stringliteral}{'/civil.pdf'}
+00068         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
+00069         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
+00070         user\_email.attach\_file(command)
+00071         user\_email.send()
+00072 
+00073         \textcolor{comment}{#deleting files}
+00074         command=\textcolor{stringliteral}{'rm -rf '}+name
+00075         os.system(command)
+00076     \textcolor{keywordflow}{except}:
+00077                 command=\textcolor{stringliteral}{'rm -rf '}+name
+00078                 os.system(command)
+00079 
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -108,38 +107,37 @@ function to get name of directory that are unprocessed and then call \hyperlink{
 
 initalize sage 
 
-Definition at line 20 of file initial\+\_\+file.\+py.
+Definition at line \hyperlink{initial__file_8py_source_l00020}{20} of file \hyperlink{initial__file_8py_source}{initial\+\_\+file.\+py}.
 
 
 \begin{DoxyCode}
-20 \textcolor{keyword}{def }\hyperlink{namespaceinitial__file_a105b1aa7bf4db853b6f4d064ed224030}{pdfemail}():
-21     \textcolor{comment}{##}
-22     \textcolor{comment}{# initalize sage}
-23 
-24     os.system(\textcolor{stringliteral}{'sage sagemath/input.sage'})
-25 
-26     \textcolor{comment}{# get list of unprocessed files}
-27     os.system(\textcolor{stringliteral}{'ls -d Temp*>file'})
-28 
-29     \textcolor{comment}{# open and read names of directory to be processed}
-30     f=open(\textcolor{stringliteral}{'file'})
-31     a=f.read()
-32     \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}( a ==\textcolor{stringliteral}{''}):
-33         \textcolor{keywordflow}{return}
-34 
-35     \textcolor{comment}{# getting individual directory name}
-36     a=a.split(\textcolor{stringliteral}{'\(\backslash\)n'})
-37 
-38     \textcolor{comment}{# process files}
-39     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(a)-1):
-40         \hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{emailcall}(a[i])
-41     os.system(\textcolor{stringliteral}{'rm file'})
-42 
+\hypertarget{namespaceinitial__file_l00020}{}\hyperlink{namespaceinitial__file_a105b1aa7bf4db853b6f4d064ed224030}{00020} \textcolor{keyword}{def }\hyperlink{namespaceinitial__file_a105b1aa7bf4db853b6f4d064ed224030}{pdfemail}():
+00021     \textcolor{comment}{##}
+00022     \textcolor{comment}{# initalize sage}
+00023 
+00024     os.system(\textcolor{stringliteral}{'sage sagemath/input.sage'})
+00025 
+00026     \textcolor{comment}{# get list of unprocessed files}
+00027     os.system(\textcolor{stringliteral}{'ls -d Temp*>file'})
+00028 
+00029     \textcolor{comment}{# open and read names of directory to be processed}
+00030     f=open(\textcolor{stringliteral}{'file'})
+00031     a=f.read()
+00032     \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}( a ==\textcolor{stringliteral}{''}):
+00033         \textcolor{keywordflow}{return}
+00034 
+00035     \textcolor{comment}{# getting individual directory name}
+00036     a=a.split(\textcolor{stringliteral}{'\(\backslash\)n'})
+00037 
+00038     \textcolor{comment}{# process files}
+00039     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(len(a)-1):
+00040         \hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{emailcall}(a[i])
+00041     os.system(\textcolor{stringliteral}{'rm file'})
+00042 
 \end{DoxyCode}
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

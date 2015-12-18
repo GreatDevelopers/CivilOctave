@@ -1,0 +1,331 @@
+\hypertarget{index_8html_source}{}\section{index.\+html}
+\label{index_8html_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/civilsage/index.\+html@{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/civilsage/index.\+html}}
+
+\begin{DoxyCode}
+00001 \{% extends "base.html" %\}
+00002 \{% block title %\}DoS\{% endblock %\}
+00003 \{% load static %\}
+00004 \{% load staticfiles %\}
+00005 \{% block extrastyle %\}
+00006     <script>
+00007         $(document).ready(function()\{
+00008              $('[data-toggle="tooltip"]').tooltip(\{
+00009                  placement : 'top'
+00010              \});
+00011         \});
+00012         function autofill()\{
+00013             document.getElementById("noofstoreys").value="4";
+00014             document.getElementById("imp\_factor").value="1.5";
+00015             document.getElementById("res\_reduction").value="1.5";
+00016             document.getElementById("zone\_factor").value=".1";
+00017             document.getElementById("modes").value="4";
+00018         \}
+00019     </script>
+00020     \{% endblock %\}
+00021     \{% block autofill %\}
+00022         <li><a href="#" id="autofill"
+00023             onclick="autofill()">Autofill values</a>
+00024         </li>
+00025     \{% endblock %\}
+00026    <!-- content block start-->
+00027     \{% block body %\}
+00028 
+00029 
+00030         <!--<div class="center"><h2>Dynamic of Structure:</h2>
+00031             <h4>Mode and Time Period</h4></div>-->
+00032         <h3>\{\{ message \}\}</h3>
+00033        <!-- form to get values from the user-->
+00034        <div class="input-group container width">
+00035            <form action="\{% url 'matrix' %\}" method="post">
+00036                \{% csrf\_token %\}
+00037                 <div class="row">
+00038                     <div class="col-md-3">
+00039                     </div>
+00040                     <div class="col-md-9">
+00041                         <label class="top-margin" for="soil\_type">
+00042                             SOIL TYPE:</label>
+00043                     </div>
+00044                 </div>
+00045                 
+00046                 <div class="row">
+00047                     <div class="col-md-3">
+00048                     </div>
+00049                     <div class="col-md-6 col-sm-10 col-xs-10">
+00050                         <select name = "Soil\_type"
+00051                            class="form-control dropdown-toggle 
+00052                             input-lg" id="soil\_type">
+00053                             <option value="1">I</options>
+00054                             <option value="2" selected="selected">II</options>
+00055                             <option value="3">III</options>
+00056                         </select>
+00057                     </div>
+00058                     <div class="col-md-3 col-sm-2 col-xs-2">
+00059                         <span class="col-md-2 glyphicon 
+00060                             glyphicon-question-sign" aria-hidden="true" 
+00061                             data-toggle="tooltip" data-original-title=
+00062                             "This is type of soil.">
+00063                         </span>
+00064                     </div>
+00065                 </div>
+00066                 
+00067                 <div class="row">
+00068                     <div class="col-md-3">
+00069                     </div>
+00070                     <div class="col-md-9"><label class="top-margin"
+00071                        for="noofstoreys">NUMBER OF STOREYS:</label>
+00072                     </div>
+00073                 </div>
+00074                
+00075                 <div class="row">
+00076                     <div class="col-md-3">
+00077                     </div>
+00078                     <div class="col-md-6 col-sm-10 col-xs-10">
+00079                         <input class="form-control input-lg space"
+00080                         type="number" name="Number\_of\_storeys"
+00081                         placeholder="Number\_of\_storeys" required min="1" 
+00082                         max="400" id="noofstoreys">
+00083                     </div>
+00084                     <div class="col-md-3 col-sm-2 col-xs-2">
+00085                         <span class="col-md-2 glyphicon 
+00086                             glyphicon-question-sign" aria-hidden="true" 
+00087                         data-toggle="tooltip" data-original-title="This
+00088                         defines the number of storeys to be considered.
+00089                         It can have value from 1 to 1000.">
+00090                         </span>
+00091                     </div>
+00092                </div>
+00093                 
+00094                 <div class="row">
+00095                     <div class="col-md-3">
+00096                     </div>
+00097                     <div class="col-md-9"><label class="top-margin"
+00098                        for="imp\_factor">IMPORTANCE FACTOR:</label>
+00099                     </div>
+00100                 </div>
+00101 
+00102                 <div class="row">
+00103                     <div class="col-md-3">
+00104                     </div>
+00105                     <div class="col-md-6 col-sm-10 col-xs-10">
+00106                         <input class="form-control input-lg space"
+00107                         type="number" name="Importance\_factor"
+00108                         placeholder="Importance\_factor" required 
+00109                         step=0.25 min =0.5 max=10 id="imp\_factor">
+00110                     </div>
+00111                     <div class="col-md-3 col-sm-2 col-xs-2">
+00112                         <span class="col-md-2 glyphicon 
+00113                             glyphicon-question-sign" aria-hidden="true"
+00114                             data-toggle="tooltip" data-original-title=
+00115                             "It depends upon the building category and 
+00116                             nature of use.">
+00117                         </span>
+00118                     </div>
+00119                 </div>
+00120                 
+00121                 <div class="row">
+00122                     <div class="col-md-3">
+00123                     </div>
+00124                     <div class="col-md-9"><label class="top-margin"
+00125                         for="res\_reduction">RESPONSE REDUCTION
+00126                         FACTOR:</label>
+00127                     </div>
+00128                 </div>
+00129                 
+00130                 <div class="row">
+00131                     <div class="col-md-3">
+00132                     </div>
+00133                     <div class="col-md-6 col-sm-10 col-xs-10">
+00134                         <input class="form-control input-lg space"
+00135                         type="number" name="Response\_reduction\_factor"
+00136                         placeholder="Response\_reduction\_factor" 
+00137                         required min=0.5 max= 10 step=0.5 
+00138                         id="res\_reduction">
+00139                     </div>
+00140                     <div class="col-md-3 col-sm-2 col-xs-2">
+00141                         <span class="col-md-2 glyphicon 
+00142                             glyphicon-question-sign" aria-hidden="true"
+00143                             data-toggle="tooltip" data-original-title=
+00144                             "It depends upon the ductility of the 
+00145                             structure.">
+00146                         </span>
+00147                     </div>
+00148                 </div>
+00149 
+00150                 <div class="row">
+00151                     <div class="col-md-3">
+00152                     </div>
+00153                     <div class="col-md-9"><label class="top-margin"
+00154                         for="zone\_factor">ZONE FACTOR:</label>
+00155                     </div>
+00156                 </div>
+00157                 
+00158                 <div class="row">
+00159                     <div class="col-md-3">
+00160                     </div>
+00161                     <div class="col-md-6 col-sm-10 col-xs-10">
+00162                         <select name="Zone\_factor" id="zone\_factor"
+00163                         class="form-control dropdown-toggle input-lg"
+00164                         id="zone\_factor">
+00165                             <option value=".1">II</options>
+00166                             <option value=".16">III</options>
+00167                             <option value=".24">IV</options>
+00168                             <option value=".36">V</options>
+00169                         </select>
+00170                     </div>
+00171                     <div class="col-md-3 col-sm-2 col-xs-2">
+00172                         <span class="col-md-2 glyphicon 
+00173                             glyphicon-question-sign" aria-hidden="true" 
+00174                             data-toggle="tooltip" data-original-title="
+00175                             It depends upon the location of the 
+00176                             structure. Also, it corresponds to the
+00177                             seismic zone obtained from a map.">
+00178                         </span>
+00179                     </div>
+00180                 </div>
+00181 
+00182                 <div class="row">
+00183                     <div class="col-md-3">
+00184                     </div>
+00185                     <div class="col-md-9"><label class="top-margin"
+00186                         for="gravity">GRAVITY ACCELERATION:</label>
+00187                     </div>
+00188                 </div>
+00189 
+00190                 <div class="row">
+00191                     <div class="col-md-3">
+00192                     </div>
+00193                     <div class="col-md-6 col-sm-10 col-xs-10">
+00194                         <input class="form-control input-lg space"
+00195                         type="number" name="Gravity\_acceleration"
+00196                         placeholder="Gravity\_acceleration" value=9.8
+00197                         step="any" min=9 max=10 required 
+00198                         id="gravity">
+00199                     </div>
+00200                     <div class="col-md-3 col-sm-2 col-xs-2">
+00201                         <span class="col-md-2 glyphicon 
+00202                             glyphicon-question-sign" aria-hidden="true"
+00203                             data-toggle="tooltip" data-original-title=
+00204                             "The default value is 9.8, but you can 
+00205                             choose between 9 to 10.">
+00206                         </span>
+00207                     </div>
+00208                 </div>
+00209                   
+00210                 <div class="row">
+00211                     <div class="col-md-3">
+00212                     </div>
+00213                     <div class="col-md-9"><label class="top-margin"
+00214                         for="modes">MODES CONSIDERED:</label>
+00215                     </div>
+00216                 </div>
+00217                 
+00218                 <div class="row">
+00219                     <div class="col-md-3">
+00220                     </div>
+00221                     <div class="col-md-6 col-sm-10 col-xs-10">
+00222                         <input class=" form-control input-lg space"
+00223                         type="number" name="Modes\_considered" 
+00224                         id="modes" placeholder="Modes\_considered" 
+00225                         min=1>
+00226                     </div>
+00227                     <div class="col-md-3 col-sm-2 col-xs-2">
+00228                         <span class="col-md-2 glyphicon 
+00229                             glyphicon-question-sign" aria-hidden="true" 
+00230                             data-toggle="tooltip" data-original-title=
+00231                             "It tells about the number of modes to be 
+00232                             considered. It can have value from 1 to
+00233                             'Number of storeys' field value above.">
+00234                         </span>
+00235                     </div>
+00236                 </div>
+00237                     
+00238                 <div class="row">
+00239                     <div class="col-md-3">
+00240                     </div>
+00241                     <div class="col-md-9"><label class="top-margin"
+00242                        for="modes">UPLOAD CSV FILE:</label>
+00243                         <span class="glyphicon glyphicon-question-sign"
+00244                            aria-hidden="true" data-toggle="tooltip"
+00245                            data-original-title="This allows you to 
+00246                             upload CSV file to submit the values of 
+00247                             Mass, Height and Stiffness matrices instead
+00248                             of filling in yourself. Click 'Help' button
+00249                             on the top to know more about the CSV 
+00250                             format. To download a sample CSV file click 
+00251                             here">
+00252                             <a href="\{% static 'new.csv' %\}">Sample CSV
+00253                                 file</a> 
+00254                         </span>
+00255                     </div>
+00256                 </div>
+00257 
+00258                <div class="row">
+00259                     <div class="col-md-3">
+00260                     </div>
+00261                     <div class="col-md-2">
+00262                         <label class="radio-inline"><input type="radio"
+00263                             name="through\_file" value="Y">Yes</label>
+00264                     </div>
+00265                     <div class="col-md-2">
+00266                         <label class="radio-inline"><input type="radio"
+00267                            name="through\_file" value="N" checked>No
+00268                         </label>
+00269                     </div>
+00270                 </div>
+00271 
+00272                 <div class="row">
+00273                     <div class="col-md-3">
+00274                     </div>
+00275                     <div class="col-md-9"><label class="top-margin"
+00276                         for="modes">EMAIL (after completion):</label>
+00277                         <span class="glyphicon glyphicon-question-sign"
+00278                             aria-hidden="true" data-toggle="tooltip"
+00279                             data-original-title="If you select yes, 
+00280                             the output PDF file will be sent to you via
+00281                             email. Or else, you have to wait till the 
+00282                             processing ends.">
+00283                         </span>
+00284                     </div>
+00285                 </div>
+00286                 
+00287                 <div class="row">
+00288                     <div class="col-md-3">
+00289                     </div>
+00290                     <div class="col-md-2">
+00291                         <label class="radio-inline"><input type="radio"
+00292                             name="email\_get" value="Y" checked>Yes
+00293                         </label>
+00294                     </div>
+00295                     <div class="col-md-2">
+00296                         <label class="radio-inline space"><input type="radio"
+00297                             name="email\_get" value="N">No</label>
+00298                     </div>
+00299                 </div>
+00300                 
+00301                 <div class="row">
+00302                     <div class="col-md-5"></div>
+00303                     <!--
+00304                     <div class="col-md-3"><a class="btn btn-primary"
+00305                     id="autofill"
+00306                             onclick="autofill()">Autofill values</a>
+00307                     </div>-->
+00308                     <div class="col-md-3">
+00309                         <input class="btn-lg btn-success space" type="submit"
+00310                             value="Submit" id="submit">
+00311                     </div>
+00312                     <!-- Button trigger modal
+00313                     <div class="col-md-3">
+00314                     <button type="button" class="btn btn-primary"
+00315                         id="help-btn" data-toggle="modal"
+00316                         data-target="#myModal">Help</button>
+00317                     </div> -->
+00318                 </div>
+00319            </form>
+00320                <!-- form end-->
+00321        </div>
+00322        <!--div end  -->
+00323 
+00324 
+00325 
+00326         \{% endblock %\} 
+\end{DoxyCode}

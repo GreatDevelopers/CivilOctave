@@ -165,16 +165,11 @@ def last(request):
 # to give output in form of response.
 # It call civil.sh to process
 # @param request request from matrix.html
-# @return request and message to index.html 
-# @return pdf as response 
+# @return render() request and message to index.html 
+# @return response pdf as response 
 # @exception return message and request to file.html
 
 def file(request):
-
-	"""Documentation for a function
-	This veiw take input data from file uploaded by user and processes
-	to give output in form of response
-	"""
 
 	message='please fill again'
 	try:
@@ -290,15 +285,9 @@ def pdfemail(request,name):
 # This function that write basic input same for all veiws and called
 # by last() and file() when email option is chossen
 # @param request request from calling function 
-# @return name and message 
+# @return name,message name of directory and Error message  
 
 def first_write(request):
-	"""
-
-	This function that write basic input same for all
-	veiws
-	...
-	"""
 	message='error occured please fill again'
 
 	#dictionary of all input tags

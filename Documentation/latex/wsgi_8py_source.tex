@@ -1,0 +1,19 @@
+\hypertarget{wsgi_8py_source}{}\section{wsgi.\+py}
+\label{wsgi_8py_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/sage/wsgi.\+py@{/home/amarjeet/projects/\+Civil\+Octave/sage/sage/wsgi.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{wsgi_8py_source_l00001}{}\hyperlink{namespacesage_1_1wsgi}{00001} \textcolor{stringliteral}{"""}
+00002 \textcolor{stringliteral}{WSGI config for sage project.}
+00003 \textcolor{stringliteral}{}
+00004 \textcolor{stringliteral}{It exposes the WSGI callable as a module-level variable named ``application``.}
+00005 \textcolor{stringliteral}{}
+00006 \textcolor{stringliteral}{For more information on this file, see}
+00007 \textcolor{stringliteral}{https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/}
+00008 \textcolor{stringliteral}{"""}
+00009 
+00010 \textcolor{keyword}{import} os
+00011 os.environ.setdefault(\textcolor{stringliteral}{"DJANGO\_SETTINGS\_MODULE"}, \textcolor{stringliteral}{"sage.settings"})
+00012 
+00013 \textcolor{keyword}{from} django.core.wsgi \textcolor{keyword}{import} get\_wsgi\_application
+\hypertarget{wsgi_8py_source_l00014}{}\hyperlink{namespacesage_1_1wsgi_a1ddb23bace7377dbda42c61a804bb9aa}{00014} application = get\_wsgi\_application()
+\end{DoxyCode}

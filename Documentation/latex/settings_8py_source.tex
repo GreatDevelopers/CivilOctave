@@ -1,0 +1,125 @@
+\hypertarget{settings_8py_source}{}\section{settings.\+py}
+\label{settings_8py_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/sage/settings.\+py@{/home/amarjeet/projects/\+Civil\+Octave/sage/sage/settings.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{settings_8py_source_l00001}{}\hyperlink{namespacesage_1_1settings}{00001} \textcolor{comment}{##}
+00002 \textcolor{comment}{# @package sage.settings}
+00003 \textcolor{comment}{# Django settings for sage project.}
+00004 \textcolor{comment}{#}
+00005 \textcolor{comment}{# For more information on this file, see}
+00006 \textcolor{comment}{# https://docs.djangoproject.com/en/1.7/topics/settings/}
+00007 \textcolor{comment}{# }
+00008 \textcolor{comment}{# For the full list of settings and their values, see}
+00009 \textcolor{comment}{# https://docs.djangoproject.com/en/1.7/ref/settings/}
+00010 \textcolor{comment}{# @author amarjeet kapoor}
+00011 
+00012 \textcolor{comment}{# Build paths inside the project like this: os.path.join(BASE\_DIR, ...)}
+00013 \textcolor{keyword}{import} os
+\hypertarget{settings_8py_source_l00014}{}\hyperlink{namespacesage_1_1settings_add6d83672b1137d74a06bf1606aecf04}{00014} BASE\_DIR = os.path.dirname(os.path.dirname(\_\_file\_\_))
+\hypertarget{settings_8py_source_l00015}{}\hyperlink{namespacesage_1_1settings_ae2e71004e0684c0243b4e9792726cd0f}{00015} PROJECT\_ROOT = os.path.abspath(os.path.dirname(\_\_file\_\_))
+00016 
+00017 \textcolor{comment}{# Quick-start development settings - unsuitable for production}
+00018 \textcolor{comment}{# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/}
+00019 
+00020 \textcolor{comment}{# SECURITY WARNING: keep the secret key used in production secret!}
+\hypertarget{settings_8py_source_l00021}{}\hyperlink{namespacesage_1_1settings_acc7cb44e3d92fc1334c19318ede49bc8}{00021} SECRET\_KEY = \textcolor{stringliteral}{'en8wt8cf*i!64!@axrx&rs$p--i4x8d2ven30)nu7ny1k9m^sp'}
+00022 
+00023 \textcolor{comment}{# SECURITY WARNING: don't run with debug turned on in production!}
+\hypertarget{settings_8py_source_l00024}{}\hyperlink{namespacesage_1_1settings_acc28086c56df6aed910b2552e07944cc}{00024} DEBUG = \textcolor{keyword}{True}
+00025 
+\hypertarget{settings_8py_source_l00026}{}\hyperlink{namespacesage_1_1settings_a74c98bee40b9b06d51e44be6df73eb46}{00026} TEMPLATE\_DEBUG = \textcolor{keyword}{True}
+00027 
+\hypertarget{settings_8py_source_l00028}{}\hyperlink{namespacesage_1_1settings_a2eb98def792cf73bbc5884024afc5602}{00028} ALLOWED\_HOSTS = []
+00029 
+00030 \textcolor{comment}{#  Templates location}
+\hypertarget{settings_8py_source_l00031}{}\hyperlink{namespacesage_1_1settings_addc90c15790d385d304972f1b3098a86}{00031} TEMPLATE\_DIRS = (
+00032     os.path.join(os.path.dirname(BASE\_DIR), \textcolor{stringliteral}{"/sage/templates"}),
+00033 )
+00034 print(\textcolor{stringliteral}{"Template-dirs: "},TEMPLATE\_DIRS)
+00035 \textcolor{comment}{# Application definition}
+00036 
+\hypertarget{settings_8py_source_l00037}{}\hyperlink{namespacesage_1_1settings_af48e999a4a4e7f8830d84ac4eb08df1a}{00037} INSTALLED\_APPS = (
+00038     \textcolor{stringliteral}{'django.contrib.admin'},
+00039     \textcolor{stringliteral}{'django.contrib.auth'},
+00040     \textcolor{stringliteral}{'django.contrib.contenttypes'},
+00041     \textcolor{stringliteral}{'django.contrib.sessions'},
+00042     \textcolor{stringliteral}{'django.contrib.messages'},
+00043     \textcolor{stringliteral}{'django.contrib.staticfiles'},
+00044     \textcolor{stringliteral}{'civilsage'},
+00045 )
+00046 
+\hypertarget{settings_8py_source_l00047}{}\hyperlink{namespacesage_1_1settings_a247a0ea3c79f999897dbfaed3bc99b1d}{00047} MIDDLEWARE\_CLASSES = (
+00048     \textcolor{stringliteral}{'django.middleware.common.CommonMiddleware'},
+00049     \textcolor{stringliteral}{'django.contrib.sessions.middleware.SessionMiddleware'},
+00050     \textcolor{stringliteral}{'django.middleware.csrf.CsrfViewMiddleware'},
+00051     \textcolor{stringliteral}{'django.contrib.auth.middleware.AuthenticationMiddleware'},
+00052     \textcolor{stringliteral}{'django.contrib.messages.middleware.MessageMiddleware'},
+00053 )
+00054 
+\hypertarget{settings_8py_source_l00055}{}\hyperlink{namespacesage_1_1settings_a92b3d804acae3871a9877ad143df4201}{00055} ROOT\_URLCONF = \textcolor{stringliteral}{'sage.urls'}
+00056 
+\hypertarget{settings_8py_source_l00057}{}\hyperlink{namespacesage_1_1settings_a700b653427cc28bc1ebe951b419cfd58}{00057} WSGI\_APPLICATION = \textcolor{stringliteral}{'sage.wsgi.application'}
+00058 
+00059 
+00060 \textcolor{comment}{# Database}
+00061 \textcolor{comment}{# https://docs.djangoproject.com/en/1.7/ref/settings/#databases}
+00062 
+\hypertarget{settings_8py_source_l00063}{}\hyperlink{namespacesage_1_1settings_a870c10acdd1141ac92340ce3e50ffbbd}{00063} DATABASES = \{
+00064     \textcolor{stringliteral}{'default'}: \{
+00065         \textcolor{stringliteral}{'ENGINE'}: \textcolor{stringliteral}{'django.db.backends.sqlite3'},
+00066         \textcolor{stringliteral}{'NAME'}: os.path.join(BASE\_DIR, \textcolor{stringliteral}{'db.sqlite3'}),
+00067     \}
+00068 \}
+00069 
+00070 \textcolor{comment}{# Internationalization}
+00071 \textcolor{comment}{# https://docs.djangoproject.com/en/1.7/topics/i18n/}
+00072 
+\hypertarget{settings_8py_source_l00073}{}\hyperlink{namespacesage_1_1settings_ac5b7a49ef37a25508ecb84453063821a}{00073} LANGUAGE\_CODE = \textcolor{stringliteral}{'en-us'}
+00074 
+\hypertarget{settings_8py_source_l00075}{}\hyperlink{namespacesage_1_1settings_a07421ef620becc4c93753901abdf83c0}{00075} TIME\_ZONE = \textcolor{stringliteral}{'Asia/Kolkata'}
+00076 
+\hypertarget{settings_8py_source_l00077}{}\hyperlink{namespacesage_1_1settings_acf5dd02a352695a98f57bef7679a29af}{00077} USE\_I18N = \textcolor{keyword}{True}
+00078 
+\hypertarget{settings_8py_source_l00079}{}\hyperlink{namespacesage_1_1settings_a9d0e7298d4688c99e0ee9e965d950de0}{00079} USE\_L10N = \textcolor{keyword}{True}
+00080 
+\hypertarget{settings_8py_source_l00081}{}\hyperlink{namespacesage_1_1settings_aa385f778cd7bd79cc4c688fec7c101a2}{00081} USE\_TZ = \textcolor{keyword}{True}
+00082 
+\hypertarget{settings_8py_source_l00083}{}\hyperlink{namespacesage_1_1settings_a91b967847aecdd4d0edfbb0229656929}{00083} STATIC\_ROOT = \textcolor{stringliteral}{''}
+00084 
+\hypertarget{settings_8py_source_l00085}{}\hyperlink{namespacesage_1_1settings_a0b4647cdde23eaed09c255182a9f576c}{00085} STATIC\_URL = \textcolor{stringliteral}{'/static/'}
+00086 
+\hypertarget{settings_8py_source_l00087}{}\hyperlink{namespacesage_1_1settings_ac4ae870dea0d58410747ddcbdff2b3d7}{00087} STATICFILES\_DIRS = (
+00088         os.path.join(os.path.dirname(BASE\_DIR), \textcolor{stringliteral}{"sage/static/"}),
+00089 )
+00090 print(\textcolor{stringliteral}{'Staticfiles-dirs: '},STATICFILES\_DIRS)
+00091 \textcolor{comment}{# Static files (CSS, JavaScript, Images)}
+00092 \textcolor{comment}{# https://docs.djangoproject.com/en/1.7/howto/static-files/}
+00093 
+\hypertarget{settings_8py_source_l00094}{}\hyperlink{namespacesage_1_1settings_af629022b1da961fa9828f450bc80bd22}{00094} STATICFILES\_FINDERS = (
+00095     \textcolor{stringliteral}{'django.contrib.staticfiles.finders.FileSystemFinder'},
+00096     \textcolor{stringliteral}{'django.contrib.staticfiles.finders.AppDirectoriesFinder'},
+00097 )
+00098 
+\hypertarget{settings_8py_source_l00099}{}\hyperlink{namespacesage_1_1settings_a2d83ca0a279480aa03599465a0386b17}{00099} EMAIL\_BACKEND = \textcolor{stringliteral}{'django.core.mail.backends.smtp.EmailBackend'}
+00100 
+\hypertarget{settings_8py_source_l00101}{}\hyperlink{namespacesage_1_1settings_a0fe7c4174cb1b7d03f7b574ae1e5eed9}{00101} EMAIL\_USE\_TLS = \textcolor{keyword}{True}
+00102 
+\hypertarget{settings_8py_source_l00103}{}\hyperlink{namespacesage_1_1settings_a594329fe15c9680f523afaab779411ed}{00103} EMAIL\_HOST = \textcolor{stringliteral}{'smtp.gmail.com'}
+00104 
+00105 \textcolor{comment}{#Set it's value to the email-id from which the emails will be sent.}
+\hypertarget{settings_8py_source_l00106}{}\hyperlink{namespacesage_1_1settings_a9c01855359753a3c3f517341806347c2}{00106} EMAIL\_HOST\_USER = \textcolor{stringliteral}{'email.id1@gmail.com'}
+00107 
+00108 
+00109 \textcolor{stringliteral}{"""}
+00110 \textcolor{stringliteral}{Write the password here. If you are using 2-step verification (gmail),}
+00111 \textcolor{stringliteral}{then you should use generate the app password via
+       https://security.google.com/settings/security/apppasswords}
+00112 \textcolor{stringliteral}{and paste that here.}
+00113 \textcolor{stringliteral}{"""}
+00114 
+\hypertarget{settings_8py_source_l00115}{}\hyperlink{namespacesage_1_1settings_a66e7a16ed6b0df5716a6579fcba949a6}{00115} EMAIL\_HOST\_PASSWORD = \textcolor{stringliteral}{'password'}
+00116 
+\hypertarget{settings_8py_source_l00117}{}\hyperlink{namespacesage_1_1settings_a3fe927460bba6408b5df39fa8a10d367}{00117} EMAIL\_PORT = 587
+00118 
+\hypertarget{settings_8py_source_l00119}{}\hyperlink{namespacesage_1_1settings_a6517c4f93850d63e2bdbe7040ad0e2ff}{00119} DEFAULT\_FROM\_EMAIL = EMAIL\_HOST\_USER
+\end{DoxyCode}
