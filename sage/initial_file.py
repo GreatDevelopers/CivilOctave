@@ -5,22 +5,22 @@
 # and then process
 # files in it using emailcall()
 # @author amarjeet kapoor
-# 
 #
- 
+#
+
 import os,threading
 from django.core.mail import EmailMessage
 
 
 ##
-# function to get name of directory that are unprocessed and then 
+# function to get name of directory that are unprocessed and then
 # call emailcall() and pass the name
 #
 
 def pdfemail():
-	##	  
+	##
    	# initalize sage
-   	
+
     os.system('sage sagemath/input.sage')
 
     # get list of unprocessed files
@@ -43,32 +43,24 @@ def pdfemail():
 ##
 # A function that run as process to send pdf as emails
 # @param name this name of directory
-# 
+#
 # @exception remove directory and email error
 def emailcall(name):
 	##
-	# @breif 
-	
+	# @breif
+
 	#getting email id
-	
-	message='unable to send'
-	command=name+'/email.txt'
-	f=open(command)
-	a=f.read()
-        email=a.split('\n')
-        email_id=email[0]
-	f.close()
+
 	try:
-		#creating and writing sh file for background processing
-		command=name+'/civil.sh'
-		file=open(command,'w')
-		command='cd '+name
-		file.write(command)
-		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-		file.write('pdflatex civil.tex\n')
-		file.close()
+                message='unable to send'
+                command=name+'/email.txt'
+                f=open(command)
+                a=f.read()
+                email=a.split('\n')
+                email_id=email[0]
+                f.close()
 		#calling sh file for background processing
-		command='sh '+name+'/civil.sh'
+		command='sh civil.sh '+name
 		os.system(command)
 
 		#sending email
@@ -84,8 +76,6 @@ def emailcall(name):
 	except:
                 command='rm -rf '+name
                 os.system(command)
-		user_email = EmailMessage('Dynamics of structure',
-		message, to=[email_id])
 
 if __name__ == '__main__':
 	print("hello")

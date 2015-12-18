@@ -1,0 +1,456 @@
+\hypertarget{namespacemain}{}\section{main Namespace Reference}
+\label{namespacemain}\index{main@{main}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacemain_a4f60afd2426ee9409955e4352b3f0486}{fun\+Saog} (soil\+Type, time\+Prd)
+\begin{DoxyCompactList}\small\item\em function to pick values according to type of soil selected \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacemain_ad85d7913c0e40b9e1f30e64611a0fafa}{\+\_\+sage\+\_\+const\+\_\+2} = Integer(2)
+\item 
+tuple \hyperlink{namespacemain_ad7b051da0e829aff37fef1e171e37fa3}{Level\+\_\+floor} = zero\+\_\+matrix(Q\+Q,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_a0011be18dbc87087d6aaf28802f121c0}{Stiffness\+\_\+matrix} = zero\+\_\+matrix(Q\+Q,Number\+\_\+of\+\_\+storeys,Number\+\_\+of\+\_\+storeys)
+\item 
+tuple \hyperlink{namespacemain_af76005101c339a32cd5d37ba82ee072c}{w} = var(\textquotesingle{}w\textquotesingle{})
+\item 
+tuple \hyperlink{namespacemain_a1787a37505189f764069a45071189112}{q} = \hyperlink{namespacemain_a0011be18dbc87087d6aaf28802f121c0}{Stiffness\+\_\+matrix}-\/(\hyperlink{namespacemain_af76005101c339a32cd5d37ba82ee072c}{w}$\ast$$\ast$\hyperlink{namespacemain_ad85d7913c0e40b9e1f30e64611a0fafa}{\+\_\+sage\+\_\+const\+\_\+2} )
+\item 
+tuple \hyperlink{namespacemain_ad101f166a53497f04b37636bcadbfe65}{A} = \hyperlink{namespacemain_a0011be18dbc87087d6aaf28802f121c0}{Stiffness\+\_\+matrix}$\ast$Mass.\+inverse()
+\item 
+tuple \hyperlink{namespacemain_a63066086ca439ff34de16475b00387f5}{Omega\+\_\+square} = A.\+eigenvalues()
+\item 
+tuple \hyperlink{namespacemain_af44dcb60e61649c65257466d65b4d548}{Omega} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_a6bf4b8266bcb3b4f390149620fea3d6c}{Time\+\_\+period} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_a2d5b336e3b2f7d2e14f04fa3cc413457}{z} = A.\+eigenvectors\+\_\+left()
+\item 
+tuple \hyperlink{namespacemain_a00488f5887e168f7781b6fb94dd08518}{J} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_a5eac8e4368036ef94463d6e42c1628c5}{X} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,Number\+\_\+of\+\_\+storeys)
+\item 
+tuple \hyperlink{namespacemain_a70551c7fc78da8fdec83fe500056d388}{mid} = \hyperlink{namespacemain_a1787a37505189f764069a45071189112}{q}$\ast$Mass$\ast$q.\+transpose()
+\item 
+tuple \hyperlink{namespacemain_a936ce857e8e4f4855af1cc5bf2635191}{Modal\+\_\+participation\+\_\+factor} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_a176940b2d446033050ac092436f63974}{Modal\+\_\+mass} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+\hyperlink{namespacemain_a27fb93072b84fd448623807df350f132}{sum\+\_\+modal\+\_\+mass} = \+\_\+sage\+\_\+const\+\_\+0
+\item 
+list \hyperlink{namespacemain_af6e3698b7f50fc004eb759d7c447fdb3}{m} = \hyperlink{namespacemain_a5eac8e4368036ef94463d6e42c1628c5}{X}\mbox{[}\hyperlink{L02_2main_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{j},\+:\mbox{]}
+\item 
+list \hyperlink{namespacemain_add7e0394c94a2e2115aff785eb6995e3}{P1} = P1+Mass\mbox{[}\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i}\mbox{]}
+\item 
+list \hyperlink{namespacemain_a1b83b7a3849a8e1c84b9906c45625fec}{P2} = P2+Mass\mbox{[}\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i}\mbox{]}
+\item 
+tuple \hyperlink{namespacemain_ae18df6a00aee4516c7ad8961b666e2a3}{X\+X} = X.\+transpose()
+\item 
+tuple \hyperlink{namespacemain_ab273c2ae46514d6ec3d905c30cbb5a1b}{Modal\+\_\+contribution} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered} = Number\+\_\+of\+\_\+storeys
+\item 
+string \hyperlink{namespacemain_a52e65712caa18dade1326ad4efeebfa1}{Type\+\_\+of\+\_\+soil} = \textquotesingle{}\textquotesingle{}
+\item 
+tuple \hyperlink{namespacemain_ac3a509169246622b50fc23d809d30833}{Sa\+\_\+by\+\_\+g} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_a49b10c1530f56b101c4cc17b20fb1973}{A\+\_\+h} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,Number\+\_\+of\+\_\+storeys)
+\item 
+tuple \hyperlink{namespacemain_a0caf610899fee63b00acb7cce7c804d7}{Design\+\_\+lateral\+\_\+force} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered})
+\item 
+tuple \hyperlink{namespacemain_a9e135aea550f8ea419857f817a196d56}{Peak\+\_\+shear\+\_\+force} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered})
+\item 
+tuple \hyperlink{namespacemain_aaa52e7055409dcf0785880422294a704}{Storey\+\_\+shear\+\_\+force} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_ab6dd9cc05fd903a9da8b9734c44fef57}{Storey\+\_\+shear\+\_\+force2} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_aa91561fad2579200e566fa01f3cbc359}{Force} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+tuple \hyperlink{namespacemain_ad403610ba53df02f8dfaff8dd64227b3}{P} = zero\+\_\+matrix(R\+R,\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered},\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered})
+\item 
+tuple \hyperlink{namespacemain_a6ae8768d11174f5baf9febc5244d6f06}{B} = zero\+\_\+matrix(R\+R,\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered},\hyperlink{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{Modes\+\_\+considered})
+\item 
+list \hyperlink{namespacemain_a4760f4121f66000c5570f75176649cb8}{r} = \hyperlink{namespacemain_af44dcb60e61649c65257466d65b4d548}{Omega}\mbox{[}\hyperlink{L02_2main_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{j},\+\_\+sage\+\_\+const\+\_\+0 \mbox{]}
+\item 
+list \hyperlink{namespacemain_ab1e783015bffd2e1d395a9099143d967}{b} = \+\_\+sage\+\_\+const\+\_\+1+\hyperlink{namespacemain_a6ae8768d11174f5baf9febc5244d6f06}{B}\mbox{[}\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i},\hyperlink{L02_2main_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{j}\mbox{]}
+\item 
+tuple \hyperlink{namespacemain_aa7f4fe671f919f7f067f9337ef9e02c0}{e} = (\+\_\+sage\+\_\+const\+\_\+1 -\/\hyperlink{namespacemain_a6ae8768d11174f5baf9febc5244d6f06}{B}\mbox{[}\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i},\hyperlink{L02_2main_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{j}\mbox{]}$\ast$$\ast$\hyperlink{namespacemain_ad85d7913c0e40b9e1f30e64611a0fafa}{\+\_\+sage\+\_\+const\+\_\+2} )
+\item 
+tuple \hyperlink{namespacemain_a712447a841ce148ad2d1210e57dc7894}{Lateral\+\_\+force} = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )
+\item 
+list \hyperlink{namespacemain_a027916efc284622d928c1d8383917f6d}{l} = \hyperlink{namespacemain_a9e135aea550f8ea419857f817a196d56}{Peak\+\_\+shear\+\_\+force}\mbox{[}\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i},\+:\mbox{]}
+\item 
+tuple \hyperlink{namespacemain_ab31fc16b432d2248a6c76c6a18d741d0}{p} = list()
+\item 
+tuple \hyperlink{namespacemain_aeabbf69db1809807f065c2d1e9a62567}{color} = hue(\+\_\+sage\+\_\+const\+\_\+0p4 + \+\_\+sage\+\_\+const\+\_\+0p6 $\ast$(\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i}/\+\_\+sage\+\_\+const\+\_\+10 ))
+\item 
+tuple \hyperlink{namespacemain_ad40f6b3437e83a0385177ac65a317b97}{Graph} = plot(\mbox{[}$\,$\mbox{]})
+\item 
+list \hyperlink{namespacemain_aa741e0bac28acc57bb99fbe2b14205c7}{storey\+\_\+shear\+\_\+force3} = \hyperlink{namespacemain_aaa52e7055409dcf0785880422294a704}{Storey\+\_\+shear\+\_\+force}\mbox{[}\+:\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacemain_a4f60afd2426ee9409955e4352b3f0486}{}\index{main@{main}!fun\+Saog@{fun\+Saog}}
+\index{fun\+Saog@{fun\+Saog}!main@{main}}
+\subsubsection[{fun\+Saog(soil\+Type, time\+Prd)}]{\setlength{\rightskip}{0pt plus 5cm}def main.\+fun\+Saog (
+\begin{DoxyParamCaption}
+\item[{}]{soil\+Type, }
+\item[{}]{time\+Prd}
+\end{DoxyParamCaption}
+)}\label{namespacemain_a4f60afd2426ee9409955e4352b3f0486}
+
+
+function to pick values according to type of soil selected 
+
+
+\begin{DoxyParams}{Parameters}
+{\em soil\+Type} & it tells type of soil \\
+\hline
+{\em time\+Prd} & time period of mode of floor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sag 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file main.\+sage.\+py.
+
+
+\begin{DoxyCode}
+18 \textcolor{keyword}{def }\hyperlink{namespacemain_a4f60afd2426ee9409955e4352b3f0486}{funSaog}(soilType, timePrd):
+19 
+20   t1 = \_sage\_const\_0 ; t2 = \_sage\_const\_0 ; t3 = \_sage\_const\_0 ; t4 = \_sage\_const\_0 
+21   eq3num = \_sage\_const\_0 
+22   t2 = \_sage\_const\_0p10 
+23   \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(soilType==\textcolor{stringliteral}{'I'}):
+24       t3 = \_sage\_const\_0p40 ; eq3num = \_sage\_const\_1p0 
+25   \textcolor{keywordflow}{elif} (soilType==\textcolor{stringliteral}{'II'}):
+26       t3 = \_sage\_const\_0p55 ; eq3num = \_sage\_const\_1p36 
+27   elif(soilType==\textcolor{stringliteral}{'III'}):
+28       t3 = \_sage\_const\_0p67 ; eq3num = \_sage\_const\_1p67 
+29   \textcolor{keywordflow}{else}:
+30       Print(\textcolor{stringliteral}{'Unexpected soil type'})
+31   \textcolor{keywordflow}{if} (timePrd < t2):
+32       sag = \_sage\_const\_1p  + \_sage\_const\_15  * timePrd
+33   elif(timePrd > t3):
+34       sag = eq3num / timePrd
+35   \textcolor{keywordflow}{else}:
+36       sag = \_sage\_const\_2p5 
+37   \textcolor{keywordflow}{return} sag
+38 
+39 \textcolor{stringliteral}{"""main program ... """}
+40 
+41 \textcolor{comment}{#loading input variables from input.sage}
+42 load(\textcolor{stringliteral}{'input.sage'})
+43 \textcolor{comment}{#changing style of brackets for latex output}
+44 latex.matrix\_delimiters(\textcolor{stringliteral}{"["},\textcolor{stringliteral}{"]"})
+45 t=time.clock()
+46 \textcolor{comment}{#converting mass in diagonal matrix}
+47 Mass=\hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}(QQ,Number\_of\_storeys,Number\_of\_storeys)
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemain_a4f60afd2426ee9409955e4352b3f0486_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacemain_ad85d7913c0e40b9e1f30e64611a0fafa}{}\index{main@{main}!\+\_\+sage\+\_\+const\+\_\+2@{\+\_\+sage\+\_\+const\+\_\+2}}
+\index{\+\_\+sage\+\_\+const\+\_\+2@{\+\_\+sage\+\_\+const\+\_\+2}!main@{main}}
+\subsubsection[{\+\_\+sage\+\_\+const\+\_\+2}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+\_\+sage\+\_\+const\+\_\+2 = Integer(2)}\label{namespacemain_ad85d7913c0e40b9e1f30e64611a0fafa}
+
+
+Definition at line 3 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ad101f166a53497f04b37636bcadbfe65}{}\index{main@{main}!A@{A}}
+\index{A@{A}!main@{main}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+A = {\bf Stiffness\+\_\+matrix}$\ast$Mass.\+inverse()}\label{namespacemain_ad101f166a53497f04b37636bcadbfe65}
+
+
+Definition at line 77 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a49b10c1530f56b101c4cc17b20fb1973}{}\index{main@{main}!A\+\_\+h@{A\+\_\+h}}
+\index{A\+\_\+h@{A\+\_\+h}!main@{main}}
+\subsubsection[{A\+\_\+h}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+A\+\_\+h = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,Number\+\_\+of\+\_\+storeys)}\label{namespacemain_a49b10c1530f56b101c4cc17b20fb1973}
+
+
+Definition at line 140 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a6ae8768d11174f5baf9febc5244d6f06}{}\index{main@{main}!B@{B}}
+\index{B@{B}!main@{main}}
+\subsubsection[{B}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+B = zero\+\_\+matrix(R\+R,{\bf Modes\+\_\+considered},{\bf Modes\+\_\+considered})}\label{namespacemain_a6ae8768d11174f5baf9febc5244d6f06}
+
+
+Definition at line 190 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ab1e783015bffd2e1d395a9099143d967}{}\index{main@{main}!b@{b}}
+\index{b@{b}!main@{main}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+b = \+\_\+sage\+\_\+const\+\_\+1+{\bf B}\mbox{[}{\bf i},{\bf j}\mbox{]}}\label{namespacemain_ab1e783015bffd2e1d395a9099143d967}
+
+
+Definition at line 201 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_aeabbf69db1809807f065c2d1e9a62567}{}\index{main@{main}!color@{color}}
+\index{color@{color}!main@{main}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+color = hue(\+\_\+sage\+\_\+const\+\_\+0p4 + \+\_\+sage\+\_\+const\+\_\+0p6 $\ast$({\bf i}/\+\_\+sage\+\_\+const\+\_\+10 ))}\label{namespacemain_aeabbf69db1809807f065c2d1e9a62567}
+
+
+Definition at line 217 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a0caf610899fee63b00acb7cce7c804d7}{}\index{main@{main}!Design\+\_\+lateral\+\_\+force@{Design\+\_\+lateral\+\_\+force}}
+\index{Design\+\_\+lateral\+\_\+force@{Design\+\_\+lateral\+\_\+force}!main@{main}}
+\subsubsection[{Design\+\_\+lateral\+\_\+force}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Design\+\_\+lateral\+\_\+force = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,{\bf Modes\+\_\+considered})}\label{namespacemain_a0caf610899fee63b00acb7cce7c804d7}
+
+
+Definition at line 151 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_aa7f4fe671f919f7f067f9337ef9e02c0}{}\index{main@{main}!e@{e}}
+\index{e@{e}!main@{main}}
+\subsubsection[{e}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+e = (\+\_\+sage\+\_\+const\+\_\+1 -\/{\bf B}\mbox{[}{\bf i},{\bf j}\mbox{]}$\ast$$\ast${\bf \+\_\+sage\+\_\+const\+\_\+2} )}\label{namespacemain_aa7f4fe671f919f7f067f9337ef9e02c0}
+
+
+Definition at line 203 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_aa91561fad2579200e566fa01f3cbc359}{}\index{main@{main}!Force@{Force}}
+\index{Force@{Force}!main@{main}}
+\subsubsection[{Force}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Force = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_aa91561fad2579200e566fa01f3cbc359}
+
+
+Definition at line 181 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ad40f6b3437e83a0385177ac65a317b97}{}\index{main@{main}!Graph@{Graph}}
+\index{Graph@{Graph}!main@{main}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+Graph = plot(\mbox{[}$\,$\mbox{]})}\label{namespacemain_ad40f6b3437e83a0385177ac65a317b97}
+
+
+Definition at line 222 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a00488f5887e168f7781b6fb94dd08518}{}\index{main@{main}!J@{J}}
+\index{J@{J}!main@{main}}
+\subsubsection[{J}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+J = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_a00488f5887e168f7781b6fb94dd08518}
+
+
+Definition at line 95 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a027916efc284622d928c1d8383917f6d}{}\index{main@{main}!l@{l}}
+\index{l@{l}!main@{main}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+l = {\bf Peak\+\_\+shear\+\_\+force}\mbox{[}{\bf i},\+:\mbox{]}}\label{namespacemain_a027916efc284622d928c1d8383917f6d}
+
+
+Definition at line 208 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a712447a841ce148ad2d1210e57dc7894}{}\index{main@{main}!Lateral\+\_\+force@{Lateral\+\_\+force}}
+\index{Lateral\+\_\+force@{Lateral\+\_\+force}!main@{main}}
+\subsubsection[{Lateral\+\_\+force}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Lateral\+\_\+force = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_a712447a841ce148ad2d1210e57dc7894}
+
+
+Definition at line 206 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ad7b051da0e829aff37fef1e171e37fa3}{}\index{main@{main}!Level\+\_\+floor@{Level\+\_\+floor}}
+\index{Level\+\_\+floor@{Level\+\_\+floor}!main@{main}}
+\subsubsection[{Level\+\_\+floor}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Level\+\_\+floor = zero\+\_\+matrix(Q\+Q,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_ad7b051da0e829aff37fef1e171e37fa3}
+
+
+Definition at line 55 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_af6e3698b7f50fc004eb759d7c447fdb3}{}\index{main@{main}!m@{m}}
+\index{m@{m}!main@{main}}
+\subsubsection[{m}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+m = {\bf X}\mbox{[}{\bf j},\+:\mbox{]}}\label{namespacemain_af6e3698b7f50fc004eb759d7c447fdb3}
+
+
+Definition at line 112 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a70551c7fc78da8fdec83fe500056d388}{}\index{main@{main}!mid@{mid}}
+\index{mid@{mid}!main@{main}}
+\subsubsection[{mid}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+mid = {\bf q}$\ast$Mass$\ast$q.\+transpose()}\label{namespacemain_a70551c7fc78da8fdec83fe500056d388}
+
+
+Definition at line 99 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ab273c2ae46514d6ec3d905c30cbb5a1b}{}\index{main@{main}!Modal\+\_\+contribution@{Modal\+\_\+contribution}}
+\index{Modal\+\_\+contribution@{Modal\+\_\+contribution}!main@{main}}
+\subsubsection[{Modal\+\_\+contribution}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Modal\+\_\+contribution = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_ab273c2ae46514d6ec3d905c30cbb5a1b}
+
+
+Definition at line 121 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a176940b2d446033050ac092436f63974}{}\index{main@{main}!Modal\+\_\+mass@{Modal\+\_\+mass}}
+\index{Modal\+\_\+mass@{Modal\+\_\+mass}!main@{main}}
+\subsubsection[{Modal\+\_\+mass}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Modal\+\_\+mass = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_a176940b2d446033050ac092436f63974}
+
+
+Definition at line 108 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a936ce857e8e4f4855af1cc5bf2635191}{}\index{main@{main}!Modal\+\_\+participation\+\_\+factor@{Modal\+\_\+participation\+\_\+factor}}
+\index{Modal\+\_\+participation\+\_\+factor@{Modal\+\_\+participation\+\_\+factor}!main@{main}}
+\subsubsection[{Modal\+\_\+participation\+\_\+factor}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Modal\+\_\+participation\+\_\+factor = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_a936ce857e8e4f4855af1cc5bf2635191}
+
+
+Definition at line 107 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a9d22ac077c22a97b1b095068a1500d16}{}\index{main@{main}!Modes\+\_\+considered@{Modes\+\_\+considered}}
+\index{Modes\+\_\+considered@{Modes\+\_\+considered}!main@{main}}
+\subsubsection[{Modes\+\_\+considered}]{\setlength{\rightskip}{0pt plus 5cm}main.\+Modes\+\_\+considered = Number\+\_\+of\+\_\+storeys}\label{namespacemain_a9d22ac077c22a97b1b095068a1500d16}
+
+
+Definition at line 133 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_af44dcb60e61649c65257466d65b4d548}{}\index{main@{main}!Omega@{Omega}}
+\index{Omega@{Omega}!main@{main}}
+\subsubsection[{Omega}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Omega = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_af44dcb60e61649c65257466d65b4d548}
+
+
+Definition at line 81 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a63066086ca439ff34de16475b00387f5}{}\index{main@{main}!Omega\+\_\+square@{Omega\+\_\+square}}
+\index{Omega\+\_\+square@{Omega\+\_\+square}!main@{main}}
+\subsubsection[{Omega\+\_\+square}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Omega\+\_\+square = A.\+eigenvalues()}\label{namespacemain_a63066086ca439ff34de16475b00387f5}
+
+
+Definition at line 78 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ad403610ba53df02f8dfaff8dd64227b3}{}\index{main@{main}!P@{P}}
+\index{P@{P}!main@{main}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+P = zero\+\_\+matrix(R\+R,{\bf Modes\+\_\+considered},{\bf Modes\+\_\+considered})}\label{namespacemain_ad403610ba53df02f8dfaff8dd64227b3}
+
+
+Definition at line 189 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ab31fc16b432d2248a6c76c6a18d741d0}{}\index{main@{main}!p@{p}}
+\index{p@{p}!main@{main}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+p = list()}\label{namespacemain_ab31fc16b432d2248a6c76c6a18d741d0}
+
+
+Definition at line 212 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_add7e0394c94a2e2115aff785eb6995e3}{}\index{main@{main}!P1@{P1}}
+\index{P1@{P1}!main@{main}}
+\subsubsection[{P1}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+P1 = P1+Mass\mbox{[}{\bf i}\mbox{]}}\label{namespacemain_add7e0394c94a2e2115aff785eb6995e3}
+
+
+Definition at line 114 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a1b83b7a3849a8e1c84b9906c45625fec}{}\index{main@{main}!P2@{P2}}
+\index{P2@{P2}!main@{main}}
+\subsubsection[{P2}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+P2 = P2+Mass\mbox{[}{\bf i}\mbox{]}}\label{namespacemain_a1b83b7a3849a8e1c84b9906c45625fec}
+
+
+Definition at line 115 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a9e135aea550f8ea419857f817a196d56}{}\index{main@{main}!Peak\+\_\+shear\+\_\+force@{Peak\+\_\+shear\+\_\+force}}
+\index{Peak\+\_\+shear\+\_\+force@{Peak\+\_\+shear\+\_\+force}!main@{main}}
+\subsubsection[{Peak\+\_\+shear\+\_\+force}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Peak\+\_\+shear\+\_\+force = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,{\bf Modes\+\_\+considered})}\label{namespacemain_a9e135aea550f8ea419857f817a196d56}
+
+
+Definition at line 160 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a1787a37505189f764069a45071189112}{}\index{main@{main}!q@{q}}
+\index{q@{q}!main@{main}}
+\subsubsection[{q}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+q = {\bf Stiffness\+\_\+matrix}-\/({\bf w}$\ast$$\ast${\bf \+\_\+sage\+\_\+const\+\_\+2} )}\label{namespacemain_a1787a37505189f764069a45071189112}
+
+
+Definition at line 76 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a4760f4121f66000c5570f75176649cb8}{}\index{main@{main}!r@{r}}
+\index{r@{r}!main@{main}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+r = {\bf Omega}\mbox{[}{\bf j},\+\_\+sage\+\_\+const\+\_\+0 \mbox{]}}\label{namespacemain_a4760f4121f66000c5570f75176649cb8}
+
+
+Definition at line 194 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ac3a509169246622b50fc23d809d30833}{}\index{main@{main}!Sa\+\_\+by\+\_\+g@{Sa\+\_\+by\+\_\+g}}
+\index{Sa\+\_\+by\+\_\+g@{Sa\+\_\+by\+\_\+g}!main@{main}}
+\subsubsection[{Sa\+\_\+by\+\_\+g}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Sa\+\_\+by\+\_\+g = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_ac3a509169246622b50fc23d809d30833}
+
+
+Definition at line 139 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a0011be18dbc87087d6aaf28802f121c0}{}\index{main@{main}!Stiffness\+\_\+matrix@{Stiffness\+\_\+matrix}}
+\index{Stiffness\+\_\+matrix@{Stiffness\+\_\+matrix}!main@{main}}
+\subsubsection[{Stiffness\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Stiffness\+\_\+matrix = zero\+\_\+matrix(Q\+Q,Number\+\_\+of\+\_\+storeys,Number\+\_\+of\+\_\+storeys)}\label{namespacemain_a0011be18dbc87087d6aaf28802f121c0}
+
+
+Definition at line 63 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_aaa52e7055409dcf0785880422294a704}{}\index{main@{main}!Storey\+\_\+shear\+\_\+force@{Storey\+\_\+shear\+\_\+force}}
+\index{Storey\+\_\+shear\+\_\+force@{Storey\+\_\+shear\+\_\+force}!main@{main}}
+\subsubsection[{Storey\+\_\+shear\+\_\+force}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Storey\+\_\+shear\+\_\+force = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_aaa52e7055409dcf0785880422294a704}
+
+
+Definition at line 170 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ab6dd9cc05fd903a9da8b9734c44fef57}{}\index{main@{main}!Storey\+\_\+shear\+\_\+force2@{Storey\+\_\+shear\+\_\+force2}}
+\index{Storey\+\_\+shear\+\_\+force2@{Storey\+\_\+shear\+\_\+force2}!main@{main}}
+\subsubsection[{Storey\+\_\+shear\+\_\+force2}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+Storey\+\_\+shear\+\_\+force2 = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_ab6dd9cc05fd903a9da8b9734c44fef57}
+
+
+Definition at line 171 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_aa741e0bac28acc57bb99fbe2b14205c7}{}\index{main@{main}!storey\+\_\+shear\+\_\+force3@{storey\+\_\+shear\+\_\+force3}}
+\index{storey\+\_\+shear\+\_\+force3@{storey\+\_\+shear\+\_\+force3}!main@{main}}
+\subsubsection[{storey\+\_\+shear\+\_\+force3}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+storey\+\_\+shear\+\_\+force3 = {\bf Storey\+\_\+shear\+\_\+force}\mbox{[}\+:\mbox{]}}\label{namespacemain_aa741e0bac28acc57bb99fbe2b14205c7}
+
+
+Definition at line 237 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a27fb93072b84fd448623807df350f132}{}\index{main@{main}!sum\+\_\+modal\+\_\+mass@{sum\+\_\+modal\+\_\+mass}}
+\index{sum\+\_\+modal\+\_\+mass@{sum\+\_\+modal\+\_\+mass}!main@{main}}
+\subsubsection[{sum\+\_\+modal\+\_\+mass}]{\setlength{\rightskip}{0pt plus 5cm}list main.\+sum\+\_\+modal\+\_\+mass = \+\_\+sage\+\_\+const\+\_\+0}\label{namespacemain_a27fb93072b84fd448623807df350f132}
+
+
+Definition at line 109 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a6bf4b8266bcb3b4f390149620fea3d6c}{}\index{main@{main}!Time\+\_\+period@{Time\+\_\+period}}
+\index{Time\+\_\+period@{Time\+\_\+period}!main@{main}}
+\subsubsection[{Time\+\_\+period}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+Time\+\_\+period = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,\+\_\+sage\+\_\+const\+\_\+1 )}\label{namespacemain_a6bf4b8266bcb3b4f390149620fea3d6c}
+
+
+Definition at line 82 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a52e65712caa18dade1326ad4efeebfa1}{}\index{main@{main}!Type\+\_\+of\+\_\+soil@{Type\+\_\+of\+\_\+soil}}
+\index{Type\+\_\+of\+\_\+soil@{Type\+\_\+of\+\_\+soil}!main@{main}}
+\subsubsection[{Type\+\_\+of\+\_\+soil}]{\setlength{\rightskip}{0pt plus 5cm}string main.\+Type\+\_\+of\+\_\+soil = \textquotesingle{}\textquotesingle{}}\label{namespacemain_a52e65712caa18dade1326ad4efeebfa1}
+
+
+Definition at line 136 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_af76005101c339a32cd5d37ba82ee072c}{}\index{main@{main}!w@{w}}
+\index{w@{w}!main@{main}}
+\subsubsection[{w}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+w = var(\textquotesingle{}w\textquotesingle{})}\label{namespacemain_af76005101c339a32cd5d37ba82ee072c}
+
+
+Definition at line 75 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a5eac8e4368036ef94463d6e42c1628c5}{}\index{main@{main}!X@{X}}
+\index{X@{X}!main@{main}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+X = zero\+\_\+matrix(R\+R,Number\+\_\+of\+\_\+storeys,Number\+\_\+of\+\_\+storeys)}\label{namespacemain_a5eac8e4368036ef94463d6e42c1628c5}
+
+
+Definition at line 96 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_ae18df6a00aee4516c7ad8961b666e2a3}{}\index{main@{main}!X\+X@{X\+X}}
+\index{X\+X@{X\+X}!main@{main}}
+\subsubsection[{X\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+X\+X = X.\+transpose()}\label{namespacemain_ae18df6a00aee4516c7ad8961b666e2a3}
+
+
+Definition at line 119 of file main.\+sage.\+py.
+
+\hypertarget{namespacemain_a2d5b336e3b2f7d2e14f04fa3cc413457}{}\index{main@{main}!z@{z}}
+\index{z@{z}!main@{main}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\+z = A.\+eigenvectors\+\_\+left()}\label{namespacemain_a2d5b336e3b2f7d2e14f04fa3cc413457}
+
+
+Definition at line 93 of file main.\+sage.\+py.
+

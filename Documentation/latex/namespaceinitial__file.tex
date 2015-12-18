@@ -52,50 +52,41 @@ Definition at line 48 of file initial\+\_\+file.\+py.
 \begin{DoxyCode}
 48 \textcolor{keyword}{def }\hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{emailcall}(name):
 49     \textcolor{comment}{##}
-50     \textcolor{comment}{# @breif }
-51     
+50     \textcolor{comment}{# @breif}
+51 
 52     \textcolor{comment}{#getting email id}
-53     
-54     message=\textcolor{stringliteral}{'unable to send'}
-55     command=name+\textcolor{stringliteral}{'/email.txt'}
-56     f=open(command)
-57     a=f.read()
-58         email=a.split(\textcolor{stringliteral}{'\(\backslash\)n'})
-59         email\_id=email[0]
-60     f.close()
-61     \textcolor{keywordflow}{try}:
-62         \textcolor{comment}{#creating and writing sh file for background processing}
-63         command=name+\textcolor{stringliteral}{'/civil.sh'}
-64         file=open(command,\textcolor{stringliteral}{'w'})
-65         command=\textcolor{stringliteral}{'cd '}+name
-66         file.write(command)
-67         file.write(\textcolor{stringliteral}{'\(\backslash\)nlatex civil.tex\(\backslash\)nsage civil.sagetex.sage\(\backslash\)n'})
-68         file.write(\textcolor{stringliteral}{'pdflatex civil.tex\(\backslash\)n'})
-69         file.close()
-70         \textcolor{comment}{#calling sh file for background processing}
-71         command=\textcolor{stringliteral}{'sh '}+name+\textcolor{stringliteral}{'/civil.sh'}
-72         os.system(command)
-73 
-74         \textcolor{comment}{#sending email}
-75         command=name+\textcolor{stringliteral}{'/civil.pdf'}
-76         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
-77         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
-78         user\_email.attach\_file(command)
-79         user\_email.send()
-80 
-81         \textcolor{comment}{#deleting files}
-82         command=\textcolor{stringliteral}{'rm -rf '}+name
-83         os.system(command)
-84     \textcolor{keywordflow}{except}:
-85                 command=\textcolor{stringliteral}{'rm -rf '}+name
-86                 os.system(command)
-87         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
-88         message, to=[email\_id])
-89 
+53 
+54     \textcolor{keywordflow}{try}:
+55                 message=\textcolor{stringliteral}{'unable to send'}
+56                 command=name+\textcolor{stringliteral}{'/email.txt'}
+57                 f=open(command)
+58                 a=f.read()
+59                 email=a.split(\textcolor{stringliteral}{'\(\backslash\)n'})
+60                 email\_id=email[0]
+61                 f.close()
+62         \textcolor{comment}{#calling sh file for background processing}
+63         command=\textcolor{stringliteral}{'sh civil.sh '}+name
+64         os.system(command)
+65 
+66         \textcolor{comment}{#sending email}
+67         command=name+\textcolor{stringliteral}{'/civil.pdf'}
+68         user\_email = EmailMessage(\textcolor{stringliteral}{'Dynamics of structure'},
+69         \textcolor{stringliteral}{'You have is ready'}, to=[email\_id])
+70         user\_email.attach\_file(command)
+71         user\_email.send()
+72 
+73         \textcolor{comment}{#deleting files}
+74         command=\textcolor{stringliteral}{'rm -rf '}+name
+75         os.system(command)
+76     \textcolor{keywordflow}{except}:
+77                 command=\textcolor{stringliteral}{'rm -rf '}+name
+78                 os.system(command)
+79 
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,16 +106,16 @@ Here is the caller graph for this function\+:\nopagebreak
 
 function to get name of directory that are unprocessed and then call \hyperlink{namespaceinitial__file_ad9d26ace18fc618ee70df3c0c94927b7}{emailcall()} and pass the name 
 
-
+initalize sage 
 
 Definition at line 20 of file initial\+\_\+file.\+py.
 
 
 \begin{DoxyCode}
 20 \textcolor{keyword}{def }\hyperlink{namespaceinitial__file_a105b1aa7bf4db853b6f4d064ed224030}{pdfemail}():
-21     \textcolor{comment}{##    }
+21     \textcolor{comment}{##}
 22     \textcolor{comment}{# initalize sage}
-23     
+23 
 24     os.system(\textcolor{stringliteral}{'sage sagemath/input.sage'})
 25 
 26     \textcolor{comment}{# get list of unprocessed files}
@@ -147,7 +138,8 @@ Definition at line 20 of file initial\+\_\+file.\+py.
 \end{DoxyCode}
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
