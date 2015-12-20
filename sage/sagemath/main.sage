@@ -216,8 +216,8 @@ for i in range(Number_of_storeys):
 		else:
 			p.append(line([(XX[j,i],Level_floor[j,0]),
 			(XX[j-1,i],Level_floor[j-1,0])],marker='o',
-			color=hue(0.4 + 0.6*(i/10))))
-Graph=plot([])
+			color=hue(0.4 + 0.6*(i/10)),))
+Graph=plot([],axes_labels=['$disp$','$height$'])
 for r in range(Number_of_storeys^2):
 	Graph= Graph+p[r]
 

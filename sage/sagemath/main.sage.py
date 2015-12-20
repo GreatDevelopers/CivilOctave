@@ -218,8 +218,8 @@ for i in range(Number_of_storeys):
 		else:
 			p.append(line([(XX[j,i],Level_floor[j,_sage_const_0 ]),
 			(XX[j-_sage_const_1 ,i],Level_floor[j-_sage_const_1 ,_sage_const_0 ])],marker='o',
-			color=hue(_sage_const_0p4  + _sage_const_0p6 *(i/_sage_const_10 ))))
-Graph=plot([])
+			color=hue(_sage_const_0p4  + _sage_const_0p6 *(i/_sage_const_10 )),))
+Graph=plot([],axes_labels=['$disp$','$height$'])
 for r in range(Number_of_storeys**_sage_const_2 ):
 	Graph= Graph+p[r]
 
