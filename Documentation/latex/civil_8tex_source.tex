@@ -1,0 +1,140 @@
+\hypertarget{civil_8tex_source}{}\section{civil.\+tex}
+\label{civil_8tex_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/sagemath/civil.\+tex@{/home/amarjeet/projects/\+Civil\+Octave/sage/sagemath/civil.\+tex}}
+
+\begin{DoxyCode}
+00001 %===================================Used packages======================%
+00002 %----------------------------------------------------------------------%
+00003 \(\backslash\)documentclass[12pt]\{report\}
+00004 \(\backslash\)usepackage\{sagetex\}
+00005 \(\backslash\)pagenumbering\{gobble\}
+00006 \(\backslash\)oddsidemargin=0pt
+00007 
+00008 %----------------------------------------------------------------------%
+00009 %=======================Title page=====================================%
+00010 %----------------------------------------------------------------------%
+00011 \(\backslash\)title\{Dynamic of Structure: Mode and Time Period\}
+00012 \(\backslash\)author\{Amarjeet Singh \}
+00013 \(\backslash\)begin\{document\}
+00014 \(\backslash\)setcounter\{chapter\}\{1\}
+00015 \(\backslash\)thispagestyle\{plain\}
+00016    \(\backslash\)begin\{titlepage\}
+00017 \(\backslash\)maketitle
+00018    \(\backslash\)end\{titlepage\}
+00019 
+00020 \(\backslash\)begin\{sagesilent\}
+00021    load('main.sage.py')
+00022 
+00023 \(\backslash\)end\{sagesilent\}
+00024 
+00025 Number Of Storeys
+00026 \(\backslash\)begin\{equation\}
+00027    N = \(\backslash\)sage\{Number\_of\_storeys\}
+00028 \(\backslash\)end\{equation\}
+00029 
+00030 
+00031 \(\backslash\)begin\{sagesilent\}
+00032 latex.matrix\_delimiters("\(\backslash\)\{","\(\backslash\)\}")
+00033 \(\backslash\)end\{sagesilent\}
+00034 
+00035 
+00036 Mass
+00037 \(\backslash\)begin\{equation\}
+00038     [M]=\(\backslash\)sage\{mass\}
+00039 \(\backslash\)end\{equation\}
+00040 
+00041 
+00042 
+00043 Time Period
+00044 \(\backslash\)begin\{equation\}
+00045    [T]=\(\backslash\)sage\{Time\_period\}
+00046 \(\backslash\)end\{equation\}
+00047 
+00048 Omega Square
+00049 \(\backslash\)begin\{equation\}
+00050    [\(\backslash\)omega^2] =\(\backslash\)sage\{Omega\_square.transpose()\}
+00051 \(\backslash\)end\{equation\}
+00052 
+00053 Frequency
+00054 \(\backslash\)begin\{equation\}
+00055    [\(\backslash\)omega]=\(\backslash\)sage\{Omega\}
+00056 \(\backslash\)end\{equation\}
+00057 
+00058 \(\backslash\)newpage
+00059 \(\backslash\)begin\{figure\}
+00060    \(\backslash\)sageplot[scale=0.75]\{Graph\}
+00061    \(\backslash\)caption\{Mass Model\}
+00062 \(\backslash\)end\{figure\}
+00063 
+00064 \(\backslash\)begin\{equation\}Number of modes considered=\(\backslash\)sage\{Modes\_considered\}
+00065 \(\backslash\)end\{equation\}
+00066 \(\backslash\)newpage
+00067 
+00068 Level Floor
+00069 \(\backslash\)begin\{equation\}
+00070    [L]=\(\backslash\)sage\{Level\_floor\}
+00071 \(\backslash\)end\{equation\}
+00072 
+00073 Modal Participation Factor
+00074 \(\backslash\)begin\{equation\}
+00075     [p]=\(\backslash\)sage\{Modal\_participation\_factor\}
+00076 \(\backslash\)end\{equation\}
+00077 
+00078 Modal Mass
+00079 \(\backslash\)begin\{equation\}
+00080     [M\_\{\{m\}\}]=\(\backslash\)sage\{Modal\_mass\}
+00081 \(\backslash\)end\{equation\}
+00082 
+00083 Modal Contribution
+00084 \(\backslash\)begin\{equation\}
+00085    [M\_\{\{c\}\}]=\(\backslash\)sage\{Modal\_contribution\}
+00086 \(\backslash\)end\{equation\}
+00087 
+00088 
+00089 Sa By G
+00090 \(\backslash\)begin\{equation\}
+00091     [S\_\{\{a\}\}]=\(\backslash\)sage\{Sa\_by\_g\}
+00092 \(\backslash\)end\{equation\}
+00093 
+00094 A H
+00095 \(\backslash\)begin\{equation\}
+00096    [A\_\{\{H\}\}]=\(\backslash\)sage\{A\_h[:,1]\}
+00097 \(\backslash\)end\{equation\}
+00098 
+00099 \(\backslash\)begin\{sagesilent\}
+00100 latex.matrix\_delimiters("[","]")
+00101 
+00102 \(\backslash\)end\{sagesilent\}
+00103 Design Lateral Force
+00104 \(\backslash\)begin\{equation\}
+00105    [F]=\(\backslash\)sage\{Design\_lateral\_force\}
+00106 \(\backslash\)end\{equation\}
+00107 
+00108 Peak Shear Force
+00109 \(\backslash\)begin\{equation\}
+00110    [V]=\(\backslash\)sage\{Peak\_shear\_force\}
+00111 \(\backslash\)end\{equation\}
+00112 
+00113 
+00114 \(\backslash\)begin\{sagesilent\}
+00115 latex.matrix\_delimiters("\(\backslash\)\{","\(\backslash\)\}")
+00116 \(\backslash\)end\{sagesilent\}
+00117 
+00118 \(\backslash\)section\{Storey Shear Force\}
+00119 ABS-:
+00120 \(\backslash\)begin\{equation\}
+00121    \(\backslash\)sage\{storey\_shear\_force3\}
+00122 \(\backslash\)end\{equation\}
+00123 SRSS -:
+00124 \(\backslash\)begin\{equation\}
+00125    \(\backslash\)sage\{Storey\_shear\_force2\}
+00126 \(\backslash\)end\{equation\}
+00127 Complete Quadratic combination -:
+00128 \(\backslash\)begin\{equation\}
+00129    \(\backslash\)sage\{Lateral\_force\}
+00130 \(\backslash\)end\{equation\}
+00131 Maximum Absolute Response -:
+00132 \(\backslash\)begin\{equation\}
+00133    \(\backslash\)sage\{Force\}
+00134 \(\backslash\)end\{equation\}
+00135 \(\backslash\)end\{document\}
+\end{DoxyCode}

@@ -1,0 +1,245 @@
+\hypertarget{main_8sage_source}{}\section{main.\+sage}
+\label{main_8sage_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/sagemath/main.\+sage@{/home/amarjeet/projects/\+Civil\+Octave/sage/sagemath/main.\+sage}}
+
+\begin{DoxyCode}
+00001 ##
+00002 # @package sagemath.main
+00003 # This module contain code to process the data
+00004 # obtain from input.sage
+00005 # @author amarjeet kapoor
+00006 
+00007 import time
+00008 
+00009 ##
+00010 #  function to pick values according to
+00011 #  type of soil selected
+00012 # @param soilType it tells type of soil
+00013 # @param timePrd time period of mode of floor 
+00014 # @return Sag 
+00015 #
+00016 def funSaog(soilType, timePrd):
+00017 
+00018   t1 = 0; t2 = 0; t3 = 0; t4 = 0
+00019   eq3num = 0
+00020   t2 = 0.10
+00021   if(soilType=='I'):
+00022       t3 = 0.40; eq3num = 1.0
+00023   elif (soilType=='II'):
+00024       t3 = 0.55; eq3num = 1.36
+00025   elif(soilType=='III'):
+00026       t3 = 0.67; eq3num = 1.67
+00027   else:
+00028       Print('Unexpected soil type')
+00029   if (timePrd < t2):
+00030       sag = 1. + 15 * timePrd
+00031   elif(timePrd > t3):
+00032       sag = eq3num / timePrd
+00033   else:
+00034       sag = 2.5
+00035   return sag
+00036 
+00037 """main program ... """
+00038 
+00039 #loading input variables from input.sage
+00040 load('input.sage')
+00041 #changing style of brackets for latex output
+00042 latex.matrix\_delimiters("[","]")
+00043 t=time.clock()
+00044 #converting mass in diagonal matrix
+00045 Mass=matrix(QQ,Number\_of\_storeys,Number\_of\_storeys)
+00046 for i in range(Number\_of\_storeys):
+00047     for j in range(Number\_of\_storeys):
+00048         if(i==j):
+00049             Mass[i,j]=mass[j,0]
+00050         else:
+00051             Mass[i,j]=0
+00052 #calculating level of floors from its height
+00053 Level\_floor=zero\_matrix(QQ,Number\_of\_storeys,1)
+00054 for storey\_i in range(Number\_of\_storeys):
+00055     Level\_floor[storey\_i,0] = Height\_storey[storey\_i,0]
+00056     if(storey\_i>0):
+00057         Level\_floor[storey\_i,0]=(
+00058         Level\_floor[storey\_i,0]+Level\_floor[storey\_i-1,0])
+00059 
+00060 #calcutaing stiffness matrix from stiffness of storeys
+00061 Stiffness\_matrix=zero\_matrix(QQ,Number\_of\_storeys,Number\_of\_storeys)
+00062 for storey\_i in range(Number\_of\_storeys):
+00063    Stiffness\_matrix[storey\_i, storey\_i] = Stiffness\_storey[storey\_i][0]
+00064    if (storey\_i < Number\_of\_storeys-1):
+00065        Stiffness\_matrix[storey\_i, storey\_i]=(
+00066            Stiffness\_matrix[storey\_i, storey\_i] +
+00067            Stiffness\_storey[storey\_i + 1][0])
+00068        Stiffness\_matrix[storey\_i, storey\_i + 1]=(
+00069        -Stiffness\_storey[storey\_i + 1][0])
+00070        Stiffness\_matrix[storey\_i + 1, storey\_i]=(
+00071        Stiffness\_matrix[storey\_i, storey\_i + 1])
+00072 #calculating eginvalues
+00073 w=var('w')
+00074 q=Stiffness\_matrix-(w^2)*Mass
+00075 A=Stiffness\_matrix*Mass.inverse()
+00076 Omega\_square=A.eigenvalues()
+00077 
+00078 #calculating W and time period
+00079 Omega=zero\_matrix(RR,Number\_of\_storeys,1)
+00080 Time\_period=zero\_matrix(RR,Number\_of\_storeys,1)
+00081 for i in range( Number\_of\_storeys):
+00082    q=sqrt(Omega\_square[i])
+00083    Omega[i,0]=n(q)
+00084    Time\_period[i,0]=n(2*pi)/q
+00085 
+00086 
+00087 #Frequency=list()
+00088 #for storey\_i in range(Number\_of\_storeys):
+00089    #Frequency.append(sqrt(Omega\_square[storey\_i].n(digits=4)))
+00090 #calculating egin vectors
+00091 z=A.eigenvectors\_left()
+00092 
+00093 J=zero\_matrix(RR,Number\_of\_storeys,1)
+00094 X=zero\_matrix(RR,Number\_of\_storeys,Number\_of\_storeys)
+00095 for x in range(Number\_of\_storeys):
+00096    q=matrix(z[x][1][0])
+00097    mid=q*Mass*q.transpose()
+00098    J[x,0]=n(mid[0][0])
+00099    X[x]=matrix(q/sqrt(abs(J[x])))
+00100 #ModesContributionX = 0;
+00101 #Number\_of\_modes\_to\_be\_considered = 0;
+00102 
+00103 #calculating Modal participation factor ,sum of modal mass
+00104 #and modal mass
+00105 Modal\_participation\_factor=zero\_matrix(RR,Number\_of\_storeys,1)
+00106 Modal\_mass=zero\_matrix(RR,Number\_of\_storeys,1)
+00107 sum\_modal\_mass=0
+00108 for j in range(Number\_of\_storeys):
+00109         P1,P2=0,0
+00110         m=X[j,:]
+00111         for i in range(Number\_of\_storeys):
+00112             P1=P1+Mass[i][i]*m[0][i]
+00113             P2=P2+Mass[i][i]*(m[0][i])**2
+00114         Modal\_participation\_factor[j,0]=P1/P2
+00115         Modal\_mass[j,0]=(P1)**2/(P2)
+00116         sum\_modal\_mass = sum\_modal\_mass + Modal\_mass[j,0]
+00117 XX=X.transpose()
+00118 #calculating modal contribution of each storey
+00119 Modal\_contribution=zero\_matrix(RR,Number\_of\_storeys,1)
+00120 for i in range(Number\_of\_storeys):
+00121    Modal\_contribution[i,0]=((100 / sum\_modal\_mass )*Modal\_mass[i,0]).n(digits=4)
+00122 
+00123 
+00124 #for Number\_of\_modes\_to\_be\_considered in range(Number\_of\_storeys):
+00125    #ModesContributionX = ModesContributionX+Modal\_contribution[Number\_of\_modes\_to\_be\_considered,0];
+00126    #if (ModesContributionX > Modescontribution):
+00127        #Modes\_considered= Number\_of\_modes\_to\_be\_considered+1
+00128        #break;
+00129        
+00130 if (Modes\_considered == 0 or Modes\_considered > Number\_of\_storeys):
+00131     Modes\_considered = Number\_of\_storeys
+00132     
+00133 #getting type of soil and dependent variables
+00134 Type\_of\_soil=''
+00135 for i in range (Soil\_type):
+00136    Type\_of\_soil = Type\_of\_soil+'I'
+00137 Sa\_by\_g=zero\_matrix(RR,Number\_of\_storeys,1)
+00138 A\_h=zero\_matrix(RR,Number\_of\_storeys,Number\_of\_storeys)
+00139 for index\_time in range(Number\_of\_storeys):
+00140    Sa\_by\_g[index\_time,0] = funSaog(
+00141    Type\_of\_soil, Time\_period[index\_time,0])
+00142    A\_h[index\_time,1]= (
+00143    Zone\_factor/2*Importance\_factor/
+00144    Response\_reduction\_factor * Sa\_by\_g[index\_time,0])
+00145 
+00146 #calculating design lateral force
+00147 
+00148 
+00149 Design\_lateral\_force=zero\_matrix(RR,Number\_of\_storeys,Modes\_considered)
+00150 for index\_i in range(Modes\_considered):
+00151     q=Mass*XX[:,index\_i]
+00152     z=q*matrix(A\_h[index\_i]*Modal\_participation\_factor[index\_i,0]*
+00153     Gravity\_acceleration)
+00154     Design\_lateral\_force[: , index\_i]=z[:,1]
+00155 
+00156 
+00157 #calculating Peak shear force
+00158 Peak\_shear\_force = zero\_matrix(RR,Number\_of\_storeys,Modes\_considered)
+00159 for index\_j in range(Modes\_considered):
+00160    for index\_i in range(Number\_of\_storeys):
+00161        for index\_k in range(Number\_of\_storeys - index\_i ):
+00162            Peak\_shear\_force[index\_i,index\_j]=(
+00163            Design\_lateral\_force[index\_k + index\_i,index\_j] +
+00164             Peak\_shear\_force[index\_i,index\_j])
+00165 
+00166 
+00167 #storey shear force for all modes
+00168 Storey\_shear\_force = zero\_matrix(RR,Number\_of\_storeys,1)
+00169 Storey\_shear\_force2 = zero\_matrix(RR,Number\_of\_storeys,1)
+00170 
+00171 for index\_i in range(Number\_of\_storeys):
+00172     for index\_j in range(Modes\_considered):
+00173         Storey\_shear\_force[index\_i,0]=(Storey\_shear\_force[index\_i,0]+
+00174         abs(Peak\_shear\_force[index\_i,index\_j]))
+00175         Storey\_shear\_force2[index\_i,0]=(Storey\_shear\_force2[index\_i,0]+
+00176         Peak\_shear\_force[index\_i,index\_j]^2)
+00177     Storey\_shear\_force2[index\_i,0] = sqrt(Storey\_shear\_force2[index\_i,0])
+00178     
+00179 Force=zero\_matrix(RR,Number\_of\_storeys,1)
+00180 for i in range(Number\_of\_storeys):
+00181    if(i==Number\_of\_storeys-1):
+00182        Force[i,0]=Storey\_shear\_force[i,0]
+00183        break
+00184    Force[i,0]=Storey\_shear\_force[i,0]-Storey\_shear\_force[i+1,0]
+00185     
+00186  
+00187 P=zero\_matrix(RR,Modes\_considered,Modes\_considered)
+00188 B=zero\_matrix(RR,Modes\_considered,Modes\_considered)
+00189 for i in range(Modes\_considered):
+00190    for j in range(Modes\_considered):
+00191        q=Omega[i,0]
+00192        r=Omega[j,0]
+00193        B[i,j]=(r/q)
+00194 B=B.n(digits=4)
+00195 
+00196 
+00197 for i in range(Modes\_considered):
+00198    for j in range(Modes\_considered):
+00199        b=1+B[i,j]
+00200        q=8*(0.05)^2*(b)*B[i,j]^1.5
+00201        e=(1-B[i,j]^2)^2+4*(0.05)*B[i,j]*(b)^2
+00202        P[i,j]=q/e
+00203    
+00204 Lateral\_force=zero\_matrix(RR,Number\_of\_storeys,1)
+00205 for i in range(Number\_of\_storeys):
+00206    l=Peak\_shear\_force[i,:]*P*Peak\_shear\_force[i,:].transpose()
+00207    Lateral\_force[i,0]=sqrt(l[0,0])
+00208 
+00209 #making graph for eigen vectors of calculated
+00210 p=list()
+00211 for i in range(Number\_of\_storeys):
+00212    for j in range(Number\_of\_storeys):
+00213        if(j==0):
+00214            p.append(line([(XX[j,i],Level\_floor[j,0]),(0,0)],
+00215            color=hue(0.4 + 0.6*(i/10))))
+00216        else:
+00217            p.append(line([(XX[j,i],Level\_floor[j,0]),
+00218            (XX[j-1,i],Level\_floor[j-1,0])],marker='o',
+00219            color=hue(0.4 + 0.6*(i/10))))
+00220 Graph=plot([])
+00221 for r in range(Number\_of\_storeys^2):
+00222    Graph= Graph+p[r]
+00223 
+00224 Omega\_square=matrix(Omega\_square).n(digits=4)
+00225 Time\_period=Time\_period.n(digits=4)
+00226 Omega=Omega.n(digits=4)
+00227 Level\_floor=(Level\_floor).n(digits=4)
+00228 Modal\_participation\_factor=(Modal\_participation\_factor).n(digits=4)
+00229 Modal\_mass=(Modal\_mass).n(digits=4)
+00230 Modal\_contribution=Modal\_contribution.n(digits=4)
+00231 Sa\_by\_g=Sa\_by\_g.n(digits=4)
+00232 A\_h=A\_h.n(digits=4)
+00233 Design\_lateral\_force=Design\_lateral\_force.n(digits=4)
+00234 Peak\_shear\_force=Peak\_shear\_force.n(digits=4)
+00235 storey\_shear\_force3=Storey\_shear\_force[:].n(digits=4)
+00236 Storey\_shear\_force2=Storey\_shear\_force2[:].n(digits=4)
+00237 Lateral\_force=Lateral\_force.n(digits=4)
+00238 Force=Force.n(digits=4)
+00239 print(time.clock()-t)
+00240 
+\end{DoxyCode}
