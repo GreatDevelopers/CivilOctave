@@ -1,0 +1,3 @@
+mass (optional),8,8,4,4
+height (optional),4,4,4,4
+stiffness_storey (optional),1000,800,600,600

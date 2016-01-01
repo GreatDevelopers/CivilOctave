@@ -1,12 +1,13 @@
-"""
-Django settings for sage project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
+##
+# @package sage.settings
+# Django settings for sage project.
+#
+# For more information on this file, see
+# https://docs.djangoproject.com/en/1.7/topics/settings/
+# 
+# For the full list of settings and their values, see
+# https://docs.djangoproject.com/en/1.7/ref/settings/
+# @author amarjeet kapoor
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -102,7 +103,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 
 #Set it's value to the email-id from which the emails will be sent.
-EMAIL_HOST_USER = 'your_email1@gmail.com'
+EMAIL_HOST_USER = 'email.id1@gmail.com'
 
 
 """

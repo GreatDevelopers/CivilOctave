@@ -1,35 +1,46 @@
-"""@package docstring
-This module contain functions to controls veiws
-...
-"""
-# Create your views here.
+##
+# @package civilsage.views
+# This module contain functions to controls veiws of django.
+# It include following functions -:
+# index()
+# matrix() 
+# last()
+# file() 
+# pdfemail()
+# first_write()
+# ...
+# @author amarjeet kapoor
+
+# @code importing modules
 import os,threading
 from django.http import HttpResponse
 from django.shortcuts import render
 import csv,datetime
 from django.core.mail import EmailMessage
 
-
-
+##
+# first veiw created by rendering html page
+# from templete
+# @param request request from civilsage.urls()
+# @return request and path to index.html
+#
 def index(request):
-	"""
-	first veiw created by rendering html page
-	from templete
-	...
-	"""
-
 	return render(request, 'civilsage/index.html')
 
+##
+# This function display matrix for input from user and take 
+# response from index veiw and write input taken through index.html
+# and write in input.sage file
+# @param request request from index.html
+# @return request and path to matrix.html and number of storeys and 
+# input taken from index.html
+# @exception return message and request to index.html
+
 def matrix(request):
-	"""
-	This function display matrix for input from user and take
-	response from index veiw and write input taken through index.html
-	and write in input.sage file
-	...
-	"""
 
 	try:
 		#dictionary of all input tags
+		
 		lists = {'Soil_type':'','Number_of_storeys':''
 		,'Importance_factor':'','Response_reduction_factor':''
 		,'Zone_factor':'','Gravity_acceleration':''
@@ -38,15 +49,20 @@ def matrix(request):
 		name = ''
 
 		#getting input using tags and sending it as response
+		
 		for var in lists.keys():
 			request.session[var] = request.POST.get(var)
 
 		#creating directory from base directory
+		
 		lists['Number_of_storeys'] = request.POST.get('Number_of_storeys')
 
 		#making list for iteratation in templete
+		
 		number_of_storeys = list()
+		
 		#name of directory of specific user
+		
 		for a in range(int(lists['Number_of_storeys'])):
 			number_of_storeys.append('a')
 
@@ -59,6 +75,7 @@ def matrix(request):
 			'email_get': request.POST.get('email_get')})
 		else:
 		#user want to upload matrix value through file or
+		
 			return render( request,'civilsage/matrix.html'
 			,{'number_of_storeys': number_of_storeys,
 			'email_get': request.POST.get('email_get') })
@@ -67,14 +84,15 @@ def matrix(request):
 		,{'message':'please fill again'})
 
 
+##
+# This function gets request from matix.html and
+# gives pdf as output to user it call civil.sh to process inputs and get output
+# @param request request from matrix.html
+# @return request and message to index.html 
+# @return pdf as response 
+# @exception return message and request to index.html
 
 def last(request):
-	"""
-
-	This function gets request from matix.html and
-	gives pdf as output to user
-	...
-	"""
 
 	message='error occured please fill again'
 	try:
@@ -121,17 +139,9 @@ def last(request):
 			message="PDF send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
-			#creating and writing sh file for background processing
-			command=name+'/civil.sh'
-			file=open(command,'w')
-			command='cd '+name
-			file.write(command)
-			file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-			file.write('pdflatex civil.tex\n')
-			file.close()
 
 			#calling sh file for background processing
-			command='sh '+name+'/civil.sh'
+			command='sh  civil.sh '+name
 			os.system(command)
 
 			#opening creted pdf to display to user
@@ -150,12 +160,16 @@ def last(request):
 		{'message':message,'email_get':request.session.get('email_get')})
 
 
-def file(request):
+##
+# This veiw take input data from file uploaded by user and processes
+# to give output in form of response.
+# It call civil.sh to process
+# @param request request from matrix.html
+# @return render() request and message to index.html 
+# @return response pdf as response 
+# @exception return message and request to file.html
 
-	"""Documentation for a function
-	This veiw take input data from file uploaded by user and processes
-	to give output in form of response
-	"""
+def file(request):
 
 	message='please fill again'
 	try:
@@ -188,7 +202,7 @@ def file(request):
 				file.write('[')
 
 				#getting input from tags
-				message="Less no. of elements in row "+str(i)
+				message="Less no. of elements in row "+str(j)
 				if(not data[jar][i].isdigit()):
 					ii=i+1
 				else:
@@ -198,7 +212,7 @@ def file(request):
 				file.write(']')
 
 				#condition to check last element
-				if( i!=int(num)+jar-1):
+				if( i!=int(num)-1):
 					file.write(',')
 			jar=jar+1
 			file.write('])\n')
@@ -208,20 +222,10 @@ def file(request):
 			thread = threading.Thread(target=pdfemail,args=(request,name))
 			thread.daemon = True
 			thread.start()
-			message="PDF send to "+request.POST.get('email_id')
+			message="PDF will be send to "+request.POST.get('email_id')
 			return render(request, "civilsage/index.html", {'message':message})
 		else:
-			#creating and writing sh file for background processing
-			command=name+'/civil.sh'
-			file=open(command,'w')
-			command='cd '+name
-			file.write(command)
-			file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-			file.write('pdflatex civil.tex\n')
-			file.close()
-
-			#calling sh file for background processing
-			command='sh '+name+'/civil.sh'
+			command='sh  civil.sh '+name
 			os.system(command)
 
 			#opening creted pdf to display to user
@@ -236,15 +240,21 @@ def file(request):
 			os.system(command)
 			return response
 	except:
+		command='rm -rf '+name
+		os.system(command)
 		return render(request, "civilsage/file.html",
 		{'message':message,'email_get':request.session.get('email_get')})
 
+##
+# A function that run as background process to send pdf as emails and called
+# by last() and file() when email option is chossen
+# @param request request from calling function 
+# @param name name of directory to becreated for user
+# @exception send error message through email 
+
 def pdfemail(request,name):
-	"""
-	A function that run as background process to send pdf as emails
-	...
-	"""
-	message='unable to send'
+
+	message='unable to send it will be send after sometime'
 	try:
 		#creating and writing sh file for background processing
 		email_id=request.POST.get('email_id')
@@ -252,36 +262,32 @@ def pdfemail(request,name):
 		f=open(command,'w')
 		f.write(email_id)
 		f.close()
-		command=name+'/civil.sh'
-		file=open(command,'w')
-		command='cd '+name
-		file.write(command)
-		file.write('\nlatex civil.tex\nsage civil.sagetex.sage\n')
-		file.write('pdflatex civil.tex\n')
-		file.close()
-		#calling sh file for background processing
-		command='sh '+name+'/civil.sh'
+		command='sh  civil.sh '+name
 		os.system(command)
 		command=name+'/civil.pdf'
 		email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		'You have is ready', to=[email_id])
 		user_email.attach_file(command)
+		message='wrong email id'
 		user_email.send()
 		command='rm -rf '+name
 		os.system(command)
 	except:
-		email_id=request.POST.get('email_id')
+		command='rm -rf '+name
+		if(message=='wrong email id'):
+                    os.system(command)
+                email_id=request.POST.get('email_id')
 		user_email = EmailMessage('Dynamics of structure',
 		message, to=[email_id])
 
-def first_write(request):
-	"""
+##
+# This function that write basic input same for all veiws and called
+# by last() and file() when email option is chossen
+# @param request request from calling function 
+# @return name,message name of directory and Error message  
 
-	This function that write basic input same for all
-	veiws
-	...
-	"""
+def first_write(request):
 	message='error occured please fill again'
 
 	#dictionary of all input tags
@@ -290,7 +296,7 @@ def first_write(request):
 	,'Zone_factor':'','Gravity_acceleration':''
 	,'Modes_considered':''}
 	#name of directory of specific user
-	name=request.session.session_key+str(datetime.datetime.now())
+	name='Temp'+request.session.session_key+str(datetime.datetime.now())
 	name=name.replace(" ", "")
 	#getting input using tags
 	for var in lists.keys():

@@ -1,3 +1,9 @@
+##
+# @package sage.urls
+# This module contain urlspatterns to map to  civilsage.urls in django.
+#...
+# @author amarjeet kapoor
+
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 

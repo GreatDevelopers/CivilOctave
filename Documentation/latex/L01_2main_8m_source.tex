@@ -1,0 +1,64 @@
+\hypertarget{L01_2main_8m_source}{}\section{main.\+m}
+\label{L01_2main_8m_source}\index{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+L01/main.\+m@{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+L01/main.\+m}}
+
+\begin{DoxyCode}
+00001 % Program to formulate global stiffness \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00002 clc
+00003 clear
+00004 
+00005 %% Initialisation [PRE-PROCESSING]
+00006 
+00007 % Following are the \hyperlink{namespacemain}{main} variables used. No explanation is given as
+00008 %   names are \textcolor{keyword}{self} explanatory.
+00009 % \hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes}
+00010 % Number\_of\_elements
+00011 % \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}
+00012 % Local\_stiffness\_matrix
+00013 % Load\_matrix
+00014 % \hyperlink{L01_2main_8m_aba5eae545abb25c91b167b9fcdf95479}{Element\_incidences}
+00015 %   (Information on nodes correspinding to \hyperlink{jquery_8min_8js_a18d9b499a0765bf2fe5f372ff2fc0236}{each} elements)
+00016 
+00017 
+00018 load \hyperlink{namespaceinput}{input}.mat
+00019 
+00020 %Variable initialisation
+\hypertarget{L01_2main_8m_source_l00021}{}\hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{00021} \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(\hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes},
+      \hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes}) = 0;
+00022 
+00023 %% [PROCESSING]
+00024 
+00025 % Following loop adds local matrices of \hyperlink{jquery_8min_8js_a18d9b499a0765bf2fe5f372ff2fc0236}{each} element to form Global
+00026 % Matrix.
+00027 
+\hypertarget{L01_2main_8m_source_l00028}{}\hyperlink{L01_2main_8m_aeaaf98952d2cff93963f1287282861de}{00028} for \hyperlink{L01_2main_8m_aeaaf98952d2cff93963f1287282861de}{element\_i} = 1:Number\_of\_elements
+00029     
+00030     \hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i} = \hyperlink{L01_2main_8m_aba5eae545abb25c91b167b9fcdf95479}{Element\_incidences}(\hyperlink{L01_2main_8m_aeaaf98952d2cff93963f1287282861de}{element\_i},1);
+\hypertarget{L01_2main_8m_source_l00031}{}\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{00031}     \hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j} = \hyperlink{L01_2main_8m_aba5eae545abb25c91b167b9fcdf95479}{Element\_incidences}(\hyperlink{L01_2main_8m_aeaaf98952d2cff93963f1287282861de}{element\_i},2);
+\hypertarget{L01_2main_8m_source_l00032}{}\hyperlink{L01_2main_8m_a0b4fbdd467cb846f22c44ad1178c22d4}{00032}     \hyperlink{L01_2main_8m_a0b4fbdd467cb846f22c44ad1178c22d4}{ks} = Local\_stiffness\_matrix(\hyperlink{L01_2main_8m_aeaaf98952d2cff93963f1287282861de}{element\_i})*[1 -1;-1 1];
+00033     
+00034     \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(i,i) = \hyperlink{L01_2main_8m_a0b4fbdd467cb846f22c44ad1178c22d4}{ks}(1,1) + 
+      \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(i,i);
+00035     \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(i,\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j}) = \hyperlink{L01_2main_8m_a0b4fbdd467cb846f22c44ad1178c22d4}{ks}(1,2) + 
+      \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(i,\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j});
+00036     \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j},i) = \hyperlink{L01_2main_8m_a0b4fbdd467cb846f22c44ad1178c22d4}{ks}(2,1) + 
+      \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j},i);
+00037     \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j},\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j}) = \hyperlink{L01_2main_8m_a0b4fbdd467cb846f22c44ad1178c22d4}{ks}(2,2) + 
+      \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j},\hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j});
+00038 
+00039 end
+00040 
+00041 %% [POST-PROCESSING]
+00042 
+00043 %% Echo \hyperlink{namespaceinput}{input} data
+00044 
+00045 Number\_of\_elements
+00046 \hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes}
+00047 \hyperlink{L01_2main_8m_aba5eae545abb25c91b167b9fcdf95479}{Element\_incidences}
+00048 Local\_stiffness\_matrix
+00049 Load\_matrix
+00050 
+00051 \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix} % Global stiffness \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00052 %Load\_matrix % GLobal force vector
+00053 
+00054 % End of \hyperlink{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb}{file}
+\end{DoxyCode}
