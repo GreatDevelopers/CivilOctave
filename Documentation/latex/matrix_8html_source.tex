@@ -1,0 +1,98 @@
+\hypertarget{matrix_8html_source}{}\section{matrix.\+html}
+\label{matrix_8html_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/civilsage/matrix.\+html@{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/civilsage/matrix.\+html}}
+
+\begin{DoxyCode}
+00001 \{% extends "base.html" %\}
+00002 \{% block body %\}
+00003 <div class="container">
+00004 <h3>\{\{ message \}\}</h3>
+00005 <div class="input-group container width"></div>
+00006 <form action="\{% url 'last' %\}" method="post"
+00007     enctype="multipart/form-data">
+00008     \{% csrf\_token %\}
+00009     \{% if email\_get == 'Y' %\}
+00010         <div class="container">
+00011             <div class="row">
+00012                 <div class="row">
+00013                     <div class="col-md-4 col-sm-12 col-xs-12"> 
+00014                         <h3 class="center"><label for="email\_id">
+00015                             Email address</label></h3>
+00016                     </div>
+00017                 </div>
+00018             <div class="row">
+00019                 <div class="col-md-1 col-sm-2 col-xs-2"></div>
+00020                 <div class="col-md-6 col-xs-8 col-sm-8">
+00021                     <input class="form-control input-lg space" 
+00022                         type="email" name="email\_id" id="email\_id"/>
+00023                 </div>
+00024                 <div class="col-xs-2 col-md-5 col-sm-2"></div>
+00025             </div>
+00026         </div>
+00027     \{% endif %\}
+00028 
+00029     <!-- 3 Column layout  -->
+00030     <div class="row">    
+00031         <div class="col-md-4 col-sm-12 col-xs-12">
+00032             <h3 class="center">Mass</h3>
+00033             \{% for row in  number\_of\_storeys %\}
+00034             <div class="row">
+00035                 <div class="col-md-1 col-sm-2 col-xs-2"></div>
+00036                 <div class="col-md-10 col-xs-8 col-sm-8">
+00037                     <input class="input-lg space form-control"
+00038                         type="number" name="mass\{\{forloop.counter0\}\}"
+00039                         placeholder="m\{\{forloop.counter0\}\}" required 
+00040                         min=0 step="any">
+00041                 </div>
+00042                 <div class="col-xs-2 col-md-1 col-sm-2"></div>
+00043             </div>
+00044             \{% endfor %\}
+00045         </div> 
+00046         
+00047         <div class="col-md-4 col-sm-12 col-xs-12">
+00048             <h3 class="center">Height storey</h3>
+00049     
+00050             \{% for row in number\_of\_storeys %\}
+00051     
+00052             <div class="row">
+00053                 <div class="col-md-1 col-sm-2 col-xs-2"></div>
+00054                 <div class="col-md-10 col-xs-8 col-sm-8">
+00055                 <input class="input-lg space form-control"
+00056                     type="number" step="any" min="0"
+00057                     name="Height\_storey\{\{forloop.counter0\}\}"
+00058                     placeholder="h\{\{forloop.counter0\}\}" required>
+00059             </div>
+00060                 <div class="col-xs-2 col-md-1 col-sm-2"></div>
+00061             </div>
+00062              \{% endfor %\}
+00063         </div>
+00064 
+00065         <div class="col-md-4 col-sm-12 col-xs-12">
+00066             <h3 class="center">Stiffness storey</h3>
+00067     
+00068             \{% for row in number\_of\_storeys %\}
+00069             <div class="row">
+00070                 <div class="col-md-1 col-sm-2 col-xs-2"></div>
+00071                 <div class="col-md-10 col-xs-8 col-sm-8">
+00072                 <input class="input-lg space form-control"
+00073                     type="number" step="any"  min="0"
+00074                     name="Stiffness\_storey\{\{forloop.counter0\}\}"
+00075                     placeholder="s\{\{forloop.counter0\}\}" required >
+00076             </div>
+00077                 <div class="col-xs-2 col-md-1 col-sm-2"></div>
+00078             </div>
+00079             \{% endfor %\}
+00080         </div>
+00081     </div>
+00082 
+00083     <div class="row">
+00084         <div class="col-md-5 col-sm-5 col-xs-5"></div>
+00085             <div class="col-md-7 col-xs-7 col-sm-7">
+00086                 <input class="btn-lg btn-success space" type="submit" 
+00087                     value="Submit">
+00088             </div>
+00089         </div>
+00090     </div>
+00091 </form>
+00092 </div>
+00093 \{% endblock %\}
+\end{DoxyCode}

@@ -1,0 +1,44 @@
+\hypertarget{manage_8py_source}{}\section{manage.\+py}
+\label{manage_8py_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/manage.\+py@{/home/amarjeet/projects/\+Civil\+Octave/sage/manage.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{manage_8py_source_l00001}{}\hyperlink{namespacemanage}{00001} \textcolor{comment}{##}
+00002 \textcolor{comment}{# @package manage}
+00003 \textcolor{comment}{# This code to start server and application }
+00004 \textcolor{comment}{# additional argument is find initial to start processing of intruppted }
+00005 \textcolor{comment}{# files }
+00006 \textcolor{comment}{# @author amarjeet kapoor}
+00007 \textcolor{comment}{# }
+00008 \textcolor{comment}{#}
+00009  
+00010 
+00011 
+00012 \textcolor{comment}{#!/usr/bin/env python}
+00013 \textcolor{keyword}{import} os
+00014 \textcolor{keyword}{import} sys,threading
+00015 \textcolor{keyword}{import} initial\_file
+00016 
+00017 
+00018 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"\_\_main\_\_"}:
+00019 
+00020     os.environ.setdefault(\textcolor{stringliteral}{"DJANGO\_SETTINGS\_MODULE"}, \textcolor{stringliteral}{"sage.settings"})
+00021 
+00022     \textcolor{keyword}{from} django.core.management \textcolor{keyword}{import} execute\_from\_command\_line
+00023     
+00024     
+00025     \textcolor{comment}{##}
+00026     \textcolor{comment}{# code to fire thread to process intrupted process}
+00027     \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if}(sys.argv[1]== \textcolor{stringliteral}{'initial'}):
+00028         
+00029         \textcolor{comment}{#remove our argument so that argv can be send to django}
+00030         sys.argv.remove(\textcolor{stringliteral}{'initial'})
+00031         
+00032         \textcolor{comment}{## }
+00033         \textcolor{comment}{# starting thread}
+00034         \textcolor{comment}{# @args initial\_file.pdfemail()}
+\hypertarget{manage_8py_source_l00035}{}\hyperlink{namespacemanage_ab0c13dd165a5c8a6f3e3c029a2acd921}{00035}         thread = threading.Thread(target=initial\_file.pdfemail,args=())
+00036         thread.daemon = \textcolor{keyword}{True}
+00037         thread.start()
+00038 
+00039     execute\_from\_command\_line(sys.argv)
+\end{DoxyCode}

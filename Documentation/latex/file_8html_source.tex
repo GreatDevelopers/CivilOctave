@@ -1,0 +1,69 @@
+\hypertarget{file_8html_source}{}\section{file.\+html}
+\label{file_8html_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/civilsage/file.\+html@{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/templates/civilsage/file.\+html}}
+
+\begin{DoxyCode}
+00001 \{% extends "base.html" %\}
+00002 \{% block title %\}CSV\{% endblock %\}
+00003 
+00004 \{% block body %\}
+00005     <div class="container">
+00006         <h3>\{\{message\}\}</h3>
+00007         <form action="\{% url 'file' %\}" method="post"
+00008             enctype="multipart/form-data">
+00009             \{% csrf\_token %\}
+00010             \{% if email\_get == 'Y' %\}
+00011                 <div class="container">
+00012                         <div class="row">
+00013                             <div class="col-md-4 col-sm-12 col-xs-12"> 
+00014                                 <h3 class="center"><label 
+00015                                     for="email\_id">Email address</label>
+00016                                 </h3>
+00017                             </div>
+00018                         </div>
+00019                         <div class="row">
+00020                             <div class="col-md-1 col-sm-2 col-xs-2">
+00021                             </div>
+00022                             <div class="col-md-6 col-xs-8 col-sm-8">
+00023                                 <input class="form-control input-lg 
+00024                                     space" type="email" name="email\_id" 
+00025                                     id="email\_id"/>
+00026                             </div>
+00027                             <div class="col-xs-2 col-md-5 col-sm-2">
+00028                             </div>
+00029                         </div>
+00030                </div>
+00031             \{% endif %\}
+00032                <div class="container">
+00033                     <div class="row">
+00034                         <div class="col-md-4 col-sm-12 col-xs-12"> 
+00035                             <h3 class="center"><label 
+00036                                 for="csvfile">Select CSV</label>
+00037                             </h3>
+00038                         </div>
+00039                     </div>
+00040                     <div class="row">
+00041                         <div class="col-md-1 col-sm-2 col-xs-2">
+00042                         </div>
+00043                         <div class="col-md-6 col-xs-8 col-sm-8">
+00044                             <input class="form-control btn-lg 
+00045                                 input-lg space" type="file" id="csvfile"
+00046                                 name="input\_file">
+00047                         </div>
+00048                         <div class="col-xs-2 col-md-5 col-sm-2">
+00049                         </div>
+00050                     </div>
+00051                     <div class="row">
+00052                         <div class="col-md-3 col-sm-5 col-xs-4">
+00053                         </div>
+00054                         <div class="row col-md-5 col-sm-5 col-xs-6">
+00055                             <input class="btn-lg btn-succes" 
+00056                             type="submit" value="Submit">
+00057                         </div>
+00058                         <div class="col-md-4 col-sm-2 col-xs-2">
+00059                         </div>
+00060                     </div>
+00061                 </div>
+00062         </form>
+00063     </div>
+00064 \{% endblock %\}
+\end{DoxyCode}

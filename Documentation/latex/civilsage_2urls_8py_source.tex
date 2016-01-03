@@ -1,0 +1,25 @@
+\hypertarget{civilsage_2urls_8py_source}{}\section{urls.\+py}
+\label{civilsage_2urls_8py_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/urls.\+py@{/home/amarjeet/projects/\+Civil\+Octave/sage/civilsage/urls.\+py}}
+
+\begin{DoxyCode}
+\hypertarget{civilsage_2urls_8py_source_l00001}{}\hyperlink{namespacecivilsage_1_1urls}{00001} \textcolor{comment}{##}
+00002 \textcolor{comment}{# @package civilsage.urls}
+00003 \textcolor{comment}{# This module contain urlspatterns to map to html file in django.}
+00004 \textcolor{comment}{#...}
+00005 \textcolor{comment}{# @author amarjeet kapoor}
+00006 
+00007 \textcolor{keyword}{from} django.conf.urls \textcolor{keyword}{import} url
+00008 
+00009 \textcolor{keyword}{from} . \textcolor{keyword}{import} views
+00010 
+\hypertarget{civilsage_2urls_8py_source_l00011}{}\hyperlink{namespacecivilsage_1_1urls_a46a501661622e9e2b11c9d6da43bbec0}{00011} urlpatterns = [
+00012     \textcolor{comment}{#directs to index veiw}
+00013     url(\textcolor{stringliteral}{r'^$'}, views.index, name=\textcolor{stringliteral}{'index'}),
+00014     \textcolor{comment}{#directs request to matrix veiw}
+00015     url(\textcolor{stringliteral}{r'^matrix/$'}, views.matrix, name=\textcolor{stringliteral}{'matrix'}),
+00016     \textcolor{comment}{#directs request to file veiw to upload file}
+00017     url(\textcolor{stringliteral}{r'^file/$'}, views.file, name=\textcolor{stringliteral}{'file'}),
+00018     \textcolor{comment}{#directs request to last veiw}
+00019     url(\textcolor{stringliteral}{r'^last/$'}, views.last, name=\textcolor{stringliteral}{'last'}),
+00020 ]
+\end{DoxyCode}

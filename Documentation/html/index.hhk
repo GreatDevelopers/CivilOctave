@@ -5,15 +5,15 @@
 </OBJECT>
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="jquery_8min_8js.html#a43f0b96ea8ec44ca20ba86809a785614"><param name="Name" value="!function"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="_sage_const_1"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="input"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="input.sage.py"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="_sage_const_2"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="main"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad85d7913c0e40b9e1f30e64611a0fafa"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a807fd6f7029374e2d9e918088f60bb88"><param name="Name" value="_sage_const_3"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a807fd6f7029374e2d9e918088f60bb88"><param name="Name" value="input"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a807fd6f7029374e2d9e918088f60bb88"><param name="Name" value="input.sage.py"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="bootstrap_8min_8js.html#a1f5870dcf487187f13d5fd328ed9e6e7"><param name="Name" value="a"></OBJECT>
   <UL>
@@ -49,8 +49,11 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="main.sage.py"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a6ae8768d11174f5baf9febc5244d6f06"><param name="Name" value="B"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab1e783015bffd2e1d395a9099143d967"><param name="Name" value="b"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="BASE_DIR"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#add6d83672b1137d74a06bf1606aecf04"><param name="Name" value="sage::settings"></OBJECT>
@@ -271,7 +274,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html"><param name="Name" value="input"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html"><param name="Name" value="input.sage.py"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="_sage_const_1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a807fd6f7029374e2d9e918088f60bb88"><param name="Name" value="_sage_const_3"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="Height_storey"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="input_8sage_8py.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
@@ -285,7 +288,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html"><param name="Name" value="input"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a221dbe0b6723929966d68d807eb5b2db"><param name="Name" value="_sage_const_1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a807fd6f7029374e2d9e918088f60bb88"><param name="Name" value="_sage_const_3"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a55ab15c1c171513e99332aa50c723764"><param name="Name" value="Gravity_acceleration"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a01ad5b8730285b6aaebb2bc3f3fc0894"><param name="Name" value="Height_storey"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespaceinput.html#a0840d963ea24db338f3ab4457defb494"><param name="Name" value="Importance_factor"></OBJECT>
@@ -443,8 +446,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9d22ac077c22a97b1b095068a1500d16"><param name="Name" value="Modes_considered"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#af44dcb60e61649c65257466d65b4d548"><param name="Name" value="Omega"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a63066086ca439ff34de16475b00387f5"><param name="Name" value="Omega_square"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ab31fc16b432d2248a6c76c6a18d741d0"><param name="Name" value="p"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ad403610ba53df02f8dfaff8dd64227b3"><param name="Name" value="P"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#add7e0394c94a2e2115aff785eb6995e3"><param name="Name" value="P1"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a1b83b7a3849a8e1c84b9906c45625fec"><param name="Name" value="P2"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#a9e135aea550f8ea419857f817a196d56"><param name="Name" value="Peak_shear_force"></OBJECT>
@@ -589,7 +592,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacemain.html#ac3a509169246622b50fc23d809d30833"><param name="Name" value="main.sage.py"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="DoS_201_2main_8m.html#aac9abc95cd2ddc27fa84fb4440b62888"><param name="Name" value="sag"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="md__home_amarjeet_projects_CivilOctave_sage_Readme.html"><param name="Name" value="SAGE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage.html"><param name="Name" value="sage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="sage_2urls_8py.html"><param name="Name" value="sage/urls.py"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html"><param name="Name" value="sage::settings"></OBJECT>
@@ -631,6 +633,9 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1wsgi.html#a1ddb23bace7377dbda42c61a804bb9aa"><param name="Name" value="application"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesagemath.html"><param name="Name" value="sagemath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesagemath_1_1input.html"><param name="Name" value="sagemath::input"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesagemath_1_1main.html"><param name="Name" value="sagemath::main"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="SECRET_KEY"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="namespacesage_1_1settings.html#acc7cb44e3d92fc1334c19318ede49bc8"><param name="Name" value="sage::settings"></OBJECT>

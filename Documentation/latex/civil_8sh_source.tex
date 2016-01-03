@@ -1,0 +1,14 @@
+\hypertarget{civil_8sh_source}{}\section{civil.\+sh}
+\label{civil_8sh_source}\index{/home/amarjeet/projects/\+Civil\+Octave/sage/civil.\+sh@{/home/amarjeet/projects/\+Civil\+Octave/sage/civil.\+sh}}
+
+\begin{DoxyCode}
+00001 ##
+00002 # This file run all files needed to process data sagemath.main and get output as # pdf through latex  
+00003 # @author amarjeet kapoor
+00004 # 
+00005 #
+00006 cd $1
+00007 latex civil.tex
+00008 sage civil.sagetex.sage
+00009 pdflatex civil.tex
+\end{DoxyCode}

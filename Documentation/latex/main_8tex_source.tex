@@ -1,0 +1,33 @@
+\hypertarget{main_8tex_source}{}\section{main.\+tex}
+\label{main_8tex_source}\index{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+Do\+S/01/tex/main.\+tex@{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+Do\+S/01/tex/main.\+tex}}
+
+\begin{DoxyCode}
+00001 % Setting up document class
+00002 \(\backslash\)documentclass\{article\}
+00003 
+00004 % Inputting usepackage.tex file
+00005    \(\backslash\)input\{usepackage.tex\}
+00006 
+00007 % Main source of a document
+00008 \(\backslash\)begin\{document\}
+00009        
+00010 % Inputting title.tex file
+00011    \(\backslash\)input\{title.tex\}
+00012 
+00013    \(\backslash\)input\{abstract.tex\}
+00014 
+00015 \(\backslash\)begin\{figure\}
+00016 \(\backslash\)centering
+00017 
+      \(\backslash\)includegraphics[width=1.0\(\backslash\)textwidth,height=0.75\(\backslash\)textheight,resolution=300,keepaspectratio]\{../ModeShape.png\}
+00018 \(\backslash\)caption\{Mode shapes\}
+00019 \(\backslash\)label\{ModeShape\}
+00020 \(\backslash\)end\{figure\}
+00021 
+00022 
+00023 % Inputting chapter.tex file
+00024    \(\backslash\)input\{../output.tex\}
+00025 
+00026 % Closing document
+00027 \(\backslash\)end\{document\}
+\end{DoxyCode}

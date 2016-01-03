@@ -1,0 +1,285 @@
+\hypertarget{DoS_201_2main_8m_source}{}\section{main.\+m}
+\label{DoS_201_2main_8m_source}\index{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+Do\+S/01/main.\+m@{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+Do\+S/01/main.\+m}}
+
+\begin{DoxyCode}
+00001 % Program to formulate global stiffness \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00002 clc
+00003 clear
+00004 
+00005 
+00006 load \hyperlink{namespaceinput}{input}.mat
+00007 
+00008 %\hyperlink{namespaceinput_a6221ae01cf2fb9e8cd22204749785a0e}{Soil\_type}
+\hypertarget{DoS_201_2main_8m_source_l00009}{}\hyperlink{DoS_201_2main_8m_a3e2c6a7e7b1f0ac68cc462d26373be9b}{00009} \hyperlink{DoS_201_2main_8m_a3e2c6a7e7b1f0ac68cc462d26373be9b}{Type\_of\_soil} = \textcolor{stringliteral}{''};
+00010 
+\hypertarget{DoS_201_2main_8m_source_l00011}{}\hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{00011} \textcolor{keywordflow}{for} \hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i} = 1:\hyperlink{namespaceinput_a6221ae01cf2fb9e8cd22204749785a0e}{Soil\_type}
+00012   \hyperlink{DoS_201_2main_8m_a3e2c6a7e7b1f0ac68cc462d26373be9b}{Type\_of\_soil} = strcat(\hyperlink{DoS_201_2main_8m_a3e2c6a7e7b1f0ac68cc462d26373be9b}{Type\_of\_soil}, \textcolor{charliteral}{'I'});
+00013 end
+00014 
+00015 %\hyperlink{DoS_201_2main_8m_a3e2c6a7e7b1f0ac68cc462d26373be9b}{Type\_of\_soil}
+00016 
+00017 %% Function to write Matrix
+00018 
+\hypertarget{DoS_201_2main_8m_source_l00019}{}\hyperlink{DoS_201_2main_8m_ae95ab11d59379638967673bd74654b2a}{00019} \hyperlink{DoS_201_2main_8m_a3a318718cf4c9c1380475d059171d8f3}{t1} = 0; \hyperlink{DoS_201_2main_8m_a24aeadb733f27244ec14e4cba82eeee9}{t2} = 0; \hyperlink{DoS_201_2main_8m_a80d62394ff82e3ae283e9113bca340a2}{t3} = 0; \hyperlink{DoS_201_2main_8m_ae95ab11d59379638967673bd74654b2a}{t4} = 0; 
+\hypertarget{DoS_201_2main_8m_source_l00020}{}\hyperlink{DoS_201_2main_8m_a8ecbd124ddcdab7fc367443a82b241af}{00020} \hyperlink{DoS_201_2main_8m_a8ecbd124ddcdab7fc367443a82b241af}{eq3num} = 0;
+00021 
+\hypertarget{DoS_201_2main_8m_source_l00022}{}\hyperlink{DoS_201_2main_8m_aac9abc95cd2ddc27fa84fb4440b62888}{00022} \textcolor{keyword}{function} \hyperlink{DoS_201_2main_8m_aac9abc95cd2ddc27fa84fb4440b62888}{sag} = \hyperlink{namespacemain_a4f60afd2426ee9409955e4352b3f0486}{funSaog}(soilType, timePrd)
+00023   \hyperlink{DoS_201_2main_8m_a24aeadb733f27244ec14e4cba82eeee9}{t2} = 0.10;
+00024   switch soilType
+00025     case 'I' 
+00026       \hyperlink{DoS_201_2main_8m_a80d62394ff82e3ae283e9113bca340a2}{t3} = 0.40; \hyperlink{DoS_201_2main_8m_a8ecbd124ddcdab7fc367443a82b241af}{eq3num} = 1.0;
+00027     case 'II'
+00028       t3 = 0.55; \hyperlink{DoS_201_2main_8m_a8ecbd124ddcdab7fc367443a82b241af}{eq3num} = 1.36;
+00029     case 'III'
+00030       t3 = 0.67; \hyperlink{DoS_201_2main_8m_a8ecbd124ddcdab7fc367443a82b241af}{eq3num} = 1.67;
+00031     otherwise
+00032       \hyperlink{DoS_201_2main_8m_a29249d852e6e3fd1e206e1f920300e24}{warning}('Unexpected soil type')
+00033   end
+00034   \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if} (timePrd < t2)
+00035     \hyperlink{DoS_201_2main_8m_aac9abc95cd2ddc27fa84fb4440b62888}{sag} = 1. + 15 * timePrd;  
+00036   \hyperlink{DoS_201_2main_8m_a0d135864d9bc0103cbd903c62d64b088}{elseif} (timePrd > t3)
+00037     \hyperlink{DoS_201_2main_8m_aac9abc95cd2ddc27fa84fb4440b62888}{sag} = \hyperlink{DoS_201_2main_8m_a8ecbd124ddcdab7fc367443a82b241af}{eq3num} / timePrd; 
+00038   else
+00039     \hyperlink{DoS_201_2main_8m_aac9abc95cd2ddc27fa84fb4440b62888}{sag} = 2.5;
+00040   end
+00041 end
+00042 
+\hypertarget{DoS_201_2main_8m_source_l00043}{}\hyperlink{DoS_201_2main_8m_a8c0a4f44ca03289871d3743578e0412c}{00043} function \hyperlink{DoS_201_2main_8m_a8c0a4f44ca03289871d3743578e0412c}{matrixTeX}(\hyperlink{namespacemain_ad101f166a53497f04b37636bcadbfe65}{A}, fmt, align)
+00044   disp(['\(\backslash\)section\{\textcolor{stringliteral}{',strrep(inputname(1),'}\_\textcolor{charliteral}{','} \textcolor{stringliteral}{'),'}\}\textcolor{stringliteral}{'])}
+00045 \textcolor{stringliteral}{  [m,n] = size(A);}
+00046 \textcolor{stringliteral}{  if isvector(A)}
+00047 \textcolor{stringliteral}{    myMatrix = '}Bmatrix\textcolor{stringliteral}{';}
+00048 \textcolor{stringliteral}{  else}
+00049 \textcolor{stringliteral}{    myMatrix = '}bmatrix\textcolor{stringliteral}{';}
+00050 \textcolor{stringliteral}{  end}
+00051 \textcolor{stringliteral}{  if(nargin < 2)}
+00052 \textcolor{stringliteral}{    %}
+00053 \textcolor{stringliteral}{    % Is the matrix full of integers?}
+00054 \textcolor{stringliteral}{    % If so, then use integer output}
+00055 \textcolor{stringliteral}{    %}
+00056 \textcolor{stringliteral}{    if( norm(A-floor(A)) < eps )}
+00057 \textcolor{stringliteral}{      intA = 1;}
+00058 \textcolor{stringliteral}{      fmt  = '}%\hyperlink{bootstrap_8min_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}\textcolor{stringliteral}{';}
+00059 \textcolor{stringliteral}{    else}
+00060 \textcolor{stringliteral}{      intA = 0;}
+00061 \textcolor{stringliteral}{      fmt  = '}%8.4f\textcolor{stringliteral}{';}
+00062 \textcolor{stringliteral}{    end}
+00063 \textcolor{stringliteral}{  end}
+00064 \textcolor{stringliteral}{  fmtstring1 = ['} \textcolor{stringliteral}{',fmt,'} & \textcolor{stringliteral}{'];}
+00065 \textcolor{stringliteral}{  fmtstring2 = ['} \textcolor{stringliteral}{',fmt,'} \(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\) \(\backslash\)n\textcolor{stringliteral}{'];}
+00066 \textcolor{stringliteral}{  if(nargin < 3)}
+00067 \textcolor{stringliteral}{    printf('}\(\backslash\)\(\backslash\)[\(\backslash\)n\(\backslash\)\(\backslash\)begin\{%s\}\(\backslash\)n',myMatrix);
+00068   else
+00069     printf('\(\backslash\)\(\backslash\)[\(\backslash\)n\(\backslash\)\(\backslash\)begin\{%s*\}[%s]\(\backslash\)n',myMatrix,align);
+00070   endif  
+00071   for i = 1:m
+00072     for j = 1:n-1
+00073        printf(fmtstring1,A(i,j));
+00074     end
+00075     printf(fmtstring2, A(i,n));
+00076   end
+00077   if(nargin < 3)
+00078     printf('\(\backslash\)\(\backslash\)end\{%s\}\(\backslash\)n\(\backslash\)\(\backslash\)]\(\backslash\)n',myMatrix);
+00079   else
+00080     printf('\(\backslash\)\(\backslash\)end\{%s*\}\(\backslash\)n\(\backslash\)\(\backslash\)]\(\backslash\)n\textcolor{stringliteral}{',myMatrix);}
+00081 \textcolor{stringliteral}{  endif  }
+00082 \textcolor{stringliteral}{end}
+00083 \textcolor{stringliteral}{}
+00084 \textcolor{stringliteral}{%% Initialisation [PRE-PROCESSING]}
+00085 \textcolor{stringliteral}{}
+00086 \textcolor{stringliteral}{% Following are the main variables used. No explanation is given as}
+00087 \textcolor{stringliteral}{%  names are self explanatory.}
+00088 \textcolor{stringliteral}{% Number\_of\_storeys}
+00089 \textcolor{stringliteral}{% Mass}
+00090 \textcolor{stringliteral}{% Stiffness\_storey}
+00091 \textcolor{stringliteral}{%  (Summed shear stiffness of all columns in a storey)}
+00092 \textcolor{stringliteral}{%}
+00093 \textcolor{stringliteral}{% Frequency is vector matrix while Omega is diagonal matrix.}
+00094 \textcolor{stringliteral}{% Time\_periods is vector matrix while Time\_period is diagonal matrix.}
+00095 \textcolor{stringliteral}{}
+00096 \textcolor{stringliteral}{%Variable initialisation}
+00097 \textcolor{stringliteral}{Stiffness\_matrix = zeros(Number\_of\_storeys, Number\_of\_storeys,'}\textcolor{keywordtype}{double}\textcolor{stringliteral}{');}
+00098 \textcolor{stringliteral}{Time\_period = zeros(Number\_of\_storeys, Number\_of\_storeys, '}\textcolor{keywordtype}{double}\textcolor{stringliteral}{');}
+00099 \textcolor{stringliteral}{}
+00100 \textcolor{stringliteral}{}
+00101 \textcolor{stringliteral}{%% Display input}
+00102 \textcolor{stringliteral}{}
+00103 \textcolor{stringliteral}{disp(['}\(\backslash\)section\{Given data\} Number of storeys = \textcolor{stringliteral}{',num2str(Number\_of\_storeys)])}
+00104 \textcolor{stringliteral}{%disp(Number\_of\_storeys)}
+00105 \textcolor{stringliteral}{}
+00106 \textcolor{stringliteral}{matrixTeX(Mass,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00107 \textcolor{stringliteral}{}
+00108 \textcolor{stringliteral}{%matrixTeX(Stiffness\_storey)}
+00109 \textcolor{stringliteral}{}
+00110 \textcolor{stringliteral}{%% [PROCESSING]}
+00111 \textcolor{stringliteral}{}
+00112 \textcolor{stringliteral}{% Following loop adds local matrices of each element to form Global}
+00113 \textcolor{stringliteral}{% Matrix.}
+00114 \textcolor{stringliteral}{}
+00115 \textcolor{stringliteral}{for storey\_i = 1:Number\_of\_storeys}
+00116 \textcolor{stringliteral}{  Stiffness\_matrix(storey\_i, storey\_i) = ...}
+00117 \textcolor{stringliteral}{    Stiffness\_storey(storey\_i);}
+00118 \textcolor{stringliteral}{}
+00119 \textcolor{stringliteral}{  if (storey\_i < Number\_of\_storeys )}
+00120 \textcolor{stringliteral}{    Stiffness\_matrix(storey\_i, storey\_i) = ...}
+00121 \textcolor{stringliteral}{      Stiffness\_matrix(storey\_i, storey\_i) + ...}
+00122 \textcolor{stringliteral}{      Stiffness\_storey(storey\_i + 1);}
+00123 \textcolor{stringliteral}{    Stiffness\_matrix(storey\_i, storey\_i + 1) = ...}
+00124 \textcolor{stringliteral}{      - Stiffness\_storey(storey\_i + 1);}
+00125 \textcolor{stringliteral}{    Stiffness\_matrix(storey\_i + 1, storey\_i) = ...}
+00126 \textcolor{stringliteral}{      Stiffness\_matrix(storey\_i, storey\_i + 1);}
+00127 \textcolor{stringliteral}{   endif}
+00128 \textcolor{stringliteral}{    }
+00129 \textcolor{stringliteral}{end}
+00130 \textcolor{stringliteral}{}
+00131 \textcolor{stringliteral}{for storey\_i = 1 : Number\_of\_storeys}
+00132 \textcolor{stringliteral}{  Level\_floor(storey\_i, 1) = ...}
+00133 \textcolor{stringliteral}{    Height\_storey(storey\_i,1);}
+00134 \textcolor{stringliteral}{  if (storey\_i > 1 )}
+00135 \textcolor{stringliteral}{     Level\_floor(storey\_i, 1) = ...}
+00136 \textcolor{stringliteral}{       Level\_floor(storey\_i, 1) + ...}
+00137 \textcolor{stringliteral}{     Level\_floor(storey\_i - 1, 1);}
+00138 \textcolor{stringliteral}{  endif}
+00139 \textcolor{stringliteral}{end}
+00140 \textcolor{stringliteral}{}
+00141 \textcolor{stringliteral}{[Eigen\_vector, Omega\_square] = eig(Stiffness\_matrix, Mass);}
+00142 \textcolor{stringliteral}{Omega = sqrt(Omega\_square);}
+00143 \textcolor{stringliteral}{}
+00144 \textcolor{stringliteral}{for storey\_i = 1 : Number\_of\_storeys}
+00145 \textcolor{stringliteral}{  Time\_period(storey\_i, storey\_i) = 2 * pi() ...}
+00146 \textcolor{stringliteral}{    / sqrt(Omega\_square(storey\_i, storey\_i)); }
+00147 \textcolor{stringliteral}{end}
+00148 \textcolor{stringliteral}{}
+00149 \textcolor{stringliteral}{for storey\_i = 1 : Number\_of\_storeys}
+00150 \textcolor{stringliteral}{  Frequency(storey\_i,1) = Omega(storey\_i, storey\_i);}
+00151 \textcolor{stringliteral}{end}
+00152 \textcolor{stringliteral}{}
+00153 \textcolor{stringliteral}{for storey\_i = 1 : Number\_of\_storeys}
+00154 \textcolor{stringliteral}{  Time\_periods(storey\_i,1) = Time\_period(storey\_i, storey\_i);}
+00155 \textcolor{stringliteral}{end}
+00156 \textcolor{stringliteral}{}
+00157 \textcolor{stringliteral}{sum\_modal\_mass = 0;}
+00158 \textcolor{stringliteral}{}
+00159 \textcolor{stringliteral}{for index\_k = 1 : Number\_of\_storeys}
+00160 \textcolor{stringliteral}{  sum\_W\_Phi = 0;}
+00161 \textcolor{stringliteral}{  sum\_W\_Phi2 = 0;}
+00162 \textcolor{stringliteral}{  for index\_i = 1 : Number\_of\_storeys}
+00163 \textcolor{stringliteral}{    sum\_W\_Phi = sum\_W\_Phi + Mass(index\_i, index\_i) * ...}
+00164 \textcolor{stringliteral}{      Eigen\_vector(index\_i, index\_k);}
+00165 \textcolor{stringliteral}{    sum\_W\_Phi2 = sum\_W\_Phi2 + Mass(index\_i, index\_i) * ...}
+00166 \textcolor{stringliteral}{      Eigen\_vector(index\_i, index\_k)^2;}
+00167 \textcolor{stringliteral}{  end}
+00168 \textcolor{stringliteral}{  Modal\_participation\_factor(index\_k,1) = sum\_W\_Phi / sum\_W\_Phi2;}
+00169 \textcolor{stringliteral}{  Modal\_mass(index\_k,1) = (sum\_W\_Phi^2) / (sum\_W\_Phi2);}
+00170 \textcolor{stringliteral}{  sum\_modal\_mass = sum\_modal\_mass + Modal\_mass(index\_k,1);  }
+00171 \textcolor{stringliteral}{end}
+00172 \textcolor{stringliteral}{}
+00173 \textcolor{stringliteral}{Modal\_contribution = 100 / sum\_modal\_mass * Modal\_mass;}
+00174 \textcolor{stringliteral}{}
+00175 \textcolor{stringliteral}{ModesContributionX = 0;}
+00176 \textcolor{stringliteral}{Number\_of\_modes\_to\_be\_considered = 0;}
+00177 \textcolor{stringliteral}{}
+00178 \textcolor{stringliteral}{for Number\_of\_modes\_to\_be\_considered = 1:Number\_of\_storeys}
+00179 \textcolor{stringliteral}{  ModesContributionX = ModesContributionX + ...}
+00180 \textcolor{stringliteral}{    Modal\_contribution(Number\_of\_modes\_to\_be\_considered); }
+00181 \textcolor{stringliteral}{ }
+00182 \textcolor{stringliteral}{  if (ModesContributionX > 90)}
+00183 \textcolor{stringliteral}{    break;}
+00184 \textcolor{stringliteral}{  endif}
+00185 \textcolor{stringliteral}{end}
+00186 \textcolor{stringliteral}{}
+00187 \textcolor{stringliteral}{for index\_time = 1:Number\_of\_storeys}
+00188 \textcolor{stringliteral}{  Sa\_by\_g(index\_time,1) = funSaog(Type\_of\_soil, Time\_periods(index\_time,1) );}
+00189 \textcolor{stringliteral}{  A\_h(index\_time,1) = Zone\_factor / 2 * Importance\_factor / ...}
+00190 \textcolor{stringliteral}{    Response\_reduction\_factor * Sa\_by\_g(index\_time,1);}
+00191 \textcolor{stringliteral}{end  }
+00192 \textcolor{stringliteral}{}
+00193 \textcolor{stringliteral}{for index\_i = 1:Number\_of\_storeys}
+00194 \textcolor{stringliteral}{  Design\_lateral\_force(:,index\_i) = Mass * Eigen\_vector(:,index\_i) * A\_h(index\_i) * ...}
+00195 \textcolor{stringliteral}{  Modal\_participation\_factor(index\_i) * Gravity\_acceleration;}
+00196 \textcolor{stringliteral}{end}
+00197 \textcolor{stringliteral}{}
+00198 \textcolor{stringliteral}{Peak\_shear\_force = zeros(Number\_of\_storeys, Number\_of\_storeys,'}\textcolor{keywordtype}{double}\textcolor{stringliteral}{');}
+00199 \textcolor{stringliteral}{for index\_j = 1:Number\_of\_storeys}
+00200 \textcolor{stringliteral}{  for index\_i = 1:Number\_of\_storeys}
+00201 \textcolor{stringliteral}{      for index\_k = 1:Number\_of\_storeys - index\_i +1}
+00202 \textcolor{stringliteral}{     % index\_m = index\_k + index\_i -1;}
+00203 \textcolor{stringliteral}{      Peak\_shear\_force(index\_i,index\_j) = ...}
+00204 \textcolor{stringliteral}{        Design\_lateral\_force(index\_k + index\_i -1,index\_j) + ...}
+00205 \textcolor{stringliteral}{        Peak\_shear\_force(index\_i,index\_j);}
+00206 \textcolor{stringliteral}{        %index\_i}
+00207 \textcolor{stringliteral}{        %index\_j}
+00208 \textcolor{stringliteral}{        %index\_k}
+00209 \textcolor{stringliteral}{    end    }
+00210 \textcolor{stringliteral}{  end  }
+00211 \textcolor{stringliteral}{end}
+00212 \textcolor{stringliteral}{}
+00213 \textcolor{stringliteral}{%% [POST-PROCESSING]}
+00214 \textcolor{stringliteral}{}
+00215 \textcolor{stringliteral}{%% Echo input data}
+00216 \textcolor{stringliteral}{}
+00217 \textcolor{stringliteral}{%Number\_of\_storeys}
+00218 \textcolor{stringliteral}{%Stiffness\_storey}
+00219 \textcolor{stringliteral}{}
+00220 \textcolor{stringliteral}{%% Echo processed data}
+00221 \textcolor{stringliteral}{}
+00222 \textcolor{stringliteral}{matrixTeX(Stiffness\_matrix,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00223 \textcolor{stringliteral}{matrixTeX(Eigen\_vector,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00224 \textcolor{stringliteral}{matrixTeX(Omega\_square,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00225 \textcolor{stringliteral}{matrixTeX(Frequency,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00226 \textcolor{stringliteral}{matrixTeX(Time\_periods,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00227 \textcolor{stringliteral}{matrixTeX(Level\_floor,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00228 \textcolor{stringliteral}{matrixTeX(Modal\_participation\_factor,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00229 \textcolor{stringliteral}{}
+00230 \textcolor{stringliteral}{disp('} \textcolor{stringliteral}{')}
+00231 \textcolor{stringliteral}{disp(['}g = \textcolor{stringliteral}{', num2str(Gravity\_acceleration)])}
+00232 \textcolor{stringliteral}{}
+00233 \textcolor{stringliteral}{matrixTeX(Modal\_mass,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00234 \textcolor{stringliteral}{matrixTeX(Modal\_contribution,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00235 \textcolor{stringliteral}{}
+00236 \textcolor{stringliteral}{disp(['}Modal Contribution of \textcolor{stringliteral}{', num2str(ModesContributionX), '} \(\backslash\)% \textcolor{keywordflow}{for} \textcolor{stringliteral}{', ...}
+00237 \textcolor{stringliteral}{  num2str(Number\_of\_modes\_to\_be\_considered), '} number of modes \textcolor{stringliteral}{'])}
+00238 \textcolor{stringliteral}{}
+00239 \textcolor{stringliteral}{if (Modes\_considered == 0)}
+00240 \textcolor{stringliteral}{  Modes\_considered = Number\_of\_modes\_to\_be\_considered;}
+00241 \textcolor{stringliteral}{endif}
+00242 \textcolor{stringliteral}{disp('} \textcolor{stringliteral}{')}
+00243 \textcolor{stringliteral}{disp(['}Modes Considered \textcolor{stringliteral}{', num2str(Modes\_considered)])}
+00244 \textcolor{stringliteral}{}
+00245 \textcolor{stringliteral}{Storey\_shear\_force = zeros(Number\_of\_storeys, 3);}
+00246 \textcolor{stringliteral}{}
+00247 \textcolor{stringliteral}{for index\_i = 1:Number\_of\_storeys}
+00248 \textcolor{stringliteral}{  for index\_j = 1:Modes\_considered}
+00249 \textcolor{stringliteral}{    Storey\_shear\_force(index\_i,1) = Storey\_shear\_force(index\_i,1) + ...}
+00250 \textcolor{stringliteral}{      abs(Peak\_shear\_force(index\_i,index\_j));}
+00251 \textcolor{stringliteral}{    Storey\_shear\_force(index\_i,2) = Storey\_shear\_force(index\_i,2) + ...}
+00252 \textcolor{stringliteral}{      Peak\_shear\_force(index\_i,index\_j)^2;}
+00253 \textcolor{stringliteral}{  end}
+00254 \textcolor{stringliteral}{   Storey\_shear\_force(index\_i,2) = sqrt(Storey\_shear\_force(index\_i,2));}
+00255 \textcolor{stringliteral}{end}
+00256 \textcolor{stringliteral}{}
+00257 \textcolor{stringliteral}{matrixTeX(Sa\_by\_g,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00258 \textcolor{stringliteral}{matrixTeX(A\_h,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00259 \textcolor{stringliteral}{matrixTeX(Design\_lateral\_force,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00260 \textcolor{stringliteral}{matrixTeX(Peak\_shear\_force,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00261 \textcolor{stringliteral}{matrixTeX(Storey\_shear\_force,'}%10.4e\textcolor{charliteral}{','}\hyperlink{jquery_8min_8js_a96f65b399314d93896076ceb474b6b9b}{r}\textcolor{stringliteral}{')}
+00262 \textcolor{stringliteral}{}
+00263 \textcolor{stringliteral}{%% Plot mode shapes}
+00264 \textcolor{stringliteral}{}
+00265 \textcolor{stringliteral}{plotHangle = figure('}visible\textcolor{stringliteral}{', '}off\textcolor{stringliteral}{')}
+00266 \textcolor{stringliteral}{}
+00267 \textcolor{stringliteral}{plot([0; Eigen\_vector(:,1)], [0; Level\_floor],'}-ro')
+00268 hold on
+00269 plot([0; Eigen\_vector(:,2)], [0; Level\_floor],\textcolor{stringliteral}{'-go'})
+00270 plot([0; Eigen\_vector(:,3)], [0; Level\_floor],\textcolor{stringliteral}{'-bo'})
+00271 plot([0; Eigen\_vector(:,4)], [0; Level\_floor],\textcolor{stringliteral}{'-mo'})
+00272 plot([0 0], [0 \hyperlink{namespacemain_ad7b051da0e829aff37fef1e171e37fa3}{Level\_floor}(\hyperlink{namespaceinput_a10237b312ba44e8c8090db86059c5803}{Number\_of\_storeys})],\textcolor{stringliteral}{'-k'})
+00273 hold off
+00274 
+00275 % saveas(plotHangle, \textcolor{stringliteral}{'ModeShape.eps'},\textcolor{stringliteral}{'eps'})
+00276 %print (plotHangle, \textcolor{stringliteral}{'-color'},  \textcolor{stringliteral}{'ModeShape.eps'})
+00277 %saveas(plotHangle, \textcolor{stringliteral}{'ModeShape.png'},\textcolor{stringliteral}{'png'})
+00278 %saveas(plotHangle, \textcolor{stringliteral}{'ModeShape.pdf'})
+00279 
+00280 % End of \hyperlink{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb}{file}
+\end{DoxyCode}

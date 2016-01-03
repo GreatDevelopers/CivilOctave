@@ -1,0 +1,99 @@
+\hypertarget{L02_2main_8m_source}{}\section{main.\+m}
+\label{L02_2main_8m_source}\index{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+L02/main.\+m@{/home/amarjeet/projects/\+Civil\+Octave/\+Examples/\+L02/main.\+m}}
+
+\begin{DoxyCode}
+00001 % Program to modify global stiffness \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix} to account \textcolor{keywordflow}{for} homogenous \hyperlink{L02_2main_8m_ab56a0e8dabe1e9e6a7fd6913e6448220}{and}
+00002 % non-homogenous boundary conditions
+00003 clc
+00004 clear
+00005 
+00006 %% Initialisation [PRE-PROCESSING]
+00007 
+00008 % Following are the \hyperlink{namespacemain}{main} variables used. No explanation is given as
+00009 %       names are self explanatory.
+00010 % \hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes}   
+00011 % Number\_of\_elements
+00012 % \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}
+00013 % Local\_stiffness\_matrix
+00014 % \hyperlink{L01_2main_8m_aba5eae545abb25c91b167b9fcdf95479}{Element\_incidences}
+00015 %       (Information on nodes correspinding to \hyperlink{jquery_8min_8js_a18d9b499a0765bf2fe5f372ff2fc0236}{each} elements)
+00016 % \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix}
+00017 
+00018 % Enter global \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00019 
+00020 % Enter global force \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00021 
+00022 % Enter number of nodes
+00023 
+00024 % Enter number of elements
+00025 
+00026 %% Initialization- Boundary conditions [PRE-PROCESSING]
+00027 
+00028 % loc Enter location of boundary nodes to be initialised as node numbers
+00029 % In this case boundaries corresponding to nodes 1 \hyperlink{L02_2main_8m_ab56a0e8dabe1e9e6a7fd6913e6448220}{and} 5
+00030 
+00031 % Enter boundary condition displacement values in the order of
+00032 % node numbers initialised in the location \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00033 
+00034 % NOTE: 'Boundary\_nodes' matrix and 'Boundary\_condition\_displacement'
+00035 % matrix should be of the same size
+00036 
+00037 load input.mat
+00038 
+00039 % Echo input data
+00040 
+00041 Global\_stiffness\_matrix % Displays global stiffness matrix
+00042 Global\_force\_matrix % Displays global force matrix
+00043 
+00044 %% [PROCESSING]
+00045 
+00046 % For the algorithm to be used for general cases it is required to keep the
+00047 % size of Global\_stiffness\_matrix and Global\_force\_matrix to remain the
+00048 % same even after the boundary conditions are accounted for.
+00049 
+00050 Number\_of\_known\_displacements = length(Boundary\_condition\_displacement);
+00051 
+00052 %Step 1
+\hypertarget{L02_2main_8m_source_l00053}{}\hyperlink{L02_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{00053} \textcolor{keywordflow}{for} \hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i} = 1:Number\_of\_known\_displacements
+00054     aa = \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(Boundary\_nodes(\hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i}), Boundary\_nodes(
+      \hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i}));
+00055     \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix}(Boundary\_nodes(\hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i})) = aa * ...
+00056                 Boundary\_condition\_displacement(\hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i});
+\hypertarget{L02_2main_8m_source_l00057}{}\hyperlink{L02_2main_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{00057}     \textcolor{keywordflow}{for} \hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j} = 1:\hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes}
+00058         \textcolor{keywordflow}{if} \hyperlink{L01_2main_8m_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j} == Boundary\_nodes(\hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i})
+00059             \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(Boundary\_nodes(\hyperlink{DoS_201_2main_8m_a6dbbc96f4222af2f6c18c8e60f41726b}{i}),j) = ...
+00060             \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(Boundary\_nodes(i),j);
+00061         else
+00062             \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(Boundary\_nodes(i),j) = 0;
+00063         end
+00064     end
+00065 end
+00066 
+00067 %Step 2
+00068 for i = 1:1:Number\_of\_known\_displacements
+00069     for j = 1:\hyperlink{L01_2main_8m_a1d65c23ed4744bf98747671b08490b5c}{Number\_of\_nodes}
+00070         \hyperlink{bootstrap_8min_8js_ac2d69f5011896c6ed4a54e0dd36f6334}{if} j ~= Boundary\_nodes(i)
+00071             sum(j) = \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(j,Boundary\_nodes(i)) * ...
+00072                 Boundary\_condition\_displacement(i);
+00073             \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix}(j) = \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix}(j) - sum(j);
+00074             \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}(j,Boundary\_nodes(i)) = 0
+00075         % This line will make 1st \hyperlink{L02_2main_8m_ab56a0e8dabe1e9e6a7fd6913e6448220}{and} 5 th column=0
+\hypertarget{L02_2main_8m_source_l00076}{}\hyperlink{L02_2main_8m_ab56a0e8dabe1e9e6a7fd6913e6448220}{00076}         % (except 1,1 \hyperlink{L02_2main_8m_ab56a0e8dabe1e9e6a7fd6913e6448220}{and} 5,5 element in our case)
+00077         else
+00078         end
+00079     end
+00080 end
+00081 
+00082 %% [POST-PROCESSING]
+00083 
+00084 % Displays modified global stiffness \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00085 \hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix} 
+00086 % Displays modified global force \hyperlink{namespacecivilsage_1_1views_a8b58c93a9c82e84143c43dafaa744a4b}{matrix}
+00087 \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix} = \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix}' 
+00088 
+00089 % Displays calculated displacements
+00090 Displacements = inv(\hyperlink{GeoTech_2BC_2main_8m_a31cdcce530a93925f9b8c6349e94e70b}{Global\_stiffness\_matrix}) * 
+      \hyperlink{L02_2main_8m_a22c0511a90736f47a39b47581e1b823e}{Global\_force\_matrix}
+00091 
+00092 % End of \hyperlink{namespacecivilsage_1_1views_a32de127956738677913352a2db84ecdb}{file}
+\end{DoxyCode}

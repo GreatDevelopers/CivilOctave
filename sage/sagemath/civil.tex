@@ -2,7 +2,8 @@
 %----------------------------------------------------------------------%
 \documentclass[12pt]{report}
 \usepackage{sagetex}
-
+\pagenumbering{gobble}
+\oddsidemargin=0pt
 
 %----------------------------------------------------------------------%
 %=======================Title page=====================================%
@@ -26,20 +27,18 @@ Number Of Storeys
 	N = \sage{Number_of_storeys}
 \end{equation}
 
-Stiffness Matrix
-\begin{equation}
-	[K]=\sage{Stiffness_matrix}
-\end{equation}
-
-Mass
-\begin{equation}
-	 [M]=\sage{Mass}
-\end{equation}
-
 
 \begin{sagesilent}
 latex.matrix_delimiters("\{","\}")
 \end{sagesilent}
+
+
+Mass
+\begin{equation}
+	 [M]=\sage{mass}
+\end{equation}
+
+
 
 Time Period
 \begin{equation}
@@ -56,10 +55,15 @@ Frequency
 	[\omega]=\sage{Omega}
 \end{equation}
 
+\newpage
 \begin{figure}
 	\sageplot[scale=0.75]{Graph}
 	\caption{Mass Model}
 \end{figure}
+
+\begin{equation}Number of modes considered=\sage{Modes_considered}
+\end{equation}
+\newpage
 
 Level Floor
 \begin{equation}
