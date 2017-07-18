@@ -1,4 +1,3 @@
-# Created by Octave 4.0.0, Thur Jan 12 2017 <maheshmadhavblog>
 # name: Cohesion
 # type: scalar
 4
@@ -9,9 +8,34 @@
 1
 
 
+# name: Depth_of_foundation
+# type: scalar
+1
+
+
+# name: Dw
+# type: scalar
+2
+
+
 # name: Gamma
 # type: scalar
 16.8
+
+
+# name: Length_of_foundation
+# type: scalar
+1
+
+
+# name: Unit_weight_of_soil
+# type: scalar
+16.8
+
+
+# name: Water_table_correction_factor
+# type: scalar
+1
 
 
 # name: Width_of_footing
@@ -19,25 +43,23 @@
 1
 
 
+# name: Width_of_foundation
+# type: matrix
+# rows: 1
+# columns: 4
+1 2 3 4
+
+
+# name: alpha
+# type: scalar
+0
+
 # name: phi
 # type: scalar
 26
 
-
-# name: Depth_of_foundation
-#type: scalar
-1
-
-#name  : width_of_foundation
-#type:scalar
-1
-
-
-
-#name: incination_of_load_to_vertical
-#type: scalar
-0
-
-#name: Dw
-#type: scalar
-2
+# name: shape
+# type: string
+# elements: 1
+#length: 6
+circle
