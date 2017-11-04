@@ -1,0 +1,8 @@
+The main.m file contain code for Dynamic Analysis of framed building,
+an example taken from book entitled "Earthquake resistant Design of
+Structures" 1st Edition (2006) Eighth Printing (2010) by Pankaj
+Agarwal and Manish Shrikhande.
+
+The code correspond to a Example 2 Chapter 16, page 262.
+
+To know how to execute this code, read README.md file in folder CivilOctave.
