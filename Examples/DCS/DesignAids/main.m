@@ -1,6 +1,10 @@
-# Execute Material.m to get material data
+#format short g
 
+# Execute Material.m to get material data
 Material
+
+# Openfile
+fileID = fopen('DesignTables.tex','w');
 
 # Execute all file of pattern Table10*.m
 
@@ -17,5 +21,15 @@ for k = 1:nFile
     fprintf('failed: %s\n', file);
   end
 end
+
+tableTex1D(Material.Steel.f_y, Table(1), fileID);
+
+tableTex1D(Material.Steel.f_y, Table(2), fileID);
+
+tableTex1D(Material.Steel.f_y, Table(3), fileID);
+
+tableTex2D(Material.Conc.f_ck, Material.Steel.f_y, Table(4), fileID);
+
+fclose(fileID);
 
 # EoF =======

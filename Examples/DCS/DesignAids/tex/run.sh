@@ -1,0 +1,1 @@
+pdflatex main && pdflatex main
