@@ -2,8 +2,8 @@
 
 Table(4).ID = "D";
 Table(4).Source = "SP16";
-Table(4).Caption = 'Limiting moment of resistance factor for singly reinforced rectangular sections';
-Table(4).Clause = [2.3];
+Table(4).Caption = 'Limiting Moment of Resistance Factor for Singly Reinforced Rectangular Sections';
+Table(4).Clause = ["2.3"];
 Table(4).Header = ["$\\dfrac{M_{u,lim}}{bd^2}$ factor"];
 
 TempM = Table(2).Content' * Material.Conc.f_ck;
