@@ -30,6 +30,12 @@ tableTex1D(Material.Steel.f_y, Table(3), fileID);
 
 tableTex2D(Material.Conc.f_ck, Material.Steel.f_y, Table(4), fileID);
 
+tableTex2D(Material.Conc.f_ck, Material.Steel.f_y, Table(5), fileID);
+
+# Table(6) is 3D
+
+tableTex2D(steelPtShear, Material.Conc.f_ck, Table(7), fileID);
+
 fclose(fileID);
 
 # EoF =======

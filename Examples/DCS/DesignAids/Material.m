@@ -1,5 +1,7 @@
 # Concrete
 
+steelpt = 0:.1:6;
+
 Material.Conc.f_ck = [15 20 25 30 35 40 45 50 55];
 
 Material.Conc.FactorFcr_fck = 0.7;

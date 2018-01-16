@@ -19,7 +19,7 @@ for i = 1:iI
 
    for k = 1:kK
      if ( steelpt(k) > maxPt )
-       MuBYbd2(i,j,k) = 0;
+       MuBYbd2(i,j,k) = NaN;
      else
        MuBYbd2(i,j,k) = 0.87 * fyT(j) * steelpt(k)/100. * ...
        ( 1. - 1.005 * fyT(j)/fckT(i) * steelpt(k)/100. );
