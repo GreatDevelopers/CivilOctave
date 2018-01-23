@@ -4,6 +4,7 @@ function tableTex2D(x, y, table2tex, fileID)
 
 A = table2tex.Content;
 nRows = rows(A);
+nColmns = columns(A);
 sizey = columns(y);
 sizex = columns(x);
 
@@ -17,13 +18,12 @@ TableHead = "\\";
 
 TableHead = [TableHead, "begin{table}[!h]\n", "\\",...
  "begin{center}\n", "\\caption{", table2tex.Caption,"}", ...
- "\\begin{tabular}{"];
+ "\n\\begin{tabular}{"];
 
-for i = 1:sizex
+for i = 1:sizey+1
  TableHead = [TableHead,CellSep];
 end
 TableHead = [TableHead,"}\n"];
-
 IR = rows(buildTable);
 JC = columns(buildTable);
 
