@@ -9,7 +9,7 @@ clear
 %
 
 load input.mat
-load datafile.mat
+load dataFile.mat
 
 %Variable initialisation
 %Global_stiffness_matrix(Number_of_nodes,Number_of_nodes) = 0;
