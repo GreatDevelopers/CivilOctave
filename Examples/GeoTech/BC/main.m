@@ -106,7 +106,7 @@ Safe_Net_Allowable_Bearing_Capacityspt
 switch (shape)
   case "rectangle"
     rectangle();
-    break;
+    # break;
   case "strip"
    Sq=1;
    Sc=1;
