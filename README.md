@@ -27,7 +27,7 @@ http://sachinashanbhag.blogspot.in/2012/11/exporting-matrices-in-octavematlab-to
 https://docs.google.com/open?id=0Bww3OZktvGQucmxnd1FJNElCVGc
 
 
-#Sage
+# Sage
 Use of Sage in Civil Engineering Problems 
 
 
@@ -36,7 +36,3 @@ Requirement-:
 ## 1. Sagemath
 ## 2. latex 
 ## 3. Django
-
-
-
-
